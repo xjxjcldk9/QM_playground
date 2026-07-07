@@ -53,3 +53,28 @@ print(f"ψ_10:  σ_p      = {sigma_p10:.5f}")
 
 print(f"\nψ_1:   σ_x · σ_p = {sigma_x1 * sigma_p1:.5f}")
 print(f"ψ_10:  σ_x · σ_p = {sigma_x10 * sigma_p10:.5f}")
+
+# --- Plot |ψ_10|² vs classical turning-point approximation ---
+import matplotlib.pyplot as plt
+
+t_vals = np.linspace(0, 12.5, 2000)
+
+psi10_sq = airy(t_vals - z10)[0] ** 2 / int10
+
+# Classical approximation: 1 / (2 * sqrt(z10 * (z10 - t))), valid for t < z10
+t_class = t_vals[t_vals < z10]
+classical = 1.0 / (2.0 * np.sqrt(z10 * (z10 - t_class)))
+
+fig, ax = plt.subplots(figsize=(8, 4))
+ax.plot(t_vals, psi10_sq, label=r"$|\psi_{10}|^2$")
+ax.plot(t_class, classical, "--", label=r"$\frac{1}{2\sqrt{z_{10}(z_{10}-t)}}$")
+ax.set_xlabel("$t$")
+ax.set_ylabel("probability density")
+ax.set_title(r"$\psi_{10}$: quantum vs classical envelope")
+ax.legend()
+ax.set_xlim(0, 12.5)
+ax.set_ylim(bottom=0)
+plt.tight_layout()
+plt.savefig("prob2.59_psi10_classical.png", dpi=150)
+plt.show()
+print("Plot saved to prob2.59_psi10_classical.png")
