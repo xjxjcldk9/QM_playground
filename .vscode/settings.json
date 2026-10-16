@@ -12,6 +12,11 @@
     "latex-workshop.linting.chktex.exec.args": ["-wall", "-n22", "-n30", "-e16", "-q", "-l", "%DIR%/.chktexrc"],
     "latex-workshop.linting.run": "onType",
 
+    // ---- Live math preview (hover + side panel) ----
+    "latex-workshop.hover.preview.enabled": true,
+    "latex-workshop.hover.preview.mathjax.extensions": ["mathtools", "mhchem", "boldsymbol"],
+    "latex-workshop.mathpreviewpanel.cursor.enabled": true,
+
     // ---- Formatting (latexindent) ----
     "latex-workshop.formatting.latex": "latexindent",
     "[latex]": {
