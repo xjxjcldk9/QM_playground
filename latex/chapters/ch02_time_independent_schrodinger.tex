@@ -1,0 +1,3166 @@
+\section{Time-Independent Schrödinger Equation}
+\subsection*{Sol. 1}
+\begin{enumerate}
+    \item Write the separation constant as $E+i\Gamma,$ where $E,$ and $\Gamma$ are real. By equation 2.7 and 1.20, the wave function must satisfy
+    \begin{align*}
+        1 =& \int_{-\infty}^{\infty}
+        |\psi(x)e^{-i(E+i\Gamma)t/\hbar}|^2dx\\
+        =&e^{2\Gamma t/\hbar}\int_{-\infty}^{\infty}|\psi(x)|dx
+    \end{align*}
+    for all $t.$ However, $\int_{-\infty}^{\infty}|\psi(x)|dx$ is a constant over $t,$ so $e^{2\Gamma t/\hbar}$ must also be a constant over $t,$ and this will only happen when $\Gamma=0.$
+    \item Write $\psi(x)=A(x)+iB(x),$ where $A$ and $B$ are both real functions. By eq2.5, 
+    \begin{align*}
+        -\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}+V\psi=E\psi &\Rightarrow 
+        -\frac{\hbar^2}{2m}\frac{d^2(A(x)+iB(x))}{dx^2}+V(A+iB)=E(A+iB)
+    \end{align*} By separating the real and the imaginary parts, we obtain that $A(x)$ and $B(x)$ both must satisfy eq2.5. Hence, every function that satisfies eq2.5 can be expressed as a linear combination of real solutions.
+    \item Let $h(x)=-x$, then $(\psi\circ h)'=(\psi'\circ h)\cdot h'=-(\psi'\circ h),$ and 
+    $(\psi\circ h)'' = -(\psi'\circ h)'=-(\psi''\circ h)\cdot h'=\psi''\circ h$
+    By eq2.5, 
+    \begin{align*}
+        -\frac{\hbar^2}{2m}\psi''(x)+V(x)\psi(x)=E\psi(x)
+    \end{align*}
+    plug in $-x$ on both sides
+    \begin{align*}
+        &-\frac{\hbar^2}{2m}\psi''(-x)+V(-x)\psi(-x)=E\psi(-x)\\
+        \Rightarrow
+        &-\frac{\hbar^2}{2m}(\psi\circ h)''(x)+V(x)(\psi\circ h)(x)=E(\psi\circ h)(x).
+    \end{align*}
+    The function $(\psi\circ h)(x)=\psi(-x)$ also satisfies eq2.5. Since eq2.5 is linear, the even and odd functions, $\psi(x)\pm \psi(-x)$ satisfy eq2.5. Hence, we could say that every solution can be expressed as a linear combination of even and odd functions.
+\end{enumerate}
+
+\subsection*{Sol. 2}
+By Ex1.b, we can assume that $\psi$ is real. Let $g=\psi^2,$ then $g'=2\psi\cdot\psi',$ and $g''=2\psi'\cdot\psi'+2\psi\cdot\psi''\geq 0,$ so $g'$ never decrease.
+
+Pick a point $a$ so that $g(a)>0.$ 
+If $g'(a)>0,$ by the mean value theorem, $g(N)-g(a)=g'(c)(N-a)\geq g'(a)(N-a),$ where $c\in(a,N),$ so $g\to\infty$ as $N\to\infty.$ 
+If $g'(a)<0,$ by the mean value theorem, $g(a)-g(N)=g'(c)(a-N)\leq g'(a)(a-N),$ where $c\in(N,a),$ so $g\to \infty$ as $N\to -\infty.$ If $g'(a)=0,$ by the mean value theorem, $g'(b)=g''(c)(b-a)=\frac{g(c)}{A}(b-a).$ Since $g$ is continuous, $g(c)>0$, therefore we can always choose a point $b$ at the vicinity of $a$ so that $g(b)>0$ and $g'(b)\neq 0.$
+
+Since $\psi^2$ will eventually go to infinity either side, it is not even possible to normalize it.
+
+\subsection*{Sol. 3}
+Inside the well, $\psi''=k^2\psi,$ where $k^2=-\frac{2m}{\hbar^2}E.$ The general solution is $\psi = Ae^{kx}+Be^{-kx}.$ To satisfy the boundary condition, $\psi(0)=A+B=0,$ and $\psi(a)=Ae^{ka}+Be^{-ka}=0.$ However, this means 
+$Ae^{ka}+Be^{-ka}=Ae^{ka}-Ae^{-ka}=A(e^{ka}-e^{-ka})=Ae^{-ka}(e^{2ka}-1)=0.$ This will only happen if $A=0$ or $k=0,$ both will lead to $\psi=0,$ an unacceptable state. 
+
+
+\subsection*{Sol. 4}
+
+\begin{align*}
+    \langle x\rangle
+    =\frac{2}{a}\int_{0}^ax\sin^2\left(\frac{n\pi}{a}x\right)dx = \frac{2}{a}\frac{2\pi^2n^2a^2}{8\pi^2n^2}=\frac{a}{2}
+\end{align*}
+
+\begin{align*}
+    \langle x^2\rangle
+    =\frac{2}{a}\int_{0}^ax^2\sin^2\left(\frac{n\pi}{a}x\right)dx 
+    = \frac{2}{a}\frac{a^3(4\pi^3n^3-6\pi n)}{24\pi^3n^3}=
+    a^2\left(\frac{1}{3}-\frac{1}{2\pi^2n^2}    \right)
+\end{align*}
+
+
+\begin{align*}
+    \langle p\rangle
+    =m\frac{d}{dt}\langle x\rangle = 0
+\end{align*}
+
+
+\begin{align*}
+    \langle p^2\rangle
+    =& -\hbar^2\frac{2}{a}\int_0^a\sin\left(\frac{n\pi}{a}x\right)\frac{d^2}{dx^2}\sin\left(\frac{n\pi}{a}x\right)dx\\
+    =& \hbar^2\frac{2}{a}\frac{n^2\pi^2}{a^2}\int_0^a\sin^2\left(\frac{n\pi}{a}x\right)dx
+    =\hbar^2\frac{2}{a}\frac{n^2\pi^2}{a^2}\frac{2\pi n a}{4\pi n} = 
+    \left(\frac{\hbar\pi n}{a}\right)^2.
+\end{align*}
+
+$\sigma_x=\sqrt{a^2\left(\frac{1}{3}-\frac{1}{2\pi^2n^2}    \right)-\frac{a^2}{4}}=
+\sqrt{a^2\left(\frac{1}{3}-\frac{1}{2\pi^2n^2}    \right)-\frac{a^2}{4}}=
+a\sqrt{\frac{1}{12}-\frac{1}{2\pi^2n^2}}
+$
+
+$\sigma_p = \frac{\hbar\pi n}{a}$
+
+Uncertainty:
+$
+\sigma_x\sigma_p = 
+\hbar\pi n\sqrt{\frac{1}{12}-\frac{1}{2\pi^2n^2}}
+=\hbar\sqrt{\frac{\pi^2n^2}{12}-\frac{1}{2}}\geq 0.57\hbar.
+$ 
+
+The first stationary state hits the closest to the uncertainty limit.
+
+\subsection*{Sol. 5}
+\begin{enumerate}
+    \item 
+    $|A|^2\int (\psi_1(x)+\psi_2(x))(\psi_1(x)+\psi_2(x))dx
+        =2|A|^2=1.$ Take $A=\frac{1}{\sqrt{2}}.$
+        \item 
+        $\Psi(x, t) = \sum_{n=1}^\infty c_n\psi_n(x)\varphi_n(t).$
+    Since $\Psi(x,0)=\sum_{n=1}^\infty c_n\psi_n(x) = A\psi_1(x)+A\psi_2(x),$ $c_1=A,$ $c_2=A,$ and $c_3, c_4, \dots = 0.$
+
+    \begin{align*}
+    \Psi(x, t)= & 
+    \frac{1}{\sqrt{2}}\psi_1(x)\varphi_1(t) + 
+    \frac{1}{\sqrt{2}}\psi_2(x)\varphi_2(t)\\
+    =& \frac{1}{\sqrt{a}}
+    \left(
+    \sin\frac{\pi x}{a}\cdot e^{-i\omega t/\hbar} + 
+    \sin\frac{2\pi x}{a}\cdot e^{-i4\omega t/\hbar}
+    \right)
+    \end{align*}
+
+    \begin{align*}
+        |\Psi(x,t)|^2=\frac{1}{a}
+        \left[
+    \sin^2\frac{\pi x}{a}
+    +\sin^2\frac{2\pi x}{a}
+    +\sin\frac{\pi x}{a} \sin\frac{2\pi x}{a}
+    2\cos\frac{3\omega t}{\hbar}
+    \right]
+    \end{align*}
+    \item 
+\begin{align*}
+    \langle x\rangle = \int\Psi^*x\Psi dx= & 
+    \frac{1}{a} \int x(
+    \sin^2\frac{\pi x}{a}
+    +\sin^2\frac{2\pi x}{a}
+    +\sin\frac{\pi x}{a} \sin\frac{2\pi x}{a}
+    2\cos\frac{3\omega t}{\hbar}
+    )dx\\
+    =& \frac{1}{a}\frac{a^2(9\pi^2-32\cos\frac{3t\omega}{\hbar})}{18\pi^2}
+    =a\left(\frac{1}{2}-\frac{16}{9\pi^2}\cos\frac{3t\omega}{\hbar}
+    \right)
+\end{align*}
+Angular frequency: $\frac{3\omega}{\hbar},$
+Amplitude: $\frac{16a}{9\pi^2}.$
+
+\item 
+$\langle p \rangle = m\frac{d}{dt}\langle x\rangle
+= \frac{16ma\omega}{9\pi^2\hbar}\frac{3\omega}{\hbar}\sin \frac{3t\omega}{\hbar}=
+\frac{8\hbar}{3a}\sin \frac{3t\omega}{\hbar}
+.
+$
+\item Get $E_1$ with probability $\frac{1}{2},$ and get $E_2$ with probability $\frac{1}{2}.$
+$\langle H\rangle=\frac{1}{2}(E_1+E_2).$
+    
+    
+\end{enumerate}
+
+
+
+\subsection*{Sol. 6}
+    
+    $|A|^2\int (\psi_1(x)+e^{-i\phi}\psi_2(x))(\psi_1(x)+e^{i\phi}\psi_2(x))dx
+        =2|A|^2=1.$ Take $A=\frac{1}{\sqrt{2}}.$
+        
+        $\Psi(x, t) = \sum_{n=1}^\infty c_n\psi_n(x)\varphi_n(t).$
+    Since $\Psi(x,0)=\sum_{n=1}^\infty c_n\psi_n(x) = A\psi_1(x)+Ae^{i\phi}\psi_2(x),$ $c_1=A,$ $c_2=Ae^{i\phi},$ and $c_3, c_4, \dots = 0.$
+
+    \begin{align*}
+    \Psi(x, t)= & 
+    \frac{1}{\sqrt{2}}\psi_1(x)\varphi_1(t) + 
+    e^{i\phi}\frac{1}{\sqrt{2}}\psi_2(x)\varphi_2(t)\\
+    =& \frac{1}{\sqrt{a}}
+    \left(
+    \sin\frac{\pi x}{a}\cdot e^{-i\omega t/\hbar} + 
+    \sin\frac{2\pi x}{a}\cdot e^{-i(4\omega t/\hbar-\phi)}
+    \right)
+    \end{align*}
+
+    \begin{align*}
+        |\Psi(x,t)|^2=\frac{1}{a}
+        \left[
+    \sin^2\frac{\pi x}{a}
+    +\sin^2\frac{2\pi x}{a}
+    +\sin\frac{\pi x}{a} \sin\frac{2\pi x}{a}
+    2\cos\left(\frac{3\omega t}{\hbar}-\phi\right)
+    \right]
+    \end{align*}
+    
+\begin{align*}
+    \langle x\rangle = \int\Psi^*x\Psi dx= & 
+    \frac{1}{a} \int x(
+    \sin^2\frac{\pi x}{a}
+    +\sin^2\frac{2\pi x}{a}
+    +\sin\frac{\pi x}{a} \sin\frac{2\pi x}{a}
+    2\cos\left(\frac{3\omega t}{\hbar}-\phi\right)
+    )dx\\
+    =& \frac{1}{a}\frac{a^2(9\pi^2-32\cos(\frac{3t\omega}{\hbar}-\phi))}{18\pi^2}
+    =a\left(\frac{1}{2}-\frac{16}{9\pi^2}\cos(\frac{3t\omega}{\hbar}-\phi)
+    \right)
+\end{align*}
+
+$\langle x\rangle$ still oscillates with the same frequency and amplitude, and $\phi$ controls the starting point of the oscillation. 
+For $\phi=0,$ it starts from the left most, for $\phi=\frac{\pi}{2},$ it starts from the middle, and for $\phi=\pi,$ it starts from the right most.
+
+
+\subsection*{Sol. 7}
+\begin{enumerate}
+    \item $\int_0^{a/2}A^2x^2dx + \int_{a/2}^{a}A^2(a-x)^2dx=
+    \frac{1}{12}A^2a^3.
+    $ Take $A=\sqrt{\frac{12}{a^3}}.$
+    \item 
+    \begin{align*}
+        c_n =& \int_0^a\psi_n\Psi(x,0)dx \\
+        =& 
+        \sqrt{\frac{2}{a}}\int_0^{a/2}\sin(\frac{n\pi}{a}x)Axdx
+        +
+        \sqrt{\frac{2}{a}}\int_{a/2}^{a}\sin(\frac{n\pi}{a}x)A(a-x)dx\\
+        =&\sqrt{\frac{2}{a}}Aa^2
+        \frac{2\sin\frac{n\pi}{2}-n\pi\cos\frac{n\pi}{2}
+        +2\sin\frac{n\pi}{2}+n\pi\cos\frac{n\pi}{2}
+        }{2\pi^2n^2}\\
+        =&\begin{cases}
+  4\sqrt{6}\frac{1}{\pi^2n^2}& \text{if }  n\equiv 1 \bmod 4 \\
+  4\sqrt{6}\frac{-1}{\pi^2n^2}& \text{if }  n\equiv 3 \bmod 4 \\
+  0 & \text{if } n\equiv 0, 2 \bmod 4 \\
+\end{cases}
+    \end{align*}
+    $
+    \Psi(x,t) = 
+    \sum_{n=1,3,5,\dots}
+    4\sqrt{6}\frac{(-1)^{\frac{n-1}{2}}}{\pi^2n^2}
+    \sqrt{\frac{2}{a}}
+    \sin(\frac{n\pi}{a}x)e^{-in^2\pi^2\hbar t/2ma^2}
+    $
+    \item $|c_1|^2 = \frac{96}{\pi^4} \approx 0.9856$
+    \item 
+    \begin{align*}
+        \langle
+        H
+        \rangle
+        =\sum_{n=1}^\infty
+        \frac{96}{\pi^4n^4}\frac{n^2\pi^2\hbar^2}{2ma^2}
+        =\frac{48\hbar^2}{ma^2\pi^2}\sum_{n=1,3,5,\dots}\frac{1}{n^2}=
+        \frac{48\hbar^2}{ma^2\pi^2}\frac{\pi^2}{8}
+        =\frac{6\hbar^2}{ma^2}.
+    \end{align*}
+\end{enumerate}
+
+\subsection*{Sol. 8}
+$\int_0^{a/2}A^2= A^2a/2=1,$ take $A=\sqrt{\frac{2}{a}}.$
+
+\begin{align*}
+c_n=&\int_0^{a}\psi_n\Psi(x,0)dx\\
+=&\sqrt{\frac{2}{a}}
+\int_0^{a/2}\sin(\frac{n\pi}{a}x)Adx\\
+=&2\frac{1-\cos\frac{n\pi}{2}}{n\pi}\\
+=&\begin{cases}
+  \frac{2}{n\pi} & \text{if } n\equiv 1,3 \bmod 4 \\
+  \frac{4}{n\pi} & \text{if } n\equiv 2 \bmod 4 \\
+  0 & \text{if } n\equiv 0 \bmod 4 \\
+\end{cases}
+\end{align*}
+$|c_1|^2=\frac{4}{\pi^2}\approx0.405.$
+
+
+\subsection*{Sol. 9}
+
+\begin{align*}
+    -A^2\frac{\hbar^2}{2m}\int_0^a[x(a-x)]\frac{d^2}{dx^2}[x(a-x)]dx = &
+    A^2\frac{\hbar^2}{2m}\int_0^a2(ax-x^2)dx\\
+    =&\frac{30}{a^5}\frac{\hbar^2}{m}\frac{a^3}{6} = \frac{5\hbar^2}{ma^2}
+\end{align*}
+
+
+\subsection*{Sol. 10}
+\begin{enumerate}
+    \item \begin{align*}
+        \psi_2(x) \propto & 
+        (-\hbar\frac{d}{dx}+m\omega x)xe^{-\frac{m\omega}{2\hbar}x^2} \\
+        = &
+    \left(m{\omega}x^{2} -
+    \hbar\right) \mathrm{e}^{-\frac{m{\omega}x^{2}}{2\hbar}}
+    +m\omega x^2\mathrm{e}^{-\frac{m{\omega}x^{2}}{2\hbar}}
+    \end{align*}
+    \begin{align*}
+        \int\psi_2^2dx = &
+        \int A^2(\left( 2m{\omega}x^{2} -
+    \hbar\right) \mathrm{e}^{-\frac{m{\omega}x^{2}}{2\hbar}})^2dx\\
+    =&2A^2\sqrt{\frac{\pi\hbar^5}{m\omega}}
+    \end{align*}
+    $$
+    \psi_2(x) = \left(\frac{m\omega}{4\pi\hbar^5}\right)^{1/4}
+    \left( 2m{\omega}x^{2} -
+    \hbar\right) \mathrm{e}^{-\frac{m{\omega}x^{2}}{2\hbar}}
+    $$
+    \item 
+    \includegraphics[width=0.8\textwidth]{fig/Prob2.10.png}
+
+    \item 
+    \begin{align*}
+        \int\psi_0\psi_1dx \propto 
+        \int e^{-\frac{m\omega}{2\hbar}x^2}xe^{-\frac{m\omega}{2\hbar}x^2}dx = 0
+    \end{align*}
+    \begin{align*}
+        \int\psi_0\psi_2dx \propto 
+        \int e^{-\frac{m\omega}{2\hbar}x^2}\left( 2m{\omega}x^{2} -
+    \hbar\right) \mathrm{e}^{-\frac{m{\omega}x^{2}}{2\hbar}}dx = 0
+    \end{align*}
+    \begin{align*}
+        \int\psi_1\psi_2dx \propto 
+        \int \left( 2m{\omega}x^{2} -
+    \hbar\right) \mathrm{e}^{-\frac{m{\omega}x^{2}}{2\hbar}}
+    xe^{-\frac{m\omega}{2\hbar}x^2}dx = 0
+    \end{align*}
+    
+\end{enumerate}
+
+
+\subsection*{Sol. 11}
+\begin{enumerate}
+    \item $\psi_0:$
+
+\begin{align*}
+    \langle
+     x
+     \rangle
+     = \int (\frac{m\omega}{\pi\hbar})^{1/4}
+     e^{-\frac{m\omega}{2\hbar}x^2}
+     x(\frac{m\omega}{\pi\hbar})^{1/4}
+     e^{-\frac{m\omega}{2\hbar}x^2}dx = 0 
+\end{align*}
+\begin{align*}
+    \langle
+     p
+     \rangle
+     = -i\hbar\int
+     (\frac{m\omega}{\pi\hbar})^{1/4}
+     e^{-\frac{m\omega}{2\hbar}x^2}
+     \frac{\partial}{\partial x}(\frac{m\omega}{\pi\hbar})^{1/4}
+     e^{-\frac{m\omega}{2\hbar}x^2}
+     dx = 0 
+\end{align*}
+\begin{align*}
+    \langle
+     x^2
+     \rangle
+     = \int (\frac{m\omega}{\pi\hbar})^{1/4}
+     e^{-\frac{m\omega}{2\hbar}x^2}
+     x^2(\frac{m\omega}{\pi\hbar})^{1/4}
+     e^{-\frac{m\omega}{2\hbar}x^2}dx = \frac{\hbar}{2m\omega}
+\end{align*}
+\begin{align*}
+    \langle
+     p^2
+     \rangle
+     =& -\hbar^2\int (\frac{m\omega}{\pi\hbar})^{1/4}
+     e^{-\frac{m\omega}{2\hbar}x^2}
+     \frac{\partial^2}{\partial x^2}(\frac{m\omega}{\pi\hbar})^{1/4}
+     e^{-\frac{m\omega}{2\hbar}x^2}dx \\
+     =&  -\hbar^2\int (\frac{m\omega}{\pi\hbar})^{1/4}
+     e^{-\frac{m\omega}{2\hbar}x^2}
+     (\frac{m\omega}{\pi\hbar})^{1/4}
+     \frac{m{\omega} \left(m{\omega}x^{2} - \hbar\right) \mathrm{e}^{-\frac{m{\omega}x^{2}}{2\hbar}}}{\hbar^{2}} dx = \frac{\hbar m \omega}{2}
+\end{align*}
+
+
+$\psi_1:$
+
+\begin{align*}
+    \langle
+     x
+     \rangle
+     = \int (\frac{m\omega}{\pi\hbar})^{1/4}
+     \sqrt{\frac{2m\omega}{\hbar}}x
+     e^{-\frac{m\omega}{2\hbar}x^2}
+     x(\frac{m\omega}{\pi\hbar})^{1/4}
+     \sqrt{\frac{2m\omega}{\hbar}}x
+     e^{-\frac{m\omega}{2\hbar}x^2}dx = 0 
+\end{align*}
+\begin{align*}
+    \langle
+     p
+     \rangle
+     = -i\hbar\int
+     (\frac{m\omega}{\pi\hbar})^{1/4}
+     \sqrt{\frac{2m\omega}{\hbar}}x
+     e^{-\frac{m\omega}{2\hbar}x^2}
+     \frac{\partial}{\partial x}(\frac{m\omega}{\pi\hbar})^{1/4}
+     \sqrt{\frac{2m\omega}{\hbar}}x
+     e^{-\frac{m\omega}{2\hbar}x^2}
+     dx = 0 
+\end{align*}
+\begin{align*}
+    \langle
+     x^2
+     \rangle
+     = \int (\frac{m\omega}{\pi\hbar})^{1/4}
+     \sqrt{\frac{2m\omega}{\hbar}}x
+     e^{-\frac{m\omega}{2\hbar}x^2}
+     x^2(\frac{m\omega}{\pi\hbar})^{1/4}
+     \sqrt{\frac{2m\omega}{\hbar}}x
+     e^{-\frac{m\omega}{2\hbar}x^2}dx
+     = \frac{3\hbar}{2m\omega}
+\end{align*}
+
+\begin{align*}
+    \langle
+     p^2
+     \rangle
+     =& -\hbar^2\int (\frac{m\omega}{\pi\hbar})^{1/4}
+     \sqrt{\frac{2m\omega}{\hbar}}x
+     e^{-\frac{m\omega}{2\hbar}x^2}
+     \frac{\partial^2}{\partial x^2}
+     (\frac{m\omega}{\pi\hbar})^{1/4}
+     \sqrt{\frac{2m\omega}{\hbar}}x
+     e^{-\frac{m\omega}{2\hbar}x^2}dx \\
+     =&  -\hbar^2\int (\frac{m\omega}{\pi\hbar})^{1/4}
+     \sqrt{\frac{2m\omega}{\hbar}}x
+     e^{-\frac{m\omega}{2\hbar}x^2}
+     \frac{\sqrt{2} \, m{\omega} \cdot \left(\frac{m{\omega}}{\hbar}\right)^{\frac{3}{4}} \, x \left(m{\omega}x^{2} - 3\hbar\right) \mathrm{e}^{-\frac{m{\omega}x^{2}}{2\hbar}}}{\sqrt[4]{\pi} \, \hbar^{2}}
+     dx
+     = \frac{3\hbar m \omega}{2}
+\end{align*}
+\item $\psi_0: \sigma_x\sigma_p = \frac{\hbar}{2},$ $\psi_1:\sigma_x\sigma_p = \frac{3}{2}\hbar$
+\item $\psi_0:$ $\langle T\rangle = \frac{\hbar \omega}{4},$ 
+$\langle V\rangle = \frac{\hbar \omega}{4}.$ 
+
+$\psi_1:$ $\langle T\rangle = \frac{3\hbar \omega}{4},$ 
+$\langle V\rangle = \frac{3\hbar \omega}{4}.$ 
+\end{enumerate}
+
+
+\subsection*{Sol. 12}
+\begin{align*}
+    \langle
+    x
+    \rangle = 
+    \sqrt{\frac{\hbar}{2m\omega}}
+    \int \psi^*_n(\hat{a}_+ + \hat{a}_-)\psi_ndx = 0
+\end{align*}
+
+\begin{align*}
+    \langle
+    x^2
+    \rangle = 
+    \frac{\hbar}{2m\omega}
+    \int \psi^*_n(\hat{a}_+^2 + \hat{a}_+\hat{a}_-
+    + \hat{a}_-\hat{a}_+
+    +\hat{a}_-^2)\psi_ndx = 
+    \frac{\hbar}{2m\omega}(2n+1)
+\end{align*}
+
+\begin{align*}
+    \langle
+    p
+    \rangle = 
+    i\sqrt{\frac{\hbar m\omega}{2}}
+    \int \psi^*_n(\hat{a}_+ - \hat{a}_-)\psi_ndx = 0
+\end{align*}
+
+\begin{align*}
+    \langle
+    p^2
+    \rangle = 
+    -\frac{\hbar m\omega}{2}
+    \int \psi^*_n(\hat{a}_+^2 
+    - \hat{a}_+\hat{a}_-
+    - \hat{a}_-\hat{a}_+
+    +\hat{a}_-^2)\psi_ndx = 
+    \frac{\hbar m\omega}{2}(2n+1)
+\end{align*}
+
+$$\langle T\rangle = \frac{\hbar\omega}{4}(2n+1)$$
+
+$$\sigma_x\sigma_p = \frac{\hbar}{2}(2n+1)$$
+
+\subsection*{Sol. 13}
+\begin{enumerate}
+    \item 
+    \begin{align*}
+        A^2\int(3\psi_0(x)+4\psi_1(x))^2dx = 
+        A^2(9+16) = 1
+    \end{align*}
+    $A= \frac{1}{5}.$
+    \item 
+    $$
+    \Psi(x,t) = \frac{3}{5}\psi_0(x)e^{-i\omega t/2} + 
+    \frac{4}{5}\psi_1(x)e^{-i3\omega t/2}
+    $$
+
+    $$
+    |\Psi(x,t)|^2 = \frac{9}{25}\psi_0^2(x) + 
+    \frac{16}{25}\psi_1^2(x) + 
+    \frac{24}{25}\psi_0(x)\psi_1(x)\cos\omega t
+    $$
+
+    If specified in $\psi_2(x)$
+    $$
+    \Psi(x,t) = \frac{3}{5}\psi_0(x)e^{-i\omega t/2} + 
+    \frac{4}{5}\psi_2(x)e^{-i5\omega t/2}
+    $$
+
+    $$
+    |\Psi(x,t)|^2 = \frac{9}{25}\psi_0^2(x) + 
+    \frac{16}{25}\psi_2^2(x) + 
+    \frac{24}{25}\psi_0(x)\psi_1(x)\cos2\omega t
+    $$
+
+    \item 
+    \begin{align*}
+        \langle x\rangle
+        = & \sqrt{\frac{\hbar}{2m\omega}}\int
+        (\frac{3}{5}\psi_0(x)e^{i\omega t/2} + 
+    \frac{4}{5}\psi_1(x)e^{i3\omega t/2})
+    (\hat{a}_+ + \hat{a}_-)
+    (\frac{3}{5}\psi_0(x)e^{-i\omega t/2} + 
+    \frac{4}{5}\psi_1(x)e^{-i3\omega t/2})
+    dx\\
+    = & 
+    \sqrt{\frac{\hbar}{2m\omega}}\int
+        (\frac{3}{5}\psi_0(x)e^{i\omega t/2} + 
+    \frac{4}{5}\psi_1(x)e^{i3\omega t/2})
+    (\frac{3}{5}\psi_1(x)e^{-i\omega t/2} + 
+    \frac{4}{5}\psi_0(x)e^{-i3\omega t/2})
+    dx\\
+    =& \sqrt{\frac{\hbar}{2m\omega}}
+    (\frac{12}{25}e^{-i\omega t} + \frac{12}{25}e^{i\omega t})\\
+    = & \sqrt{\frac{\hbar}{2m\omega}}\frac{24}{25}\cos\omega t
+    \end{align*}
+
+    \begin{align*}
+        \langle p\rangle
+        = & i\sqrt{\frac{\hbar m\omega}{2}}
+        \int
+        (\frac{3}{5}\psi_0(x)e^{i\omega t/2} + 
+    \frac{4}{5}\psi_1(x)e^{i3\omega t/2})
+    (\hat{a}_+ - \hat{a}_-)
+    (\frac{3}{5}\psi_0(x)e^{-i\omega t/2} - 
+    \frac{4}{5}\psi_1(x)e^{-i3\omega t/2})
+    dx\\
+    = & 
+    i\sqrt{\frac{\hbar m\omega}{2}}
+    \int
+        (\frac{3}{5}\psi_0(x)e^{i\omega t/2} + 
+    \frac{4}{5}\psi_1(x)e^{i3\omega t/2})
+    (\frac{3}{5}\psi_1(x)e^{-i\omega t/2} -
+    \frac{4}{5}\psi_0(x)e^{-i3\omega t/2})
+    dx\\
+    =& i\sqrt{\frac{\hbar m\omega}{2}}
+    (-\frac{12}{25}e^{-i\omega t} + \frac{12}{25}e^{i\omega t})\\
+    = & -\sqrt{\frac{\hbar m\omega}{2}}
+    \frac{24}{25}\sin\omega t
+    \end{align*}
+
+    $$
+    \frac{d\langle p\rangle}{dt} = -\sqrt{\frac{\hbar m\omega}{2}}
+    \frac{24}{25}\omega\cos\omega t
+    $$
+    $$
+    \langle - \frac{\partial V}{\partial x}\rangle = 
+    -m\omega^2\langle x\rangle = 
+     -\sqrt{\frac{\hbar m\omega}{2}}
+    \frac{24}{25}\omega\cos\omega t
+    $$
+\item 
+    $\hbar\omega\frac{1}{2}:$ prob $\frac{9}{25},$ $\hbar\omega\frac{3}{2}:$ prob $\frac{16}{25}$
+    
+\end{enumerate}
+
+\subsection*{Sol. 14}
+\begin{align*}
+    1-2(\frac{m\omega}{\pi\hbar})^{1/2}\int_0^{\sqrt{\frac{2\hbar}{m\omega}}}
+    e^{-\frac{m\omega}{\hbar}x^2}dx
+    =1-erf(\sqrt{2})=0.0455
+\end{align*}
+
+\subsection*{Sol. 15}
+$a_5=32,$ $
+a_5=\frac{-2(5-3)}{(3+1)(3+2)}a_3\Rightarrow a_3 = -160,
+$
+$
+a_3=\frac{-2(5-1)}{(1+1)(1+2)}a_1\Rightarrow a_1=120
+$
+
+$$H_5(\xi) = 32\xi^5-160\xi^3+120\xi.$$
+
+
+$a_6=64,$ $
+a_6=\frac{-2(6-4)}{(4+1)(4+2)}a_4\Rightarrow a_4 = -480,
+$
+$
+a_4=\frac{-2(6-2)}{(2+1)(2+2)}a_2\Rightarrow a_2=720,
+$
+$
+a_2=\frac{-2(6-0)}{(0+1)(0+2)}a_0\Rightarrow a_0=-120
+$
+
+$$H_6(\xi) = 64\xi^6-480\xi^4+720\xi^2-120.$$
+
+\subsection*{Sol. 16}
+\begin{enumerate}
+    \item 
+    $$
+    H_3(\xi) = (-1)^3e^{\xi^2}\frac{d^3}{d\xi^3}e^{-\xi^2} = 
+    -e^{\xi^2}(-\left(8{\xi}^{3} - 12{\xi}\right) \mathrm{e}^{-{\xi}^{2}}) = 
+    8{\xi}^{3} - 12{\xi}
+    $$
+    $$
+    H_4(\xi) = (-1)^4e^{\xi^2}\frac{d^4}{d\xi^4}e^{-\xi^2} = 
+    e^{\xi^2}\left(16{\xi}^{4} - 48{\xi}^{2} + 12\right) \mathrm{e}^{-{\xi}^{2}}
+    =16{\xi}^{4} - 48{\xi}^{2} + 12
+    $$
+    \item 
+    \begin{align*}
+        H_5(\xi) =& 2\xi H_4(\xi) - 2\cdot4 H_3(\xi) \\
+        = & 
+    2\xi(16{\xi}^{4} - 48{\xi}^{2} + 12)-8(8{\xi}^{3} - 12{\xi}) \\
+    = & 32\xi^5-160\xi^3 + 120\xi
+    \end{align*}
+
+    \begin{align*}
+        H_6(\xi) =& 2\xi H_5(\xi) - 2\cdot5 H_4(\xi) \\
+        = & 
+    2\xi(32\xi^5-160\xi^3 + 120\xi)-10(16{\xi}^{4} - 48{\xi}^{2} + 12) \\
+    = & 64\xi^6-480\xi^4 + 720\xi^2 - 120 
+    \end{align*}
+
+    \item 
+    $$
+    \frac{d H_6}{d\xi} =
+    384{\xi}^{5} - 1920{\xi}^{3} + 1440{\xi} = 
+    12(32\xi^5-160\xi^3 + 120\xi)
+    $$
+
+    $$
+    \frac{d H_5}{d\xi} =
+    160{\xi}^{4} - 480{\xi}^{2} + 120 = 
+    10(16\xi^4-48\xi^2 + 12)
+    $$
+
+    \item 
+    $$
+    \frac{d}{dz}e^{-z^2+2z\xi}\bigg|_{z=0}
+    =-2\left(z - {\xi}\right) \mathrm{e}^{2{\xi}z - z^{2}}\bigg|_{z=0}
+    =2\xi
+    $$
+
+    $$
+    \frac{d^2}{dz^2}e^{-z^2+2z\xi}\bigg|_{z=0}
+    =\left(4z^{2} - 8{\xi}z + 4{\xi}^{2} - 2\right) \mathrm{e}^{2{\xi}z - z^{2}}\bigg|_{z=0}
+    =4{\xi}^{2} - 2
+    $$
+
+    $$
+    \frac{d^3}{dz^3}e^{-z^2+2z\xi}\bigg|_{z=0}
+    =-4 \left(z - {\xi}\right) \left(2z^{2} - 4{\xi}z + 2{\xi}^{2} - 3\right) \mathrm{e}^{2{\xi}z - z^{2}}\bigg|_{z=0}
+    =8\xi^3-12\xi
+    $$
+
+    
+\end{enumerate}
+
+\subsection*{Sol. 17}
+\begin{align*}
+    Ae^{ikx}+Be^{-ikx} =& 
+A(\cos kx+i\sin kx) + B(\cos kx-i\sin kx)\\
+=&(A+B)\cos kx + i(A-B)\sin kx
+\end{align*}
+$C=A+B,$ $D=i(A-B)$
+
+\subsection*{Sol. 18}
+
+$$
+\Psi_k(x,t)=Ae^{i(kx-\frac{\hbar k^2}{2m}t)}
+$$
+
+\begin{align*}
+    J(x,t)= & \frac{i\hbar}{2m}(\Psi\frac{\partial\Psi^*}{\partial x} 
+    - \Psi^*\frac{\partial\Psi}{\partial x})\\
+    = & \frac{i\hbar}{2m}(
+    -Ae^{i(kx-\frac{\hbar k^2}{2m}t)}
+    iAke^{-i(kx-\frac{\hbar k^2}{2m}t)}
+    -Ae^{-i(kx-\frac{\hbar k^2}{2m}t)}
+    iAke^{i(kx-\frac{\hbar k^2}{2m}t)}
+    )\\
+    =&\frac{\hbar}{m}A^2k
+\end{align*}
+
+$k>0,$ traveling to the right, $k<0,$ traveling to the left.
+
+\subsection*{Sol. 19}
+\begin{enumerate}
+    \item 
+    \begin{align*}
+    f(x) =& \sum_{n=-\infty}^{\infty}c_ne^{in\pi x/a}\\
+    =&\sum_{n=0}^{\infty}c_ne^{in\pi x/a} + c_{-n}e^{-in\pi x/a}\\
+    =&\sum_{n=0}^{\infty}(c_n+c_{-n})\cos\frac{n\pi x}{a} + i(c_n-c_{-n})\sin\frac{n\pi x}{a}
+    \end{align*}
+
+$b_n=c_n+c_{-n},$ $a_n=i(c_n-c_{-n})\Rightarrow c_n= -sgn(n)\frac{ i}{2} a_{|n|}+ \frac{1}{2}b_{|n|},$ 
+
+\item 
+\begin{align*}
+    \int_{-a}^af(x)e^{-in\pi x/a}dx = & 
+    \int_{-a}^a\sum_{m=-\infty}^{\infty}c_me^{im\pi x/a}
+    e^{-in\pi x/a}dx\\=&
+    \sum_{m=-\infty}^{\infty}
+    \int_{-a}^ac_me^{im\pi x/a}
+    e^{-in\pi x/a}dx\\
+    =&\sum_{m=-\infty}^{\infty}
+    c_m\frac{2a \sin\left(\pi n - \pi m\right)}{\pi \left(n - m\right)}
+    = 2ac_n
+\end{align*}
+\item 
+\begin{align*}
+f(x)= & \sum_{n=-\infty}^{\infty}c_ne^{in\pi x/a}\\
+= & \sum_{n=-\infty}^{\infty}\frac{F(k)}{\sqrt{2/\pi}a}
+e^{ikx}\\
+=& \frac{1}{\sqrt{2\pi}}\sum_{n=-\infty}^{\infty}
+F(k)
+e^{ikx}\Delta k
+\end{align*}
+\begin{align*}
+    F(k) = & \sqrt{\frac{2}{\pi}}ac_n\\
+    = & \sqrt{\frac{2}{\pi}}\frac{1}{2}\int_{-a}^a f(x)e^{-in\pi x/a}dx\\
+    =& \frac{1}{\sqrt{2\pi}}\int_{-a}^af(x)e^{-ikx}dx
+\end{align*}
+\item 
+$$
+\lim_{a\to_\infty}
+f(x)=  \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}
+F(k)
+e^{ikx}dk
+$$
+
+
+$$
+\lim_{a\to_\infty} F(k) = 
+\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}f(x)e^{-ikx}dx
+$$
+\end{enumerate}
+
+
+\subsection*{Sol. 20}
+\begin{enumerate}
+    \item $$
+    \int A^2e^{-2a|x|}dx = \frac{1}{a}A^2.
+    $$
+    $A=\sqrt{a}.$
+    \item 
+    \begin{align*}
+        \phi(k)=&\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}\sqrt{a}e^{-a|x|}e^{-ikx}dx\\
+        =& \frac{\sqrt{2} \, a^{\frac{3}{2}}}{\sqrt{\pi} \left(k^{2} + a^{2}\right)}
+        \end{align*}
+        \item 
+    $$
+    \Psi(x,t) = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}
+    \frac{\sqrt{2} \, a^{\frac{3}{2}}}{\sqrt{\pi} \left(k^{2} + a^{2}\right)}e^{i(kx-\frac{\hbar k^2}{2m}t)}dk
+    $$
+    \item 
+    If $a$ very large, $\Psi(x,0)$ concentrates at the origin, whereas $\phi(k)$ is almost flat.
+
+    If $a$ very small, $\Psi(x,0)$ is almost flat, whereas $\phi(k)$ peaks at the origin.
+    
+    
+\end{enumerate}
+
+\subsection*{Sol. 21}
+
+\begin{enumerate}
+    \item 
+    $$
+    \int A^2e^{-2ax^2}dx = \sqrt{\frac{\pi}{2a}}A^2
+    $$
+    $A = (\frac{2a}{\pi})^{1/4}$
+
+    \item 
+    \begin{align*}
+        \phi(k) = \frac{1}{\sqrt{2\pi}}\int 
+        (\frac{2a}{\pi})^{1/4}e^{-ax^2}e^{-ikx}dx
+        = \frac{1}{\sqrt[4]{2\pi a}}e^{-\frac{k^2}{4a}}
+    \end{align*}
+    \begin{align*}
+        \Psi(x,t) =& \frac{1}{\sqrt{2\pi}}
+        \int \frac{1}{\sqrt[4]{2\pi a}}e^{-\frac{k^2}{4a}}
+        e^{i(kx-\frac{\hbar k^2}{2m}t)}dk\\
+        = & 
+        \frac{1}{\sqrt{2\pi}}
+        \frac{1}{\sqrt[4]{2\pi a}}\
+        \sqrt{\frac{\pi}{\frac{1}{4a+\frac{i\hbar t}{2m}}}}
+        e^{\frac{-x^2}{4(\frac{1}{4a+\frac{i\hbar t}{2m}})}}
+        \\
+        =& (\frac{2a}{\pi})^{1/4}\frac{1}{\gamma}e^{-\frac{ax^2}{\gamma^2}},
+    \end{align*}
+    where $\gamma = \sqrt{1+2i\hbar at/m}.$ 
+    \item 
+    \begin{align*}
+        |\Psi(x,t)|^2 = &
+        (\frac{2a}{\pi})^{1/2}\frac{1}{|\gamma|^2}
+        e^{-ax^2(\frac{1}{\gamma^2}+\frac{1}{\bar{\gamma}^2})}\\
+        = & (\frac{2a}{\pi})^{1/2}
+        \frac{1}{\sqrt{1+(2\hbar at/m)^2}}e^{-ax^2\frac{\bar{\gamma}^2 + \gamma^2}
+        {\gamma^2\bar{\gamma}^2}}\\
+        = & 
+        (\frac{2a}{\pi})^{1/2}
+        \frac{1}{\sqrt{1+(2\hbar at/m)^2}}
+        e^{-ax^2\frac{2}
+        {1+(2\hbar at/m)^2}}\\
+        =& \sqrt{\frac{2}{\pi}}we^{-2x^2w^2},
+    \end{align*}
+    where $w=\sqrt{\frac{a}{1+(2\hbar a t /m)^2}}.$
+    Originally the free particle is concentrated at the origin. As time goes by, the probability of finding the particle spreads.
+
+    \item 
+
+    \begin{align*}
+        \langle x\rangle
+        =\int 
+        (\frac{2a}{\pi})^{1/4}\frac{1}{\bar{\gamma}}e^{-\frac{ax^2}{\bar{\gamma}^2}}
+        x 
+        (\frac{2a}{\pi})^{1/4}\frac{1}{\gamma}e^{-\frac{ax^2}{\gamma^2}}
+        dx = 0
+    \end{align*}
+    \begin{align*}
+        \langle p\rangle
+        =-i\hbar\int 
+        (\frac{2a}{\pi})^{1/4}\frac{1}{\bar{\gamma}}e^{-\frac{ax^2}{\bar{\gamma}^2}}
+        \frac{\partial}{\partial x} 
+        (\frac{2a}{\pi})^{1/4}\frac{1}{\gamma}e^{-\frac{ax^2}{\gamma^2}}dx = 0
+    \end{align*}
+    \begin{align*}
+        \langle x^2\rangle
+        =& \int 
+        (\frac{2a}{\pi})^{1/4}\frac{1}{\bar{\gamma}}e^{-\frac{ax^2}{\bar{\gamma}^2}}
+        x^2 
+        (\frac{2a}{\pi})^{1/4}\frac{1}{\gamma}e^{-\frac{ax^2}{\gamma^2}}
+        dx \\
+        =& 
+        (\frac{2a}{\pi})^{1/2}
+        \frac{1}{|\gamma|^2}
+        \int 
+        x^2 
+        e^{-a(1/\gamma^2+1/\bar{\gamma}^2)x^2}
+        dx 
+        \\
+        =& (\frac{2a}{\pi})^{1/2}
+        \frac{1}{|\gamma|^2}
+        \frac{1}{2}
+        \sqrt{\frac{\pi}{(2a/|\gamma|^4)^3}}\\
+        =& 
+        \frac{1}{4a}|\gamma|^4\\
+    =& \frac{1}{4a}(1+(2\hbar at/m)^2)
+    \end{align*}
+    \begin{align*}
+        \langle p^2\rangle
+        =&-\hbar^2\int 
+        (\frac{2a}{\pi})^{1/4}\frac{1}{\bar{\gamma}}e^{-\frac{ax^2}{\bar{\gamma}^2}}
+        \frac{\partial^2}{\partial x^2} 
+        (\frac{2a}{\pi})^{1/4}\frac{1}{\gamma}e^{-\frac{ax^2}{\gamma^2}}dx \\
+        =& -\hbar^2
+        (\frac{2a}{\pi})^{1/2}\frac{1}{|\gamma|^2}
+        \frac{-2a}{\gamma^2}
+        \int 
+        (1-2a/\gamma^2x^2)e^{-\frac{2ax^2}{|\gamma|^4}}dx\\
+        =& 
+        \hbar^2
+        (\frac{2a}{\pi})^{1/2}\frac{1}{|\gamma|^2}
+        \frac{2a}{\gamma^2}
+        (\sqrt{\frac{\pi}{2a/|\gamma|^4}}
+        -\frac{a}{\gamma^2}
+        \sqrt{\frac{\pi}{(2a/|\gamma|^4)^3}}
+        )\\
+        =& \hbar^2
+        \frac{2a}{\gamma^2}
+        (1-\frac{|\gamma|^4}{2\gamma^2})\\
+        =&a\hbar^2
+    \end{align*}
+    \item 
+    $\sigma_x\sigma_p 
+    =\frac{\hbar}{2}\sqrt{1+(2\hbar at/m)^2},
+    $
+    the system comes closest to the uncertainty limit at time $t=0.$
+    
+\end{enumerate}
+
+
+
+\subsection*{Sol. 22}
+\begin{enumerate}
+    \item $$(-2)^3 - 3(-2)^2 + 2(-2) - 1=-25$$
+    \item $$
+    \cos(3\pi)+2 = 1
+    $$
+    \item $$0$$
+\end{enumerate}
+
+\subsection*{Sol. 23}
+
+\begin{enumerate}
+    \item If $c>0,$ then
+    $$
+    \int_{-\infty}^{\infty} f(x)\delta(cx)dx
+    =\int_{-\infty}^{\infty} f(\frac{y}{c})\delta(y)\frac{1}{c}dy
+    =\frac{1}{c}f(0)
+    $$
+    If $c<0,$ then
+    $$
+    \int_{-\infty}^{\infty} f(x)\delta(cx)dx
+    =\int_{-\infty}^{\infty} f(\frac{y}{c})\delta(y)\frac{-1}{c}dy
+    =\frac{-1}{c}f(0).
+    $$
+    Thus, $$\delta(cx)=\frac{1}{|c|}\delta(x).$$
+    \item
+    $$
+    \int_{-\infty}^{\infty}f(x)\frac{d\theta}{dx}dx
+    = f(0)\theta(x)\bigg|^\infty_\infty = f(0),
+    $$
+    thus, $\frac{d\theta}{dx} =\delta(x).$
+\end{enumerate}
+
+
+\subsection*{Sol. 24}
+\begin{align*}
+    \langle x\rangle
+    = \int_{-\infty}^{\infty}
+    \frac{\sqrt{m\alpha}}{\hbar}
+    e^{-m\alpha|x|/\hbar^2} x
+    \frac{\sqrt{m\alpha}}{\hbar}
+    e^{-m\alpha|x|/\hbar^2}
+    dx = 0
+\end{align*}
+\begin{align*}
+    \langle x^2\rangle
+    = \int_{-\infty}^{\infty}
+    \frac{\sqrt{m\alpha}}{\hbar}
+    e^{-m\alpha|x|/\hbar^2} x^2
+    \frac{\sqrt{m\alpha}}{\hbar}
+    e^{-m\alpha|x|/\hbar^2}
+    dx = \frac{\hbar^4}{2m^2\alpha^2}
+\end{align*}
+
+\begin{align*}
+    \langle p\rangle
+    = -i\hbar\int_{-\infty}^{\infty}
+    \frac{\sqrt{m\alpha}}{\hbar}
+    e^{-m\alpha|x|/\hbar^2} \frac{\partial}{\partial x}
+    \frac{\sqrt{m\alpha}}{\hbar}
+    e^{-m\alpha|x|/\hbar^2}
+    dx = 0
+\end{align*}
+\begin{align*}
+    \langle p^2\rangle
+    =& -\hbar^2\int_{-\infty}^{\infty}
+    \frac{\sqrt{m\alpha}}{\hbar}
+    e^{-m\alpha|x|/\hbar^2} \frac{\partial^2}{\partial x^2}
+    \frac{\sqrt{m\alpha}}{\hbar}
+    e^{-m\alpha|x|/\hbar^2}
+    dx \\
+    =& -m\alpha
+    \int_{-\infty}^{\infty}
+     e^{-m\alpha|x|/\hbar^2}
+     \frac{m\alpha}{\hbar^2}
+     \frac{d}{dx}[e^{-m\alpha|x|/\hbar^2}(\theta(-x)-\theta(x))]dx\\
+     =&-m\alpha\int_{-\infty}^{\infty}
+     e^{-m\alpha|x|/\hbar^2}
+     \frac{m\alpha}{\hbar^2}
+     (\frac{m\alpha}{\hbar^2}
+     e^{-m\alpha|x|/\hbar^2}(\theta(-x)-\theta(x))^2
+     +e^{-m\alpha|x|/\hbar^2}\frac{d}{dx}
+     (\theta(-x)-\theta(x))
+     )dx\\
+     =&-\frac{m^2\alpha^2}{\hbar^2}
+     \int_{-\infty}^{\infty}
+     e^{-2m\alpha|x|/\hbar^2}
+     (\frac{m\alpha}{\hbar^2}-2\delta(x))dx\\
+     =&-\frac{m^2\alpha^2}{\hbar^2}
+     (1-2)=\frac{m^2\alpha^2}{\hbar^2}
+\end{align*}
+$$
+\sigma_x\sigma_p
+=\frac{\hbar}{\sqrt{2}}
+$$
+
+\subsection*{Sol. 25}
+\begin{align*}
+    & \int_{-\infty}^{0}
+    e^{m\alpha x/\hbar^2}
+    (Ae^{ikx} + Be^{-ikx})dx
+    +
+    \int_{0}^{\infty}
+    e^{-m\alpha x/\hbar^2}
+    (Fe^{ikx} + Ge^{-ikx})dx
+    \\= & 
+    \frac{\left(B + A\right) h^{2} m{\alpha} + \left(\mathrm{i}B - \mathrm{i}A\right) h^{4} k}{m^{2} {\alpha}^{2} + h^{4} k^{2}} + 
+    \frac{\left(G + F\right) h^{2} m{\alpha} + \left(\mathrm{i}F - \mathrm{i}G\right) h^{4} k}{m^{2} {\alpha}^{2} + h^{4} k^{2}}
+\end{align*}
+\begin{align*}
+     & \left(B + A\right) h^{2} m{\alpha} 
+     + \left(\mathrm{i}B - \mathrm{i}A\right) h^{4} k + 
+    \left(G + F\right) h^{2} m{\alpha} + \left(\mathrm{i}F - \mathrm{i}G\right) h^{4} k\\
+    = & 
+    \left(B + A\right) h^{2} m{\alpha} +
+    \left(G + F\right) h^{2} m{\alpha}
+    -2m\alpha\hbar^2(A+B)\\
+    = & 0
+\end{align*}
+
+\subsection*{Sol. 26}
+
+Since 
+$$
+\frac{1}{\sqrt{2\pi}} = \frac{1}{\sqrt{2\pi}}
+\int_{-\infty}^{\infty}
+\delta(x)e^{-ikx}dx,
+$$
+by Plancherel's theorem,
+$$
+\delta(x) = \frac{1}{\sqrt{2\pi}}
+\int_{-\infty}^{\infty}
+\frac{1}{\sqrt{2\pi}}e^{ikx}dx
+=\frac{1}{2\pi}\int_{-\infty}^{\infty}
+e^{ikx}dx.
+$$
+
+\subsection*{Sol. 27}
+\begin{enumerate}
+    \item skip
+    \item 
+    Suppose that for $x<-a,$ $\psi(x)=Ae^{\kappa x},$
+    for $x>a,$ $\psi(x)=Be^{-\kappa x},$
+    and for $-a<x<a,$ $\psi(x)=Ge^{-\kappa x} + Fe^{\kappa x}.$
+
+    To meet the continuity condition, 
+    $$
+    Ae^{-a\kappa} = Ge^{a\kappa } + Fe^{-a\kappa}
+    $$
+    $$
+    Be^{-a\kappa} = Ge^{-a\kappa } + Fe^{a\kappa}.
+    $$
+
+    Also,
+    $$
+    \frac{d\psi}{dx}\bigg|_{-a^+}=-\kappa G 
+    e^{a\kappa}+
+    \kappa Fe^{-a\kappa }
+    $$
+    $$
+    \frac{d\psi}{dx}\bigg|_{-a^-}=\kappa Ae^{-a\kappa}=
+    \kappa (Ge^{a\kappa } + Fe^{-a\kappa}),
+    $$
+    we have
+    $$
+    -\kappa G e^{a\kappa}+\kappa Fe^{-a\kappa }
+    -
+    \kappa (Ge^{a\kappa } + Fe^{-a\kappa})
+    =-\frac{2m\alpha}{\hbar^2}
+    (Ge^{a\kappa } + Fe^{-a\kappa}),
+    $$
+    or 
+     $$
+    (\frac{2m\alpha}{\hbar^2}-2\kappa)G e^{a\kappa}
+    +
+    (\frac{2m\alpha}{\hbar^2})Fe^{-a\kappa }=0.
+    $$
+    Similarly,
+     $$
+    \frac{d\psi}{dx}\bigg|_{a^+}=-\kappa Be^{-a\kappa}
+    =-\kappa (Ge^{-a\kappa } + Fe^{a\kappa}),
+    $$
+    $$
+    \frac{d\psi}{dx}\bigg|_{a^-}=-\kappa G e^{-a\kappa}+\kappa Fe^{a\kappa }
+    $$
+    we have
+    $$
+    -\kappa (Ge^{-a\kappa } + Fe^{a\kappa})+\kappa G e^{-a\kappa}-\kappa Fe^{a\kappa }
+    =-\frac{2m\alpha}{\hbar^2}(Ge^{-a\kappa } + Fe^{a\kappa}),
+    $$
+    or 
+    $$
+    (\frac{2m\alpha}{\hbar^2})Ge^{-a\kappa} +
+    (\frac{2m\alpha}{\hbar^2}-2\kappa)F e^{a\kappa} = 0.
+    $$
+    To let $G$ and $F$ having non-zero solutions,
+    $$
+    \begin{vmatrix}
+    (\frac{2m\alpha}{\hbar^2}-2\kappa)e^{a\kappa}
+     & \frac{2m\alpha}{\hbar^2}e^{-a\kappa}\\
+     \frac{2m\alpha}{\hbar^2}e^{-a\kappa} & 
+     (\frac{2m\alpha}{\hbar^2}-2\kappa)e^{a\kappa}
+    \end{vmatrix} = 0.
+    $$
+    
+    $$
+    1-\frac{\hbar^2\kappa}{m\alpha} = \pm e^{-2a\kappa}.
+    $$
+
+
+    The 'minus' equation always yields a positive solution. In contrast, the 'plus' equation—aside from the zero solution—yields either a positive or negative solution depending on the values of $\alpha$ and $a$.
+
+    
+
+    If $\alpha = \frac{\hbar^2}{ma},$ $a\kappa_1\approx 0.8,$ 
+    $E_1\approx -\frac{0.64\hbar^2}{2ma^2},$
+
+    \includegraphics[width=0.8\textwidth]{fig/prob2.27e1.png}
+
+
+
+    
+    $a\kappa_2\approx 1.1,$ 
+    $E_2\approx -\frac{1.21\hbar^2}{2ma^2}$
+    
+    \includegraphics[width=0.8\textwidth]{fig/prob2.27e2.png}
+    
+
+
+    If $\alpha = \frac{\hbar^2}{4ma},$ $a\kappa_1\approx -0.63,$ 
+    $E_1$ not allowed,
+    and 
+    $a\kappa_2\approx 0.37,$ 
+    $E_2\approx -\frac{0.14\hbar^2}{2ma^2}$
+    
+    \includegraphics[width=0.8\textwidth]{fig/prob2.27e3.png}
+    
+    
+    \item 
+    \begin{enumerate}
+        \item If $a\to0,$ the 'plus' equation has no positive solution. The 'negative' equation has solution tends to 
+        $\kappa=\frac{2m\alpha}{\hbar^2},$
+        $E=-\frac{2m\alpha^2}{\hbar^2},$
+        consistent with the result of single delta function, where the strength of the delta function is doubled.
+        \item  If $a\to\infty,$ the plus and minus equations have positive solutions both converge to 
+        $\kappa=\frac{m\alpha}{\hbar^2},$ 
+        $E=-\frac{m\alpha^2}{2\hbar^2}.$ 
+        The allowed energy reduces to the single delta potential case. This can be explained by translating the origin to $x = -a$, where it appears that only a single delta potential is in effect.
+    \end{enumerate}
+    
+\end{enumerate}
+
+\subsection*{Sol. 28}
+For $x<-a,$ $\psi(x)=Ae^{ikx}+Be^{-ikx},$ for $x>a,$ $\psi(x)=De^{ikx},$ and for $-a<x<a,$ 
+$\psi(x)=Fe^{ikx}+Ge^{-ikx}.$
+
+  To meet the continuity condition, 
+    $$
+    Ae^{-ika}+Be^{ika} = Fe^{-ika}+Ge^{ika}
+    $$
+    $$
+    De^{ika} = Fe^{ika}+Ge^{-ika}
+    $$
+
+    Also,
+    $$
+    \frac{d\psi}{dx}\bigg|_{-a^+}=
+    ikFe^{-ika} - ikGe^{ika}
+    $$
+    $$
+    \frac{d\psi}{dx}\bigg|_{-a^-}=
+    ikAe^{-ika}-ikBe^{ika}
+    $$
+    we have
+    $$
+    (ikFe^{-ika} - ikGe^{ika}) -
+    (ikAe^{-ika}-ikBe^{ika})
+    =-\frac{2m\alpha}{\hbar^2}
+    (Fe^{-ika}+Ge^{ika}).
+    $$
+    
+    Similarly,
+     $$
+    \frac{d\psi}{dx}\bigg|_{a^+}=ik De^{ika},
+    $$
+    $$
+    \frac{d\psi}{dx}\bigg|_{a^-}=ikFe^{ika}-ikGe^{-ika}
+    $$
+    we have
+    $$
+    ik De^{ika} - (ikFe^{ika}-ikGe^{-ika})
+    =-\frac{2m\alpha}{\hbar^2}(Fe^{ika}+Ge^{-ika}).  
+    $$
+    Solving the linear system, we have
+
+    
+    $$
+    G = i\beta e^{2ika} D,
+    $$
+    
+    $$
+    F = (1-i\beta) D,
+    $$
+    
+    $$
+    B = [(\beta^2+i\beta)e^{-2ika}-(\beta^2-i\beta)e^{2ika}] D,
+    $$
+
+    
+    $$
+    A = (1-\beta^2-2i\beta+\beta^2e^{4ika}) D,
+    $$
+    where $\beta = \frac{m\alpha}{\hbar^2k}.$
+
+    Hence, the transmission coefficient is 
+    $$
+    T = \frac{|D|^2}{|A|^2} 
+    =
+    \frac{1}{(1-\beta^2+\beta^2\cos(4ka))^2 + (-2\beta+\beta^2\sin(4ka))^2}.
+    $$
+
+    \subsection*{Sol. 29}
+    $\psi(x) = Fe^{-\kappa x}$ for $x>a,$ $\psi(x)=C\sin(lx),$ for $0<x<a,$ and $\psi(x)=-\psi(-x)$ for $x<0.$
+
+    The continuity at $x=a$ says $Fe^{-\kappa a}=C\sin(la),$ and the continuity of the derivative gives 
+    $-\kappa Fe^{-\kappa a}=lC\cos(la).$
+
+    Dividing both equations, we find that $-\kappa = l\cot(la),$ which is $\cot z = -\sqrt{(z_0/z)^2-1}.$
+
+    
+    \includegraphics[width=0.8\textwidth]{fig/prob2.29e1.png}
+
+    If $z_0$ is very large, the intersections occur  just slightly below $z_n=n\pi/2,$ with $n$ even.
+
+    
+    \includegraphics[width=0.8\textwidth]{fig/prob2.29e2.png}
+
+    If $z_0$ is very small, there are fewer and fewer bound states, and for $z_0<\pi/2,$ there might be no odd bound states at all.
+
+    \subsection*{Sol. 30}
+    \begin{align*}
+         \int_{-\infty}^{\infty}\psi^2(x)dx 
+         = &  
+        2\int_{0}^{a}D^2\cos^2(lx)dx + 
+        2\int_{a}^{\infty}F^2e^{-2\kappa x}dx\\
+        =& \frac{D^2}{2l}(\sin(2al) + 2al) + 
+        \frac{F^2}{\kappa}e^{-2a\kappa}
+    \end{align*}
+    Since $Fe^{-\kappa a}=D\cos(la),$ and $\kappa = l\tan(la)$ this becomes
+    \begin{align*}
+        \frac{D^2}{2l}\sin(2al) + D^2a + 
+        \frac{F^2}{\kappa}e^{-2a\kappa}
+        =& \frac{D^2}{2l}\sin(2al) + D^2a + 
+        \frac{D^2}{\kappa}\cos^2(al)\\
+        =& 
+        \frac{D^2}{l}\sin(al)\cos(al) + D^2a + 
+        \frac{D^2}{l}\cos^2(al)\cot(al)\\
+        =& D^2\frac{1}{l}(la + \sin(al)\cos(al)+\cos^2(al)\cot(al))
+    \end{align*}
+
+    $$
+    D^2 = \frac{l}{la + \sin(al)\cos(al)+\cos^2(al)\cot(al)}
+    $$
+    $$
+    F^2 = \frac{l\cos(la)e^{\kappa a}}{la + \sin(al)\cos(al)+\cos^2(al)\cot(al)}
+    $$
+
+    \subsection*{Sol. 31}
+    As $a\to0,$ $V_0\to\infty,$ and $2aV_0\to\alpha,$
+    the finite square well collapses to the delta function well with strength $\alpha$.
+
+    By equation 2.157, 
+    \begin{align*}
+        \frac{\sqrt{-2mE}}{\hbar} = 
+        \frac{\sqrt{2m(E+V_0)}}{\hbar}
+        \tan(\frac{\sqrt{2m(E+V_0)}}{\hbar}a)
+        \approx 
+        \frac{2m(E+V_0)}{\hbar^2}a
+        \approx\frac{m\alpha}{\hbar^2},
+    \end{align*}
+    so the limit energy is $E=-\frac{m\alpha^2}{2\hbar^2},$ consistent with the equation 2.132.
+
+    For the limiting case of equation 1.72,
+    \begin{align*}
+        T^{-1}=&
+        1+\frac{V_0^2}{4E(E+V_0)}\sin^2(\frac{2a}{\hbar}\sqrt{2m(E+V_0)})\\
+        \approx&1+\frac{V_0}{4E}
+        \frac{4a^2}{\hbar^2}2mV_0\\
+        \approx &
+        1+\frac{\alpha^2m}{2E\hbar^2},
+    \end{align*}
+    consistent with equation 2.144.
+
+    \subsection*{Sol. 32}
+    Using Cramer's rule 
+    \begin{align*}
+        C = \frac{
+        \begin{vmatrix}
+        Fe^{ika} & \cos la\\
+        ikFe^{ika} & -l\sin la
+        \end{vmatrix}
+        }{\begin{vmatrix}
+        \sin la & \cos la\\
+        l\cos la & -l\sin la
+        \end{vmatrix}}
+        =
+        \frac{(-l\sin la-ik\cos la)Fe^{ika}}
+        {-l\sin^2la-l\cos^2la}
+        =(\sin la+\frac{ik}{l}\cos la)Fe^{ika}
+    \end{align*}
+    \begin{align*}
+        D = \frac{
+        \begin{vmatrix}
+        \sin la & Fe^{ika} \\
+        l\cos la & ikFe^{ika} 
+        \end{vmatrix}
+        }{\begin{vmatrix}
+        \sin la & \cos la\\
+        l\cos la & -l\sin la
+        \end{vmatrix}}
+        =
+        \frac{(ik\sin la-l\cos la)Fe^{ika}}
+        {-l\sin^2la-l\cos^2la}
+        =(\cos la-\frac{ik}{l}\sin la)Fe^{ika}
+    \end{align*}
+    Equation 2.166 becomes,
+    \begin{align*}
+        Ae^{-ika} + Be^{ika} 
+        = &  -C\sin la + D\cos la\\
+         = & -(\sin la+\frac{ik}{l}\cos la)Fe^{ika}\sin la + 
+         (\cos la-\frac{ik}{l}\sin la)Fe^{ika}\cos la\\
+         = & (-\sin^2la+\cos^2la-2\frac{ik}{l}\sin la\cos la)Fe^{ika}\\
+         = & (\cos 2la -\frac{ik}{l}\sin 2la)Fe^{ika},
+    \end{align*}
+    and 
+    equation 2.167 becomes
+    \begin{align*}
+        ik(Ae^{-ika} - Be^{ika} )
+        = &  l(C\cos la + D\sin la)\\
+         = & l((\sin la+\frac{ik}{l}\cos la)Fe^{ika}\cos la + 
+         (\cos la-\frac{ik}{l}\sin la)Fe^{ika}
+         \sin la)\\
+         = & (2l\sin la\cos la + ik\cos^2la -ik \sin^2la)Fe^{ika} \\
+         =& (l\sin 2la +ik\cos2la)Fe^{ika}
+    \end{align*}
+    Using Cramer's rule,
+    \begin{align*}
+        B = &
+        \frac{
+        \begin{vmatrix}
+        e^{-ika} & (\cos 2la -\frac{ik}{l}\sin 2la)Fe^{ika} \\
+        ike^{-ika} & (l\sin 2la +ik\cos2la)Fe^{ika} 
+        \end{vmatrix}
+        }{\begin{vmatrix}
+        e^{-ika} & e^{ika}\\
+        ike^{-ika} & -ike^{ika}
+        \end{vmatrix}}\\
+        = & 
+        \frac{(l\sin 2la +ik\cos2la-ik(\cos2la - \frac{ik}{l}\sin2la)) F}{-ik-ik}\\
+        =& 
+        i\frac{l-k^2/l}{2k}\sin(2la) F\\
+        =& i\frac{\sin(2la)}{2kl}(l^2-k^2)F
+    \end{align*}
+
+    
+    \begin{align*}
+        A = &
+        \frac{
+        \begin{vmatrix}
+        (\cos 2la -\frac{ik}{l}\sin 2la)Fe^{ika} & e^{ika}\\
+        (l\sin 2la +ik\cos2la)Fe^{ika} & -ike^{ika}
+        \end{vmatrix}
+        }{\begin{vmatrix}
+        e^{-ika} & e^{ika}\\
+        ike^{-ika} & -ike^{ika}
+        \end{vmatrix}}\\
+        = & 
+        \frac{(-ik\cos 2la -\frac{k^2}{l}\sin 2la-(l\sin 2la +ik\cos2la)) Fe^{2ika}}{-ik-ik}\\
+        =& 
+        \frac{-2ik\cos2la -(k^2/l+l)\sin2la}
+        {-2ik}
+        Fe^{2ika},
+    \end{align*}
+    so 
+    \begin{align*}
+        F =&  \frac{-2ikA}{-2ik\cos2la -(k^2/l+l)\sin2la}e^{-2ika}\\
+        = & \frac{Ae^{-2ika}}{\cos2la-i\frac{k^2+l^2}{2kl}\sin2la}.
+    \end{align*}
+
+    \begin{align*}
+        T^{-1}
+        = & 
+        \cos^22la + \frac{(k^2+l^2)^2}{4k^2l^2}\sin^22la\\
+        = & 
+        1-\sin^22la + 
+        \frac{(k^2+l^2)^2}{4k^2l^2}\sin^22la\\
+        = & 
+        1 + \left(\frac{(\frac{2mE}{\hbar^2}+\frac{2m(E+V_0)}{\hbar^2})^2}{4\frac{2mE}{\hbar^2}\frac{2m(E+V_0)}{\hbar^2}} - 1\right)\sin^2\left(\frac{2a}{\hbar}\sqrt{2m(E+V_0)}\right)\\
+        =& 
+        1 + \left(
+        \frac{4E^2+4EV_0+V_0^2}
+        {4E(E+V_0)} - 1\right)\sin^2\left(\frac{2a}{\hbar}\sqrt{2m(E+V_0)}\right)\\
+        =& 
+        1 +
+        \frac{V_0^2}
+        {4E(E+V_0)}
+        \sin^2\left(\frac{2a}{\hbar}\sqrt{2m(E+V_0)}\right).
+    \end{align*}
+    \subsection*{Sol. 33}
+    For $V=-V_0,$ by equation 2.172,
+    $$
+    T^{-1} = 1 + \frac{V_0^2}{4E(E-V_0)}\sin^2\left(\frac{2a}{\hbar}\sqrt{2m(E-V_0)}\right).
+    $$
+
+    For $E<V_0,$ by the identity $\sinh (-x) = i\sin ix,$
+    \begin{align*}
+        T^{-1} = & 1 + \frac{V_0^2}{4E(E-V_0)}\sin^2\left(\frac{2ai}{\hbar}\sqrt{2m(V_0-E)}\right)\\
+        = & 1 + \frac{V_0^2}{4E(E-V_0)}\sin^2\left(\frac{2ai}{\hbar}\sqrt{2m(V_0-E)}\right)\\
+        = & 1 + \frac{V_0^2}{4E(V_0-E)}\sinh^2\left(\frac{2a}{\hbar}\sqrt{2m(V_0-E)}\right).
+    \end{align*}
+
+
+    For $E=V_0,$ note that
+    \begin{align*}
+        \lim_{E\to V_0}\frac{\sin^2\left(\frac{2a}{\hbar}\sqrt{2m(E-V_0)}\right)}{E-V_0}
+        = \lim_{E\to V_0}\frac{\frac{4a^2}{\hbar^2}2m(E-V_0)}{E-V_0} = 
+        \frac{8ma^2}{\hbar^2},
+    \end{align*}
+    so 
+    \begin{align*}
+        T^{-1} = & 1 + \frac{V_0^2}{4E}\frac{8ma^2}{\hbar^2} = 1 + \frac{2ma^2V_0}{\hbar^2}.
+    \end{align*}
+    
+
+    For $E>V_0,$ 
+     $$
+    T^{-1} = 1 + \frac{V_0^2}{4E(E-V_0)}\sin^2\left(\frac{2a}{\hbar}\sqrt{2m(E-V_0)}\right).
+    $$
+
+    \subsection*{Sol. 34}
+    \begin{enumerate}
+        \item For $x<0,$ $\psi(x)=Ae^{ikx}+B^{-ikx},$ where $k=\frac{\sqrt{2mE}}{\hbar}.$ 
+        For $x>0,$ $\psi(x)=Ce^{-lx},$ where $l=\frac{\sqrt{2m(V_0-E)}}{\hbar}.$
+
+        Continuity at $x=0$ gives
+        $$
+        A+B = C.
+        $$
+
+        Continuity of the derivative at $x=0$ gives
+        $$
+        ikA-ikB = -lC.
+        $$
+
+        Solving  the system,
+        $$
+        B = \frac{A(-l-ik)}{l-ik},\;C=\frac{-2ikA}{l-ik}.
+        $$
+
+        The reflection coefficient 
+        \begin{align*}
+            R=\frac{l^2+k^2}{l^2+k^2} = 1,
+        \end{align*}
+        that is, the particle reflects back to the left perfectly for every $E<V_0.$
+
+        \item For $x<0,$ $\psi(x)=Ae^{ikx}+B^{-ikx},$ where $k=\frac{\sqrt{2mE}}{\hbar}.$ 
+        For $x>0,$ $\psi(x)=Ce^{ilx},$ where $l=\frac{\sqrt{2m(E-V_0)}}{\hbar}.$
+
+        Continuity at $x=0$ gives
+        $$
+        A+B = C.
+        $$
+
+        Continuity of the derivative at $x=0$ gives
+        $$
+        kA-kB = lC.
+        $$
+
+        Solving  the system,
+        $$
+        B = \frac{A(k-l)}{k+l},\;C=\frac{2kA}{k+l}.
+        $$
+        Thus, the reflection coefficient
+        $$
+        R = \left(\frac{\sqrt{E}-\sqrt{E-V_0}}{\sqrt{E}+\sqrt{E-V_0}}\right)^2
+        =\frac{2E-V_0-2\sqrt{E(E-V_0)}}{2E-V_0+2\sqrt{E(E-V_0)}}.
+        $$
+
+    \item From equation 2.99, the speed of the particle is proportional to $\sqrt{E-V}.$ Therefore, given the same amount of time, the proportion of the particles passing through a given point of two areas is
+    $$
+    \sqrt{\frac{E-V_0}{E}}\frac{|F|^2}{|A|^2}.
+    $$
+
+    Alternatively, the transmission is simply the ratio of the probability currents between two regions. By prob 2.18,
+    $J(x,t)=\hbar A^2\sqrt{2m(E-V)},$ and thus, $T=\sqrt{\frac{E-V_0}{E}}\frac{|F|^2}{|A|^2}.$
+    \item 
+    \begin{align*}
+    T = &  \sqrt{\frac{E-V_0}{E}}\left(\frac{2\sqrt{E}}{\sqrt{E}+\sqrt{E-V_0}}\right)^2 \\
+    =&  \sqrt{\frac{E-V_0}{E}}\frac{4E}{2E-V_0+2\sqrt{E(E-V_0)}}\\
+    = & \frac{4\sqrt{E(E-V_0)}}{2E-V_0+2\sqrt{E(E-V_0)}},
+    \end{align*}
+    so $T+R=1.$
+    
+    
+        
+    \end{enumerate}
+
+    \subsection*{Sol. 35}
+    \begin{enumerate}
+        \item By prob.b, 
+        $$
+        R = \frac{2E+V_0-2\sqrt{E(E+V_0)}}
+        {2E+V_0+2\sqrt{E(E+V_0)}}.
+        $$ If $E=\frac{V_0}{3},$ 
+        $R = \frac{1}{9}.$
+        \item To represent the potential of a cliff, it requires a two dimensional coordinate. Therefore, this potential does not correctly represent a cliff.
+        \item By 1, $R=\frac{1}{9},$ therefore $T=\frac{8}{9}.$
+    \end{enumerate}
+
+    \subsection*{Sol. 36}
+    The potential is even, so we can only consider the odd and even solutions. For the even solution, $\psi(x)=A\cos kx$ for $x>0.$ $\psi(a)=A\cos ka=0,$ which gives $ka=\frac{n\pi}{2},$ for $n=1,3,5\dots$ 
+    For the odd solution, $\psi(x)=B\sin kx$ for $x>0.$ 
+    $\psi(a)=B\sin ka=0,$ which gives $ka=\frac{m\pi}{2},$ for $m=2,4,6,\dots$
+
+    Therefore, the allowed energies should follow 
+    $\frac{\sqrt{2mE}}{\hbar}a=\frac{n\pi}{2},$ for $n=1,2,3,\dots,$ 
+    and thus $E_n=\frac{n^2\pi^2\hbar^2}{8ma^2},$ consistent with 2.30.
+
+    The allowed wave functions are $\psi(x)=A\cos \frac{n\pi}{2a}x$ for $n=1,3,5,\dots$ 
+    and $\psi(x)=B\sin \frac{m\pi}{2a}x$ for $m=2,4,6,\dots$
+    
+    
+    Plugging $x+a$ into 2.31, $\psi_n(x)\propto\sin\left(\frac{n\pi}{2a}(x+a)\right)=\sin(\frac{n\pi x}{2a}+\frac{n\pi}{2}).$ If $n$ is odd, then $\sin(\frac{n\pi x}{2a}+\frac{n\pi}{2})\propto \cos(\frac{n\pi x}{2a}),$ and if $n$ if even, $\propto \sin(\frac{n\pi x}{2a}),$ consistent with our result.
+
+    \begin{figure}[htbp]
+    \centering
+    % First subfigure
+    \begin{subfigure}{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{fig/prob361.png}
+        \caption{First State}
+        \label{fig:sub1}
+    \end{subfigure}
+    \hfill
+    % Second subfigure
+    \begin{subfigure}{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{fig/prob362.png}
+        \caption{Second State}
+        \label{fig:sub2}
+    \end{subfigure}
+    \hfill
+    % Third subfigure
+    \begin{subfigure}{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{fig/prob363.png}
+        \caption{Third State}
+        \label{fig:sub3}
+    \end{subfigure}
+    
+    \label{fig:three_images}
+\end{figure}
+
+    \subsection*{Sol. 37}
+
+
+    $$
+    \int_0^aA^2\sin^6(\pi x/a)dx = \frac{5A^2a}{16},
+    $$
+    $A=\sqrt{\frac{16}{5a}}.$
+
+    Note that 
+    \begin{align*}
+        \Psi(x,0) = &
+        \sqrt{\frac{16}{5a}}\sin^3(\pi x/a)\\
+        = & \sqrt{\frac{16}{5a}}
+        \frac{3}{4}\sin(\pi x/a) - 
+        \sqrt{\frac{16}{5a}}
+        \frac{1}{4}\sin(3\pi x/a)\\
+        =&
+        \frac{3}{\sqrt{10}}\sqrt{\frac{2}{a}}
+        \sin(\pi x/a)
+        -
+        \frac{1}{\sqrt{10}}\sqrt{\frac{2}{a}}
+        \sin(3\pi x/a)
+    \end{align*}
+
+    
+    \begin{align*}
+        \Psi(x,t)
+    =&\frac{3}{\sqrt{10}}
+    \sqrt{\frac{2}{a}}
+    \sin(\frac{\pi}{a}x)
+    e^{-i(\pi^2\hbar/2ma^2)t}
+    -
+    \frac{1}{\sqrt{10}}
+    \sqrt{\frac{2}{a}}
+    \sin(\frac{3\pi}{a}x)
+    e^{-i(9\pi^2\hbar/2ma^2)t}\\
+    =& 
+    \frac{1}{\sqrt{5a}}\left(\sin(\frac{\pi}{a}x)
+    3e^{-i(\frac{\pi^2\hbar}{2ma^2})t}+
+    \sin(\frac{3\pi}{a}x)e^{-i(\frac{9\pi\hbar^2}{2ma^2})t}\right)
+    .
+    \end{align*}
+
+
+    \begin{align*}
+        \langle x\rangle
+        =&
+        \frac{1}{5a}
+        \int_0^a
+        x
+        \left(\sin(\frac{\pi}{a}x)
+    3e^{-i(\frac{\pi^2\hbar}{2ma^2})t}+
+    \sin(\frac{3\pi}{a}x)e^{-i(\frac{9\pi^2\hbar}{2ma^2})t}\right)\\
+    &
+        \left(\sin(\frac{\pi}{a}x)
+    3e^{i(\frac{\pi^2\hbar}{2ma^2})t}+
+    \sin(\frac{3\pi}{a}x)e^{i(\frac{9\pi^2\hbar}{2ma^2})t}\right)dx\\
+    =&\frac{1}{5a}
+    \int_0^a
+    x(9\sin^2(\frac{\pi x}{a})+\sin^2(\frac{3\pi x}{a})+
+    2\cdot3\sin(\frac{\pi x}{a})\sin(\frac{3\pi x}{a})
+    \cos(\frac{4\pi^2\hbar}{ma^2}))dx\\
+    =& \frac{1}{5a}
+    (\frac{9a^2}{4}+\frac{a^2}{4})\\
+    =& \frac{a}{2}
+    \end{align*}
+
+    $$
+    \langle E\rangle
+    =\frac{9}{10}
+    \frac{\pi^2\hbar^2}{2ma^2} + 
+    \frac{1}{10}
+    \frac{9\pi^2\hbar^2}{2ma^2}
+    =
+    \frac{9\pi^2\hbar^2}{10ma^2}
+    $$
+
+    \subsection*{Sol. 38}
+    \begin{enumerate}
+        \item 
+        By 2.39, the general solution 
+        \begin{align*}
+            \Psi(x,t+\frac{4ma^2}{\pi\hbar}) = &\sum_{n=1}^\infty 
+        c_n\sqrt{\frac{2}{a}}
+        \sin(\frac{n\pi}{a}x)
+        e^{-i(n^2\pi^2\hbar/2ma^2)
+        (t+\frac{4ma^2}{\pi\hbar})}\\
+        =& \sum_{n=1}^\infty 
+        c_n\sqrt{\frac{2}{a}}
+        \sin(\frac{n\pi}{a}x)
+        e^{-i(n^2\pi^2\hbar/2ma^2)t}
+        e^{-i2n^2\pi}\\
+        =&\sum_{n=1}^\infty 
+        c_n\sqrt{\frac{2}{a}}
+        \sin(\frac{n\pi}{a}x)
+        e^{-i(n^2\pi^2\hbar/2ma^2)t}\\
+        =& \Psi(x,t)
+        \end{align*}
+        \item $\frac{2a}{\sqrt{2E/m}}$
+        \item $\frac{\pi^2\hbar^2}{8ma^2}.$
+    \end{enumerate}
+
+    \subsection*{Sol. 39}
+    \begin{enumerate}
+        \item 
+        $$\frac{d}{dx}
+        \Psi(x,0)=A-2A\theta(x-\frac{a}{2})$$
+        \item 
+        $$\frac{d^2}{dx^2}
+        \Psi(x,0)=
+        -2A\delta(x-\frac{a}{2})$$
+        \item 
+        \begin{align*}
+            -\frac{\hbar^2}{2m}
+            \int_0^a
+            \Psi(x,0)
+            \frac{d^2}{dx^2}
+            \Psi(x,0)dx= & 
+            \frac{\hbar^2A}{m}
+            \int_0^a
+            \Psi(x,0)
+            \delta(x-\frac{a}{2})dx\\
+            =& \frac{\hbar^2A}{m}\Psi(\frac{a}{2},0)\\
+            =&  \frac{\hbar^2A^2a}{2m}\\
+            =&  \frac{6\hbar^2}{ma^2}
+        \end{align*}
+    \end{enumerate}
+
+    \subsection*{Sol. 40}
+    \begin{enumerate}
+        \item 
+        \begin{align*}
+             & \int_{-\infty}^\infty
+            A^2\left(1-2\sqrt{\frac{m\omega}{\hbar}}x\right)^4
+            e^{-\frac{m\omega}{\hbar}x^2}dx\\
+            =& 
+            \frac{25 \sqrt{\pi} \, A^{2} \sqrt{h}}{\sqrt{m} \sqrt{\omega}},
+        \end{align*}
+        then $A= \frac{1}{5}\left(\frac{m\omega}{\pi\hbar}\right)^{1/4}.$
+
+        Note that 
+        \begin{align*}
+             \Psi(x,0)=& \frac{1}{5}\left(\frac{m\omega}{\pi\hbar}\right)^{1/4}
+            \left(1-2\sqrt{\frac{m\omega}{\hbar}}x\right)^2
+            e^{-\frac{m\omega}{2\hbar}x^2}\\
+            =& 
+            \left(\frac{m\omega}{\pi\hbar}\right)^{1/4}
+            e^{-\xi^2/2}
+            \frac{1}{5}(1-2\xi )^2\\
+            =&\left(\frac{m\omega}{\pi\hbar}\right)^{1/4}
+            e^{-\xi^2/2}
+            (\frac{1}{5}H_2(\xi) + 
+            \frac{-2}{5}H_1(\xi) +
+            \frac{3}{5}H_0(\xi))\\
+            =& \frac{2\sqrt{2}}{5}\psi_2(x)
+            -\frac{2\sqrt{2}}{5}\psi_1(x)+
+            \frac{3}{5}\psi_0(x)
+        \end{align*}
+        \item We
+        would get $\frac{1}{2}\hbar\omega$ with probability $\frac{9}{25},$ 
+        $\frac{3}{2}\hbar\omega$ with probability $\frac{8}{25},$
+        $\frac{5}{2}\hbar\omega$ with probability $\frac{8}{25}.$
+
+        The expectation value of the energy is $\frac{73}{50}\hbar\omega.$
+        \item 
+        \begin{align*}
+            \Psi(x,t) =& 
+            \frac{2\sqrt{2}}{5}\psi_2(x)e^{-i5\omega t/2}
+            -\frac{2\sqrt{2}}{5}\psi_1(x)e^{-i3\omega t/2}+
+            \frac{3}{5}\psi_0(x)e^{-i\omega t/2}
+        \end{align*}
+        The smallest possible time to let three components sync again requires $\omega T=2\pi,$ $T=\frac{2\pi}{\omega}.$
+        
+    \end{enumerate}
+
+    \subsection*{Sol. 41}
+    $\psi(0)$ now requires to be zero. By 2.86, this only happens for odd $n$ states. Therefore, the allowed energies are $(n+\frac{1}{2})\hbar\omega$ for $n=1,3,5...$
+
+
+    \subsection*{Sol. 42}
+    By problem 21, $A = (\frac{2a}{\pi})^{1/4}$
+
+    \begin{align*}
+        \phi(k) =& 
+        \frac{1}{\sqrt{2\pi}}
+        \int_{-\infty}^{\infty}
+        \left(\frac{2a}{\pi}\right)^{1/4}
+        e^{-ax^2}e^{ilx}
+        e^{-ikx}dx\\
+        =& \frac{1}{\sqrt[4]{2\pi a}}e^{-\frac{(k-l)^2}{4a}}
+    \end{align*}
+
+    \begin{align*}
+        \Psi(x,t) = &
+        \frac{1}{\sqrt{2\pi}}
+        \int_{-\infty}
+        ^\infty
+        \frac{1}{\sqrt[4]{2\pi a}}e^{-\frac{(k-l)^2}{4a}}
+        e^{i(kx-\frac{\hbar k^2}{2m}t)}dk\\
+        =& 
+        \frac{1}{\sqrt{2\pi}}
+        \frac{1}{\sqrt[4]{2\pi a}}
+        \int_{-\infty}
+        ^\infty
+        \exp{-\left[
+        (\frac{1}{4a}+i\frac{\hbar t}{2m})k^2
+        +(-\frac{l}{2a}-ix)k
+        + (\frac{l^2}{4a})
+        \right]}dk\\
+        =& 
+        \frac{1}{\sqrt{2\pi}}
+        \frac{1}{\sqrt[4]{2\pi a}}
+        \sqrt{\frac{\pi}{\frac{1}{4a}\gamma^2}}
+        \exp{\left[
+        \frac{(\frac{l}{2a}+ix)^2
+        -4(\frac{1}{4a}+i\frac{\hbar t}{2m})\frac{l^2}{4a}
+        }{4\frac{1}{4a}\gamma^2}
+        \right]}\\
+        =& 
+        \left(
+        \frac{2a}{\pi}
+        \right)^{1/4}
+        \frac{1}{\gamma}
+        \exp{\left[
+        \frac{lix-ax^2-\frac{i\hbar tl^2}{2m}
+        }{\gamma^2}
+        \right]}\\
+        =& 
+        \left(
+        \frac{2a}{\pi}
+        \right)^{1/4}
+        \frac{1}{\gamma}
+        \exp{\left[
+        \frac{-a(x-\hbar lt/m)^2+lix-\frac{i\hbar tl^2
+        }{2m}
+        -2\hbar ltxa/m
+        +a\hbar^2l^2t^2/m^2
+        }{\gamma^2}
+        \right]}\\
+        =& 
+        \left(
+        \frac{2a}{\pi}
+        \right)^{1/4}
+        \frac{1}{\gamma}
+        \exp{\left[
+        \frac{-a(x-\hbar lt/m)^2
+       }{\gamma^2}
+        \right]}
+        \exp\left[
+        \frac{
+        lix-\frac{i\hbar tl^2}{2m}
+        -2\hbar ltxa/m
+        +a\hbar^2l^2t^2/m^2}{1+2ia\hbar t/m}
+        \right]
+    \end{align*}
+
+    \begin{align*}
+        &\frac{
+        lix-\frac{i\hbar tl^2}{2m}
+        -2\hbar ltxa/m
+        +a\hbar^2l^2t^2/m^2}{1+2ia\hbar t/m}\\
+        =&
+        \frac{1}{1+4a^2\hbar^2t^2/m^2}
+        \left[
+        (\frac{-2\hbar ltxa}{m}
+        +\frac{a\hbar^2l^2t^2}{m^2}
+        +\frac{2a\hbar tlx}{m}
+        -\frac{a\hbar^2t^2l^2}{m^2}
+        ) + 
+        i(lx-\frac{\hbar tl^2}{2m}+
+        \frac{4a^2\hbar^2t^2lx}{m^2}
+        -\frac{2a^2\hbar^3t^3l^2}{m^3}
+        )\right]\\
+        =&
+        \frac{il(x-
+        \frac{\hbar tl}{2m}
+        )(1+\frac{4a^2\hbar^2t^2}{m^2})
+        }
+        {1+4a^2\hbar^2t^2/m^2}\\
+        =& il(x-\frac{\hbar tl}{2m}).
+    \end{align*}
+    Thus,
+    $$
+    \Phi(x,t)=
+    \left(
+        \frac{2a}{\pi}
+        \right)^{1/4}
+        \frac{1}{\gamma}
+        \exp{\left[
+        \frac{-a(x-\hbar lt/m)^2
+       }{\gamma^2}
+        \right]}
+        \exp\left[
+        il(x-\frac{\hbar tl}{2m})
+        \right].
+    $$
+
+    \begin{align*}
+        |\Phi(x,t)|^2=
+    \left(
+        \frac{2}{\pi}
+        \right)^{1/2}
+        w
+        \exp{\left[
+        -2w^2(x-\hbar lt/m)^2
+        \right]}
+        .
+    \end{align*}
+    The wave moves in the direction of $l,$ while gradually spreading out.
+
+
+    \begin{align*}
+        \langle
+        x
+        \rangle
+        =&\int_{-\infty}^{\infty}
+       \left(
+        \frac{2}{\pi}
+        \right)^{1/2}
+        w
+        \exp{\left[
+        -2w^2(x-\hbar lt/m)^2
+        \right]}xdx\\
+        =& \left(
+        \frac{2}{\pi}
+        \right)^{1/2}
+        w
+        \frac{\hbar lt}{m}
+        \sqrt{\frac{\pi}{2w^2}}\\
+        =&\frac{\hbar lt}{m}
+    \end{align*}
+
+     \begin{align*}
+        \langle
+        x^2
+        \rangle
+        =&\int_{-\infty}^{\infty}
+       \left(
+        \frac{2}{\pi}
+        \right)^{1/2}
+        w
+        \exp{\left[
+        -2w^2(x-\hbar lt/m)^2
+        \right]}x^2dx\\
+        =& \left(
+        \frac{2}{\pi}
+        \right)^{1/2}
+        w
+        \left(
+        \frac{1}{2}
+        \sqrt{\frac{\pi}{8w^6}}
+        +
+        \frac{\hbar^2 l^2t^2}{m^2}
+        \sqrt{\frac{\pi}{2w^2}}
+        \right)
+        \\
+        =&
+        \frac{1}{4w^2}
+        +
+        \frac{\hbar^2 l^2t^2}{m^2}
+    \end{align*}
+
+    \begin{align*}
+        \langle
+        p
+        \rangle
+        =m\frac{d}{dt}\langle x\rangle = 
+        \hbar l
+    \end{align*}
+
+
+    \begin{align*}
+        \langle
+        p^2
+        \rangle
+        = & -\hbar^2
+        \int
+        \left(
+        \frac{2a}{\pi}
+        \right)^{1/4}
+        \frac{1}{\bar{\gamma}}
+        \exp{\left[
+        \frac{-a(x-\hbar lt/m)^2
+       }{\gamma^2}
+        \right]}
+        \exp\left[
+        -il(x-\frac{\hbar tl}{2m})
+        \right]\\
+        &\frac{\partial^2}{\partial x^2}
+        \left(
+        \frac{2a}{\pi}
+        \right)^{1/4}
+        \frac{1}{\gamma}
+        \exp{\left[
+        \frac{-a(x-\hbar lt/m)^2
+       }{\gamma^2}
+        \right]}
+        \exp\left[
+        il(x-\frac{\hbar tl}{2m})
+        \right]
+        dx\\
+        = &
+        -\hbar^2
+        \int
+        \left(
+        \frac{2}{\pi}
+        \right)^{1/2}
+        w
+        \exp{\left[
+        -2w^2(x-\hbar lt/m)^2
+        \right]}\\
+        &
+        \left[       
+        (il-\frac{2a}{\gamma^2}(x-\frac{\hbar lt}{m}))^2
+        -
+        \frac{2a}{\gamma^2}
+        \right]
+        dx\\
+        &=-\hbar^2
+        \sqrt{\frac{2}{\pi}}w
+        \left(-\frac{4a^2}{\gamma^4}
+        \frac{1}{2}\sqrt{\frac{\pi}{8w^6}}
+        -(l^2-\frac{2a}{\gamma^2})
+        \sqrt{\frac{\pi}{2w^2}}
+        \right)\\
+        =&a\hbar^2+l^2\hbar^2
+    \end{align*}
+
+    $$
+    \sigma_x=\frac{1}{2w}=\frac{1}{2}\sqrt{\frac{1+(2at\hbar/m)^2}{a}},\;
+    \sigma_p=\sqrt{a}\hbar
+    $$
+
+    $\sigma_x\sigma_p\geq \frac{\hbar}{2},$ where $=$ holds at $t=0.$
+
+
+    The speed of the envelope is $\frac{\hbar l}{m},$ and the speed of the traveling wave is $\frac{\hbar l}{2m}.$
+
+    \subsection*{Sol. 43}
+    The general solution at $0<x<a$ is $\psi(x)=A\cos kx+B\sin kx,$  where $k=\frac{\sqrt{2mE}}{\hbar}.$
+
+    Consider the odd solutions, where $\psi(x)=-\psi(-x)
+    =-A\cos kx+B\sin kx,$ for $-a<x<0.$
+
+    
+    The continuity condition at $x=0$ gives $A=0.$
+    The boundary condition at $x=a$ requires $B\sin ka=0,$ $ka=\frac{n}{2}\pi,$ where $n=2,4,\dots.$ Therefore $E=\frac{n^2\pi^2\hbar^2}{8ma^2}.$
+    
+    The odd solutions are as the same as the infinite potential well since $\psi(0)=0,$ so that the delta function condition can be ignored.
+
+
+    For the even solutions  $\psi(x)=\psi(-x)
+    =A\cos kx-B\sin kx,$ for $-a<x<0.$
+
+    The boundary condition at $x=a$ requires $A\cos ka+B\sin ka=0.$ 
+
+    The delta function condition at $0$ requires
+    \begin{align*}
+        \frac{d\psi}{dx}\bigg|_{0^+} = (-Ak\sin kx + Bk\cos kx)|_{0^+} = Bk
+    \end{align*}
+    \begin{align*}
+        \frac{d\psi}{dx}\bigg|_{0^-} =  (-Ak\sin kx - Bk\cos kx)|_{0^-} = -Bk
+    \end{align*}
+
+    $$
+    2Bk=\frac{2m\alpha}{\hbar^2}\psi(0)=\frac{2m\alpha}{\hbar^2}A.
+    $$
+
+    This gives the transcendental equation 
+    $$
+    \frac{A}{B}=-\tan ka = \frac{k\hbar^2}{m\alpha}.
+    $$
+
+    \includegraphics[width=0.8\textwidth]{fig/prob43.png}
+    
+    The energies for the even function depend on the intensity $\alpha,$ which is generally larger than the normal case.
+    
+    If $\alpha\to 0,$ $\tan ka\to \infty \Rightarrow 
+    ka\approx\frac{n\pi}{2},
+    E\approx\frac{n^2\pi^2\hbar^2}{8ma^2},
+    $
+    for $n=1,3,5\dots,$ consistent with the normal case.
+
+    If $\alpha\to \infty,$ $\tan ka\to 0 \Rightarrow 
+    ka\approx \frac{(n+1)\pi}{2},
+    E\approx\frac{(n+1)^2\pi^2\hbar^2}{8ma^2},
+    $ for $n=1,3,5,\dots.$ 
+    
+
+    
+    
+    
+
+    \subsection*{Sol. 44}
+    $$
+    -\frac{\hbar^2}{2m}
+    \frac{d^2\psi_1}{dx^2}\psi_2+
+    V\psi_1\psi_2 = E\psi_1\psi_2
+    $$
+
+    $$
+    -\frac{\hbar^2}{2m}
+    \frac{d^2\psi_2}{dx^2}\psi_1+
+    V\psi_2\psi_1 = E\psi_2\psi_1
+    $$
+
+    $$
+    \frac{d^2\psi_1}{dx^2}\psi_2-
+    \frac{d^2\psi_2}{dx^2}\psi_1=
+    \frac{d}{dx}
+    (
+\frac{d\psi_1}{dx}\psi_2
+-
+    \frac{d\psi_2}{dx}\psi_1
+    )
+    = 
+    0
+    $$
+
+    $\frac{d\psi_1}{dx}\psi_2
+-
+    \frac{d\psi_2}{dx}\psi_1$
+    is a constant. Since the normalizable solutions $\psi\to0$ at $\pm \infty,$ this constant has to be 0.
+    $$
+    \psi_1'\psi_2=\psi_2'\psi_1\Rightarrow
+    \psi_1'/\psi_1=\psi_2'/\psi_2
+    \Rightarrow\ln|\psi_1|+C
+    =\ln|\psi_2|\Rightarrow
+    A|\psi_1|=|\psi_2|.
+    $$
+
+    \subsection*{Sol. 45}
+
+    \begin{enumerate}
+        \item 
+        $$
+    -\frac{\hbar^2}{2m}
+    \frac{d^2\psi_m}{dx^2}\psi_n+
+    V\psi_m\psi_n =
+    E_n\psi_m\psi_n
+    $$
+
+    $$
+    -\frac{\hbar^2}{2m}
+    \frac{d^2\psi_n}{dx^2}\psi_m+
+    V\psi_n\psi_m = E_m\psi_n\psi_m
+    $$
+
+    $$
+    -\frac{\hbar^2}{2m}
+    (\frac{d^2\psi_n}{dx^2}\psi_m
+    -
+    \frac{d^2\psi_m}{dx^2}\psi_n
+    )
+    = (E_n-E_m)\psi_n\psi_m
+    $$
+
+    $$
+    \frac{d}{dx}(\frac{d\psi_m}{dx}\psi_n
+    -
+    \frac{d\psi_n}{dx}\psi_m
+    )
+    = \frac{2m}{\hbar^2}(E_n-E_m)\psi_n\psi_m
+    $$
+    \item 
+    \begin{align*}
+        \frac{2m}{\hbar^2}(E_n-E_m)
+        \int_{x_1}^{x_2}
+        \psi_n\psi_mdx
+        = & 
+        (\psi_m'(x_2)\psi_n(x_2)
+    -
+    \psi_n'(x_2)\psi_m(x_2)
+    )
+    -
+    (\psi_m'(x_1)\psi_n(x_1)
+    -
+    \psi_n'(x_1)\psi_m(x_1)
+    )\\
+    =& 
+    \psi_m'(x_2)\psi_n(x_2)-
+    \psi_m'(x_1)\psi_n(x_1)
+    \end{align*}
+
+    \item 
+    Suppose $\psi_m(x)>0$ for $x_1<x<x_2,$ then $\psi_m'(x_1)>0,$ and $\psi_m'(x_2)<0.$
+
+    Suppose $\psi_n(x)>0$ for $x_1<x<x_2,$ then the integral is strictly positive, whereas the other side gives a negative number a contradiction. Similar result if we assume different signs.
+    \end{enumerate}
+
+
+    \subsection*{Sol. 46}
+    The general solution $\psi(x)=A\sin kx+B\cos kx.$ 
+    
+    The continuity at the boundary requires $B=A\sin kL + B\cos kL.$
+
+    The continuity of the first derivative at the boundary requires $kA=kA\cos kL - kB\sin kL.$
+
+    To have a non-trivial solution, 
+    $$
+    -k\sin^2 kL - k(\cos kL -1)^2=0
+    \Rightarrow kL=2\pi n,
+    $$
+    for $n=0,1,2,3,\dots$ Hence the possible energies are 
+    $E_n=\frac{2\pi^2n^2\hbar^2}{L^2}.$
+
+    Now, the conditions have been reduced to 
+    $$ 
+    A\sin 2\pi n + B(\cos 2\pi n - 1)=0 \Rightarrow 0=0,
+    $$
+    meaning that any $A$ and $B$ will satisfy the boundary conditions.
+    
+
+    \begin{align*}
+        \int_0^L
+        (A\sin \frac{2\pi n x}{L})^2dx = \frac{A^2L}{2}
+        \Rightarrow A=
+        \sqrt{\frac{2}{L}}
+    \end{align*}
+    \begin{align*}
+        \int_0^L
+        (B\cos \frac{2\pi nx}{L})^2dx = \frac{B^2L}{2}
+        \Rightarrow B=
+        \sqrt{\frac{2}{L}}
+    \end{align*},
+except for $n=0,$ $B_0=\frac{1}{\sqrt{L}}$
+    
+
+    For every energy $E_n,$ there correspond two independent stationary states $\psi_n^+(x)=\sqrt{\frac{2}{L}}\sin \frac{2\pi n}{L}x$ and 
+    $\psi_n^-(x)=\sqrt{\frac{2}{L}}\cos \frac{2\pi n}{L}x.$ 
+    Except for $n=0,$ $E_0=0,$ which only has one 
+    corresponding stationary state, $\psi(x)=\frac{1}{\sqrt{L}},$ the particle just stands without moving anywhere.
+
+    While proving the theorem in problem 44, we used the property that bound states will vanish at infinity to derive the key equation. In this case, such a property is not satisfied. Concretely, let $\psi_1=\sin kx,$ and $\psi_2=\cos kx,$ 
+    the key equation 
+    $0=\psi_1'\psi_2-\psi_2'\psi_1\neq k\cos^2 kx-k\sin^2 kx=-k$
+    does not hold.
+
+
+\subsection*{Sol. 47}
+
+\begin{enumerate}
+    \item 
+    $b=0,$
+    \begin{figure}[htbp]
+    \centering
+    % First subfigure
+    \begin{subfigure}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{fig/prob47-1.png}
+        \caption{First State}
+        \label{fig:sub1}
+    \end{subfigure}
+    \hfill
+    % Second subfigure
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{fig/prob47-2.png}
+        \caption{Second State}
+        \label{fig:sub2}
+    \end{subfigure}
+\end{figure}
+
+\item 
+    $b\approx a,$
+    
+    \includegraphics[width=\textwidth]{fig/prob47-a2.jpg}
+
+    $b\gg a,$ same as $b\approx a$
+
+    From eq.2.160, for $b=0,$ 
+    $$
+    E_1+V_0\approx \frac{\pi^2\hbar^2}{2m(2a)^2} 
+    $$
+
+    $$
+    E_2+V_0\approx \frac{4\pi^2\hbar^2}{2m(2a)^2} 
+    $$
+
+
+    If $b\to\infty,$ the system just acts like two independent finite square wells, infinitely separated, each having width $a$,
+    so
+
+    $$
+    E_1+V_0\approx \frac{\pi^2\hbar^2}{2m(a)^2} 
+    $$
+
+    $$
+    E_2+V_0\approx \frac{\pi^2\hbar^2}{2m(a)^2} 
+    $$
+    \includegraphics[width=0.6\textwidth]{fig/prob47a3.jpg}
+
+    I could not find a better qualitative explanation for  why the energy of the first excited state decreases. However, if calculated numerically, this phenomenon actually occurred.
+
+\item For the ground state, attracting the nuclei together gives the smallest energy configuration. For the first excited state, the electron drives the nuclei apart. 
+    
+\end{enumerate}
+
+
+\subsection*{Sol. 48}
+\begin{enumerate}
+    \item 
+    From the constraint of the potential, we know that it is the odd function part of the finite square well.
+    By problem 29, $\cot z = -\sqrt{(z_0/z)^2-1},$ where $z_0=\frac{a}{\hbar}\sqrt{2mV_0}=8.$
+
+    \includegraphics[width=0.6\textwidth]{fig/prob48.png}
+
+    By plotting the graph, we can see that there are three bound states for this potential.
+
+    \item The highest energy state is about $z\approx 7.957.$
+
+
+    \begin{align*}
+        \int^a_0C^2\sin^2(lx)dx + \int_a^\infty F^2e^{-2\kappa x}dx =&
+        C^2\frac{2al-\sin(2al)}{4l}+\frac{F^2e^{-2a\kappa}}{2\kappa}
+    \end{align*}
+    Note that $Fe^{-\kappa a}=C\sin(la),$ so 
+    \begin{align*}
+        1 =& C^2\frac{2al-\sin(2al)}{4l} + 
+        \frac{F^2e^{-2a\kappa}}{2\kappa}\\
+        =&C^2\frac{2al-\sin(2al)}{4l}+\frac{C^2\sin^2(la)}{2\kappa}
+    \end{align*}
+
+    \begin{align*}
+        \frac{\frac{C^2\sin^2(la)}{2\kappa}}{C^2\frac{2al-\sin(2al)}{4l}}
+        =\frac{-2\sin^2z\tan z}{2z-\sin(2z)} = 1.184
+        \Rightarrow 
+        \frac{C^2\sin^2(la)}{2\kappa}=0.542
+    \end{align*}
+
+    
+\end{enumerate}
+
+\subsection*{Sol. 49}
+\begin{enumerate}
+    \item 
+    $$
+\Psi(x,t)
+= 
+\left(\frac{m\omega}{\pi\hbar}\right)^{1/4}
+\exp\left[
+-\frac{m\omega}{2\hbar}
+\left(
+x^2+\frac{x_0^2}{2}(1+e^{-2i\omega t})+\frac{i\hbar t}{m}-2x_0xe^{-i\omega t}
+\right)
+\right]
+$$
+
+$$
+\frac{\partial \Psi}{\partial t}
+=
+-\frac{m{\omega}}{2 \hbar}
+  \left(2\mathrm{i}xx_{0} {\omega}\mathrm{e}^{-\mathrm{i}{\omega}t} - \mathrm{i}x_{0}^{2} {\omega}\mathrm{e}^{-2\mathrm{i}{\omega}t} + \frac{\mathrm{i}\hbar}{m}\right) \Psi
+$$
+
+$$
+\frac{\partial^2 \Psi}{\partial x^2}
+=
+\frac{m{\omega} }{ \hbar^{2}}
+\left(m{\omega}\mathrm{e}^{2\mathrm{i}t{\omega}} x^{2} - 2mx_{0} {\omega}\mathrm{e}^{\mathrm{i}t{\omega}} x - \hbar\mathrm{e}^{2\mathrm{i}t{\omega}} + mx_{0}^{2} {\omega}\right) e^{-2it\omega}\Psi
+$$
+
+\begin{align*}
+    i\hbar\frac{\partial \Psi}{\partial t}
+    +\frac{\hbar^2}{2m}
+    \frac{\partial^2 \Psi}{\partial x^2}
+    =&
+    \frac{m{\omega}}{2 }
+  \left(2xx_{0} {\omega}\mathrm{e}^{-\mathrm{i}{\omega}t} - x_{0}^{2} {\omega}\mathrm{e}^{-2\mathrm{i}{\omega}t} + \frac{\hbar}{m}\right) \Psi
+    \\
+   & + \frac{\omega}{2}\left(m{\omega}\mathrm{e}^{2\mathrm{i}t{\omega}} x^{2} - 2mx_{0} {\omega}\mathrm{e}^{\mathrm{i}t{\omega}} x - \hbar\mathrm{e}^{2\mathrm{i}t{\omega}} + mx_{0}^{2} {\omega}\right) e^{-2it\omega}\Psi\\
+  =& \frac{1}{2}m\omega^2x^2\Psi.
+\end{align*}
+\item 
+\begin{align*}
+|\Psi(x,t)|^2
+=
+\left(\frac{m\omega}{\pi\hbar}\right)^{1/2}
+\exp\left[
+-\frac{m\omega}{2\hbar}
+\left(
+2x^2+\frac{x_0^2}{2}(2+2\cos(2\omega t))-4x_0x\cos(\omega t)
+\right)
+\right]    
+\end{align*}
+The wave packet bounces off the potential well repeatedly.
+
+\item 
+\begin{align*}
+     \langle x\rangle = \int_{-\infty}^{\infty}
+    x\left(\frac{m\omega}{\pi\hbar}\right)^{1/2}
+\exp\left[
+-\frac{m\omega}{2\hbar}
+\left(
+2x^2+\frac{x_0^2}{2}(2+2\cos(2\omega t))-4x_0x\cos(\omega t)
+\right)
+\right]   dx = x_0\cos(\omega t)
+\end{align*}
+$$
+\langle p \rangle = -mx_0\omega\sin(\omega t)
+$$
+$$
+\langle - \frac{\partial V}{\partial x}\rangle
+=-m\omega^2\langle x\rangle =-m\omega^2x_0\cos(\omega t)
+=\frac{d\langle p\rangle}{dt}
+$$
+
+\end{enumerate}
+
+\subsection*{Sol. 50}
+\begin{enumerate}
+    \item 
+    $$
+    \Psi(x,t)=
+    \frac{\sqrt{m\alpha}}{\hbar}
+    e^{-m\alpha|x-vt|/\hbar^2}
+    e^{-i[(E+(1/2)mv^2)t-mvx]/\hbar}
+    $$
+
+    \begin{align*}
+        \frac{\partial\Psi}{\partial t}
+    =& \left(\frac{mv\alpha}{\hbar^2}
+    [\theta(x-vt)-\theta(-x+vt)]
+    -i(E+mv^2/2)/\hbar\right)\Psi
+    \end{align*}
+
+    \begin{align*}
+        \frac{\partial^2\Psi}{\partial x^2}
+    =&
+    \left[(-\frac{m\alpha}{\hbar^2}
+    (\theta(x-vt)-\theta(-x+vt))
+    +mvi/\hbar)^2+
+    (
+    -\frac{m\alpha}{\hbar^2}\delta(x-vt)
+    -\frac{m\alpha}{\hbar^2}\delta(-x+vt)
+    )\right]
+    \Psi\\
+    =& 
+    \left[\frac{m^2\alpha^2}{\hbar^4}
+    -\frac{2m^2v\alpha i}{\hbar^3}(\theta(x-vt)-\theta(-x+vt))
+    -\frac{m^2v^2}{\hbar^2}
+    -\frac{2m\alpha}{\hbar^2}\delta(x-vt)
+    \right] 
+    \Psi
+    \end{align*}
+
+    \begin{align*}
+        i\hbar\frac{\partial\Psi}{\partial t}
+        +
+        \frac{\hbar^2}{2m}\frac{\partial^2\Psi}{\partial x^2}
+        =& 
+        (E+\frac{1}{2}mv^2
+        +
+        \frac{m\alpha^2}{2\hbar^2}
+        -\frac{1}{2}mv^2
+        -\alpha\delta(x-vt)
+        )\Psi\\
+        =& -\alpha\delta(x-vt)\Psi
+    \end{align*}
+\item 
+\begin{align*}
+    & \int_{-\infty}^{\infty}
+    i\hbar 
+    \Psi^*
+    \left(\frac{mv\alpha}{\hbar^2}
+    [\theta(x-vt)-\theta(-x+vt)]
+    -i(E+mv^2/2)/\hbar\right)\Psi dx\\
+    = &  
+    E+\frac{mv^2}{2}
+\end{align*}
+It is the bound-state energy of the stationary delta function, plus the moving kinetic energy.
+\end{enumerate}
+
+
+\subsection*{Sol. 51}
+$$
+\Psi(x,t)=\Psi_0(x+\frac{1}{2}gt^2,t)
+\exp\left[-i\frac{mgt}{\hbar}\left(x+\frac{1}{6}gt^2\right)\right]
+$$
+
+\begin{align*}
+    \frac{\partial \Psi}{\partial t}(x,t)
+    =&
+    \left[gt\frac{\partial \Psi_0}{\partial x}(x+\frac{1}{2}gt^2,t)+\frac{\partial \Psi_0}{\partial t}(x+\frac{1}{2}gt^2,t)\right]
+    \exp\left[-i\frac{mgt}{\hbar}\left(x+\frac{1}{6}gt^2\right)\right]
+    \\+&
+    \Psi_0(x+\frac{1}{2}gt^2,t)
+    \exp\left[-i\frac{mgt}{\hbar}\left(x+\frac{1}{6}gt^2\right)\right]
+    \left(-i\frac{mgx}{\hbar}-i\frac{mg^2t^2}{2\hbar}\right)
+\end{align*}
+
+\begin{align*}
+    \frac{\partial^2 \Psi}{\partial x^2}(x,t)
+    =&\exp\left[-i\frac{mgt}{\hbar}\left(x+\frac{1}{6}gt^2\right)\right]\\
+    &
+    \left[\frac{\partial^2 \Psi_0}{\partial x^2}(x+\frac{1}{2}gt^2,t)
+    +2\left(-i\frac{mgt}{\hbar}\right)
+    \frac{\partial \Psi_0}{\partial x}(x+\frac{1}{2}gt^2,t)
+    +\Psi_0(x+\frac{1}{2}gt^2,t)
+    \frac{-m^2g^2t^2}{\hbar^2}
+    \right]
+\end{align*}
+
+\begin{align*}
+    &i\hbar\frac{\partial \Psi}{\partial t}(x,t)+
+    \frac{\hbar^2}{2m}\frac{\partial^2 \Psi}{\partial x^2}(x,t)
+    =
+    \exp\left[-i\frac{mgt}{\hbar}\left(x+\frac{1}{6}gt^2\right)\right]
+    \\
+    &\left[
+    i\hbar
+    gt\frac{\partial \Psi_0}{\partial x}(x+\frac{1}{2}gt^2,t)+
+    i\hbar\frac{\partial \Psi_0}{\partial t}(x+\frac{1}{2}gt^2,t)
+    +
+    \Psi_0(x+\frac{1}{2}gt^2,t)
+    (mgx+mg^2t^2)\right.\\
+    &\left.
+    +\frac{\hbar^2}{2m}\frac{\partial^2 \Psi_0}{\partial x^2}(x+\frac{1}{2}gt^2,t)
+    -i\hbar gt
+    \frac{\partial \Psi_0}{\partial x}(x+\frac{1}{2}gt^2,t)
+    -\Psi_0(x+\frac{1}{2}gt^2,t)
+    mg^2t^2
+    \right]\\
+    =&
+    \exp\left[-i\frac{mgt}{\hbar}\left(x+\frac{1}{6}gt^2\right)\right]
+    \Psi_0(x+\frac{1}{2}gt^2,t)mgx=mgx\Psi(x,t)
+\end{align*}
+
+By problem 2.21,
+\begin{align*}
+    \int_{-\infty}^{\infty}
+    x|\Psi_0(x+\frac{1}{2}gt^2,t)|^2dx
+    =-\frac{1}{2}gt^2.
+\end{align*}
+The mean position of the particle accelerates just like a free falling object in the classical sense.
+
+\subsection*{Sol. 52}
+\begin{enumerate}
+    \item 
+    \includegraphics[width=0.6\textwidth]{fig/prob52a.png}
+    \item 
+    $$
+    \frac{d^2}{dx^2}A\operatorname{sech}(ax)=
+    Aa^{2} \operatorname{sech}\left(ax\right) \tanh^{2}\left(ax\right) - Aa^{2} \operatorname{sech}^{3}\left(ax\right)
+    $$
+
+    \begin{align*}
+        &-\frac{\hbar^2}{2m}
+    Aa^{2} \operatorname{sech}\left(ax\right) \tanh^{2}\left(ax\right) +
+    \frac{\hbar^2}{2m}
+    Aa^{2} \operatorname{sech}^{3}\left(ax\right)
+    -
+    \frac{\hbar^2a^2}{m}
+    \operatorname{sech}^2(ax)
+    A\operatorname{sech}(ax)\\
+    =&
+    -\frac{\hbar^2}{2m}
+    Aa^{2} \operatorname{sech}\left(ax\right) \tanh^{2}\left(ax\right) -
+    \frac{\hbar^2}{2m}Aa^{2} \operatorname{sech}^{3}\left(ax\right)\\
+    =&-\frac{\hbar^2}{2m}Aa^2 \operatorname{sech}(ax)
+    \end{align*}
+    $
+    E=-\frac{\hbar^2a^2}{2m}
+    $
+
+    \begin{align*}
+        \int_{-\infty}^{\infty}
+        A^2\operatorname{sech}^2(ax)dx=\frac{2A^2}{a}\Rightarrow A=\sqrt{\frac{a}{2}}
+    \end{align*}
+
+    \includegraphics[width=0.6\textwidth]{fig/prob52b.png}
+
+    \item 
+    \begin{align*}
+        \psi_k(x)=A\left(
+        \frac{ik-a\operatorname{tanh}(ax)}{ik+a}
+        \right)
+        e^{ikx}
+    \end{align*}
+    
+    \begin{align*}
+        \frac{d^2\psi_k}{\partial x^2}
+        =\frac{A\mathrm{e}^{\mathrm{i}kx} \left(2a^{2} \operatorname{sech}^{2}\left(ax\right) + k^{2}\right) \left(a \tanh\left(ax\right) - \mathrm{i}k\right)}{\mathrm{i}k + a}
+    \end{align*}
+
+    \begin{align*}
+        -\frac{\hbar^2}{2m}\frac{1}{\psi}\frac{d^2\psi}{dx^2}
+        +V =&
+        -\frac{\hbar^2}{2m}
+        \frac{\frac{A\mathrm{e}^{\mathrm{i}kx} \left(2a^{2} \operatorname{sech}^{2}\left(ax\right) + k^{2}\right) \left(a \tanh\left(ax\right) - \mathrm{i}k\right)}{\mathrm{i}k + a}}{A\left(
+        \frac{ik-a\operatorname{tanh}(ax)}{ik+a}
+        \right)
+        e^{ikx}}
+        -\frac{\hbar^2a^2}{m}\operatorname{sech}^2(ax)\\
+        =&
+        \frac{\hbar^2}{2m}
+        \left(2a^{2} \operatorname{sech}^{2}\left(ax\right) + k^{2}\right)
+        -\frac{\hbar^2a^2}{m}\operatorname{sech}^2(ax)\\
+        =&\frac{\hbar^2k^2}{2m}=E
+    \end{align*}
+
+    For large positive $x,$ $\operatorname{tanh}(ax)\to1$
+    $$
+    \psi_k(x)\to 
+    Ae^{ikx}\left(
+    \frac{ik-a}{ik+a}
+    \right)
+    $$
+
+    $R=0,$ $T=1.$
+    
+\end{enumerate}
+
+\subsection*{Sol. 53}
+
+\begin{enumerate}
+    \item By equation 2.140,
+    $$
+    S=\begin{pmatrix}
+    \frac{i\beta}{1-i\beta}
+    & 
+    \frac{1}{1-i\beta}\\
+    \frac{1}{1-i\beta} & 
+    \frac{i\beta}{1-i\beta}
+    \end{pmatrix},
+    $$
+    where $\beta=\frac{m\alpha}{\hbar^2k}.$
+    \item 
+    By equation 2.170 and 2.171
+    \begin{align*}
+        S=
+        &\begin{pmatrix}
+   \frac{
+    i\sin(2la)
+    e^{-2ika}}
+    {2kl\cos(2la)-
+    i(k^2+l^2)
+    \sin(2la)
+    }
+    & 
+    \frac{e^{-2ika}}
+    {\cos(2la)-
+    i\frac{k^2+l^2}{2kl}
+    \sin(2la)
+    }\\ 
+    \frac{e^{-2ika}}
+    {\cos(2la)-
+    i\frac{k^2+l^2}{2kl}
+    \sin(2la)
+    }
+    & 
+    \frac{
+    i\sin(2la)
+    e^{-2ika}}
+    {2kl\cos(2la)-
+    i(k^2+l^2)
+    \sin(2la)
+    }
+    \end{pmatrix}
+    \end{align*}
+\end{enumerate}
+
+\subsection*{Sol. 54}
+\begin{enumerate}
+    \item 
+    $M_{11}=S_{21}-
+    \frac{S_{11}\cdot S_{22}}{S_{12}},$ 
+    $M_{12}=\frac{S_{22}}{S_{12}},$
+    $M_{21}=-\frac{S_{11}}{S_{12}},$
+    $M_{22}=\frac{1}{S_{12}}.$
+
+    $S_{11}=-\frac{M_{21}}{M_{22}},$ 
+    $S_{12}=\frac{1}{M_{22}},$
+    $S_{21}=M_{11}-\frac{M_{12}M_{21}}{M_{22}},$
+    $S_{22}=\frac{M_{12}}{M_{22}}.$
+
+    $$
+    R_l=\left|\frac{M_{21}}{M_{22}}\right|^2,
+    \;
+    T_l=\left|M_{11}-\frac{M_{12}M_{21}}{M_{22}}\right|^2
+    $$
+    
+    $$
+    R_r=\left|\frac{M_{12}}{M_{22}}\right|^2,
+    \;
+    T_r=\left|\frac{1}{M_{22}}\right|^2
+    $$
+
+    \item Note that once the coefficient on the left side is specified, the coefficients for the right side can be determined by the transfer matrix $M_1.$ Since the boundary condition is not changed no matter the second potential is added, the coefficients in the middle are still determined by $M_1.$ After adding the second potential, the coefficients on the right most are thus the middle coefficients multiplied by $M_2.$ Therefore, the final transfer matrix is $M=M_2M_1.$
+    \item By prob53 and 1,
+    $$
+    M=\begin{pmatrix}
+        1+i\beta
+        & i\beta\\
+        -i\beta & 1-i\beta
+    \end{pmatrix}
+    $$
+    \item 
+    \begin{align*}
+       \begin{pmatrix}
+        1+i\beta
+        & i\beta\\
+        -i\beta & 1-i\beta
+    \end{pmatrix}
+    \begin{pmatrix}
+        1+i\beta
+        & i\beta\\
+        -i\beta & 1-i\beta
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+        1+2i\beta
+        & 2i\beta\\
+        -2i\beta & 1-2i\beta
+    \end{pmatrix}
+    \end{align*}
+    $T=\frac{1}{1+4\beta^2}$
+\end{enumerate}
+
+
+\subsection*{Sol. 55}
+I wrote the code using scipy in the QM play ground. $K\approx0.99995.$
+
+\subsection*{Sol. 56}
+$K_1\approx2.99938,$ 
+$K_2\approx4.99906,$ 
+$K_3\approx6.99866.$ 
+
+\subsection*{Sol. 57}
+\includegraphics[width=1.0\textwidth]{fig/prob57.png}
+
+\subsection*{Sol. 58}
+\begin{enumerate}
+    \item $\frac{N\pi^2\hbar^2}{2ma^2}.$
+    \item 
+    $$
+    \sum_{n=1}^N
+    \frac{n^2\pi^2\hbar^2}{2m(Na)^2}
+    =\frac{\pi^2\hbar^2}{2mN^2a^2}\frac{N(N+1)(2N+1)}{6}
+    $$
+    \item 
+    $$
+    \frac{\pi^2\hbar^2}{2mN^2a^2}\frac{N(N+1)(2N+1)}{6}
+    \approx 
+    \frac{\pi^2\hbar^2}{ma^2}\frac{N}{6}
+    $$
+    The cohesive energy per atom 
+    $$
+    \frac{\pi^2\hbar^2}{2ma^2}-\frac{\pi^2\hbar^2}{ma^2}\frac{1}{6}
+    =\frac{\pi^2\hbar^2}{ma^2}\frac{1}{3}.
+    $$
+    \item $2.510\times 10^{-19}J\approx 1.57eV.$
+    
+\end{enumerate}
+
+\subsection*{Sol. 59}
+\begin{enumerate}
+    \item 
+    $$
+    -\frac{\hbar^2}{2m}\psi''
+    + mgx\psi = E\psi
+    $$
+    Let $z=ax,$ and $y(z)=\frac{1}{\sqrt{a}}\psi(x),$
+    then
+    $y''=\frac{1}{\sqrt{a}}\psi''(x)\frac{1}{a^2}.$
+
+    The original equation then becomes
+    $$
+    -\frac{\hbar^2}{2m}
+    \sqrt{a}a^2y''
+    +mg\frac{z}{a}\sqrt{a}y
+    =E\sqrt{a}y,
+    $$
+    or 
+    $$
+    -y''
+    +\frac{2m^2g}{a^3\hbar^2}zy
+    =\frac{2mE}{a^2\hbar^2}y
+    $$
+
+    Let $a=\left(\frac{2m^2g}{\hbar^2}\right)^{1/3},$ 
+    $\epsilon=
+    \frac{2mE}{\hbar^2}
+    \left(\frac{\hbar^2}{2m^2g}\right)^{2/3},
+    $
+     the equation becomes dimensionless 
+     $$
+     -y'' + zy = \epsilon y.
+     $$
+
+    Solving this gives two independent solutions $\operatorname{Ai}(z-\epsilon)$
+    and 
+    $\operatorname{Bi}(z-\epsilon),$
+where $\operatorname{Ai}$ is the Airy function and $\operatorname{Bi}$ is the Airy Bi function.
+Only the Airy function converges to zero at infinity, so the Bi Airy function is discarded.
+
+    $\epsilon_1\approx2.33811,$ $\epsilon_{10}\approx12.82877.$
+
+
+    $$
+    \int_0^\infty A_1^2\operatorname{Ai}^2(z-\epsilon_1)dz
+    \approx 0.4917A_1^2
+    \Rightarrow A_1\approx1.1426
+    $$
+
+    $$
+    \int_0^\infty A_{10}^2\operatorname{Ai}^2(z-\epsilon_{10})dz
+    \approx 1.1402A_{10}^2
+    \Rightarrow 
+    A_{10}\approx0.9365
+    $$
+    
+\includegraphics[width=1.0\textwidth]{fig/prob59.png}
+
+Integrating numerically, we found that 
+$$
+\int_{0}^{\infty}
+\operatorname{Ai}(z-\epsilon_1)
+\operatorname{Ai}(z-\epsilon_{10})dz = 0.
+$$
+    
+    \item 
+    
+    For $y_1(z):$
+    \begin{align*}
+        \langle x\rangle=\int_{0}^{\infty}
+        zA_1^2\operatorname{Ai}^2(z-\epsilon_1)dz\approx1.55874
+    \end{align*}
+    \begin{align*}
+        \langle x^2\rangle=\int_{0}^{\infty}
+        z^2A_1^2\operatorname{Ai}^2(z-\epsilon_1)dz\approx2.91560, 
+    \end{align*}
+    \begin{align*}
+        \langle p\rangle=-i\hbar
+        \int_{0}^{\infty}
+        A_1^2\operatorname{Ai}(z-\epsilon_1)
+        \operatorname{Ai}'(z-\epsilon_1)dz=0
+    \end{align*}
+    \begin{align*}
+        \langle p^2\rangle=&-\hbar^2\int_{0}^{\infty}
+        A_1^2\operatorname{Ai}(z-\epsilon_1)
+        \operatorname{Ai}''(z-\epsilon_1)dz\\
+        =&
+        -\hbar^2A_1^2\int_{0}^{\infty}
+        (z-\epsilon_1)
+        \operatorname{Ai}^2(z-\epsilon_1)dz
+        \approx0.77937\hbar^2
+    \end{align*}    
+    $\sigma_x\approx0.69709,$ $\sigma_p\approx0.88282\hbar
+    \Rightarrow\sigma_x\sigma_p\approx0.615\hbar$
+
+
+For $y_{10}(z):$
+    \begin{align*}
+        \langle x\rangle=\int_{0}^{\infty}
+        zA_{10}^2\operatorname{Ai}^2(z-\epsilon_{10})dz
+        \approx8.55252
+    \end{align*}
+    \begin{align*}
+        \langle x^2\rangle=\int_{0}^{\infty}
+        z^2A_{10}^2\operatorname{Ai}^2(z-\epsilon_{10})dz\approx 87.77467, 
+    \end{align*}
+    \begin{align*}
+        \langle p\rangle=-i\hbar
+        \int_{0}^{\infty}
+        A_{10}^2\operatorname{Ai}(z-\epsilon_{10})
+        \operatorname{Ai}'(z-\epsilon_{10})dz=0
+    \end{align*}
+    \begin{align*}
+        \langle p^2\rangle=&-\hbar^2\int_{0}^{\infty}
+        A_{10}^2\operatorname{Ai}(z-\epsilon_{10})
+        \operatorname{Ai}''(z-\epsilon_{10})dz\\
+        =&
+        -\hbar^2A_{10}^2\int_{0}^{\infty}
+        (z-\epsilon_{10})
+        \operatorname{Ai}^2(z-\epsilon_{10})dz
+        \approx4.27626\hbar^2
+    \end{align*}    
+    $\sigma_x\approx3.82480,$ $\sigma_p\approx2.06791\hbar
+    \Rightarrow\sigma_x\sigma_p\approx7.90935\hbar.$
+
+    $$
+    \rho_Q(z)=A^2\operatorname{Ai}^2(z-\epsilon_{10})
+    $$
+
+    By prob1.11, 
+    $
+    \rho_C(x)=
+    \frac{1}{v(x)T}.
+    $
+    For a classical bouncing ball, $E=mgx+\frac{1}{2}mv^2\Rightarrow v=\sqrt{\frac{2E-2mgx}{m}}.$ Note that 
+    the height of the ball is $\frac{E}{mg}.$ By the acceleration formula, $\frac{E}{mg}=\frac{1}{2}gT^2\Rightarrow T=\sqrt{\frac{2E}{mg^2}}.$
+
+    Therefore, 
+    $$
+    \rho_C(x)=\sqrt{\frac{m}{2E-2mgx}\frac{mg^2}{2E}}=
+    \frac{mg}{2\sqrt{E(E-mgx)}}.
+    $$
+
+    Note that, under $a=1, 1=\frac{2m^2g}{\hbar^2},$ $\epsilon=\frac{2mE}{\hbar^2}=\frac{E}{mg},$ so 
+    $$
+    \rho_C(x)=\frac{1}{2\sqrt{\epsilon(\epsilon-x)}}
+    $$
+    \includegraphics[width=0.8\textwidth]{fig/prob59d.png}
+
+    The quantum case has many nodes between its falling trajectory, whereas the probability of finding the classical ball falls smoothly toward the ground, due to the increment of speed. Specifically, we cannot find the quantum ball at the bottom of the ground.
+    The classical ball is most likely been found at the highest point, whereas for the quantum case, the point slightly lower than its highest point is the most likely place to be found.
+    The classical bouncing ball cannot be found outside its maximum height, whereas the quantum version can still be found even at infinity.
+    
+
+\end{enumerate}
+\subsection*{Sol. 60}
+\begin{enumerate}
+    \item The base unit of $E$ is $kg\cdot m^2\cdot s^{-2}.$ To make the equation make sense, the base unit of $\alpha$ has to be $kg\cdot m^4\cdot s^{-2}.$ The base unit of $\hbar$ is $kg\cdot m^2\cdot s^{-1}.$
+
+    Suppose $E_0$ can be constructed using $m,$ $\hbar,$ and $\alpha,$ say proportion to $m^a\hbar^b\alpha^c,$ then, we arrive this equation
+    $a+b+c=1,$ $2b+4c=2,$ and $b+2c=2,$ which is inconsistent.
+
+    Hence, there is no way to construct $E_0$ through these constants in a closed form.
+
+    \item 
+    Let $y(x)=\psi(\lambda x),$ then $y'(x)=\psi'(\lambda x)\lambda,$ and $y''(x)=\psi''(\lambda x)\lambda^2.$
+
+    Then 
+    $$
+    \psi''(\lambda x)+ \frac{\beta}{\lambda^2x^2}\psi(\lambda x) = \kappa^2\psi(\lambda x)
+    \Rightarrow
+    y''(x)+\frac{\beta}{x^2}y(x)=\kappa^2\lambda^2y(x).
+    $$
+
+    \item 
+    The function $K_{ig}$ satisfies the equation
+    $$
+    x^2K_{ig}''+xK'_{ig}-(x^2-g^2)K_{ig}=0.
+    $$
+
+    Here, 
+    $$
+    \psi_\kappa(x)=A\sqrt{x}K_{ig}(\kappa x)
+    $$
+    $$
+    \psi'_\kappa(x)=A\frac{1}{2}x^{-1/2}K_{ig}(\kappa x)
+    +A\sqrt{x}K'_{ig}(\kappa x)\kappa
+    $$
+    \begin{align*}
+        \psi''_\kappa(x)=&-A\frac{1}{4}x^{-3/2}K_{ig}(\kappa x)
+    +Ax^{-1/2}K'_{ig}(\kappa x)\kappa
+    +A\sqrt{x}K''_{ig}(\kappa x)\kappa^2\\
+    =&
+    -A\frac{1}{4}x^{-3/2}K_{ig}(\kappa x)
+    +Ax^{-1/2}K'_{ig}(\kappa x)\kappa
+    +A\sqrt{x} \kappa^2
+    \left[
+    -\frac{1}{\kappa x}
+    K'_{ig}(\kappa x)
+    +
+    (1-\frac{g^2}{\kappa^2x^2})
+    K_{ig}(\kappa x)
+    \right]\\
+    =&
+    A\sqrt{x}K_{ig}(\kappa x)
+    \left[
+    \frac{-1}{4x^2}
+    +\kappa^2
+    -\frac{g^2}{x^2}
+    \right]\\
+    =&\left[
+    \frac{-1}{4x^2}
+    +\kappa^2
+    -\frac{\beta-1/4}{x^2}
+    \right]\psi_{\kappa}(x)\\
+    =&\left[-\frac{\beta}{x^2}+\kappa^2\right]\psi_{\kappa}(x)
+    \end{align*}
+
+
+    \includegraphics[width=0.8\textwidth]{fig/prob2.60.png}
+
+    \begin{align*}
+        \int_{0}^\infty
+        A^2xK_{4i}^2(x)dx
+        \approx
+        4.38232\times10^{-5}\cdot A^2
+        \Rightarrow A\approx 151.
+    \end{align*}
+
+        \item 
+        $$
+        \psi_\kappa(1)
+        =AK_{4i}(\kappa)=0
+        $$
+        Finding the ground state energy for $\epsilon=1$ and $g=4$
+         is the same as finding the maximum zero point of the function $K_{4i}.$ $\kappa\approx 1.6954$
+
+         \includegraphics[width=0.8\textwidth]{fig/prob2.60_K4i_kx.png}
+
+         Note that $\beta$ is dimensionless. 
+         The base unit of 
+         $\frac{\alpha}{\epsilon^2}$ is $kg\cdot m^2\cdot s^{-2},$ the same base unit as the energy.
+
+        
+\end{enumerate}
+
+\subsection*{Sol. 61}
+\begin{enumerate}
+    \item 
+    Note that 
+    $$
+    -\psi_2+2\psi_1=E\psi_1
+    $$
+    $$
+    -\psi_3+2\psi_2-\psi_1=E\psi_2
+    $$
+    $$
+    2\psi_{N}-\psi_{N-1}=E\psi_N
+    $$
+
+For $N=1$
+$$
+\frac{4\hbar^2}{2ma^2}
+\begin{pmatrix}
+    2
+\end{pmatrix}
+$$
+
+For $N=2$
+$$
+\frac{9\hbar^2}{2ma^2}
+\begin{pmatrix}
+    2 & -1\\
+    -1 & 2
+\end{pmatrix}
+$$
+
+For $N=3$
+$$
+\frac{16\hbar^2}{2ma^2}
+\begin{pmatrix}
+    2 & -1 & 0\\
+    -1 & 2 & -1\\
+    0 & -1 & 2
+\end{pmatrix}
+$$
+\item 
+For $N=1,$ $\lambda=\frac{8\hbar^2}{2ma^2}.$
+For $N=2,$ 
+$\lambda_1=\frac{9\hbar^2}{2ma^2},
+\lambda_2=\frac{27\hbar^2}{2ma^2}.$
+For $N=3,$ 
+$\lambda_1=\frac{16(2-\sqrt{2})\hbar^2}{2ma^2}
+\approx\frac{9.37\hbar^2}{2ma^2},$
+$\lambda_2=\frac{32\hbar^2}{2ma^2},$
+$\lambda_3=\frac{16(2+\sqrt{2})\hbar^2}{2ma^2}
+\approx\frac{54.627\hbar^2}{2ma^2}
+.$
+$$
+E_1=\frac{9.8696\hbar^2}{2ma^2},\;
+E_2=\frac{39.4784\hbar^2}{2ma^2},\;
+E_3=\frac{88.8264\hbar^2}{2ma^2},\;
+E_4=\frac{157.9137\hbar^2}{2ma^2},\;
+E_5=\frac{246.74011\hbar^2}{2ma^2}
+$$
+
+\item 
+For $N=10,$
+$$
+\lambda_1\approx\frac{9.8027\hbar^2}{2ma^2},
+\;
+\lambda_2\approx\frac{38.4166\hbar^2}{2ma^2},
+\;
+\lambda_3\approx\frac{83.5237\hbar^2}{2ma^2},
+\;
+\lambda_4\approx\frac{141.4696\hbar^2}{2ma^2},
+\;
+\lambda_5\approx\frac{207.5598\hbar^2}{2ma^2}
+$$
+
+For $N=100,$
+$$
+\lambda_1\approx\frac{9.8688\hbar^2}{2ma^2},
+\;
+\lambda_2\approx\frac{39.4657\hbar^2}{2ma^2},
+\;
+\lambda_3\approx\frac{88.7620\hbar^2}{2ma^2},
+\;
+\lambda_4\approx\frac{157.7101\hbar^2}{2ma^2},
+\;
+\lambda_5\approx\frac{246.2432\hbar^2}{2ma^2}
+$$
+
+
+\item 
+
+\includegraphics[width=0.95\textwidth, valign=t]{fig/prob2.61_eigenvectors.png}
+
+
+\end{enumerate}
+
+\subsection*{Sol. 62}
+$$
+v_j=500\frac{\Delta x^2}{a^2}\sin\left(\frac{\pi x_j}{a}\right)
+$$
+$$
+E_1=\frac{304.659559\hbar^2}{2ma^2},\;
+E_2=\frac{304.800367\hbar^2}{2ma^2},\;
+E_3=\frac{476.162700\hbar^2}{2ma^2}
+$$
+\includegraphics[width=0.95\textwidth, valign=t]{fig/prob2.62_eigenvectors.png}
+
+\subsection*{Sol. 63}
+\begin{enumerate}
+    \item 
+    $$
+    -\frac{\partial}{\partial\beta}
+    \ln(Z)
+    =\frac{1}{Z}
+    \sum_ne^{-\beta E_n}E_n
+    =\sum_nE_nP(n)
+    $$
+    \item 
+    \begin{align*}
+        \sum_ne^{-\beta(n+1/2)\hbar\omega}
+        =& e^{-\beta\hbar\omega/2}
+        \frac{e^{-\beta\hbar\omega}}{1-e^{-\beta\hbar\omega}}\\
+        =&
+        \frac{e^{-\beta\hbar\omega/2}}{1-e^{-\beta\hbar\omega}}
+    \end{align*}
+    \item 
+    \begin{align*}
+        \bar{E} = &
+        -\frac{\partial}{\partial\beta}
+        (-\beta\hbar\omega/2-
+        \ln(1-e^{-\beta\hbar\omega})
+        )\\
+        =&\frac{\hbar\omega}{2}
+        +\frac{e^{-\beta\hbar\omega}
+        \hbar\omega}{1-e^{-\beta\hbar\omega}}\\
+        =&\frac{\hbar\omega}{2}
+        \left(
+        1+\frac{2e^{-\beta\hbar\omega}
+        }
+        {1-e^{-\beta\hbar\omega}}
+        \right)\\
+        =&
+        \frac{\hbar\omega}{2}\left(
+        \frac{1+e^{-\beta\hbar\omega}
+        }
+        {1-e^{-\beta\hbar\omega}}
+        \right)
+    \end{align*}
+    \item 
+    \begin{align*}
+        \frac{\partial\bar{E}}{\partial T}
+        =&
+        \frac{\hbar^{2} {\omega}^{2} \mathrm{e}^{\hbar{\omega}{\beta}}}{\left(\mathrm{e}^{\hbar{\omega}{\beta}} - 1\right)^{2}}
+        \frac{1}{k_BT^2}\\
+        =&
+        k_B
+        \frac{\theta^2_E}{T^2}
+        \frac{e^{\theta_E/T}}
+        {(e^{\theta_E/T}-1)^2},
+    \end{align*}
+    so the heat capacity 
+    $$
+    C=
+    3
+    k_B
+        \frac{\theta^2_E}{T^2}
+        \frac{e^{\theta_E/T}}
+        {(e^{\theta_E/T}-1)^2}
+    $$
+    \item 
+    \includegraphics[width=0.95\textwidth, valign=t]{fig/prob2.63.png}
+    
+\end{enumerate}
+
+\subsection*{Sol. 64}
+\begin{enumerate}
+    \item 
+    \begin{align*}
+        (1-x^2)
+        \sum_{n=2}^\infty
+        a_nn(n-1)x^{n-2}
+        -2x\sum_{n=1}^{\infty}
+        a_nnx^{n-1}
+        +l(l+1)
+        \sum_{n=0}^{\infty}
+        a_nx^n=0
+    \end{align*}
+    For the $x^m$ term,
+    $$
+    a_{m+2}(m+2)(m+1)
+    -a_mm(m-1)
+    -2a_{m}m
+    +l(l+1)a_m=0.
+    $$
+
+    The recursive relation is 
+    $$
+    a_{m+2}
+    =
+    \frac{m(m+1)-l(l+1)}{(m+1)(m+2)}a_m.
+    $$
+    \item 
+    For $m$ very large, $a_{m+2}\approx a_m,$ so the large coefficient is approximately a constant $C.$
+    This yields
+    $$
+    f(x)\approx C\sum_nx^n,
+    $$
+    which diverges at $x=1.$ Therefore, the series must be truncated at some point.
+    \item 
+    $$
+    P_0(x)=a_0
+    $$
+    $$
+    P_1(x)=a_1x
+    $$
+    $$
+    P_2(x)=-3a_0x^2+a_0
+    $$
+    $$
+    P_3(x)=-\frac{5}{3}a_1x^3+a_1x
+    $$
+    
+    
+\end{enumerate}
+
+

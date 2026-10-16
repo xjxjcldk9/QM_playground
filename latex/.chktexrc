@@ -1,0 +1,12 @@
+# ChkTeX configuration (merged with the system default chktexrc)
+# 3  Enclose parenthesis with {}  -- fires on every (x)^2, pure noise
+# 1  Command terminated with space          -- noisy with \cdot, \hbar etc. in math
+# 8  Wrong length of dash                   -- false positives in math (e.g. -7)
+# 24 Delete this space to maintain correct pagereferences
+# 36 You should put a space in front of parenthesis
+# 44 User regex (vertical rules in tables)
+# 45 Use \[ ... \] instead of $$ ... $$ -- remove -n45 below for stricter style
+CmdLine
+{
+    -n1 -n3 -n8 -n24 -n36 -n44 -n45
+}

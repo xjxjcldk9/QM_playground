@@ -1,0 +1,1593 @@
+\section{The Variational Principle}
+\subsection*{Sol. 1}
+\begin{enumerate}
+    \item 
+    \begin{align*}
+        \langle V\rangle
+        =\int_{-\infty}^\infty 
+        \sqrt{\frac{2b}{\pi}}
+        e^{-2bx^2}
+            \alpha |x|
+        dx = \frac{\alpha}{\sqrt{2b\pi}}
+    \end{align*}    
+    \begin{align*}
+        \langle H\rangle = \frac{\hbar^2 b}{2m} + \frac{\alpha}{\sqrt{2b\pi}}\Rightarrow 
+        \langle H\rangle_{min}=\frac{3 \cdot 2^{\frac{2}{3}} \alpha^{\frac{2}{3}} \hbar^{\frac{2}{3}}}{4 \sqrt[3]{\pi} \sqrt[3]{m}}
+    \end{align*}
+    \item 
+     \begin{align*}
+        \langle V\rangle
+        =\int_{-\infty}^\infty 
+        \sqrt{\frac{2b}{\pi}}
+        e^{-2bx^2}
+            \alpha x^4
+        dx = \frac{3a}{16b^2}
+    \end{align*}    
+    \begin{align*}
+        \langle H\rangle = \frac{\hbar^2 b}{2m} + \frac{3\alpha}{16b^2}\Rightarrow 
+        \langle H\rangle_{min}=
+        \frac{\sqrt[3]{6} \sqrt[3]{\alpha} \sqrt[3]{m}}{2 \hbar^{\frac{2}{3}}}
+    \end{align*}
+\end{enumerate}
+\subsection*{Sol. 2}
+\begin{align*}
+    \int \frac{A^2}{(x^2+b^2)^2}dx = \frac{\pi A^2}{2b^3}\Rightarrow A = \sqrt{\frac{2b^3}{\pi}}
+\end{align*}
+\begin{align*}
+    \langle H\rangle 
+     =& \langle T \rangle + \langle V\rangle\\
+     =&
+     -\frac{\hbar^2}{2m}
+     \frac{2b^3}{\pi}
+     \int \frac{1}{x^2+b^2}\frac{2 \left(3x^{2} - b^{2}\right)}{\left(x^{2} + b^{2}\right)^{3}}
+     dx
+     +
+     \frac{1}{2}m\omega^2 
+     \frac{2b^3}{\pi}\int \frac{1}{(x^2+b^2)^2}x^2dx\\
+     =& 
+     \frac{\hbar^2}{2m}
+     \frac{2b^3}{\pi}\frac{\pi}{4b^5}
+     + \frac{1}{2}m\omega^2 
+     \frac{2b^3}{\pi}\frac{\pi}{2b}
+     \Rightarrow \langle H\rangle_{min} = \frac{\sqrt{2} \hbar \omega}{2}
+\end{align*}
+
+
+
+\subsection*{Sol. 3}
+\begin{align*}
+    \langle H\rangle =& \langle T\rangle + \langle V\rangle\\
+    =&\frac{12\hbar^2}{2ma^2} -\alpha
+    \int \psi^2(x)\delta(x)dx\\
+    =&
+    \frac{12\hbar^2}{2ma^2} -\alpha\frac{a^2}{4}\frac{12}{a^3}\geq 
+    - \frac{3 \alpha^{2} m}{8 \hbar^{2}}
+\end{align*}
+
+\subsection*{Sol. 4}
+\begin{enumerate}
+    \item Let $\psi = \sum c_n\psi_n,$ $c_0=0.$
+    \begin{align*}
+        \langle H \rangle = \sum c^*_nc_m\langle \psi_n, H\psi_m\rangle
+        =\sum E_n|c_n|^2\geq E_1\sum |c_n|^2 = E_1.
+    \end{align*}
+    \item 
+    Note that $\psi(x)$ is orthogonal to the ground state.
+    \begin{align*}
+        \int A^2x^2e^{-2bx^2}dx = \frac{\sqrt{\pi} \, A^{2}}{2^{\frac{5}{2}} b^{\frac{3}{2}}}\Rightarrow A = 
+        \left(\frac{\sqrt{\pi} }{2^{\frac{5}{2}} b^{\frac{3}{2}}}\right)^{-1/2}
+    \end{align*}
+    \begin{align*}
+        \langle T \rangle + \langle V \rangle = & 
+        \int-\frac{\hbar^2}{2m}
+        \left(\frac{\sqrt{\pi} }{2^{\frac{5}{2}} b^{\frac{3}{2}}}\right)^{-1}
+        xe^{-bx^2}2bx \left(2bx^{2} - 3\right) \mathrm{e}^{-bx^{2}}
+        dx + 
+        \int 
+        \frac{1}{2}m\omega^2 
+        \left(\frac{\sqrt{\pi} }{2^{\frac{5}{2}} b^{\frac{3}{2}}}\right)^{-1}
+        x^2e^{-2bx^2}x^2dx\\
+        = &
+        \frac{3b\hbar^{2}}{2m}
+        +
+        \frac{3m{\omega}^{2}}{8b}\geq \frac{3 \hbar \omega}{2}
+    \end{align*}
+\end{enumerate}
+
+\subsection*{Sol. 5}
+Using the triangular wave function
+\begin{align*}
+    \langle T \rangle + \langle H\rangle
+    =&
+    \frac{12\hbar^2}{2ma^2} + 
+   mg \int_0^{a/2}A^2x^3dx + 
+   mg \int_{a/2}^aA^2(a-x)^2xdx\\
+   =&
+   \frac{12\hbar^2}{2ma^2} + mg\frac{3a}{16}
+   +mg\frac{5a}{16}
+   \geq 
+   \frac{3 \cdot \sqrt[3]{3} g^{\frac{2}{3}} \hbar^{\frac{2}{3}} \sqrt[3]{m}}{2}
+   \approx 2.7257\left(\frac{mg^2\hbar^2}{2}\right)^{1/3}
+\end{align*}
+
+\subsection*{Sol. 6}
+\begin{enumerate}
+    \item 
+    $$
+    E^0 + E^1 = \langle \psi^0, H^0\psi^0\rangle + \langle \psi^0, H'\psi^0\rangle
+    \geq 
+    \langle \psi^{gs}, (H+H')\psi^{gs}\rangle=E^{gs}
+    $$
+    \item 
+    By 7.15, the denominator is always negative, while the numerator is positive for the ground state. Thus $E^2$ for the ground state is always negative.
+\end{enumerate}
+
+\subsection*{Sol. 7}
+The ground state energy of a helium ion is $-13.6\times 4= - 54.4eV.$ The ionization energy is $24.6eV.$
+
+
+\subsection*{Sol. 8}
+For \ce{H^-}
+\begin{align*}
+    \langle H \rangle=2Z^2E_1 -4Z(Z-1)E_1-\frac{5Z}{4}E_1
+\end{align*}
+$Z = \frac{11}{16}\approx0.69,$ and $\langle H\rangle\geq -12.856eV.$
+
+For \ce{Li^+}
+\begin{align*}
+    \langle H \rangle=2Z^2E_1 -4Z(Z-3)E_1-\frac{5Z}{4}E_1
+\end{align*}
+$Z = \frac{43}{16}\approx2.69,$ and $\langle H\rangle\geq -196.456eV.$
+
+\subsection*{Sol. 9}
+\begin{align*}
+    D =& \int a\frac{1}{\pi a^3}2\pi e^{-2r/a}\frac{1}{\sqrt{r^2+R^2-2rR\cos\theta}}r^2\sin\theta drd\theta \\
+    =&
+    \frac{2}{Ra^2}
+    \left[
+    \int_0^R 
+    re^{-2r/a}[(r+R)-(R-r)]dr+
+    \int_R^\infty
+    re^{-2r/a}[(r+R)-(r-R)]dr
+    \right]\\
+    =&
+    \frac{2}{Ra^2}
+    \left[
+    \frac{a^3}{2}-\frac{a^3+2Ra^2+2R^2a}{2}e^{-2R/a}
+    +\frac{Ra(a+2R)}{2}e^{-2R/a}
+    \right]\\
+    =&\frac{a}{R}-\left(1+\frac{a}{R}\right)e^{-2R/a}
+\end{align*}
+\begin{align*}
+    X =& \int a2\pi \frac{1}{\pi a^3}e^{-r/a}\frac{1}{r}e^{-\sqrt{r^2+R^2-2rR\cos\theta }/a}r^2\sin\theta drd\theta \\
+    =&
+    \int_0^R\frac{2r}{a^2}\frac{1}{Rr}
+    [(a(R-r)+a^2)\exp(-(R-r)/a-r/a)
+    -
+    (a(R+r)+a^2)\exp(-(R+r)/a-r/a)
+    ]\\
+    &
+    \int_R^\infty \frac{2r}{a^2}\frac{1}{Rr}
+    [(a(r-R)+a^2)\exp(-(r-R)/a-r/a)
+    -
+    (a(R+r)+a^2)\exp(-(R+r)/a-r/a)
+    ]\\
+    =&
+    -\frac{\mathrm{e}^{-\frac{3R}{a}} \left(\left(3a^{2} - 2Ra - 2R^{2}\right) \mathrm{e}^{\frac{2R}{a}} - 3a^{2} - 4Ra\right)}{2Ra}+\frac{\mathrm{e}^{-\frac{3R}{a}} \left(3a\mathrm{e}^{\frac{2R}{a}} - 3a - 4R\right)}{2R}\\
+    =&
+    \left( 1+ \frac{R}{a}\right)e^{-R/a}
+\end{align*}
+
+\subsection*{Sol. 10}
+\begin{align*}
+    |A|^2 = \frac{1}{2(1-I)}
+\end{align*}
+\begin{align*}
+    H\psi =& 
+    A\left[
+    -\frac{\hbar^2}{2m}\nabla^2 - \frac{e^2}{4\pi\epsilon_0}
+    \left(\frac{1}{r} + \frac{1}{r'}\right)
+    \right][\psi_0(r)-\psi_0(r')]\\
+    =&AE_1\psi_0(r)-AE_1\psi_0(r')
+    -A\left(\frac{e^2}{4\pi\epsilon_0}\right)
+    \left[
+    \frac{1}{r'}\psi_0(r) - \frac{1}{r}\psi_0(r')
+    \right]
+\end{align*}
+\begin{align*}
+    \langle H\rangle
+    =\left[1+2\frac{D-X}{1-I}\right]E_1
+\end{align*}
+$$
+F(x) = \frac{- x^{3} e^{x} - 7 x^{2} e^{x} + 3 x e^{2 x} - 3 x e^{x} - 6 x + 6 e^{x} - 6}{x^{3} e^{x} + 3 x^{2} e^{x} - 3 x e^{2 x} + 3 x e^{x}}
+$$
+
+\includegraphics[width=0.8\textwidth,valign=t]{fig/prob8.10.png}
+
+\subsection*{Sol. 11}
+\begin{align*}
+    F(x) = -1 + \frac{2}{x}
+    \left\{
+    \frac{(1-(2/3)x^2)e^{-x} + (1 + x) e^{-2x}}
+    {1 + (1 + x+(1/3)x^2)e^{-x}}
+    \right\}
+    \approx 
+    -1.129662 + 0.062834(x - 2.492830)^2
+\end{align*}
+Use the reduced mass of the two proton system to do the estimation
+\begin{align*}
+    \frac{1}{2}\mu\omega^2\approx 0.062834 \times 13.6eV\Rightarrow 
+    \frac{1}{2}\hbar\omega \approx 0.1125eV.
+\end{align*}
+\begin{align*}
+    (1/2 + n)\hbar\omega\leq 1.8eV
+\end{align*}
+about 8 bound vibrational levels.
+
+\subsection*{Sol. 12}
+\begin{align*}
+    \psi_0(r_1)\psi(r_2') - \psi_0(r_1')\psi_0(r_2) \propto
+    [\psi_0(r_1)+\psi_0(r_1')]
+    [\psi_0(r_2)-\psi_0(r_2')]
+    -
+    [\psi_0(r_1)-\psi_0(r_1')]
+    [\psi_0(r_2)+\psi_0(r_2')]
+\end{align*}
+\subsection*{Sol. 13}
+\begin{align*}
+    &A^2\langle
+    [\psi_0(r_1)\psi_0(r'_2)\pm\psi_0(r_1')\psi_0(r_2)], \frac{1}{r_1}
+    [\psi_0(r_1)\psi_0(r'_2)\pm\psi_0(r_1')\psi_0(r_2)]
+    \rangle\\
+    =&A^2
+    \langle\psi_0(r_1)\psi_0(r'_2), \frac{1}{r_1}\psi_0(r_1)\psi_0(r'_2)\rangle\pm
+    A^2
+    \langle\psi_0(r_1)\psi_0(r'_2), \frac{1}{r_1}\psi_0(r_1')\psi_0(r_2)\rangle\\
+    \pm&A^2
+    \langle\psi_0(r_1')\psi_0(r_2), \frac{1}{r_1}\psi_0(r_1)\psi_0(r'_2)\rangle
+    +A^2\langle\psi_0(r_1')\psi_0(r_2), \frac{1}{r_1}\psi_0(r_1')\psi_0(r_2)\rangle\\
+    =&\frac{1}{a}\left(A^2\pm A^2IX\pm  A^2XI+A^2D\right)\\
+    =&\frac{1}{2(1\pm I^2)a}\left(1\pm 2IX + D\right)
+\end{align*}
+
+\subsection*{Sol. 14}
+\begin{enumerate}
+    \item 
+    \begin{align*}
+        & \int \frac{2\pi}{\pi a^3}
+        e^{-2r_1/a}
+        \frac{a}{\sqrt{r_1^2+r_2^2-2r_1r_2\cos\theta_1}}
+        r_1^2\sin\theta_1 dr_1d\theta_1\\
+        =&
+        \int_0^{r_2}\frac{2r_1e^{-2r_1/a}}{a^2r_2}
+        \left[
+        (r_1+r_2)-(r_2-r_1)
+        \right]dr_1
+        +
+        \int_{r_2}^\infty
+        \frac{2r_1e^{-2r_1/a}}{a^2r_2}
+        \left[
+        (r_1+r_2)-(r_1-r_2)
+        \right]dr_1\\
+        =&
+        \frac{1}{ar_2}
+        \left(a^2-
+        e^{-2r_2/a}
+        (2r_2^2+2ar_2+a^2)\right)
+        +
+        (1+\frac{2r_2}{a})e^{-2r_2/a}\\
+        =&
+        \frac{a}{r_2}
+        -\left(
+        1 + \frac{a}{r_2}
+        \right)e^{-2r_2/a}
+    \end{align*}
+    \item 
+    \begin{align*}
+        &\int 
+        \frac{2\pi}{\pi a^3}
+        \exp\left(
+        -2\sqrt{R^2+r_2^2-2Rr_2\cos\theta_2}/a
+        \right)
+        \left(
+        \frac{a}{r_2}
+        -\left(
+        1 + \frac{a}{r_2}
+        \right)e^{-2r_2/a}
+        \right)
+        r_2^2
+        \sin\theta_2 dr_2r\theta_2\\
+        =&
+        \int_0^R
+       \frac{2r_{2}^{2} \left(\frac{a}{r_{2}} - \left(\frac{a}{r_{2}} + 1\right) \mathrm{e}^{-\frac{2r_{2}}{a}}\right) \left(\frac{\left(2a (R-r_2) + a^{2}\right) \mathrm{e}^{-\frac{2(R-r_2)}{a}}}{4Rr_{2}} - \frac{\left(2a (R+r_2) + a^{2}\right) \mathrm{e}^{-\frac{2 (R+r_2)}{a}}}{4Rr_{2}}\right)}{a^{3}}
+        dr_2
+        \\
+        +&
+        \int_R^\infty
+        \frac{2r_{2}^{2} \left(\frac{a}{r_{2}} - \left(\frac{a}{r_{2}} + 1\right) \mathrm{e}^{-\frac{2r_{2}}{a}}\right) \left(\frac{\left(2a (r_2-R) + a^{2}\right) \mathrm{e}^{-\frac{2 (r_2-R)}{a}}}{4Rr_{2}} - \frac{\left(2a (r_2+R)+ a^{2}\right) \mathrm{e}^{-\frac{2 (r_2+R)}{a}}}{4Rr_{2}}\right)}{a^{3}}
+        dr_2\\
+        =&
+        \dfrac{a}{R}-\left(\dfrac{a}{R}+\dfrac{11}{8}+\dfrac{3R}{4a}+\dfrac{R^{2}}{6a^{2}}\right)e^{-2R/a}
+    \end{align*}
+\end{enumerate}
+
+\subsection*{Sol. 15}
+\includegraphics[width=0.8\textwidth,valign=t]{fig/prob8.15.png}
+
+\subsection*{Sol. 16}
+\begin{enumerate}
+    \item \begin{align*}
+    \int_0^a A^2x^2(a-x)^2dx=\frac{A^2a^5}{30}\Rightarrow A = \sqrt{\frac{30}{a^5}}
+\end{align*}
+\begin{align*}
+    \langle T\rangle =& 
+    -\int \frac{\hbar^2}{2m}
+    \frac{30}{a^5}
+    x(a-x)(-2)dx\\
+    =&\frac{5\hbar}{a^2m}
+\end{align*}
+\item 
+\begin{align*}
+    \int_0^a A^2[x(a-x)]^{2p}dx=
+    A^{2} a^{4p + 1} \operatorname{B}\left(2p + 1,2p + 1\right),
+\end{align*}
+where $B$ is the Beta function.
+\begin{align*}
+    \langle T\rangle
+    =&\frac{\hbar^2}{2m}
+    \frac{1}{a^{4p + 1} \operatorname{B}\left(2p + 1,2p + 1\right)}
+    \int_0^a
+    \left[\frac{p \left(a - 2x\right) \left(\left(a - x\right) x\right)^{p}}{\left(a - x\right) x}\right]^2dx\\
+    =&
+    \frac{\hbar^2}{2m}
+    \frac{a^{4p - 1} p^{2} \left(4 \operatorname{B}\left(2p - 1,2p + 1\right) + \operatorname{B}\left(2p - 1,2p - 1\right) - 4 \operatorname{B}\left(2p,2p - 1\right)\right)}{a^{4p + 1} \operatorname{B}\left(2p + 1,2p + 1\right)}\\
+    =&\frac{\hbar^2}{2m}
+    \frac{1}{a^2}[
+    2p(4p + 1)/(2p - 1)
+    ].
+\end{align*}
+$p=\frac{1}{2}+\frac{\sqrt{6}}{4}$
+$$
+\langle H\rangle\geq 
+\frac{\hbar^2}{2m}\frac{1}{a^2}(5+2\sqrt{6})
+$$
+\end{enumerate}
+
+
+\subsection*{Sol. 17}
+\begin{enumerate}
+    \item 
+    \begin{align*}
+    \int_{-a/2}^{a/2} A^2\cos^2(\pi x/a)dx = \frac{A^2a}{2}
+\end{align*}
+\begin{align*}
+    \langle H \rangle
+    =&
+    \frac{\hbar^2}{2m}
+    \frac{2}{a}\frac{\pi^2}{a^2}
+    \int_{-a/2}^{a/2}
+    \cos^2(\pi x/a)dx
+    +\frac{1}{2}m\omega^2
+    \frac{2}{a}
+    \int_{-a/2}^{a/2}
+    \cos^2(\pi x/a)x^2dx\\
+=&\frac{\pi^{2} \hbar^{2}}{2a^{2} m}
++\frac{\left(\pi^{2} - 6\right) a^{2} m{\omega}^{2}}{24\pi^{2}}
+\end{align*}
+The best value of $a$ is $\frac{\sqrt{2} \cdot \sqrt[4]{3} \pi \sqrt{\hbar}}{\sqrt{m} \sqrt{\omega} \sqrt[4]{-6 + \pi^{2}}}.$
+$$
+\langle H\rangle\geq \frac{\hbar \omega \sqrt{-18 + 3 \pi^{2}}}{6}\approx0.57\hbar\omega
+$$
+\item \begin{align*}
+    \int_{-a}^a B^2\sin^2(\pi x/a)dx=B^2a
+\end{align*}
+\begin{align*}
+    \langle H\rangle
+    =&\frac{\hbar^2}{2m}\frac{1}{a}
+    \frac{\pi^2}{a^2}
+    \int_{-a}^a
+    \sin^2(\pi x/a)dx
+    +\frac{1}{2}m\omega^2 
+    \frac{1}{a}
+    \int_{-a}^a
+    \sin^2(\pi x/a)x^2dx\\
+    =&\frac{\pi^2 \hbar^{2}}{2a^{2} m}
+    +\frac{\left(2\pi^{2} - 3\right) a^{2} m{\omega^2}}{12\pi^{2}}\\
+    &\geq  \frac{\hbar \omega \sqrt{-18 + 12 \pi^{2}}}{6}\approx 1.67\hbar\omega
+\end{align*}
+\end{enumerate}
+
+
+\subsection*{Sol. 18}
+\begin{enumerate}
+    \item 
+    Assume that $n$ is some positive integer.
+    \begin{align*}
+        \int A^2\frac{1}{(x^2+b^2)^{2n}}dx = 1
+        \Rightarrow 
+        \frac{2A^2(-1)^{2n-1}\pi b^{1-4n}\Gamma(1/2)}
+        {2\sin(\pi/2)\Gamma(2n)\Gamma(1/2-2n+1)}=1
+    \end{align*}
+    \begin{align*}
+        \frac{A^2(-1)\pi b^{1-4n}\sqrt{\pi}}
+        {\Gamma(2n)\Gamma(1/2-2n+1)}=1
+    \end{align*}
+    \begin{align*}
+        \langle T \rangle
+        +\langle V\rangle
+        =&
+        \frac{\hbar^2}{2m}
+        A^2 4n^2
+        \int 
+        \frac{x^2}{(x^2+b^2)^{2n+2}}dx
+        +
+        \frac{1}{2}m\omega^2\int 
+        A^2 
+        \frac{1}{(x^2+b^2)^{2n}}x^2dx\\
+        =&
+        \frac{\hbar^2}{2m}A^24n^2
+       \frac{2(-1)^{2n+1}\pi b^{-1-4n}\Gamma(3/2)}
+       {2\sin(3/2\pi)\Gamma(2n+2)\Gamma(3/2-(2n+2)+1)}\\
+       +&\frac{1}{2}m\omega^2 
+       A^2 
+       \frac{2(-1)^{2n-1}\pi b^{3-4n}\Gamma(3/2)}
+       {2\sin(3/2\pi)\Gamma(2n)\Gamma(3/2-(2n)+1)}\\
+       =&
+       \frac{\hbar^2}{2m}4n^2 
+       \frac{2n-\frac{1}{2}}{2b^2(2n+1)(2n)}
+       +\frac{1}{2}m\omega^2b^2\frac{1}{2}\frac{1}{2n-\frac{3}{2}}.
+    \end{align*}
+    The minimum occurred at 
+    $$
+    b^2=\frac{\sqrt{2} \hbar \sqrt{n} \sqrt{(4n-1)(4n-3)}}{2 m \omega \sqrt{2 n + 1}}
+    $$
+    and 
+    $$
+    \langle H\rangle\geq 
+    \frac{\sqrt{2} \hbar \sqrt{n} \omega \sqrt{\frac{4 n - 1}{4 n - 3}}}{2 \sqrt{2 n + 1}}
+    $$
+    \item 
+    \begin{align*}
+        \int_{-\infty}^{\infty} \frac{B^2x^2}{(x^2+b^2)^{2n}}dx = 1
+        \Rightarrow 
+        \frac{2B^2(-1)^{2n-1}\pi b^{3-4n}\Gamma(3/2)}
+        {2\sin(3/2\pi)\Gamma(2n)\Gamma(3/2-2n+1)}=1
+    \end{align*}
+    \begin{align*}
+        B^2=
+        \frac
+        {\Gamma(2n)\Gamma(3/2-2n+1)}
+        {\pi b^{3-4n}\Gamma(3/2)}
+    \end{align*}
+    \begin{align*}
+        \langle T\rangle + \langle V \rangle
+        =&
+        \frac{\hbar^2}{2m}
+        B^2
+        \int 
+        \frac{((2n-1)x^2-b^2)^2}{(x^2+b^2)^{2n+2}}dx
+        +\frac{1}{2}m\omega^2\int 
+        \frac{B^2x^4}{(x^2+b^2)^{2n}}dx\\
+        =&\frac{\hbar^2}{2m}(2n-1)^2B^2
+        \frac{2(-1)^{2n+1}\pi b^{4+1-2(2n+2)}\Gamma(5/2)}
+        {2\sin(5/2\pi)\Gamma(2n+2)\Gamma(5/2-(2n+2)+1)}\\
+        &-\frac{\hbar^2}{2m}2(2n-1)b^2B^2
+        \frac{2(-1)^{2n+1}\pi b^{2+1-2(2n+2)}\Gamma(3/2)}
+        {2\sin(3/2\pi)\Gamma(2n+2)\Gamma(3/2-(2n+2)+1)}\\
+        &+
+        \frac{\hbar^2}{2m}b^4B^2
+        \frac{2(-1)^{2n+1}\pi b^{0+1-2(2n+2)}\Gamma(1/2)}
+        {2\sin(1/2\pi)\Gamma(2n+2)\Gamma(1/2-(2n+2)+1)}
+        \\
+        &+\frac{1}{2}m\omega^2B^2
+        \frac{2(-1)^{2n-1}\pi b^{4+1-2(2n)}\Gamma(5/2)}
+        {2\sin(5/2\pi)\Gamma(2n)\Gamma(5/2-(2n)+1)}\\
+        =&
+        \frac{\hbar^2}{2m}(2n-1)^2
+        \frac{(2n-\frac{3}{2})3/2}
+        { b^2(2n+1)(2n)}\\
+        &-\frac{\hbar^2}{2m}2(2n-1)
+        \frac{(2n-3/2)(2n-1/2)}
+        {b^2(2n+1)(2n)}\\
+        &+
+        \frac{\hbar^2}{2m}
+        2
+        \frac{(2n-3/2)(2n-1/2)(2n+1/2)}
+        {b^2(2n+1)(2n)}
+        \\
+        &+\frac{1}{2}m\omega^2
+        \frac{b^2\frac{3}{2}}
+        {2n-\frac{5}{2}}.
+    \end{align*}
+    The minimum occurred at 
+    $$
+    b^2 = \frac{\sqrt{2} \hbar \sqrt{n} \sqrt{\left(4 n - 5\right) \left(4 n - 3\right)}}{2 m \omega \sqrt{2 n + 1}},
+    $$
+    and 
+    $$
+    \langle H\rangle
+    =\frac{3 \sqrt{2} \hbar \sqrt{n} \omega \sqrt{\frac{4 n - 3}{4 n - 5}}}{2 \sqrt{2 n + 1}}.
+    $$
+    \item 
+    \begin{align*}
+        &\lim_{n\to\infty}
+        \sqrt{(-1)\frac{\Gamma(2n)\Gamma(3/2-2n)}{\sqrt{\pi}\pi b^{1-4n}}}
+        \frac{1}{(x^2+b^2)^n}
+        \\=&
+        \lim_{n\to\infty}
+        \sqrt{
+        \frac{(2n-1)!(2n-\frac{1}{2})
+        \frac{(-4)^{2n}(2n)!}{(4n)!}
+        }{\pi b^{1-4n}}}
+        \frac{1}{(x^2+b^2)^n}\\
+    =&
+    \lim_{n\to\infty}
+        \sqrt{
+        \frac{\sqrt{2\pi(2n-1)}((2n-1)/e)^{2n-1}
+        (2n-\frac{1}{2})
+        (4)^{2n}
+        \sqrt{2\pi(2n)}(2n/e)^{2n}
+        }{\pi b^{1-4n}
+        \sqrt{2\pi(4n)}(4n/e)^{4n}
+        }}
+        \frac{1}{(x^2+b^2)^n}\\
+    =&
+    \lim_{n\to\infty}
+        \sqrt{
+        e\frac{\sqrt{2\pi(2n-1)}(2n-1)^{2n-1}
+        (2n-\frac{1}{2})
+        (4)^{2n}
+        (2n)^{2n}
+        }{\pi b^{1-4n}
+        \sqrt{2}(4n)^{4n}
+        }}
+        \frac{1}{(x^2+b^2)^n}\\
+        =&
+        \lim_{n\to\infty}
+        \sqrt{
+        \frac{e}{\sqrt{\pi}}
+        \frac{(2n-\frac{1}{2})}{(2n-1)^{1/2}b}
+        \left(
+        \frac{(2n-1)b^2}{2n(x^2+b^2)}
+        \right)^{2n}}\\
+    =&
+    \lim_{n\to\infty}
+        \sqrt{
+        \frac{e}{\sqrt{\pi}}
+        \frac{(2n-\frac{1}{2})}{(2n-1)^{1/2}
+        \sqrt{\frac{\hbar}{m\omega}2n}
+        }
+        \left(
+        \frac{(2n-1)\frac{\hbar}{m\omega}}
+        {(x^2+
+        \frac{\hbar}{m\omega}2n)}
+        \right)^{2n}}\\
+        =& \lim_{n\to\infty}
+        \sqrt{
+        \frac{e}{\sqrt{\pi}}
+        \sqrt{\frac{m\omega}{\hbar}}
+        \frac{1}{e}\exp(-\frac{m\omega}{\hbar}x^2)
+        }\\
+        =&
+        \left(
+        \frac{m\omega}{\pi\hbar}
+        \right)^{1/4}
+        \exp(-\frac{m\omega}{2\hbar}x^2)
+    \end{align*}
+    \begin{align*}
+        &\sqrt{\frac{\Gamma(2n)\Gamma(5/2-2n)}{\pi b^{3-4n}\Gamma(3/2)}}
+        \frac{x}{(x^2+b^2)^n}\\
+        =&
+        \sqrt{
+        \frac{(2n-1)!(3/2-2n)(1/2-2n)(-4)^{2n}(2n)!\sqrt{\pi}}
+        {\pi b^{3-4n}\sqrt{\pi}/2(4n)!}
+        }
+        \frac{x}{(x^2+b^2)^n}\\
+        =&
+        \sqrt{
+        \frac{\sqrt{2\pi((2n-1))}
+        ((2n-1)/e)^{(2n-1)}
+        (3/2-2n)(1/2-2n)(4)^{2n}
+        \sqrt{2\pi(2n)}(2n/e)^{2n}
+        }
+        {\pi b^{3-4n}/2
+        \sqrt{2\pi(4n)}(4n/e)^{4n}
+        }
+        }
+        \frac{x}{(x^2+b^2)^n}\\
+        =&x
+        \sqrt{
+        \frac{2e\sqrt{2\pi}}{\pi \sqrt{2}}
+        \frac{\sqrt{(2n-1)}(3/2-2n)(1/2-2n)}{(2n-1)b^3}
+        \left(
+        \frac{(2n-1)b^2}{2n(x^2+b^2)}
+        \right)^{2n}
+        }\\
+    =&
+    x\sqrt{2e 
+    \frac{\sqrt{2n}(2n)^2}{(2n)(2n)^{3/2}(\frac{\hbar}{m\omega})^{3/2}}
+    \left(
+        \frac{(2n-1)\frac{\hbar}{m\omega}2n}{2n(x^2+\frac{\hbar}{m\omega}2n)}
+        \right)^{2n}
+    }\\
+    =&x\sqrt{2e\sqrt{\frac{m\omega}{\hbar}}
+    \frac{m\omega}{\hbar}
+    \frac{1}{e}\exp(-\frac{m\omega}{\hbar}x^2)}\\
+    =&\left(
+    \frac{m\omega}{\pi\hbar}
+    \right)^{1/4}
+    \sqrt{\frac{2m\omega}{\hbar}}
+    x\exp(-\frac{m\omega}{2\hbar}x^2)
+    \end{align*}
+\end{enumerate}
+
+\subsection*{Sol. 19}
+\begin{align*}
+    \int4\pi A^2e^{-2br^2}r^2dr = A^2\left(\frac{\pi}{2b}\right)^{3/2}=1
+\end{align*}
+\begin{align*}
+    \langle T\rangle + \langle V\rangle
+    =& -\frac{\hbar^2}{2m}
+    4\pi
+    \int
+    A^2e^{-br^2}
+    \frac{1}{r^2}\frac{d}{dr}(r^2\frac{d}{dr}e^{-br^2})r^2dr
+    -\frac{e^2}{4\pi\epsilon_0}
+    4\pi\int A^2e^{-2br^2}\frac{1}{r}r^2dr\\
+=&
+-\frac{\hbar^2}{2m}4\pi\int A^2e^{-br^2}2br^{2} \left(2br^{2} - 3\right) \mathrm{e}^{-br^{2}}dr
+-\frac{e^2}{4\pi\epsilon_0}
+    4\pi\frac{A^2}{4b}\\
+    =&
+    \frac{\hbar^2}{2m}4\pi
+    \frac{3 \sqrt{\pi} \, A^{2}}{2^{\frac{7}{2}} \sqrt{b}}
+    -\frac{e^2}{\epsilon_0}\frac{A^2}{4b}\\
+    =&
+    \frac{\hbar^2}{2m}4\pi
+    \frac{3 \sqrt{\pi} }{2^{\frac{7}{2}} \sqrt{b}}
+    \left(\frac{2b}{\pi}\right)^{3/2}
+    -\frac{e^2}{\epsilon_0}\frac{1}{4b}
+    \left(\frac{2b}{\pi}\right)^{3/2}\\
+    \geq& - \frac{e^{4} m}{12 \pi^{3} \epsilon_{0}^{2} \hbar^{2}}\approx -11.5eV.
+\end{align*}
+
+\subsection*{Sol. 20}
+Choose $\psi(r,\theta)=Ae^{-br^2}\cos\theta$
+\begin{align*}
+    2\pi\int A^2e^{-2br^2}\cos^2\theta r^2\sin\theta
+    drd\theta = 
+    A^{2}
+    \frac{2\pi\sqrt{\pi}}{3 \cdot 2^{\frac{5}{2}} b^{\frac{3}{2}}}=1
+\end{align*}
+\begin{align*}
+    &\langle T \rangle + \langle V\rangle\\
+    =&
+    -\frac{\hbar^2}{2m}2\pi
+    \int 
+    A^2 e^{-br^2}\cos\theta 
+    \left[
+    \frac{1}{r^2}\frac{d}{dr}(r^2\frac{d}{dr}e^{-br^2}\cos\theta)
+    +\frac{1}{r^2\sin\theta }
+    \frac{d}{d\theta}(\sin\theta \frac{d}{d\theta}e^{-br^2}\cos\theta)
+    \right]
+    r^2\sin\theta drd\theta \\
+    & 
+    -\frac{e^2}{4\pi\epsilon_0}
+    2\pi 
+    \int A^2e^{-2br^2}\cos^2\theta \frac{1}{r}r^2\sin\theta drd\theta \\
+    =&
+    -\frac{\hbar^2}{2m}2\pi
+    \int 
+    A^2 e^{-br^2}\cos\theta 
+    \left[
+    2b \cos\left({\theta}\right)\left(2br^{2} - 3\right) \mathrm{e}^{-br^{2}}
+    +\frac{-2}{r^2 }
+    \mathrm{e}^{-br^{2}} \cos\left({\theta}\right) 
+    \right]
+    r^2\sin\theta drd\theta 
+    -\frac{e^2}{4\pi\epsilon_0}
+    2\pi 
+    \frac{A^{2}}{6b}\\
+    =&
+    \frac{\hbar^2}{2m}2\pi 
+    \frac{3 \cdot 2^{\frac{5}{2}} b^{\frac{3}{2}}}{2\pi\sqrt{\pi}}
+    \frac{11 \sqrt{\pi}}{3 \cdot 2^{\frac{5}{2}} \sqrt{b}}
+    -\frac{e^2}{4\pi\epsilon_0}
+    2\pi 
+    \frac{1}{6b}
+    \frac{3 \cdot 2^{\frac{5}{2}} b^{\frac{3}{2}}}{2\pi\sqrt{\pi}}\\
+    &\geq 
+     - \frac{e^{4} m}{44 \pi^{3} \epsilon_{0}^{2} \hbar^{2}}\approx 
+    -3.1497 eV.
+\end{align*}
+
+\subsection*{Sol. 21}
+Use the trial function $\psi(r)=Ae^{-br},$
+\begin{align*}
+    4\pi\int A^2e^{-2br}r^2dr=\frac{\pi A^{2}}{b^{3}}=1
+\end{align*}
+\begin{align*}
+    &\langle T\rangle + \langle V\rangle\\
+    =&
+    -\frac{\hbar^2}{2m}4\pi 
+    \int A^2
+    e^{-br}br \left(br - 2\right) \mathrm{e}^{-br}dr
+    -\frac{e^2}{4\pi\epsilon_0}
+    4\pi\int A^2
+    e^{-2br}\frac{e^{-\mu r}}{r}r^2dr\\
+    =&
+    \frac{\hbar^2}{2m}4\pi \frac{b^3}{\pi}\frac{1}{4b}
+    -\frac{e^2}{\epsilon_0}\frac{b^3}{\pi}\frac{1}{\left({\mu} + 2b\right)^{2}}\\
+    \geq &
+      E_1\left[1-2(a\mu) +\frac{3 (a\mu)^{2}}{2}\right]
+\end{align*}
+
+
+
+\subsection*{Sol. 22}
+\begin{enumerate}
+    \item 
+    \begin{align*}
+        [H+H']
+        =
+        \begin{pmatrix}
+        E_a & h\\
+        h & E_b
+        \end{pmatrix},\;
+        \lambda = 
+        \frac{1}{2}
+        \left[
+        (E_a + E_b)
+        \pm 
+        \sqrt{(E_a-E_b)^2 + 4h^2}
+        \right]
+    \end{align*}
+    $$
+    \approx E_a + \frac{h^2}{E_a-E_b},\;
+    E_b - \frac{h^2}{E_a-E_b}
+    $$
+    \item 
+    \begin{align*}
+        E_a^2 = \frac{h^2}{E_a-E_b}
+    \end{align*}
+    \begin{align*}
+        E_b^2 = \frac{h^2}{E_b-E_a}
+    \end{align*}
+    \item 
+    \begin{align*}
+        &\langle(\cos\phi\psi_a+\sin\phi\psi_b), (H+H')(\cos\phi\psi_a+\sin\phi\psi_b)\rangle\\
+        =&
+        \cos^2\phi E_a + h\cos\phi \sin\phi
+        +\sin^2\phi E_b + h \sin\phi\cos\phi\\
+        &\geq \dfrac{E_a+E_b}{2}-\sqrt{\left(\dfrac{E_a-E_b}{2}\right)^2+h^2}
+    \end{align*}
+    \item The trial wavefunction can easily hit the exact ground state function since the dimension is just 2 only.
+\end{enumerate}
+
+\subsection*{Sol. 23}
+\begin{enumerate}
+    \item 
+    \begin{align*}
+    [H'] = 
+    \frac{eB_x}{m}
+    \frac{\hbar}{2}
+    \begin{pmatrix}
+        0 & 1\\
+        1 & 0
+    \end{pmatrix}
+    \end{align*}
+    \item 
+    \begin{align*}
+        \frac{ -eB_0\hbar}{2m} -
+        \frac{e^2B^2_x}{m^2}
+    \frac{\hbar^2}{2^2}
+    \frac{m}{e B_0\hbar}
+    =
+    \frac{ -eB_0\hbar}{2m} -
+    \frac{e\hbar B^2_x}{4mB_0}
+    \end{align*}
+    \item 
+    \begin{align*}
+        -\sqrt{
+        \left(\frac{\gamma B_0\hbar}{2}
+        \right)^2
+        +
+        \left(\frac{eB_x}{m}
+    \frac{\hbar}{2}
+    \right)^2
+        }  
+        =&-\sqrt{
+        \left(\frac{e B_0\hbar}{2m}
+        \right)^2
+        +
+        \left(\frac{eB_x}{m}
+    \frac{\hbar}{2}
+    \right)^2
+        }  \\
+        =&
+        -\frac{e\hbar}{2m}
+        \sqrt{B_0^2+B_x^2}
+    \end{align*}
+\end{enumerate}
+
+\subsection*{Sol. 24}
+\begin{enumerate}
+    \item
+    Note that 
+    \begin{align*}
+        \frac{df}{dx} = \frac{df}{du_x}\frac{du_x}{dx} + \frac{df}{dv_x}\frac{dv_x}{dx}
+    \end{align*}
+    \begin{align*}
+        \frac{d}{dx} = \frac{1}{\sqrt{2}}\left(
+        \frac{d}{du_x}\pm\frac{d}{dv_x}
+        \right)
+    \end{align*}
+    \begin{align*}
+        \frac{d^2}{dx^2} = \frac{1}{2}\left(
+        \frac{d^2}{du^2_x}+\frac{d^2}{dv^2_x}
+        \pm\frac{2d^2}{du_xdv_x}
+        \right)
+    \end{align*}
+    Thus 
+    $$
+    \nabla^2_1 + \nabla_2^2 = \nabla_u^2 + \nabla^2_v.
+    $$
+    \begin{align*}
+        H = &
+        -\frac{\hbar^2}{2m}(\nabla^2_u+\nabla^2_v)
+        +\frac{1}{2}m\omega^2
+        (u^2+v^2)
+        -\frac{\lambda}{4}m\omega^2 
+        2v^2\\
+        =&
+        \left[
+        -\frac{\hbar^2}{2m}\nabla^2_u + \frac{1}{2}m\omega^2u^2
+        \right]
+        +\left[
+        -\frac{\hbar^2}{2m}\nabla^2_v + \frac{1}{2}(1-\lambda)
+        m\omega^2v^2
+        \right].
+    \end{align*}
+    \item Note that $u$ and $v$ are three dimensional.
+    $$
+    \frac{3}{2}\hbar\omega  + \frac{3}{2}\hbar\sqrt{1-\lambda}\omega
+    $$
+    \item
+    $\psi(\bm r_1,\bm r_2)=A 
+    \exp\left(
+    -\frac{m\omega}{2\hbar}(r_1^2+r_2^2)
+    \right)
+    $
+    \begin{align*}
+        \int 4\pi A^2
+        \exp\left(
+    -\frac{m\omega}{\hbar}(r_1^2+r_2^2)
+    \right)
+    r_1^2
+    dr_1
+    d\bm r_2
+    =&
+    \int 4\pi
+    \frac{\pi^{\frac{3}{2}} A^{2} \hbar^{\frac{3}{2}} \mathrm{e}^{-\frac{mr_{2}^{2} {\omega}}{\hbar}}}{m^{\frac{3}{2}} {\omega}^{\frac{3}{2}}}
+    r_2^2dr_2\\
+    =&
+    \frac{\pi^{3} A^{2} \hbar^{3}}{m^{3} {\omega}^{3}}
+    \Rightarrow 
+    A^2 = 
+    \left(\frac{m\omega}{\pi\hbar}\right)^3
+    \end{align*}
+
+    \begin{align*}
+        &-\frac{\lambda}{4}m\omega^2
+        \int 
+        A^2
+    \exp\left(
+    -\frac{m\omega}{\hbar}(r_1^2+r_2^2)
+    \right)|\bm r_1-\bm r_2|^2d\bm r_1\bm dr_2\\
+    =&
+    -\frac{\lambda}{4}m\omega^2
+        \int 
+        2\pi
+        A^2
+    \exp\left(
+    -\frac{m\omega}{\hbar}(r_1^2+r_2^2)
+    \right)(r_1^2+r_2^2-2r_1r_2\cos\theta_1)
+    r_1^2\sin\theta_1
+    dr_1d\theta_1d\bm r_2\\
+    =&-\frac{\lambda}{4}m\omega^2
+    \int 
+    4\pi
+    \frac{\pi^{\frac{3}{2}} A^{2} \sqrt{\hbar} \left(2hmr_{2}^{2} {\omega} + 3h^{2}\right) \mathrm{e}^{-\frac{mr_{2}^{2} {\omega}}{h}}}{2m^{\frac{5}{2}} {\omega}^{\frac{5}{2}}}
+    r_2^2dr_2\\
+    =&-\frac{3\pi^{3} A^{2} \hbar^{4} {\lambda}}{4m^{3} {\omega}^{2}}\\
+    =&
+    -\frac{3\hbar\omega {\lambda}}{4}
+    \end{align*}
+    \begin{align*}
+        \langle H \rangle = &
+        3\hbar\omega 
+        -\frac{3\hbar\omega {\lambda}}{4}
+    \end{align*}
+\end{enumerate}
+
+\subsection*{Sol. 25}
+\begin{align*}
+    1/A^2=&\langle \psi_1(r_1)\psi_2(r_2)
+    +\psi_1(r_2)\psi_2(r_1),
+    \psi_1(r_1)\psi_2(r_2)
+    +\psi_1(r_2)\psi_2(r_1)
+    \rangle\\
+    &=
+    \langle 
+    \psi_1,
+    \psi_1
+    \rangle
+    \langle 
+    \psi_2,
+    \psi_2
+    \rangle
+    +
+    \langle 
+    \psi_2,
+    \psi_2
+    \rangle
+    \langle 
+    \psi_1,
+    \psi_1
+    \rangle+
+    2\langle
+    \psi_1,
+    \psi_2
+    \rangle
+    \langle
+    \psi_2,
+    \psi_1
+    \rangle
+\end{align*}
+
+\begin{align*}
+\langle \psi_1, \psi_2\rangle=&
+\sqrt{\frac{Z_1^3}{\pi a^3}}    
+\sqrt{\frac{Z_2^3}{\pi a^3}}
+4\pi \int 
+e^{-(Z_1+Z_2)r/a}r^2dr\\
+=&
+\sqrt{\frac{Z_1^3}{\pi a^3}}    
+\sqrt{\frac{Z_2^3}{\pi a^3}}
+4\pi
+2 
+\left(\frac{a}{Z_1+Z_2}\right)^3\\
+=&
+\frac{y^3}{x^3}
+\end{align*}
+\begin{align*}
+    A^2 = \frac{1}{2+2y^6/x^6} = 
+    \frac{x^6}{2(x^6+y^6)}
+\end{align*}
+
+
+\begin{align*}
+    &\langle \psi_1(r_1)\psi_2(r_2)
+    +\psi_1(r_2)\psi_2(r_1),
+    \nabla^2_1
+    (\psi_1(r_1)\psi_2(r_2)
+    +\psi_1(r_2)\psi_2(r_1))
+    \rangle\\
+    =&
+    \langle\psi_1,\nabla^2\psi_1\rangle
+    +\langle\psi_1,\nabla^2\psi_2\rangle
+    \langle\psi_2,\psi_1\rangle+
+\langle\psi_2,\nabla^2\psi_1\rangle
+\langle\psi_1,\psi_2\rangle
++    \langle\psi_2,\nabla^2\psi_2\rangle
+\end{align*}
+\begin{align*}
+    \langle\psi_1,\nabla^2\psi_1\rangle
+    =&
+    \frac{Z_1^3}{\pi a^3}
+    \int e^{-Z_1r/a}
+    \nabla^2 e^{-Z_1r/a}d\bm r\\
+    =&
+    \frac{Z_1^3}{\pi a^3}4\pi
+    \int e^{-Z_1r/a}
+    \frac{Z_{1} r \left(Z_{1} r - 2a\right) \mathrm{e}^{-\frac{Z_{1} r}{a}}}{a^{2}}dr\\
+    =&-\frac{Z_1^2}{a^2}
+\end{align*}
+\begin{align*}
+    \langle\psi_1,\nabla^2\psi_2\rangle=&
+    \frac{\sqrt{Z_1^3Z_2^3}}{\pi a^3}4\pi
+    \int e^{-Z_2r/a}
+    \frac{Z_{1} r \left(Z_{1} r - 2a\right) \mathrm{e}^{-\frac{Z_{1} r}{a}}}{a^{2}}dr\\
+    =&
+    -\frac{y^5}{4x^3a^2}
+\end{align*}
+Thus,
+\begin{align*}
+    &\langle \psi_1(r_1)\psi_2(r_2)
+    +\psi_1(r_2)\psi_2(r_1),
+    (\nabla^2_1+\nabla^2_2)
+    (\psi_1(r_1)\psi_2(r_2)
+    +\psi_1(r_2)\psi_2(r_1))
+    \rangle\\
+    =&
+    2\left(
+    -\frac{Z_1^2}{a^2}
+    -\frac{y^5}{2x^3a^2}
+    \frac{y^3}{x^3}
+    -\frac{Z_2^2}{a^2}
+    \right)\\
+    =&
+     2\left(
+    -\frac{x^2-y^2/2}{a^2}
+    -\frac{y^8}{2x^6a^2}
+    \right)\\
+    =&
+    \frac{1}{a^2}
+    \left(
+    -2x^2+y^2 - \frac{y^8}{x^6}
+    \right)
+\end{align*}
+
+
+\begin{align*}
+    &\langle \psi_1(r_1)\psi_2(r_2)
+    +\psi_1(r_2)\psi_2(r_1),
+    \frac{1}{r_1}
+    (\psi_1(r_1)\psi_2(r_2)
+    +\psi_1(r_2)\psi_2(r_1))
+    \rangle\\
+    =&
+    \langle\psi_1,\frac{1}{r}\psi_1\rangle
+    +\langle\psi_1,\frac{1}{r}\psi_2\rangle
+    \langle\psi_2,\psi_1\rangle+
+\langle\psi_2,\frac{1}{r}\psi_1\rangle
+\langle\psi_1,\psi_2\rangle
++    \langle\psi_2,\frac{1}{r}\psi_2\rangle
+\end{align*}
+\begin{align*}
+    \langle\psi_1,\frac{1}{r}\psi_1\rangle
+    =&
+    \frac{Z_1^3}{\pi a^3}
+    \int e^{-Z_1r/a}
+    \frac{1}{r} e^{-Z_1r/a}d\bm r\\
+    =&
+    \frac{Z_1^3}{\pi a^3}4\pi
+    \int e^{-2Z_1r/a}
+    rdr\\
+    =&\frac{Z_1}{a}
+\end{align*}
+\begin{align*}
+    \langle\psi_1,\frac{1}{r}\psi_2\rangle=&
+    \frac{\sqrt{Z_1^3Z_2^3}}{\pi a^3}4\pi
+    \int e^{-(Z_1+Z_2)r/a}rdr\\
+    =&
+    \frac{y^3/2}{ax^2}
+\end{align*}
+\begin{align*}
+    \langle \psi_1(r_1)\psi_2(r_2)
+    +\psi_1(r_2)\psi_2(r_1),
+    (\frac{1}{r_1}+
+    \frac{1}{r_2})
+    (\psi_1(r_1)\psi_2(r_2)
+    +\psi_1(r_2)\psi_2(r_1))
+    \rangle=&
+    2\left(
+    \frac{Z_1}{a}
+    +\frac{y^3}{ax^2}\frac{y^3}{x^3}
+    +\frac{Z_2}{a}
+    \right)\\
+    =&\frac{1}{a}\left(
+    2x + \frac{2y^6}{x^5}
+    \right)
+\end{align*}
+\begin{align*}
+    &\langle \psi_1(r_1)\psi_2(r_2)
+    +\psi_1(r_2)\psi_2(r_1),
+    \frac{1}{|\bm r_1-\bm r_2|}
+    (\psi_1(r_1)\psi_2(r_2)
+    +\psi_1(r_2)\psi_2(r_1))
+    \rangle\\
+    =&
+    \langle
+    \psi_1(r_1)\psi_2(r_2),
+    \frac{1}{|\bm r_1-\bm r_2|}
+    \psi_1(r_1)\psi_2(r_2)
+    \rangle
+    +\langle
+    \psi_1(r_1)\psi_2(r_2),
+    \frac{1}{|\bm r_1-\bm r_2|}
+    \psi_1(r_2)\psi_2(r_1)
+    \rangle\\
+    &
+    +\langle
+    \psi_1(r_2)\psi_2(r_1),
+    \frac{1}{|\bm r_1-\bm r_2|}
+    \psi_1(r_1)\psi_2(r_2)
+    \rangle+
+    \langle
+    \psi_1(r_2)\psi_2(r_1),
+    \frac{1}{|\bm r_1-\bm r_2|}
+    \psi_1(r_2)\psi_2(r_1)
+    \rangle
+\end{align*}
+\begin{align*}
+    &\langle
+    \psi_1(r_1)\psi_2(r_2),
+    \frac{1}{|\bm r_1-\bm r_2|}
+    \psi_1(r_1)\psi_2(r_2)
+    \rangle\\=&
+    \frac{Z_1^3Z_2^3}{\pi^2a^6}
+    2\pi
+    \int
+    e^{-Z_1r_1/a}
+    e^{-Z_2r_2/a}
+    \frac{\sin\theta_1}{\sqrt{r_1^2+r_2^2-2r_1r_2\cos\theta_1}}
+    e^{-Z_1r_1/a}
+    e^{-Z_2r_2/a}
+    r_1^2 dr_1d\theta_1 d\bm r_2\\
+    =&
+    \frac{Z_1^3Z_2^3}{\pi^2a^6}
+    2\pi
+    \int_0^{r_2}
+    \frac{r_1}{r_2} 
+    (r_1+r_2 - (r_2-r_1)) \mathrm{e}^{-\frac{2Z_{2} r_{2}}{a} - \frac{2Z_{1} r_{1}}{a}}
+    dr_1d\bm r_2\\
+    &+
+    \frac{Z_1^3Z_2^3}{\pi^2a^6}
+    2\pi
+    \int_{r_2}^\infty
+    \frac{r_1}{r_2}(r_1+r_2 - (r_1-r_2)) \mathrm{e}^{-\frac{2Z_{2} r_{2}}{a} - \frac{2Z_{1} r_{1}}{a}}
+    dr_1d\bm r_2\\
+    =&
+    \frac{Z_1^3Z_2^3}{\pi^2a^6}
+    2\pi 4\pi
+    \int \frac{a \left(a^{2} \mathrm{e}^{\frac{2Z_{1} r_{2}}{a}} - 2Z_{1}^{2} r_{2}^{2} - 2Z_{1} ar_{2} - a^{2}\right) \mathrm{e}^{-\frac{2Z_{2} r_{2}}{a} - \frac{2Z_{1} r_{2}}{a}}}{2Z_{1}^{3} r_{2}} r_2^2dr_2
+    \\&+
+    \frac{Z_1^3Z_2^3}{\pi^2a^6}
+    2\pi4\pi 
+    \int 
+    \frac{a \left(2Z_{1} r_{2} + a\right) \mathrm{e}^{-\frac{\left(2Z_{2} + 2Z_{1}\right) r_{2}}{a}}}{2Z_{1}^{2}}
+    r_2^2dr_2\\
+    =&
+    \frac{Z_1^3Z_2^3}{\pi^2a^6}
+    2\pi 4\pi
+    \frac{\left(4Z_{2} + Z_{1}\right) a^{5}}{8Z_{2}^{2} \left(Z_{2}^{4} + 4Z_{1} Z_{2}^{3} + 6Z_{1}^{2} Z_{2}^{2} + 4Z_{1}^{3} Z_{2} + Z_{1}^{4}\right)}\\
+    &+
+    \frac{Z_1^3Z_2^3}{\pi^2a^6}
+    2\pi 4\pi
+    \frac{\left(Z_{2} + 4Z_{1}\right) a^{5}}{8Z_{1}^{2} \left(Z_{2}^{4} + 4Z_{1} Z_{2}^{3} + 6Z_{1}^{2} Z_{2}^{2} + 4Z_{1}^{3} Z_{2} + Z_{1}^{4}\right)}\\
+    =&
+    \frac{y^6}{8a}\frac{(4Z_2+Z_1)}{8Z_2^2x^4}
+    +
+    \frac{y^6}{8a}\frac{(Z_2+4Z_1)}{8Z_1^2x^4}\\
+    =&
+    \frac{1}{a}
+    (\frac{y^2}{4x}+\frac{y^4}{16x^3})
+\end{align*}
+\begin{align*}
+    &\langle
+    \psi_1(r_1)\psi_2(r_2),
+    \frac{1}{|\bm r_1-\bm r_2|}
+    \psi_1(r_2)\psi_2(r_1)
+    \rangle\\=&
+    \frac{Z_1^3Z_2^3}{\pi^2a^6}
+    2\pi
+    \int
+    e^{-Z_1r_1/a}
+    e^{-Z_2r_2/a}
+    \frac{\sin\theta_1}{\sqrt{r_1^2+r_2^2-2r_1r_2\cos\theta_1}}
+    e^{-Z_1r_2/a}
+    e^{-Z_2r_1/a}
+    r_1^2 dr_1d\theta_1 d\bm r_2\\
+    =&
+    \frac{Z_1^3Z_2^3}{\pi^2a^6}
+    2\pi
+    \int_0^{r_2}
+    \frac{r_1}{r_2} 
+    (r_1+r_2 - (r_2-r_1)) 
+    e^{-\frac{1}{a}(Z_2r_2+Z_1r_2+Z_2r_1+Z_1r_1)}
+    dr_1d\bm r_2\\
+    &+
+    \frac{Z_1^3Z_2^3}{\pi^2a^6}
+    2\pi
+    \int_{r_2}^\infty
+    \frac{r_1}{r_2}(r_1+r_2 - (r_1-r_2)) e^{-\frac{1}{a}(Z_2r_2+Z_1r_2+Z_2r_1+Z_1r_1)}
+    dr_1d\bm r_2\\
+    =&
+    \frac{Z_1^3Z_2^3}{\pi^2a^6}
+    2\pi 4\pi
+    \int \frac{2a\mathrm{e}^{-\frac{2Z_{2} r_{2}}{a} - \frac{2Z_{1} r_{2}}{a}} \left(2a^{2} \mathrm{e}^{\frac{Z_{2} r_{2}}{a} + \frac{Z_{1} r_{2}}{a}} + \left(-Z_{2}^{2} - 2Z_{1} Z_{2} - Z_{1}^{2}\right) r_{2}^{2} + \left(-2Z_{2} - 2Z_{1}\right) ar_{2} - 2a^{2}\right)}{\left(Z_{2}^{3} + 3Z_{1} Z_{2}^{2} + 3Z_{1}^{2} Z_{2} + Z_{1}^{3}\right) r_{2}} r_2^2dr_2
+    \\&+
+    \frac{Z_1^3Z_2^3}{\pi^2a^6}
+    2\pi4\pi 
+    \int 
+   \frac{2a \left(\left(Z_{2} + Z_{1}\right) r_{2} + a\right) \mathrm{e}^{-\frac{\left(2Z_{2} + 2Z_{1}\right) r_{2}}{a}}}{\left(Z_{2} + Z_{1}\right)^{2}}
+    r_2^2dr_2\\
+    =&
+    \frac{Z_1^3Z_2^3}{\pi^2a^6}
+    2\pi 4\pi
+    \frac{5a^{5}}{4 \left(Z_{2}^{2} + 2Z_{1} Z_{2} + Z_{1}^{2}\right) \left(Z_{2}^{3} + 3Z_{1} Z_{2}^{2} + 3Z_{1}^{2} Z_{2} + Z_{1}^{3}\right)}\\
+    &+
+    \frac{Z_1^3Z_2^3}{\pi^2a^6}
+    2\pi 4\pi
+    \frac{5a^{5}}{4 \left(Z_{2} + Z_{1}\right)^{2} \left(Z_{2}^{3} + 3Z_{1} Z_{2}^{2} + 3Z_{1}^{2} Z_{2} + Z_{1}^{3}\right)}\\
+    =&
+    \frac{y^6}{8a}\frac{5}{4x^5}
+    +
+    \frac{y^6}{8a}\frac{5}{4x^5}\\
+    =&
+    \frac{y^6}{8a}\frac{5}{2x^5}
+\end{align*}
+Thus 
+\begin{align*}
+    \langle H\rangle=&
+    \frac{x^6}{2(x^6+y^6)}\left(
+    -\frac{\hbar^2}{2m}
+    \frac{1}{a^2}\left(
+    -2x^2+y^2-\frac{y^8}{x^6}
+    \right)
+    -\frac{e^2}{4\pi\epsilon_0}
+    \left(
+    \frac{1}{a}\left(2x + \frac{2y^6}{x^5}\right)
+    \right)
+    -
+    \frac{1}{a}
+    \left(
+    \frac{y^2}{2x}
+    +\frac{y^4}{8x^3}
+    +
+    \frac{5y^6}{8x^5}
+    \right)
+    \right)\\
+    =&
+    \frac{E_1}{(x^6+y^6)}\left(
+    -x^8+\frac{1}{2}x^6y^2-\frac{1}{2}y^8
+    +2x^7 
+    -
+    \frac{1}{2}y^2x^5
+    -\frac{1}{8}y^4x^3
+    +
+    \frac{11}{8}xy^6
+    \right)
+\end{align*}
+Take $E_1=1.039$ and $E_2=0.283,$ 
+$\langle H\rangle\approx -13.9618eV$
+
+\subsection*{Sol. 26}
+All the calculations are the same as 8.3. The separation distance between the deuterons are $2.5am_e/m_{\mu}\approx 6.398\times 10^{-13}m.$ Two deuterons are much closer using muons than using electrons.
+
+\subsection*{Sol. 27}
+\begin{enumerate}
+    \item 
+    Take the arm that $x\gg a$
+\begin{align*}
+    -\frac{\hbar^2}{2m}
+    \left(
+    \frac{\partial^2}{\partial x^2}+
+    \frac{\partial^2}{\partial y^2}
+    \right)XY
+    =EXY
+\end{align*}
+\begin{align*}
+    -\frac{\hbar^2}{2m}
+    \frac{\partial^2}{\partial x^2}
+    X
+    =E_xX,\;
+    -\frac{\hbar^2}{2m}
+    \frac{\partial^2}{\partial y^2}
+    Y
+    =E_yY
+\end{align*}
+$E_y=\frac{n_y\pi^2\hbar^2}{8ma^2},$ $n_y=1,2,3\dots.$ $X$ is just a free particle propagates right way. The energy in the X direction can take any positive number. Hence, the lowest energy that can propagate off to infinity is $\frac{\pi\hbar^2}{8ma^2}.$
+
+\item 
+\begin{align*}
+    1/A^2 =& 
+    \int_{-a}^a\int_{-a}^a 
+    [\cos\frac{\pi x}{2a}+
+    \cos\frac{\pi y}{2a}]^2e^{-2\alpha} dxdy
+    +4
+    \int_{a}^\infty\int_{-a}^a 
+    \cos^2\frac{\pi y}{2a}
+    e^{-2\alpha|x|/a} dydx\\
+    =&
+    \frac{\left(4\pi^{2} + 32\right) a^{2} \mathrm{e}^{-2{\alpha}}}{\pi^{2}} + 
+    \frac{2 a^2e^{-2\alpha}}{\alpha}
+\end{align*}
+\begin{align*}
+    A^2 = 
+    \frac{\alpha\pi^2}
+    {a^2e^{-2\alpha}(4\pi^2\alpha + 32\alpha + 2\pi^2)}
+\end{align*}
+
+\begin{align*}
+    &\int_{-a}^a\int_{-a}^a 
+    [\cos\frac{\pi x}{2a}+
+    \cos\frac{\pi y}{2a}]e^{-\alpha}
+    \nabla^2[\cos\frac{\pi x}{2a}+
+    \cos\frac{\pi y}{2a}]e^{-\alpha}dxdy\\
+    &+4
+    \int_{a}^\infty\int_{-a}^a 
+    \cos\frac{\pi y}{2a}
+    e^{-\alpha|x|/a}
+    \nabla^2 \cos\frac{\pi y}{2a}
+    e^{-\alpha|x|/a} dydx\\
+    &+4
+    \int_{-a}^a
+    \int_{-a-\epsilon}^{a+\epsilon}
+    \cos\frac{\pi y}{2a}e^{-\alpha|x|/a}
+    \left(
+    \left[
+    -\frac{\alpha}{a}
+    \cos\left(\frac{\pi y}{2a}\right)
+    e^{-\alpha x/a}
+    +\frac{\pi}{2a}
+    \sin\left(\frac{\pi x}{2a}\right)e^{-\alpha}
+    \right]\delta(x-a)
+    \right)dxdy
+    \\
+    =&
+   \int_{-a}^a\int_{-a}^a 
+    [\cos\frac{\pi x}{2a}+
+    \cos\frac{\pi y}{2a}]e^{-\alpha}
+    \left[
+    -\frac{\pi^{2} \mathrm{e}^{-{\alpha}} \cos\left(\frac{\pi x}{2a}\right)}{4a^{2}}
+    -\frac{\pi^{2} \mathrm{e}^{-{\alpha}} \cos\left(\frac{\pi y}{2a}\right)}{4a^{2}}
+    \right]dxdy\\
+    &+4
+    \int_{a}^\infty\int_{-a}^a 
+    \cos\frac{\pi y}{2a}
+    e^{-\alpha|x|/a}
+    \left(
+    -\frac{\pi^{2} \mathrm{e}^{-\frac{\left|x\right| {\alpha}}{a}} \cos\left(\frac{\pi y}{2a}\right)}{4a^{2}}
+    +
+    \frac{\cos\left(\frac{\pi y}{2a}\right) \, {\alpha}^{2} \mathrm{e}^{-\frac{{\alpha} \left|x\right|}{a}}}{a^{2}}
+    \right)
+     dydx\\
+    &+4
+    \int_{-a}^a
+    \cos\frac{\pi y}{2a}e^{-\alpha}
+    \left(
+    \left[
+    -\frac{\alpha}{a}
+    \cos\left(\frac{\pi y}{2a}\right)
+    e^{-\alpha }
+    +\frac{\pi}{2a}
+    e^{-\alpha}
+    \right]
+    \right)dy\\
+=&-\left(\pi^{2} + 8\right) \mathrm{e}^{-2{\alpha}}+
+\frac{\left(4{\alpha}^{2} - \pi^{2}\right) \mathrm{e}^{-2{\alpha}}}{2{\alpha}}-4\left({\alpha} - 2\right) \mathrm{e}^{-2{\alpha}}
+\end{align*}
+
+\begin{align*}
+    \langle H\rangle=&
+    -\frac{\hbar^2}{2m}
+    \frac{\alpha\pi^2
+    e^{-2\alpha}
+    [
+    -(\pi^2+8)+
+    2\alpha - \pi^2/(2\alpha)
+    -4\alpha+8]
+    }
+    {a^2e^{-2\alpha}(4\pi^2\alpha + 32\alpha + 2\pi^2)}\\
+    =&
+   \frac{\hbar^2}{ma^2}
+    \frac{
+    [
+    \pi^2/8+1 + \pi^2/(16\alpha)
+    + \alpha/4-1]
+    }
+    {1 + (8/\pi^2) + (1/2\alpha)}\\
+    =&
+    \frac{\hbar^2}{ma^2}
+    \left[
+    \frac{\pi^2}{8}
+    -
+    \frac{
+    1-(\alpha/4)
+    }
+    {1 + (8/\pi^2) + (1/2\alpha)}
+    \right]
+\end{align*}
+
+\end{enumerate}
+
+
+\subsection*{Sol. 28}
+\begin{enumerate}
+    \item 
+    \begin{align*}
+        \int 4\pi A^2e^{-2\beta r/r_0}r^2dr
+        =\frac{\pi A^2r_0^3}{\beta^3}\Rightarrow
+        A^2 = \frac{\beta^3}{\pi r_0^3}
+    \end{align*}
+    \item 
+    \begin{align*}
+        -\frac{\hbar^2}{2\mu}\langle\nabla^2\rangle
+        =&
+        -\frac{\hbar^2}{2\mu}
+        A^2\int 
+        e^{-\beta r/r_0}\nabla^2
+        e^{-\beta r/r_0} d\bm r\\
+        =&
+        -\frac{\hbar^2}{2\mu}
+        A^24\pi\int 
+        e^{-\beta r/r_0}
+        \frac{{\beta}r \left({\beta}r - 2r_{0}\right) \mathrm{e}^{-\frac{{\beta}r}{r_{0}}}}{r_{0}^{2}}
+        dr\\
+        =&
+        \frac{\hbar^2}{2\mu}
+        A^24\pi
+        \frac{r_{0}}{4{\beta}}\\
+        =&
+        \frac{\hbar^2}{2\mu}
+        \frac{\beta^2}{r_0^2}
+    \end{align*}
+    \begin{align*}
+        -r_0V_0
+        \langle
+        \frac{e^{-r/r_0}}{r}
+        \rangle = &
+        -r_0V_0 A^2
+        4\pi
+        \int 
+        e^{-2\beta r/r_0}
+        \frac{e^{-r/r_0}}{r} r^2 dr\\
+        =&
+        -r_0V_0 A^2
+        4\pi
+        \frac{r_{0}^{2}}{\left(2{\beta} + 1\right)^{2}}\\
+        =&
+        -V_0
+        \frac{4\beta^3}{\left(2{\beta} + 1\right)^{2}}
+    \end{align*}
+    \begin{align*}
+        \langle H\rangle
+        =&
+        \frac{\hbar^2}{2\mu}
+        \frac{\beta^2}{r_0^2}
+        -V_0
+        \frac{4\beta^3}{\left(2{\beta} + 1\right)^{2}}\\
+        =&
+        \frac{\hbar^2}{2\mu r_0^2}
+        \beta^2 
+        \left[
+        1 - \frac{4\gamma\beta}{(1+2\beta)^2}
+        \right],
+    \end{align*}
+    where $\gamma = \frac{2\mu r_0^2}{\hbar^2}V_0.$
+    \item 
+    \begin{align*}
+        \frac{d\langle H\rangle}{d\beta}
+        =
+        \frac{\hbar^{2} {\beta} \left(8{\beta}^{3} + \left(12 - 4{\gamma}\right) {\beta}^{2} + \left(6 - 6{\gamma}\right) {\beta} + 1\right)}{r_{0}^{2} {\mu} \left(2{\beta} + 1\right)^{3}}
+    \end{align*}
+    $$
+    \gamma = 
+    \frac{8\beta^3+1+12\beta^2+6\beta}{4\beta^2+6\beta}
+    $$
+    \begin{align*}
+        \frac{\hbar^2}{2\mu r_0^2}
+        \beta^2 
+        \left[
+        1 - \frac{4\beta}{(1+2\beta)^2}
+        \frac{8\beta^3+1+12\beta^2+6\beta}{4\beta^2+6\beta}
+        \right]=
+        &
+        \frac{\hbar^2}{2\mu r_0^2}
+        \beta^2 
+        \left[
+        1-\frac{2(2\beta+1)}{2\beta+3}
+        \right]\\
+        =&
+        \frac{\hbar^2}{2\mu r_0^2}
+        \frac{\beta^2 (1-2\beta)}{2\beta+3}
+    \end{align*}
+    \includegraphics[width=0.8\textwidth,valign=t]{fig/prob8.29.png}
+    
+    $\beta$ should be at least $\frac{1}{2}.$ Thus $\gamma$ should be at least $2,$ thus the minimum value of $V_0=\frac{\hbar^2}{\mu r_0^2}=
+    \frac{2m_\pi^2c^2}{m_p}\approx 41.5MeV.$
+\end{enumerate}
+
+\subsection*{Sol. 29}
+\begin{enumerate}
+    \item 
+    Let $\psi_1(x)$ be the ground state of $V_1(x),$ then 
+    \begin{align*}
+        \langle H_2\rangle
+        =\langle H_1\rangle
+        +\langle V_2-V_1\rangle
+        \leq E_1.
+    \end{align*}
+    \item By 2.6, no matter how shallow the potential square well is, there always exists a bound state.
+    For any potential well, we can  find a shallower potential square well such that  the potential is greater than the given potential. Thus, by the theorem, every potential well in one dimension has a bound state.
+    \item The theorem is true for all dimensions. The corollary holds for two dimensions, since 4.51 guaranties that any
+    finite circular well admits a bound state.
+    It does not hold in three dimensions, since problem 4.11 gives the counter example.
+\end{enumerate}
+
+\subsection*{Sol. 30}
+\begin{enumerate}
+    \item 
+    \begin{align*}
+        0
+        =
+        \frac{
+        (
+        \sum_n|c_n|^2
+        )\sum_{n}H_{jn}c_n
+        -
+        c_j\sum_{mn}c_m^*H_{mn}c_n
+        }{(\sum_n|c_n|^2)^2}
+    \end{align*}
+    \begin{align*}
+        (
+        \sum_n|c_n|^2
+        )\sum_{n}H_{jn}c_n
+        -
+        c_j\epsilon(
+        \sum_n|c_n|^2
+        )=0
+    \end{align*}
+    \begin{align*}
+        \sum_n H_{jn}c_n=\epsilon c_j
+    \end{align*}
+    \item 
+    \begin{align*}
+        0
+        =
+        \frac{
+        (
+        \sum_n|c_n|^2
+        )\sum_{m}c_m^*H_{mj}
+        -
+        c_j^*\sum_{mn}c_m^*H_{mn}c_n
+        }{(\sum_n|c_n|^2)^2}
+    \end{align*}
+    \begin{align*}
+        (
+        \sum_n|c_n|^2
+        )\sum_{m}c_m^*H_{mj}
+        -
+        c_j^*\epsilon(
+        \sum_n|c_n|^2
+        )=0
+    \end{align*}
+    \begin{align*}
+        \sum_{m}c_m^*H_{mj}
+        =
+        c_j^*\epsilon
+    \end{align*}
+    Taking the complex conjugate on both sides, we will recover eq 8.90.
+    \item 
+    \begin{align*}
+        -\frac{\hbar^2}{2m}
+        \langle\phi_k, \frac{d^2}{dx^2}\phi_n\rangle
+        =&\frac{\hbar^2}{2m}
+        \frac{2}{a}
+        \frac{n^2\pi^2}{a^2}
+        \int_0^a \sin \frac{k\pi x}{a}
+        \sin\frac{n\pi x}{a}
+        dx\\
+        =&
+       \frac{n^2\pi^2\hbar^2}{2ma^2}
+        \delta_{nk}
+    \end{align*}
+    \begin{align*}
+        \frac{V_0}{a}
+        \langle\phi_k, x\phi_n\rangle
+        =
+        aV_0
+        \begin{cases}
+        0,\; k\equiv n\mod 2\\
+        \frac{4}{\pi^2}
+        \frac{-nk}{(k^2-n^2)^2}
+        ,\; k\neq  n\mod 2\\
+        \frac{1}{4}, \; k=n
+        \end{cases}
+    \end{align*}
+    The smallest eigenvalue is $39.982\frac{\hbar^2}{ma^2}.$
+
+    \includegraphics[width=0.8\textwidth,valign=t]{fig/prob8.30.png}
+\end{enumerate}

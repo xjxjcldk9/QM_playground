@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath, mathtools}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{subcaption}
+\usepackage{mathabx}
+\usepackage{bm}
+\usepackage[export]{adjustbox}
+\usepackage[version=4]{mhchem}
+
+\usepackage[left=2.5cm, right=2.5cm, top=3cm, bottom=3cm]{geometry}
+
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right)
+}
+
+
+\parindent 0in
+\parskip 1em
+
+
+\newcommand{\underlineAns}{\rule{2em}{0.15mm} }
+
+\begin{document}
+
+\begin{center}
+    {\Large\textbf{Introduction to Quantum Mechanics}}
+\end{center}
+
+\begin{flushright}
+Shen-Hsun Liao
+\end{flushright}
+
+\input{chapters/ch01_wave_function}
+
+\input{chapters/ch02_time_independent_schrodinger}
+
+\input{chapters/ch03_formalism}
+
+\input{chapters/ch04_three_dimensions}
+
+\input{chapters/ch05_identical_particles}
+
+\input{chapters/ch06_symmetries}
+
+\input{chapters/ch07_perturbation_theory}
+
+\input{chapters/ch08_variational_principle}
+
+\input{chapters/ch09_wkb}
+
+\input{chapters/ch10_scattering}
+\end{document}

@@ -1,0 +1,611 @@
+\section{The Wave Function}
+
+\subsection*{Sol. 1}
+\begin{enumerate}
+    \item \begin{align*}
+        \langle j^2\rangle 
+    =& 14^2\cdot \frac{1}{14} + 15 ^ 2\cdot\frac{1}{14} 
+    + 16^2\cdot \frac{3}{14} + 22 ^ 2\cdot\frac{2}{14} 
+    + 24^2\cdot \frac{2}{14} + 25 ^ 2\cdot\frac{5}{14} \\
+    = & \frac{3217}{7}    
+    \end{align*}
+    \begin{align*}
+        \langle j\rangle
+    =& 14\cdot \frac{1}{14} + 15 \cdot\frac{1}{14} 
+    + 16 \cdot \frac{3}{14} + 22 \cdot\frac{2}{14} 
+    + 24 \cdot \frac{2}{14} + 25 \cdot\frac{5}{14} \\
+    = & 21
+    \end{align*}
+    \begin{align*}
+        \langle j\rangle^2 = 441
+    \end{align*}
+    \item 
+    \begin{itemize}
+        \item $\Delta 14=-7$
+        \item $\Delta 15=-6$
+        \item $\Delta 16=-5$
+        \item $\Delta 22=1$
+        \item $\Delta 24=3$
+        \item $\Delta 25=4$
+    \end{itemize}
+    \begin{align*}
+        \sigma^2 = & 
+        (-7)^2 \cdot \frac{1}{14} + (-6)^2 \cdot\frac{1}{14} 
+    + (-5)^2 \cdot \frac{3}{14} + (1)^2 \cdot\frac{2}{14} 
+    + (3)^2 \cdot \frac{2}{14} + (4)^2 \cdot\frac{5}{14} \\
+    = & \frac{130}{7}
+    \end{align*}
+    The standard deviation is $\sqrt{\frac{130}{7}}.$
+    \item $$
+    \sqrt{\frac{3217}{7}-441} = \sqrt{\frac{130}{7}}
+    $$
+\end{enumerate}
+
+\subsection*{Sol. 2}
+\begin{enumerate}
+    \item 
+    \begin{align*}
+        \langle x^2\rangle = &
+        \int_0^h x^2 \frac{1}{2\sqrt{hx}}dx\\
+        =&\frac{h^2}{5}
+    \end{align*}
+    $$
+    \sigma^2 = \frac{h^2}{5} - \frac{h^2}{9} = \frac{4}{45}h^2
+    $$
+    The standard deviation is $\frac{2}{3\sqrt{5}}h.$
+    \item 
+    \begin{align*}
+        1 - 
+        \int_{\frac{h}{3}-\frac{2}{3\sqrt{5}}h}
+        ^{\frac{h}{3}+\frac{2}{3\sqrt{5}}h}
+        \frac{1}{2\sqrt{hx}}dx = &
+        1-\frac{\sqrt{\sqrt{5} + 2} - \sqrt{\sqrt{5} - 2}}{\sqrt{3} \sqrt[4]{5}}\\
+        \approx & 0.393
+    \end{align*}
+\end{enumerate}
+
+\subsection*{Sol. 3}
+\begin{enumerate}
+    \item 
+    \begin{align*}
+        \int_{-\infty}^{\infty}
+        Ae^{-\lambda(x-a)^2}dx = A\sqrt{\frac{\pi}{\lambda}}.
+    \end{align*}
+    $A= \sqrt{\frac{\lambda}{\pi}}.$
+    \item 
+    \begin{align*}
+        \langle x\rangle = \int_{-\infty}^{\infty}
+        Axe^{-\lambda(x-a)^2}dx = a
+    \end{align*}
+    \begin{align*}
+        \langle x^2\rangle = \int_{-\infty}^{\infty}
+        Ax^2e^{-\lambda(x-a)^2}dx = \frac{A\sqrt{\pi}}{2\lambda^{3/2}}(2a^2\lambda+1)=\frac{1}{2\lambda}(2a^2\lambda+1)
+    \end{align*}
+    \begin{align*}
+        \sigma^2 = \frac{1}{2\lambda}(2a^2\lambda+1) - a^2 = \frac{1}{2\lambda}
+    \end{align*}
+    $\sigma = \frac{1}{\sqrt{2\lambda}}.$
+    \item skip.
+\end{enumerate}
+
+\subsection*{Sol. 4}
+\begin{enumerate}
+    \item 
+    \begin{align*}
+        \int|\Psi(x,0)|^2dx = &
+        \int_0^aA^2x^2/a^2dx + 
+        \int_a^b A^2(b-x)^2/(b-a)^2dx\\
+        = & \frac{A^2a}{3} + \frac{A^2(b-a)}{3} = \frac{A^2b}{3}
+    \end{align*}
+    $A = \sqrt{\frac{3}{b}}$
+    \item skip
+    \item At  $x=a.$
+    \item 
+    \begin{align*}
+        \int_0^aA^2x^2/a^2dx=\frac{A^2a}{3} = \frac{a}{b}.
+    \end{align*}
+    If $b=a,$ $P=1;$ if $b=2a,$ $P=\frac{1}{2}.$
+    \item 
+    \begin{align*}
+        \int x|\Psi(x,0)|^2dx = &
+        \int_0^a xA^2x^2/a^2dx + 
+        \int_a^b xA^2(b-x)^2/(b-a)^2dx\\
+        = & \frac{A^2a^2}{4} + \frac{A^2(b-a)(b+3a)}{12} = \frac{b+2a}{4}
+    \end{align*}
+\end{enumerate}
+
+\subsection*{Sol. 5}
+\begin{enumerate}
+    \item 
+    \begin{align*}
+    \int_{-\infty}^{\infty} |\Psi|^2 dx= 
+        \int_{-\infty}^{\infty}
+        A^2e^{-2\lambda|x|} dx= \frac{A^2}{\lambda}
+    \end{align*}
+    $A = \sqrt{\lambda}.$
+    \item 
+    \begin{align*}
+        \langle x\rangle = 
+        \int_{-\infty}^{\infty}
+        A^2xe^{-2\lambda|x|} dx = 0
+    \end{align*}
+
+    \begin{align*}
+    \langle x^2\rangle = 
+        \int_{-\infty}^{\infty}
+        A^2x^2e^{-2\lambda|x|} dx = \frac{A^2}{2\lambda^3} = \frac{1}{2\lambda^2}
+    \end{align*}
+    \item 
+    $\sigma = \frac{1}{\sqrt{2}\lambda}.$
+
+    \includegraphics[width=0.8\textwidth]{fig/CH1_Sol5_2.png}
+
+    \begin{align*}
+        1 - \int_{-\frac{1}{\sqrt{2}\lambda}}^{\frac{1}{\sqrt{2}\lambda}}
+        A^2e^{-2\lambda|x|}dx = 1 - \mathrm{e}^{-\sqrt{2}} \left(\mathrm{e}^{\sqrt{2}} - 1\right) \approx 0.243
+    \end{align*}
+\end{enumerate}
+
+\subsection*{Sol. 6}
+Since the integration is performed against the variable $x,$ we just cannot simply do the integration by parts on another variable $t$.
+
+\subsection*{Sol. 7}
+
+\begin{align*}
+    \frac{d\langle p\rangle}{dt}
+    = & -i\hbar \frac{d}{dt}\int\Psi^*\frac{\partial \Psi}{\partial x}dx\\
+    = & -i\hbar\int\left( 
+    \frac{\partial \Psi^*}{\partial t}\frac{\partial \Psi}{\partial x}
+    + \Psi^*\frac{\partial^2 \Psi}{\partial t\partial x}
+    \right) dx\\
+    = & 
+    -i\hbar\int\left( 
+    \left[
+    -\frac{i\hbar}{2m}
+    \frac{\partial^2\Psi^*}{\partial x^2}
+    + \frac{i}{\hbar}V\Psi^*
+    \right]
+    \frac{\partial \Psi}{\partial x}
+    + \Psi^*
+    \frac{\partial}{\partial x}
+    \left[
+    \frac{i\hbar}{2m}
+    \frac{\partial^2\Psi}{\partial x^2}
+    - \frac{i}{\hbar}V\Psi
+    \right]
+    \right)dx\\
+    =&\int \frac{\hbar^2}{2m}
+    \left(-\frac{\partial^2\Psi^*}{\partial x^2}\frac{\partial\Psi}{\partial x} + \Psi^*\frac{\partial^3\Psi}{\partial x^3}\right) dx+
+    \int \left( V\Psi^* \frac{\partial \Psi}{\partial x} 
+     - \Psi^* V \frac{\partial\Psi}{\partial x}
+    \right)dx - 
+    \int \Psi^*\frac{\partial V}{\partial x} \Psi dx
+\end{align*}
+
+Note  that 
+\begin{align*}
+    \int \left(-\frac{\partial^2\Psi^*}{\partial x^2}\frac{\partial\Psi}{\partial x} + \Psi^*\frac{\partial^3\Psi}{\partial x^3}\right) dx
+    =
+    \int \frac{\partial}{\partial x}\left(-\frac{\partial \Psi^*}{\partial x}\frac{\partial \Psi}{\partial x} + \Psi^*\frac{\partial^2 \Psi}{\partial x^2}\right)dx = 0.
+\end{align*}
+Therefore, $$
+\frac{d\langle p\rangle }{dt}
+= -\int\Psi^*\frac{\partial V}{\partial x}\Psi dx =
+\left\langle - \frac{\partial V}{\partial x} \right\rangle.
+$$
+
+\subsection*{Sol. 8}
+Say $\Psi$ is the solution to the Schrodinger equation for potential $V,$ then
+
+\begin{align*}
+    -\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}(\Psi e^{-iV_0t/\hbar}) + 
+    (V+V_0)(\Psi e^{-iV_0t/\hbar}) = & e^{-iV_0t/\hbar}
+    \left[i\hbar\frac{\partial\Psi}{\partial t} + V_0\Psi\right]
+\end{align*}
+\begin{align*}
+    i\hbar\frac{\partial}{\partial t}\Psi e^{-iV_0t/\hbar}
+    =i\hbar\left[
+    e^{-iV_0t/\hbar}\frac{\partial \Psi}{\partial t} + 
+    \frac{-iV_0}{\hbar} e^{-iV_0t/\hbar}\Psi\right]
+    = 
+ e^{-iV_0t/\hbar}
+    \left[i\hbar\frac{\partial\Psi}{\partial t} + V_0\Psi\right].
+\end{align*}
+The wave function $\Psi e^{-iV_0t/\hbar}$ satisfies the 
+Schrodinger equation for potential $V+V_0.$ It doesn't affect the expectation value of any dynamical variable, since the complex conjugate of the wave function cancels out this picked up term.
+
+
+\subsection*{Sol. 9}
+\begin{enumerate}
+    \item \begin{align*}
+        \int Ae^{-a[(mx^2/\hbar + it)]}Ae^{-a[(mx^2/\hbar - it)]}dx
+        = \int A^2e^{-2amx^2/\hbar}dx =
+        A^2\sqrt{\frac{\pi\hbar}{2am}}.
+    \end{align*}
+    $A=\left(\frac{2am}{\pi\hbar}\right)^{1/4}.$
+    \item 
+    \begin{align*}
+        i\hbar\frac{\partial\Psi}{\partial t}=
+        a\hbar Ae^{-a[(mx^2/\hbar + it)]}
+    \end{align*}
+    \begin{align*}
+        -\frac{\hbar^2}{2m}\frac{\partial^2 \Psi}{\partial x^2} = 
+        -Aa \left(2amx^{2} - \hbar\right) \mathrm{e}^{-a \left(\frac{mx^{2}}{\hbar} + \mathrm{i}t\right)}
+    \end{align*}
+    \begin{align*}
+        i\hbar\frac{\partial\Psi}{\partial t} +
+        \frac{\hbar^2}{2m}\frac{\partial^2 \Psi}{\partial x^2} = &
+        a\hbar Ae^{-a[(mx^2/\hbar + it)]} + 
+        Aa \left(2amx^{2} - \hbar\right) \mathrm{e}^{-a \left(\frac{mx^{2}}{\hbar} + \mathrm{i}t\right)}\\
+        =&2Aa^2mx^2\mathrm{e}^{-a \left(\frac{mx^{2}}{\hbar} + \mathrm{i}t\right)}
+    \end{align*}
+    $V(x)=2a^2mx^2.$
+    \item 
+    \begin{align*}
+        \langle
+         x
+         \rangle
+         =
+         \int 
+         Ae^{-a[(mx^2/\hbar - it)]}
+         x
+         Ae^{-a[(mx^2/\hbar + it)]} dx
+         = 0
+    \end{align*}
+    \begin{align*}
+        \langle
+         x^2
+         \rangle
+         =
+         \int 
+         Ae^{-a[(mx^2/\hbar - it)]}
+         x^2
+         Ae^{-a[(mx^2/\hbar + it)]} dx
+         = A^2\sqrt{\frac{\pi\hbar^3}{32a^3m^3}}
+        = \frac{\hbar}{4am}
+    \end{align*}
+
+    \begin{align*}
+        \langle
+         p
+         \rangle
+         = &
+         -i\hbar
+         \int 
+         Ae^{-a[(mx^2/\hbar - it)]}
+         \frac{\partial}{\partial x}
+         Ae^{-a[(mx^2/\hbar + it)]} dx\\
+         = & -i\hbar A\left(-\frac{2Aam}{\hbar}\right)
+         \int xe^{-2a[(mx^2/\hbar)]}dx = 0
+    \end{align*}
+    \begin{align*}
+        \langle
+         p^2
+         \rangle
+         = &
+         -\hbar^2
+         \int 
+         Ae^{-a[(mx^2/\hbar - it)]}
+         \frac{\partial^2}{\partial x^2}
+         Ae^{-a[(mx^2/\hbar + it)]} dx\\
+         = & -\hbar^2 A\left(\frac{2Aam}{\hbar^2}\right)
+         \int (2amx^2-\hbar)e^{-2a[(mx^2/\hbar)]}dx\\
+         =& 2A^2am\sqrt{\frac{\pi\hbar^3}{8am}}\\
+         =&\hbar am
+    \end{align*}
+    \item 
+    $$
+    \sigma_x = \sqrt{\frac{\hbar}{4am}}
+    $$
+    $$
+    \sigma_p = \sqrt{\hbar am}
+    $$
+    $$
+    \sigma_x\sigma_p = \frac{\hbar}{2} \geq \frac{\hbar}{2}.
+    $$
+\end{enumerate}
+
+
+\subsection*{Sol. 10}
+\begin{enumerate}
+    \item 
+    0: $\frac{0}{25},$ 1: $\frac{2}{25},$
+    2: $\frac{3}{25},$ 3: $\frac{5}{25},$
+    4: $\frac{3}{25},$ 5: $\frac{3}{25},$
+    6: $\frac{3}{25},$ 7: $\frac{1}{25},$
+    8: $\frac{2}{25},$ 9: $\frac{3}{25}.$
+    \item Most probable: 3, Median: 4, Average: $4.72$
+    \item 2.47
+\end{enumerate}
+\subsection*{Sol. 11}
+\begin{enumerate}
+    \item $v(x)=\sqrt{\frac{2}{m}(E-V(x))}.$
+    \item $$
+    v(x) = \sqrt{\frac{2}{m}(E-\frac{k}{2}x^2)}
+    $$
+    $$
+    T = \int_{-\sqrt{2E/k}}^{\sqrt{2E/k}}
+    \frac{1}{\sqrt{\frac{2}{m}(E-\frac{k}{2}x^2)}}dx
+    = \pi\sqrt{\frac{m}{k}}
+    $$
+
+    $$
+    \rho(x) = 
+    \frac{1}{ \pi\sqrt{\frac{2}{k}E-x^2}}
+    $$
+    \item 
+
+    $$
+    \langle
+    x\rangle
+    =\int_{-\sqrt{2E/k}}^{\sqrt{2E/k}}
+    \frac{xdx}{ \pi\sqrt{\frac{2}{k}E-x^2}} = 0
+    $$
+
+    $$
+    \langle
+    x^2\rangle
+    =\int_{-\sqrt{2E/k}}^{\sqrt{2E/k}}
+    \frac{x^2dx}{ \pi\sqrt{\frac{2}{k}E-x^2}} = \frac{E}{k}
+    $$
+
+    $\sigma_x=\sqrt{\frac{E}{k}}.$
+\end{enumerate}
+
+
+\subsection*{Sol. 12}
+\begin{enumerate}
+    \item 
+    Note that 
+    $$
+    E = \frac{p^2}{2m}+\frac{k}{2}x^2
+    \Rightarrow 
+    x = \pm\sqrt{\frac{2}{k}(E - \frac{p^2}{2m})}
+    $$
+
+
+\begin{align*}
+    \rho(p)dp \propto & dt \\
+    = &  
+    \frac{dt}{dx}
+    \frac{dx}{dp}
+    dp \\
+    \propto &  
+    \frac{1}{|p|}
+    \frac{|p|}{\sqrt{\frac{E - \frac{p^{2}}{2m}}{k}}}
+    dp\\
+    \propto & \frac{1}{\sqrt{2mE-p^2}}dp
+\end{align*}
+
+
+\begin{align*}
+    \int_{-\sqrt{2mE}}
+    ^{\sqrt{2mE}}
+    \frac{1}{\sqrt{2mE-p^2}}dp = \pi,
+\end{align*}
+therefore, $\rho(p) = \frac{1}{\pi\sqrt{2mE-p^2}}.$
+    
+\item 
+\begin{align*}
+    \langle p \rangle
+    =\int_{-\sqrt{2mE}}
+    ^{\sqrt{2mE}}
+    \frac{p}{\pi\sqrt{2mE-p^2}}dp = 0
+\end{align*}
+\begin{align*}
+    \langle p^2 \rangle
+    =\int_{-\sqrt{2mE}}
+    ^{\sqrt{2mE}}
+    \frac{p^2}{\pi\sqrt{2mE-p^2}}dp = Em
+\end{align*}
+$\sigma_p = \sqrt{Em}.$
+
+\item $\sigma_x\sigma_p = E\sqrt{\frac{m}{k}}.$ In quantum mechanics, $E$ cannot be less than $\hbar\sqrt{k/m}/2,$ so $\sigma_x\sigma_p \geq \hbar/2,$ obeying the uncertainty principle. 
+
+    
+\end{enumerate}
+
+\subsection*{Sol. 13}
+\includegraphics[width=0.8\textwidth]{fig/prob1.13.png}
+
+\subsection*{Sol. 14}
+\begin{enumerate}
+    \item 
+    \begin{align*}
+    P_{ab}(t) = 
+    \int_a^b\Psi^*(x,t)\Psi(x,t) dx
+\end{align*}
+
+
+By eq 1.26,
+\begin{align*}
+    \frac{d}{dt}
+    P_{ab}(t) =& 
+    \frac{i\hbar}{2m}
+    \left(
+    \Psi^*(x,t)
+    \frac{\partial \Psi}{\partial x}(x,t)
+    -
+    \frac{\partial \Psi^*}{\partial x}(x,t)
+    \Psi(x,t)
+    \right)\bigg|_a^b\\
+    = & J(a,t) - J(b, t)
+\end{align*}
+Units of $J:$ 1/t
+\item 
+$\Psi(x,t) =A e^{-a[(mx^2/\hbar)+it]}$
+
+\begin{align*}
+    J(x,t)
+    = & \frac{i\hbar}{2m}
+    [ 
+    A e^{-a[(mx^2/\hbar)+it]}
+    (-\frac{1}{\hbar}2Aamxe^{-a[(mx^2/\hbar)-it]})
+    \\ & - 
+    A e^{-a[(mx^2/\hbar)-it]}
+    (-\frac{1}{\hbar}2Aamxe^{-a[(mx^2/\hbar)+it]})
+    ]\\
+    =& 0
+\end{align*}
+
+\end{enumerate}
+
+
+\subsection*{Sol. 15}
+\begin{align*}
+    \frac{d}{dt}\int_{-\infty}^{\infty}
+    \Psi_1^*\Psi_2dx
+    = & 
+    \int_{-\infty}^{\infty}
+    \frac{\partial}{\partial t}
+    \Psi^*_1 \Psi_2 + 
+    \Psi_1^* \frac{\partial}{\partial t} \Psi_2 dx\\
+    =& \int_{-\infty}^{\infty}
+    (\frac{-i\hbar}{2m}\frac{\partial^2\Psi_1^*}{\partial x^2} + \frac{iV}{\hbar}\Psi_1^*)\Psi_2
+    +
+    \Psi_1^*(\frac{i\hbar}{2m}\frac{\partial^2\Psi_2}{\partial x^2} - \frac{iV}{\hbar}\Psi_2)dx\\
+    =& \frac{i\hbar}{2m}\int_{-\infty}^{\infty}
+    \frac{\partial}{\partial x}(
+    -\frac{\partial \Psi_1^*}{\partial x}\Psi_2
+    + \Psi_1\frac{\partial \Psi_2^*}{\partial x}
+    )dx = 0.
+\end{align*}
+
+\subsection*{Sol. 16}
+
+
+\begin{enumerate}
+    \item 
+    \begin{align*}
+        \int^{a}_{-a}
+        A^2(a^2-x^2)^2dx
+        =\frac{16}{15}A^2a^5
+    \end{align*}
+    $A = \sqrt{\frac{15}{16a^5}}$
+    \item 
+    \begin{align*}
+        \langle x \rangle = 
+        \int^{a}_{-a}x
+        A^2(a^2-x^2)^2dx
+        =0
+    \end{align*}
+    \item 
+    \begin{align*}
+     \langle p \rangle = 
+        -i\hbar\int^{a}_{-a}
+        A^2(a^2-x^2)(-2x)dx
+        =0
+    \end{align*}
+    \item 
+    \begin{align*}
+        \langle x^2 \rangle = 
+        \int^{a}_{-a}x^2
+        A^2(a^2-x^2)^2dx
+        = \frac{a^2}{7}
+    \end{align*}
+    \item 
+    \begin{align*}
+        \langle p^2 \rangle = 
+        -\hbar^2
+        \int^{a}_{-a}
+        A^2(a^2-x^2)(-2)dx
+        = \frac{5\hbar^2}{2a^2}
+    \end{align*}
+    \item $$\sigma_x = \frac{a}{\sqrt{7}}$$
+    \item $$\sigma_p = \frac{\hbar}{a}\sqrt{\frac{5}{2}}$$
+    \item $$
+    \sigma_x\sigma_p = \hbar \sqrt{\frac{5}{14}}\approx0.6\hbar\geq 0.5\hbar.
+    $$
+\end{enumerate}
+
+\subsection*{Sol. 17}
+\begin{enumerate}
+    \item 
+    $$
+    \frac{\partial \Psi}{\partial t}
+    =\frac{i\hbar}{2m}\frac{\partial^2\Psi}{\partial x^2} - 
+    \frac{i}{\hbar}(V_0-i\Gamma)\Psi
+    $$
+
+    $$
+    \frac{\partial \Psi^*}{\partial t}
+    =\frac{-i\hbar}{2m}\frac{\partial^2\Psi^*}{\partial x^2} + 
+    \frac{i}{\hbar}(V_0+i\Gamma)\Psi^*
+    $$
+
+    \begin{align*}
+        \frac{\partial}{\partial t}|\Psi|^2
+        =&\Psi^*(\frac{i\hbar}{2m}\frac{\partial^2\Psi}{\partial x^2} - 
+    \frac{i}{\hbar}(V_0-i\Gamma)\Psi) + 
+    (\frac{-i\hbar}{2m}\frac{\partial^2\Psi^*}{\partial x^2} + 
+    \frac{i}{\hbar}(V_0+i\Gamma)\Psi^*)\Psi\\
+    =&
+    \frac{i\hbar}{2m}(
+    \Psi^*
+    \frac{\partial^2\Psi}{\partial x^2}
+    - 
+    \frac{\partial^2\Psi^*}{\partial x^2}\Psi
+    ) -\frac{2\Gamma}{\hbar}\Psi^*\Psi
+    \end{align*}
+
+    \begin{align*}
+        \frac{d}{dt}\int\Psi^*\Psi dx
+        =\frac{-2\Gamma}{\hbar}
+        \int\Psi^*\Psi dx
+    \end{align*}
+
+    $$
+    \frac{dP}{dt} = -\frac{2\Gamma}{\hbar}P
+    $$
+
+    \item $P(t) = e^{-2\Gamma t/\hbar},$ $\tau = \frac{\hbar}{2\Gamma}.$
+    
+\end{enumerate}
+
+\subsection*{Sol. 18}
+\begin{enumerate}
+    \item 
+    $$
+    d < \frac{h}{\sqrt{3mk_bT}} \Rightarrow
+    T < \frac{h^2}{3mk_bd^2}
+    $$
+
+    $$
+    T < \frac{(6.626\times10^{-34})^2}{3\times (9.109\times10^{-31})
+    \times 
+    (1.381\times 10^{-23})
+    \times 
+    (0.3\times 10^{-9})^2} = 
+    1.3\times 10^5
+    $$
+
+
+    
+    Silicon radius $111\times 10^{-12}m,$ mass
+    $4.664\times 10^{-26} kg$
+    $$
+    T < \frac{(6.626\times10^{-34})^2}{3\times 
+    (4.664\times 10^{-26})
+    \times 
+    (1.381\times 10^{-23})
+    \times 
+    (111\times 10^{-12})^2} = 
+    18.44
+    $$
+    \item 
+    Note that $Nd^3 = V,$ so $NPd^3 = Nk_BT,$
+    $d = (k_BT/P)^{1/3}$
+    $$
+    d = (k_BT/P)^{1/3} < \frac{h}{\sqrt{3mk_BT}}
+    \Rightarrow 
+    T^{5/6} < \frac{hP^{1/3}k_B^{-1/3}}{\sqrt{3mk_B}}
+    \Rightarrow 
+    T < \frac{1}{k_B}(\frac{h^2}{3m})^{3/5}P^{2/5}
+    $$
+
+    Helium (4u) at atmospheric pressure: $T<2.9$
+
+    Hydrogen in outer space: de Broglie wavelength $1.46\times 10^{-9}m$
+    
+    
+\end{enumerate}

@@ -1,0 +1,49 @@
+{
+    // ---- LaTeX Workshop: build ----
+    "latex-workshop.latex.recipe.default": "latexmk",
+    "latex-workshop.latex.outDir": "%DIR%/build",
+    "latex-workshop.latex.rootFile.useSubFile": false,
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.latex.autoClean.run": "never",
+    "latex-workshop.view.pdf.viewer": "tab",
+
+    // ---- LaTeX Workshop: linting (ChkTeX, reads latex/.chktexrc) ----
+    "latex-workshop.linting.chktex.enabled": true,
+    "latex-workshop.linting.chktex.exec.args": ["-wall", "-n22", "-n30", "-e16", "-q", "-l", "%DIR%/.chktexrc"],
+    "latex-workshop.linting.run": "onType",
+
+    // ---- Formatting (latexindent) ----
+    "latex-workshop.formatting.latex": "latexindent",
+    "[latex]": {
+        "editor.formatOnSave": false,
+        "editor.wordWrap": "on",
+        "editor.defaultFormatter": "James-Yu.latex-workshop"
+    },
+
+    // ---- Grammar / spelling (LTeX+) ----
+    "ltex.language": "en-US",
+    "ltex.enabled": ["latex", "markdown"],
+    "ltex.checkFrequency": "save",
+    "ltex.additionalRules.enablePickyRules": false,
+    "ltex.latex.commands": {
+        "\\underlineAns{}": "dummy",
+        "\\ce{}": "dummy"
+    },
+    "ltex.latex.environments": {
+        "amatrix": "ignore"
+    },
+    "ltex.dictionary": {
+        "en-US": [
+            "Griffiths", "Schrödinger", "WKB", "Hamiltonian", "Hamiltonians",
+            "eigenfunction", "eigenfunctions", "eigenstate", "eigenstates",
+            "eigenvalue", "eigenvalues", "eigenvector", "eigenvectors",
+            "Hermitian", "Zeeman", "Fermi", "Bose", "Hilbert", "Airy",
+            "Liao", "Shen-Hsun"
+        ]
+    },
+
+    "files.exclude": {
+        "**/__pycache__": true,
+        "latex/build": true
+    }
+}

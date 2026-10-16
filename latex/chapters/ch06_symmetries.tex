@@ -1,0 +1,2060 @@
+\section{Symmetries and Conservation Laws}
+\subsection*{Sol. 1}
+\begin{enumerate}
+    \item It is equivalent to a reflection over the $xy$ plane, followed by a $\pi$ rotation along the $z$ axis.
+     That is 
+     $$
+     RM\psi(x,y,z) = R\psi(x,y,-z) = \psi(-x,-y,-z)
+     $$
+     \item 
+     \begin{align*}
+         r\sin(\pi-\theta)\cos(\phi+\pi)
+         =-r\sin\theta\cos\phi=-x
+     \end{align*}
+     \begin{align*}
+         r\sin(\pi-\theta)\sin(\phi+\pi)
+         =-r\sin\theta\sin\phi=-y
+     \end{align*}
+     \begin{align*}
+         r\cos(\pi-\theta)
+         =-r\cos\theta=-z
+     \end{align*}
+     \item 
+     \begin{align*}
+         \psi_{nlm}(r,\pi-\theta,\phi+\pi)
+         =&R_{nl}(r)Y_{lm}(\pi,\pi-\theta, \phi+\pi)\\
+         =&R_{nl}(r)\sqrt{\frac{(2l+1)}{4\pi}\frac{(l-m)!}{(l+m)!}}e^{im(\phi+\pi)}
+         P^m_l(\cos(\pi-\theta))\\
+         =&R_{nl}(r)\sqrt{\frac{(2l+1)}{4\pi}\frac{(l-m)!}{(l+m)!}}
+         (-1)^me^{im\pi}
+         P^m_l(-\cos(\theta))
+     \end{align*}
+     Note that $P_l(x)$ is an even or odd polynomial depending on the parity of $l,$ thus 
+     $$
+     P^m_l(-x) = (-1)^{l+m}P^m_l.
+     $$
+     Therefore,
+     $$
+     \psi_{nlm}(r,\pi-\theta,\phi+\pi) = (-1)^l\psi_{nlm}(r,\theta,\pi)
+     $$
+\end{enumerate}
+
+\subsection*{Sol. 2}
+\begin{align*}
+    \langle f, \exp(iQ)g\rangle = &
+    \langle f, \sum_j\frac{(iQ)^j}{j!}g\rangle\\
+    =&\langle \sum_j\frac{(-iQ)^j}{j!}f, g\rangle\\
+    =&\langle \exp(-iQ)f, g\rangle
+\end{align*}
+By problem 3.29
+$$
+I = \exp(-iQ+iQ)=\exp(-iQ)\exp(iQ)=U^\dagger U.
+$$
+
+\subsection*{Sol. 3}
+\begin{align*}
+    T^\dagger pT f(x) = & 
+    T^\dagger pf(x-a)\\
+    =&-i\hbar T^\dagger f'(x-a)\\
+    =&-i\hbar f'(x) = pf(x)
+\end{align*}
+
+\subsection*{Sol. 4}
+\begin{align*}
+    T^\dagger\hat Q(\hat x, \hat p)Tf(x)
+    =
+    &T^\dagger\sum_{m=0}^\infty\sum_{n=0}^\infty a_{mn}\hat x^m\hat p ^nTf(x)\\
+    =&T^\dagger\sum_{m=0}^\infty\sum_{n=0}^\infty a_{mn}\hat x^m\hat p ^nf(x-a)\\
+    =&T^\dagger\sum_{m=0}^\infty\sum_{n=0}^\infty a_{mn}x^m(-i\hbar)^nf^{(n)}(x-a)\\
+    =&\sum_{m=0}^\infty\sum_{n=0}^\infty a_{mn}(x+a)^m(-i\hbar)^nf^{(n)}(x)\\
+    =&\sum_{m=0}^\infty\sum_{n=0}^\infty a_{mn}(x+a)^m\hat p ^nf(x)\\
+    =& \hat Q(\hat x + a, \hat p)f(x)
+\end{align*}
+
+\subsection*{Sol. 5}
+\begin{align*}
+    \psi(x-a)=e^{iq(x-a)}u(x-a) = e^{-iqa}e^{iqx}u(x) \Rightarrow u(x-a)=u(x).
+\end{align*}
+
+\subsection*{Sol. 6}
+\begin{enumerate}
+    \item 
+    \begin{align*}
+        (e^{iqx}u_{nq}(x))''
+        =&
+        (iqe^{iqx}u_{nq}(x)+e^{iqx}u'_{nq}(x))'\\
+        =&
+        -q^2e^{iqx}u_{nq}(x)
+        +iqe^{iqx}u'{nq}(x)
+        +iqe^{iqx}u'_{nq}(x)
+        +e^{iqx}u''_{nq}(x)\\
+        =&e^{iqx}u''_{nq}(x)
+        +e^{iqx}2iqu'_{nq}(x)
+        -e^{iqx}q^2u_{nq}(x)
+    \end{align*}
+    \begin{align*}
+        -\frac{\hbar^2}{2m}(e^{iqx}u_{nq}(x))''
+        +V(x)(e^{iqx}u_{nq}(x))
+        =E_{nq}e^{iqx}u_{nq}(x)
+    \end{align*}
+    \begin{align*}
+        -\frac{\hbar^2}{2m}
+        (u''_{nq}(x)+2iqu'_{nq}(x)-q^2u_{nq}(x))
+        +V(x)u_{nq}(x)=E_{nq}u_{nq}(x)
+    \end{align*}
+    \begin{align*}
+        -\frac{\hbar^2}{2m}
+        u''_{nq}
+        -\frac{i\hbar^2q}{m}
+        u'_{nq}
+        +V(x)u_{nq}
+        =(E_{nq}-\frac{\hbar^2q^2}{2m})u_{nq}
+    \end{align*}
+    \item 
+    \begin{align*}
+        -\frac{\hbar^2}{2m}
+        \frac{u_{j+1}-2u_j+u_{j-1}}{(\Delta x)^2}
+        -\frac{i\hbar^2q}{m}
+        \frac{u_{j+1}-u_{j-1}}{2\Delta x}
+        +V_ju_j = 
+        E-\frac{\hbar^2q^2}{2m}u_j
+    \end{align*}
+    \begin{align*}
+        \left(-\frac{\hbar^2}{2m(\Delta x)^2}-
+        \frac{i\hbar^2 q}{2m\Delta x}
+        \right)u_{j+1}
+        + 
+        \left(\frac{\hbar^2}{m(\Delta x)^2}
+        +V_j+\frac{\hbar^2q^2}{2m}\right)
+        u_j + 
+        \left(
+        -\frac{\hbar^2}{2m(\Delta x)^2}
+        +\frac{i\hbar^2 q}{2m\Delta x}
+        \right)u_{j-1} = Eu_j
+    \end{align*}
+    \begin{align*}
+        (-\lambda-iq\lambda\Delta x)u_{j+1}
+        +(2\lambda+v_j\lambda+q^2\lambda(\Delta x)^2)u_j
+        +
+        (-\lambda+iq\lambda\Delta x)u_{j-1}
+        =Eu_j,
+    \end{align*}
+    where $\lambda=\frac{\hbar^2}{2m(\Delta x)^2}.$ 
+
+    In the unit of $\frac{\hbar^2}{2ma^2}:$
+    
+    For $qa=-\pi,$ $E_1=-6.98,$ $E_2 = 5.62.$
+
+    For $qa=-\pi/2,$ $E_1=-10.06,$ $E_2 = 13.55.$
+
+    For $qa=0,$ $E_1=-11.99,$ $E_2 = 28.85.$
+
+    For $qa=\pi/2,$ $E_1=-10.06,$ $E_2 = 13.55.$
+
+    For $qa=\pi,$ $E_1=-6.98,$ $E_2 = 5.62.$
+    \item 
+    \includegraphics[width=0.8\textwidth,valign=t]{fig/prob6.6_bands.png}
+    
+\end{enumerate}
+
+\subsection*{Sol. 7}
+\begin{enumerate}
+    \item 
+    \begin{align*}
+        T(a) =& T_1(a)T_2(a)\\
+        =&\exp(-\frac{ia}{\hbar}p_1)\exp(-\frac{ia}{\hbar}p_2)\\
+        =&\exp(-\frac{ia}{\hbar}P)
+    \end{align*}
+    \item 
+    Let $R=\frac{x_1+x_2}{2},$ $r=x_1-x_2,$ then 
+    $$
+    \frac{\partial}{\partial x_1}+\frac{\partial}{\partial x_2}
+    =\frac{\partial}{\partial R}, 
+    $$
+    then
+    \begin{align*}
+        [H,P] =& \left[V(|x_1-x_2|), \frac{\partial}{\partial x_1}+\frac{\partial}{\partial x_2}\right]
+        \\
+        =&\left[V(|r|), \frac{\partial}{\partial R}\right]\\
+        =& 0.
+    \end{align*}
+\end{enumerate}
+
+\subsection*{Sol. 8}
+\begin{enumerate}
+    \item 
+    \begin{align*}
+        \langle g, \Pi f\rangle
+        =&\int_{-\infty}^{\infty} g^*(x)f(-x)dx\\
+        =&\int_{-\infty}^{\infty} g^*(-x)f(x)dx\\
+        =&\langle \Pi g,  f\rangle,
+    \end{align*}
+    so $\Pi^\dagger = \Pi.$
+    \item 
+    $$
+    \Pi f = \mu f
+    $$
+    $$
+    \Pi^2 f = \mu^2 f = f\Rightarrow \mu=\pm 1.
+    $$
+\end{enumerate}
+
+\subsection*{Sol. 9}
+\begin{enumerate}
+    \item 
+    Since the parity operator is hermitian and projective
+    \begin{align*}
+        \Pi^\dagger f\Pi = f\Rightarrow 
+        f\Pi = \Pi f,
+    \end{align*}
+    thus $$
+    [\Pi, f]=0.
+    $$
+    For a pseudoscalar, 
+    \begin{align*}
+        \Pi^\dagger f\Pi = - f\Rightarrow 
+        f\Pi = -\Pi f,
+    \end{align*}
+    $$
+    \{\Pi, f\}=0.
+    $$
+    \item 
+    \begin{align*}
+        \Pi^\dagger \bm V\Pi = -\bm V\Rightarrow 
+        \Pi = -\Pi \bm V,
+    \end{align*}
+    thus $$
+    \{\Pi, \bm V\}=0.
+    $$
+    For a pseudovector, 
+     \begin{align*}
+        \Pi^\dagger \bm V\Pi = \bm V\Rightarrow 
+        \Pi = \Pi \bm V,
+    \end{align*}
+    $$
+    [\Pi, \bm V]=0.
+    $$
+\end{enumerate}
+
+\subsection*{Sol. 10}
+\begin{align*}
+    \Pi x\Pi f(x) = 
+    \Pi x f(-x) = 
+    -xf(x)\Rightarrow \Pi x\Pi  = -x
+\end{align*}
+\begin{align*}
+    \Pi \frac{d}{dx}\Pi f(x) = 
+    \Pi \frac{d}{dx} f(-x) = 
+    \Pi -f'(-x)
+    -f'(x)\Rightarrow \Pi p\Pi  = -p
+\end{align*}
+
+\subsection*{Sol. 11}
+\begin{align*}
+    \langle \psi_{n'l'm'}, \bm L \psi_{nlm}\rangle =& 
+    \langle \psi_{n'l'm'}, \Pi^{\dagger} \bm L \Pi\psi_{nlm}\rangle\\
+    =& (-1)^{l'+l}\langle \psi_{n'l'm'}, \bm L \psi_{nlm}\rangle
+\end{align*}
+$
+\langle \psi_{n'l'm'}, \bm L \psi_{nlm}\rangle=\bm 0
+$ if $l'+l$ is odd.
+
+\subsection*{Sol. 12}
+Let $\Pi = \begin{pmatrix}
+a & b\\ c & d
+\end{pmatrix}$
+\begin{align*}
+    \begin{pmatrix}
+a & c^*\\ b^* & d
+\end{pmatrix}
+\begin{pmatrix}
+0 & 1 \\ 1 & 0
+\end{pmatrix}
+\begin{pmatrix}
+a & b\\ c & d
+\end{pmatrix}
+=\begin{pmatrix}
+0 & 1 \\ 1 & 0
+\end{pmatrix}
+=
+\begin{pmatrix}
+ac+ac^* & ad-bc^* \\ b^*c+ad & b^*d+bd
+\end{pmatrix}
+\end{align*}
+
+\begin{align*}
+    \begin{pmatrix}
+a & c^*\\ b^* & d
+\end{pmatrix}
+\begin{pmatrix}
+0 & -i \\ i & 0
+\end{pmatrix}
+\begin{pmatrix}
+a & b\\ c & d
+\end{pmatrix}
+=\begin{pmatrix}
+0 & -i \\ i & 0
+\end{pmatrix}
+=\begin{pmatrix}
+-aci+ac^*i & -adi+bc^*i \\ -b^*ci+adi & -b^*di+bdi
+\end{pmatrix}
+\end{align*}
+
+\begin{align*}
+    \begin{pmatrix}
+a & c^*\\ b^* & d
+\end{pmatrix}
+\begin{pmatrix}
+1 & 0 \\ 0 & -1
+\end{pmatrix}
+\begin{pmatrix}
+a & b\\ c & d
+\end{pmatrix}
+=\begin{pmatrix}
+1 & 0 \\ 0 & -1
+\end{pmatrix}
+=\begin{pmatrix}
+a^2-c^*c & ab-c^*d \\ ab^*-cd & b^*b-d^2
+\end{pmatrix}
+\end{align*}
+$a$ cannot be $0,$ as this will lead to $c^*c=-1.$ Similarly, $d$ cannot be $0.$
+By the first equation $c$ and $b$ should be pure imaginary. But the second equation implies that $c=b=0.$ The euations reduce to 
+\begin{align*}
+    \begin{pmatrix}
+        0 & 1\\1 & 0
+    \end{pmatrix}
+    =\begin{pmatrix}
+        0 & ad\\ad & 0
+    \end{pmatrix}
+\end{align*}
+\begin{align*}
+    \begin{pmatrix}
+        0 & -i\\i & 0
+    \end{pmatrix}
+    =\begin{pmatrix}
+        0 & -adi\\adi & 0
+    \end{pmatrix}
+\end{align*}
+\begin{align*}
+    \begin{pmatrix}
+        1 & 0\\0 & -1
+    \end{pmatrix}
+    =\begin{pmatrix}
+        a^2 & 0\\ 0 & -d^2
+    \end{pmatrix}
+\end{align*}
+The final equation implies $a=\pm1,$ and $d=\pm 1.$ Combine with the first equation, $\Pi$ can only be 
+$\begin{pmatrix}
+    1 & 0\\0 & 1
+\end{pmatrix}$
+or 
+$\begin{pmatrix}
+    -1 & 0\\0 & -1
+\end{pmatrix}.$
+
+\subsection*{Sol. 13}
+\begin{enumerate}
+    \item 
+    The ground state is necessarily $l=0.$ By equation 6.26, $\langle \bm p_e\rangle=\bm 0.$
+    \item Consider the electron in the state 
+    $\frac{1}{\sqrt{2}}\psi_{200} +\frac{1}{\sqrt{2}} \psi_{210},$ then
+    \begin{align*}
+        \langle
+        \frac{1}{\sqrt{2}}\psi_{200} +\frac{1}{\sqrt{2}} \psi_{210},
+        q\bm r (\frac{1}{\sqrt{2}}\psi_{200} +\frac{1}{\sqrt{2}} \psi_{210})
+        \rangle = & 
+        q
+        \langle\psi_{200}, \bm r\psi_{210}\rangle
+    \end{align*}
+    $\psi_{200}=\frac{1}{\sqrt{2}}a^{-3/2}(1-\frac{r}{2a})\exp(-r/2a)(\frac{1}{4\pi})^{1/2},$
+    $\psi_{210}=\frac{1}{2\sqrt{6}}a^{-3/2}(\frac{r}{a})\exp(-r/2a)
+    (\frac{3}{4\pi})^{1/2}\cos\theta.$
+    The $x$ and $y$ vanishes since there is no $\phi$ component. However, for the $z$ direction
+    
+    \begin{align*}
+        &\int
+        r\cos\theta 
+        \frac{1}{\sqrt{2}}a^{-3/2}(1-\frac{r}{2a})\exp(-r/2a)(\frac{1}{4\pi})^{1/2}
+        \frac{1}{2\sqrt{6}}a^{-3/2}(\frac{r}{a})\exp(-r/2a)
+    (\frac{3}{4\pi})^{1/2}\cos\theta r^2\sin\theta drd\theta d\phi\\
+    =&-3a.
+    \end{align*}
+    
+    
+\end{enumerate}
+
+\subsection*{Sol. 14}
+\begin{enumerate}
+    \item \begin{align*}
+    det\begin{pmatrix}
+    1-t & -\varphi/N\\\varphi/N & 1-t
+    \end{pmatrix} = t^2-2t+1+\varphi^2/N^2 = (t-1-i\varphi/N)(t-1+i\varphi/N)
+\end{align*}
+If $t = 1+i\varphi/N,$  choose the eigenvector 
+$\frac{1}{\sqrt{2}}\begin{pmatrix}
+    i\\1
+\end{pmatrix}.$
+
+If $t = 1-i\varphi/N,$  choose the eigenvector 
+$\frac{1}{\sqrt{2}}\begin{pmatrix}
+    i\\-1
+\end{pmatrix}.$
+Thus 
+$$
+\begin{pmatrix}
+    1+ i\varphi/N & 0 \\
+    0 & 1-i\varphi/N
+\end{pmatrix}
+=
+\begin{pmatrix}
+    \frac{-i}{\sqrt{2}} & \frac{1}{\sqrt{2}}\\
+    \frac{-i}{\sqrt{2}} & \frac{-1}{\sqrt{2}}
+\end{pmatrix}
+\begin{pmatrix}
+    1 & -\varphi/N\\
+    \varphi/N & 1
+\end{pmatrix}
+\begin{pmatrix}
+    \frac{i}{\sqrt{2}} & \frac{i}{\sqrt{2}}\\
+    \frac{1}{\sqrt{2}} & \frac{-1}{\sqrt{2}}
+\end{pmatrix}
+$$
+\item 
+\begin{align*}
+    \lim_{N\to\infty}(1\pm i\varphi/N)^N = 
+    e^{\pm i\varphi}
+\end{align*}
+\item 
+\begin{align*}
+    \lim_{N\to\infty}
+    \begin{pmatrix}
+        1 & -\varphi/N\\
+        \varphi/N & 1
+    \end{pmatrix}^N
+    = & 
+    \begin{pmatrix}
+    \frac{i}{\sqrt{2}} & \frac{i}{\sqrt{2}}\\
+    \frac{1}{\sqrt{2}} & \frac{-1}{\sqrt{2}}
+\end{pmatrix}
+\begin{pmatrix}
+    e^{i\varphi} & 0\\
+    0 & e^{-i\varphi}
+\end{pmatrix}
+\begin{pmatrix}
+    \frac{-i}{\sqrt{2}} & \frac{1}{\sqrt{2}}\\
+    \frac{-i}{\sqrt{2}} & \frac{-1}{\sqrt{2}}
+\end{pmatrix}\\
+=&
+\frac{1}{2}
+\begin{pmatrix}
+    i & i \\
+    1 & -1 
+\end{pmatrix}
+\begin{pmatrix}
+    -ie^{i\varphi} & e^{i\varphi}\\
+    -ie^{-i\varphi} &-e^{-i\varphi}
+\end{pmatrix}\\
+=&\frac{1}{2}
+\begin{pmatrix}
+    e^{i\varphi}+e^{-i\varphi} & ie^{i\varphi}-ie^{-i\varphi}\\
+    -ie^{i\varphi}+ie^{-i\varphi} & e^{i\varphi}+e^{-i\varphi}
+\end{pmatrix}\\
+    =&\begin{pmatrix}
+        \cos\varphi & -\sin\varphi\\
+         \sin\varphi& \cos\varphi
+    \end{pmatrix}
+\end{align*}
+\end{enumerate}
+
+\subsection*{Sol. 15}
+\begin{align*}
+    \hat R^\dagger \hat f \hat R
+    =&(1+i\frac{\delta}{\hbar}\bm n\cdot \bm L)\hat f(1-i\frac{\delta}{\hbar}\bm n\cdot \bm L)\\
+    =&\hat f+i\frac{\delta}{\hbar}(n_x\bm L_x+n_y\bm L_y+n_z\bm L_z)\hat f
+    -i\frac{\delta}{\hbar}\hat f(n_x\bm L_x+n_y\bm L_y+n_z\bm L_z)\\
+    =&\hat f
+\end{align*}
+
+\subsection*{Sol. 16}
+\begin{align*}
+    \bm V_x' =& (1+\frac{i\delta}{\hbar}L_y)\bm V_x(1-\frac{i\delta}{\hbar}L_y)\\
+    =&\bm V_x+\frac{i\delta}{\hbar}[L_y, \bm V_x]\\
+    =&\bm V_x + \delta \bm V_z
+\end{align*}
+\begin{align*}
+    \bm V_y' =& (1+\frac{i\delta}{\hbar}L_y)\bm V_y(1-\frac{i\delta}{\hbar}L_y)\\
+    =&\bm V_y+\frac{i\delta}{\hbar}[L_y, \bm V_y]\\
+    =&\bm V_y 
+\end{align*}
+\begin{align*}
+    \bm V_z' =& (1+\frac{i\delta}{\hbar}L_y)\bm V_z(1-\frac{i\delta}{\hbar}L_y)\\
+    =&\bm V_z+\frac{i\delta}{\hbar}[L_y, \bm V_z]\\
+    =&\bm V_z - \delta \bm V_x
+\end{align*}
+\begin{align*}
+    \begin{pmatrix}
+        \bm V_x'\\
+        \bm V_y'\\
+        \bm V_z'\\
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+        1 & 0 & \delta \\
+        0 & 1 & 0 \\
+        -\delta & 0 & 1 
+    \end{pmatrix}
+    \begin{pmatrix}
+        \bm V_x\\
+        \bm V_y\\
+        \bm V_z\\
+    \end{pmatrix}
+\end{align*}
+
+\subsection*{Sol. 17}
+\begin{align*}
+    \hat R_{\bm n}(\delta)\psi_{nlm}
+    =&(1-i\frac{\delta}{\hbar}(n_xL_x+n_yL_y+n_zL_z))\psi_{nlm}\\
+    =&(1-i\frac{\delta}{\hbar}(n_x\frac{L_++L_-}{2}+n_y\frac{L_+-L_-}{2i}+n_zL_z))\psi_{nlm}\\
+    =&
+    (-i\delta n_x\frac{1}{2}+\delta n_y\frac{1}{2})\sqrt{l(l+1)-m(m+1)}\psi_{nl(m+1)}\\
+    &+ (1-i\delta n_zm)\psi_{nlm} + 
+    (-i\delta n_x\frac{1}{2}-\delta n_y\frac{1}{2})\sqrt{l(l+1)-m(m-1)}\psi_{nl(m-1)}
+\end{align*}
+
+\subsection*{Sol. 18}
+\begin{enumerate}
+    \item 
+    $$
+    T\Pi f(x) = Tf(-x) = f(-(x-a))=f(-x+a)
+    $$
+    $$
+    \Pi T f(x) = \Pi f(x-a) = f(-x-a)
+    $$
+    \item 
+    \begin{align*}
+        \Pi f_p(x)=\Pi \frac{1}{\sqrt{2\pi \hbar}}e^{ipx/\hbar}=\frac{1}{\sqrt{2\pi \hbar}}e^{-ipx/\hbar}
+        =f_{-p}(x)
+    \end{align*}
+    \item 
+    \begin{align*}
+        T\frac{1}{\sqrt{\pi\hbar}}\cos\frac{px}{\hbar}
+        =\frac{1}{\sqrt{\pi\hbar}}\cos\frac{p(x-a)}{\hbar}
+        =\frac{1}{\sqrt{\pi\hbar}}\cos\frac{px}{\hbar}
+        \cos\frac{pa}{\hbar}+
+        \frac{1}{\sqrt{\pi\hbar}}\sin\frac{px}{\hbar}
+        \sin\frac{pa}{\hbar}
+    \end{align*}
+     \begin{align*}
+        T\frac{1}{\sqrt{\pi\hbar}}\sin\frac{px}{\hbar}
+        =\frac{1}{\sqrt{\pi\hbar}}\sin\frac{p(x-a)}{\hbar}
+        =\frac{1}{\sqrt{\pi\hbar}}\sin\frac{px}{\hbar}
+        \cos\frac{pa}{\hbar}-
+        \frac{1}{\sqrt{\pi\hbar}}\cos\frac{px}{\hbar}
+        \sin\frac{pa}{\hbar}
+    \end{align*}
+\end{enumerate}
+
+\subsection*{Sol. 19}
+\begin{enumerate}
+    \item 
+    \begin{align*}
+    [L_z, V_\pm] = &
+    [L_z, V_x]\pm [L_z, iV_y]\\
+    =&i\hbar V_y \pm \hbar V_x\\
+    =&\pm \hbar V_\pm
+    \end{align*}
+    \begin{align*}
+        [L^2, V_\pm] =& 
+        [L_x^2+L_y^2+L_z^2, V_\pm] \\
+        =&L_x[L_x,V_\pm]+[L_x,V_\pm]L_x+L_y[L_y,V_\pm]+[L_y,V_\pm]L_y+L_z[L_z,V_\pm]+[L_z,V_\pm]L_z
+    \end{align*}
+    \begin{align*}
+        [L_x, V_\pm] =& [L_x, V_x]\pm [L_x, iV_y]\\
+        =&\mp \hbar V_z
+    \end{align*}
+    \begin{align*}
+        [L_y, V_\pm] =& [L_y, V_x]\pm [L_y, iV_y]\\
+        =&- i\hbar V_z
+    \end{align*}
+    \begin{align*}
+        [L^2, V_+] = &
+        -\hbar L_xV_z
+        -\hbar V_zL_x-
+        i\hbar
+        L_yV_z
+        -i\hbar V_zL_y+
+        \hbar L_zV_+
+        +\hbar V_+L_z\\
+        =&
+        -\hbar (-i\hbar V_y+V_zL_x)
+        -\hbar V_zL_x-
+        i\hbar
+        (i\hbar V_x+V_zL_y)
+        -i\hbar V_zL_y+
+        \hbar (\hbar V_++V_+L_z)
+        +\hbar V_+L_z\\
+        =&2\hbar^2V_+-2\hbar V_zL_++2\hbar V_+L_z
+    \end{align*}
+    \begin{align*}
+        [L^2, V_-] = &
+        \hbar L_xV_z
+        +\hbar V_zL_x
+        -
+        i\hbar
+        L_yV_z
+        -i\hbar V_zL_y
+        -
+        \hbar L_zV_-
+        -\hbar V_-L_z\\
+        =&
+        \hbar (-i\hbar V_y+V_zL_x)
+        +\hbar V_zL_x
+        -
+        i\hbar
+        (i\hbar V_x+V_zL_y)
+        -i\hbar V_zL_y-
+        \hbar (-\hbar V_-+V_-L_z)
+        -\hbar V_-L_z\\
+        =&2\hbar^2V_-+2\hbar V_zL_--2\hbar V_-L_z
+    \end{align*}
+    \item 
+    \begin{align*}
+        L_zV_+\psi = &
+        (\hbar V_+ + V_+L_z)\psi\\
+        =&\hbar V_+\psi + l\hbar V_+\psi\\
+        =&\hbar(l+1)V_+\psi
+    \end{align*}
+    \begin{align*}
+        L^2V_+\psi = &
+        (2\hbar^2V_+ - 2\hbar V_zL_+ + 2\hbar V_+ L_z + V_+L^2)\psi\\
+        =&(2\hbar^2+2\hbar^2l+\hbar^2l(l+1) )V_+\psi\\
+        =&\hbar^2(l+1)(l+2)V_+\psi
+    \end{align*}
+    
+\end{enumerate}
+
+\subsection*{Sol. 20}
+\begin{align*}
+    \langle n'l'm', [L_-,f]nlm\rangle=0
+\end{align*}
+\begin{align*}
+    \langle n'l'm', L_-fnlm\rangle
+    -\langle n'l'm', fL_-nlm\rangle=0
+\end{align*}
+\begin{align*}
+    A^{m'}_{l'}
+    \langle n'l'(m'+1), fnlm\rangle
+    -
+    B^m_l \langle n'l'm', fnl(m-1)\rangle = 0
+\end{align*}
+Both terms are zero unless $m-1=m',$ and $l'=l.$ But
+$$
+A^{m-1}_l = \hbar\sqrt{l(l+1)-(m-1)m}
+=B^m_l.
+$$
+Therefore, 
+$$
+\langle n'lm, fnlm\rangle
+=
+\langle n'l(m-1), fnl(m-1)\rangle.
+$$
+
+\subsection*{Sol. 21}
+\begin{align*}
+    &\langle \frac{1}{\sqrt{2}}\psi_{211}
+    +\frac{1}{\sqrt{2}}\psi_{21-1},
+    r
+    (\frac{1}{\sqrt{2}}\psi_{211}
+    +\frac{1}{\sqrt{2}}\psi_{21-1})
+    \rangle\\
+    =&\frac{1}{2}
+    (\langle
+    \psi_{211}, r\psi_{211}
+    \rangle+
+    \langle
+    \psi_{211}, r\psi_{21-1}
+    \rangle+
+    \langle
+    \psi_{21-1}, r\psi_{211}
+    \rangle+
+    \langle
+    \psi_{21-1}, r\psi_{21-1}
+    \rangle)\\
+    =&\langle\psi_{210}, r\psi_{210}\rangle\\
+    =&
+    \int r\frac{1}{24}a^{-3}
+    \frac{r^2}{a^2}\exp(-r/a)r^2
+    \frac{3}{4\pi}\cos^2\theta\sin\theta drd\theta d\phi\\
+    =&5a
+\end{align*}
+
+\subsection*{Sol. 22}
+\begin{enumerate}
+    \item 
+    \begin{itemize}
+        \item By definition of a vector operator $[L_z, V_z]=0.$
+        \item By prob19, $[L_z,V_\pm]=\pm\hbar V_\pm$
+        \item  By prob19, 
+        \begin{align*}
+            [L_\pm, V_\pm] =& 
+            [L_x, V_\pm]\pm i
+            [L_y, V_\pm]\\
+            =&\mp \hbar V_z
+            \pm \hbar V_z = 0
+        \end{align*}
+        \item 
+        \begin{align*}
+            [L_\pm, V_z] =& 
+            [L_x,V_z] \pm i[L_y, V_z]\\
+            =&-i\hbar V_y\mp \hbar V_x\\
+            =&\mp \hbar V_\pm
+        \end{align*}
+        \item 
+        \begin{align*}
+            [L_\pm, V_\mp]=&
+            [L_x\pm iL_y, V_x\mp i V_y]\\
+            =&\mp i[L_x, V_y]\pm i[L_y, V_x]\\
+            =&\pm \hbar V_z\pm \hbar V_z\\
+            =&\pm 2\hbar V_z
+        \end{align*}
+    \end{itemize}
+    \item Using equation6.50,
+    \begin{align*}
+        \langle n'l'm', [L_z, V_z] nlm\rangle=0
+    \end{align*}
+    \begin{align*}
+        \langle n'l'm', L_z V_znlm\rangle
+        -\langle n'l'm',  V_zL_z nlm\rangle=0
+    \end{align*}
+    \begin{align*}
+        \hbar m'\langle n'l'm', V_znlm\rangle
+        -\hbar m\langle n'l'm',  V_z nlm\rangle=0
+    \end{align*}
+    $$
+    \langle n'l'm', V_znlm\rangle = 0
+    $$
+    unless $m'=m.$
+\end{enumerate}
+
+\subsection*{Sol. 23}
+\begin{enumerate}
+    \item Since each angular state is orthogonal
+    $$
+    C^{j_1j_2J}_{m_1m_2M}
+    =\langle j_1j_2m_1m_2, JM\rangle
+    $$
+    \item 
+    \begin{align*}
+        J_+|JM\rangle
+        =&A_J^M|J(M+1)\rangle\\
+        =&
+        A_J^M
+        \sum_{m_1,m_2}C^{j_1j_2J}_{m_1m_2(M+1)}|j_1j_2m_1m_2\rangle
+    \end{align*}
+    
+    \begin{align*}
+        J_+|JM\rangle
+        =&\sum_{m_1,m_2}
+         C^{j_1j_2J}_{m_1m_2M}
+         (J_+^{(1)}+J_+^{(2)})|j_1j_2m_1m_2\rangle\\
+         =&
+         \sum_{m_1,m_2}
+         C^{j_1j_2J}_{m_1m_2M}
+         A_{j_1}^{m_1}|j_1j_2(m_1+1)m_2\rangle
+         +\sum_{m_1,m_2}
+         C^{j_1j_2J}_{m_1m_2M}
+         A_{j_2}^{m_2}|j_1j_2m_1(m_2+1)\rangle
+    \end{align*}
+
+    \begin{align*}
+        A^M_J C^{j_1j_2J}_{m_1m_2M+1}
+    =&A^{m_1-1}_{j_1}C^{j_1j_2J}_{m_1-1m_2M} + A^{m_2-1}_{j_2}C^{j_1j_2J}_{m_1m_2-1M}\\
+    =&
+    B^{m_1}_{j_1}C^{j_1j_2J}_{m_1-1m_2M} + B^{m_2}_{j_2}C^{j_1j_2J}_{m_1m_2-1M}
+    \end{align*}
+
+    \begin{align*}
+        J_-|JM\rangle
+        =&B_J^M|J(M-1)\rangle\\
+        =&
+        B_J^M
+        \sum_{m_1,m_2}C^{j_1j_2J}_{m_1m_2(M-1)}|j_1j_2m_1m_2\rangle
+    \end{align*}
+    
+    \begin{align*}
+        J_-|JM\rangle
+        =&\sum_{m_1,m_2}
+         C^{j_1j_2J}_{m_1m_2M}
+         (J_-^{(1)}+J_-^{(2)})|j_1j_2m_1m_2\rangle\\
+         =&
+         \sum_{m_1,m_2}
+         C^{j_1j_2J}_{m_1m_2M}
+         B_{j_1}^{m_1}|j_1j_2(m_1-1)m_2\rangle
+         +\sum_{m_1,m_2}
+         C^{j_1j_2J}_{m_1m_2M}
+         B_{j_2}^{m_2}|j_1j_2m_1(m_2-1)\rangle
+    \end{align*}
+
+    \begin{align*}
+        B^M_J C^{j_1j_2J}_{m_1m_2M-1}
+    =&B^{m_1+1}_{j_1}C^{j_1j_2J}_{m_1+1m_2M} 
+    + B^{m_2+1}_{j_2}C^{j_1j_2J}_{m_1m_2+1M}\\
+    =&
+    A^{m_1}_{j_1}C^{j_1j_2J}_{m_1+1m_2M} + A^{m_2}_{j_2}C^{j_1j_2J}_{m_1m_2+1M}
+    \end{align*}
+\end{enumerate}
+
+\subsection*{Sol. 24}
+\begin{enumerate}
+    \item 
+    \begin{itemize}
+        \item 
+        \begin{align*}
+        \langle n'l'm',[L_+,V_+]nlm\rangle = 0
+    \end{align*}
+    \begin{align*}
+        \langle n'l'm',L_+V_+nlm\rangle
+        -\langle n'l'm',V_+L_+nlm\rangle= 0
+    \end{align*}
+    \begin{align*}
+        B^{m'}_{l'}\langle n'l'(m'-1),V_+nlm\rangle
+        -A^m_l\langle n'l'm',V_+nl(m+1)\rangle= 0
+    \end{align*}
+        \item 
+        \begin{align*}
+        \langle n'l'm',[L_-,V_-]nlm\rangle = 0
+    \end{align*}
+    \begin{align*}
+        \langle n'l'm',L_-V_-nlm\rangle
+        -\langle n'l'm',V_-L_-nlm\rangle= 0
+    \end{align*}
+    \begin{align*}
+        A^{m'}_{l'}\langle n'l'(m'+1),V_-nlm\rangle
+        -B^m_l\langle n'l'm',V_-nl(m-1)\rangle= 0
+    \end{align*}
+    \item 
+        \begin{align*}
+        \langle n'l'm',L_+V_znlm\rangle 
+        -\langle n'l'm',V_zL_+nlm\rangle=
+        -\langle n'l'm',\hbar V_+nlm\rangle
+    \end{align*}
+    \begin{align*}
+        B^{m'}_{l'}\langle n'l'(m'-1),V_znlm\rangle 
+        -A^m_l\langle n'l'm',V_znl(m+1)\rangle=
+        -\hbar\langle n'l'm', V_+nlm\rangle
+    \end{align*}
+    \item 
+        \begin{align*}
+        \langle n'l'm',L_-V_znlm\rangle 
+        -\langle n'l'm',V_zL_-nlm\rangle=
+        \langle n'l'm',\hbar V_-nlm\rangle
+    \end{align*}
+    \begin{align*}
+        A^{m'}_{l'}\langle n'l'(m'+1),V_znlm\rangle 
+        -B^m_l\langle n'l'm',V_znl(m-1)\rangle=
+        \hbar\langle n'l'm', V_-nlm\rangle
+    \end{align*}
+    \item 
+        \begin{align*}
+        \langle n'l'm',L_+V_-nlm\rangle 
+        -\langle n'l'm',V_-L_+nlm\rangle=
+        \langle n'l'm',2\hbar V_znlm\rangle
+    \end{align*}
+    \begin{align*}
+        B^{m'}_{l'}\langle n'l'(m'-1),V_-nlm\rangle 
+        -A^m_l\langle n'l'm',V_-nl(m+1)\rangle=
+        2\hbar\langle n'l'm', V_znlm\rangle
+    \end{align*}
+    \item 
+        \begin{align*}
+        \langle n'l'm',L_-V_+nlm\rangle 
+        -\langle n'l'm',V_+L_-nlm\rangle=
+        -\langle n'l'm',2\hbar V_znlm\rangle
+    \end{align*}
+    \begin{align*}
+        A^{m'}_{l'}\langle n'l'(m'+1),V_+nlm\rangle 
+        -B^m_l\langle n'l'm',V_+nl(m-1)\rangle=
+        -2\hbar\langle n'l'm', V_znlm\rangle
+    \end{align*}
+    \end{itemize}
+    \item 
+    
+    \begin{itemize}
+        \item 
+         \begin{align*}
+        B^{m'}_{l'}\langle n'l'(m'-1),V_+nlm\rangle
+        -A^m_l\langle n'l'm',V_+nl(m+1)\rangle= 0
+    \end{align*}
+    \begin{align*}
+        &-B^{m'}_{l'}
+        \sqrt{2}C^{l,1,l'}_{m,1,m'-1}
+        \langle n'l'||V||nl\rangle
+        +
+        A^m_l\sqrt{2}
+        C^{l,1,l'}_{(m+1),1,m'}
+        \langle n'l'||V||nl\rangle\\
+        =&
+        -
+        (A^m_lC^{l,1,l'}_{m+1,1,m'}
+        +A^1_1C^{l1l'}_{m,2,m'})
+        \sqrt{2}
+        \langle n'l'||V||nl\rangle
+        +
+        A^m_l\sqrt{2}
+        C^{l,1,l'}_{(m+1),1,m'}
+        \langle n'l'||V||nl\rangle\\
+        =&0
+    \end{align*}
+    \item 
+    \begin{align*}
+        A^{m'}_{l'}\langle n'l'(m'+1),V_-nlm\rangle
+        -B^m_l\langle n'l'm',V_-nl(m-1)\rangle= 0
+    \end{align*}
+    \begin{align*}
+        &A^{m'}_{l'}\sqrt{2}C^{l,1,l'}_{m,-1,m'+1}\langle n'l'||V||nl\rangle
+        -B^m_l\sqrt{2}C^{l,1,l'}_{m-1,-1,m'}\langle n'l'||V||nl\rangle\\
+        =&
+        (B^m_lC^{l,1,l'}_{m-1,-1,m'}+B^{-1}_1C^{l,1,l'}_{m,-2,m'})\sqrt{2}\langle n'l'||V||nl\rangle
+        -B^m_l\sqrt{2}C^{l,1,l'}_{m-1,-1,m'}\langle n'l'||V||nl\rangle\\
+        =&0
+    \end{align*}
+    \item 
+    \begin{align*}
+        B^{m'}_{l'}\langle n'l'(m'-1),V_znlm\rangle 
+        -A^m_l\langle n'l'm',V_znl(m+1)\rangle=
+        -\hbar\langle n'l'm', V_+nlm\rangle
+    \end{align*}
+    \begin{align*}
+        &B^{m'}_{l'}
+        C^{l,1,l'}_{m,0,m'-1}
+        \langle n'l'||V||nl\rangle
+        -A^m_l 
+        C^{l,1,l'}_{m+1,0,m'}
+        \langle n'l'||V||nl\rangle
+        -\hbar \sqrt{2}C^{l,1,l'}_{m,1,m'}
+        \langle n'l'||V||nl\rangle\\
+        =&
+        (A^m_lC^{l,1,l'}_{m+1,0,m'}+A^0_1C^{l,1,l'}_{m,1m'})\langle n'l'||V||nl\rangle
+        -A^m_l 
+        C^{l,1,l'}_{m+1,0,m'}
+        \langle n'l'||V||nl\rangle
+        -\hbar \sqrt{2}C^{l,1,l'}_{m,1,m'}
+        \langle n'l'||V||nl\rangle\\
+        =&0
+    \end{align*}
+    \item 
+     \begin{align*}
+        A^{m'}_{l'}\langle n'l'(m'+1),V_znlm\rangle 
+        -B^m_l\langle n'l'm',V_znl(m-1)\rangle=
+        \hbar\langle n'l'm', V_-nlm\rangle
+    \end{align*}
+    \begin{align*}
+        &A^{m'}_{l'}
+        C^{l,1,l'}_{m,0,m'+1}
+        \langle n'l'||V||nl\rangle
+        -B^m_l 
+        C^{l,1,l'}_{m-1,0,m'}
+        \langle n'l'||V||nl\rangle
+        -\hbar \sqrt{2}C^{l,1,l'}_{m,-1,m'}
+        \langle n'l'||V||nl\rangle\\
+        =&
+        (B^m_lC^{l,1,l'}_{m-1,0,m'+1}+B^0_1C^{l,1,l'}_{m,-1,m'})
+        \langle n'l'||V||nl\rangle
+        -B^m_l 
+        C^{l,1,l'}_{m-1,0,m'}
+        \langle n'l'||V||nl\rangle\\
+        &-\hbar \sqrt{2}C^{l,1,l'}_{m,-1,m'}
+        \langle n'l'||V||nl\rangle
+        =0
+    \end{align*}
+    \item 
+    \begin{align*}
+        B^{m'}_{l'}\langle n'l'(m'-1),V_-nlm\rangle 
+        -A^m_l\langle n'l'm',V_-nl(m+1)\rangle=
+        2\hbar\langle n'l'm', V_znlm\rangle
+    \end{align*}
+    \begin{align*}
+        &B^{m'}_{l'}
+        C^{l,1,l'}_{m,-1,m'-1}
+        \sqrt{2}\langle n'l'||V||nl\rangle
+        -A^m_l 
+        C^{l,1,l'}_{m,-1,m'}\sqrt{2}
+        \langle n'l'||V||nl\rangle
+        -2\hbar C^{l,1,l'}_{m,0,m'}
+        \langle n'l'||V||nl\rangle\\
+        =&
+        (A^m_lC^{l,1,l'}_{m+1,-1,m'-1}+A^{-1}_1C^{l,1,l'}_{m,0,m'})
+        \sqrt{2}\langle n'l'||V||nl\rangle
+        -A^m_l 
+        C^{l,1,l'}_{m,-1,m'}\sqrt{2}
+        \langle n'l'||V||nl\rangle\\
+        &-2\hbar C^{l,1,l'}_{m,0,m'}
+        \langle n'l'||V||nl\rangle=0
+    \end{align*}
+    \item 
+    \begin{align*}
+        A^{m'}_{l'}\langle n'l'(m'+1),V_+nlm\rangle 
+        -B^m_l\langle n'l'm',V_+nl(m-1)\rangle=
+        -2\hbar\langle n'l'm', V_znlm\rangle
+    \end{align*}
+    \begin{align*}
+        &-A^{m'}_{l'}
+        C^{l,1,l'}_{m,1,m'+1}
+        \sqrt{2}\langle n'l'||V||nl\rangle
+        +B^m_l 
+        C^{l,1,l'}_{m-1,1,m'}\sqrt{2}
+        \langle n'l'||V||nl\rangle
+        +2\hbar C^{l,1,l'}_{m,0,m'}
+        \langle n'l'||V||nl\rangle\\
+        =&
+        -(B^m_lC^{l,1,l'}_{m-1,1,m'}+B^{1}_1C^{l,1,l'}_{m,0,m'})
+        \sqrt{2}\langle n'l'||V||nl\rangle
+        +B^m_l 
+        C^{l,1,l'}_{m,-1,m'}\sqrt{2}
+        \langle n'l'||V||nl\rangle\\
+        &+2\hbar C^{l,1,l'}_{m,0,m'}
+        \langle n'l'||V||nl\rangle=0
+    \end{align*}
+    \end{itemize}
+    
+\end{enumerate}
+
+\subsection*{Sol. 25}
+\begin{align*}
+    &\frac{1}{2}\langle \psi_{211}+\psi_{200}, \bm p_e(\psi_{211}+\psi_{200})\rangle\\
+    =&\frac{1}{2}
+    (\langle\psi_{211},\bm p_e\psi_{200}\rangle+\overline{\langle\psi_{211},\bm p_e\psi_{200}\rangle})
+\end{align*}
+
+\begin{align*}
+    \langle 211, V_z200\rangle
+    =C^{0,1,1}_{0,0,1}\langle 21||V||20\rangle=0
+\end{align*}
+\begin{align*}
+    \langle 211, V_+200\rangle
+    =-\sqrt{2}C^{0,1,1}_{0,1,1}\langle 21||V||20\rangle=-\sqrt{2}\langle 21||V||20\rangle
+\end{align*}
+\begin{align*}
+    \langle 211, V_-200\rangle
+    =\sqrt{2}C^{0,1,1}_{0,-1,1}\langle 21||V||20\rangle=0
+\end{align*}
+\begin{align*}
+    \langle 211,V_x 200\rangle = -\frac{\sqrt{2}}{2}\langle 21||V||20\rangle
+\end{align*}
+\begin{align*}
+    \langle 211,V_y 200\rangle = \frac{\sqrt{2}}{2}i\langle 21||V||20\rangle
+\end{align*}
+
+\begin{align*}
+    \langle 211,V_+200\rangle =&
+    -
+    \int \frac{1}{2\sqrt{6}}a^{-3/2}\frac{r}{a}\exp(-r/(2a))
+    \sqrt{\frac{3}{8\pi}}\sin\theta e^{-i\phi}
+    r\sin\theta e^{i\phi}\\
+    &\frac{1}{\sqrt{2}}a^{-3/2}(1-\frac{1}{2}\frac{r}{a})\exp(-r/(2a))
+    \sqrt{\frac{1}{4\pi}}
+    r^2\sin\theta\\
+    =&
+    3\sqrt{2}a
+\end{align*}
+$$
+\langle 21||V||20\rangle= -3a
+$$
+Thus 
+\begin{align*}
+    \frac{1}{2}\langle \psi_{211}+\psi_{200}, \bm p_e(\psi_{211}+\psi_{200})\rangle=
+    -q(\frac{3\sqrt{2}}{2}a,0,0).
+\end{align*}
+
+\subsection*{Sol. 26}
+\begin{align*}
+    p_H(t)\psi_n(x)
+    =&U^\dagger(t) p U(t)\psi_n(x)\\
+    =&i\sqrt{\frac{\hbar m\omega}{2}}\exp(\frac{it}{\hbar}H)(a_+-a_-)
+    \exp(-\frac{it}{\hbar}H)\psi_n(x)
+    \\
+    =&
+    i\sqrt{\frac{\hbar m\omega}{2}}
+    \exp(-\frac{it}{\hbar}E_n)
+    \exp(\frac{it}{\hbar}H)(a_+-a_-)
+    \psi_n(x)\\
+    =&
+    i\sqrt{\frac{\hbar m\omega}{2}}
+    \exp(-\frac{it}{\hbar}E_n)
+    \exp(\frac{it}{\hbar}H)(\sqrt{n+1}\psi_{n+1}(x)
+    -\sqrt{n}\psi_{n-1}(x))\\
+    =&
+    i\sqrt{\frac{\hbar m\omega}{2}}
+    \exp(-\frac{it}{\hbar}E_n)
+    (\exp(\frac{it}{\hbar}E_{n+1})\sqrt{n+1}\psi_{n+1}(x)
+    -\exp(\frac{it}{\hbar}E_{n-1})\sqrt{n}\psi_{n-1}(x))\\
+    =&
+    i\sqrt{\frac{\hbar m\omega}{2}}
+    (\exp(it\omega)\sqrt{n+1}\psi_{n+1}(x)
+    -\exp(-it\omega)\sqrt{n}\psi_{n-1}(x))
+\end{align*}
+Thus 
+\begin{align*}
+    p_H(t)=&
+    i\sqrt{\frac{\hbar m\omega}{2}}
+    (\exp(it\omega)a_+
+    -\exp(-it\omega)a_-)\\
+    =&
+    i\sqrt{\frac{\hbar m\omega}{2}}
+    (\exp(it\omega)\frac{-ip+m\omega x}{\sqrt{2\hbar m\omega}}
+    -\exp(-it\omega)\frac{ip+m\omega x}{\sqrt{2\hbar m\omega}})\\
+    =&p(0)\cos(\omega t)-m\omega x(0)\sin(\omega t).
+\end{align*}
+Classically, 
+$$
+x(t) = A\cos\omega t + B\sin\omega t,
+$$
+$$
+p(t) = -mA\omega \sin\omega t + mB\omega \cos\omega t.
+$$
+Solve the initial condition gives
+$$
+x(t) = x(0)\cos\omega t + \frac{p(0)}{m\omega}\sin\omega t,
+$$
+$$
+p(t) = -mx(0)\omega \sin\omega t + p(0) \cos\omega t.
+$$
+
+\subsection*{Sol. 27}
+Note that 
+$$
+[x,p^n]=i\hbar np^{n-1}
+$$
+\begin{align*}
+    [x,H^n]=\frac{1}{(2m)^n}[x,p^{2n}]
+    =\frac{1}{(2m)^n}i\hbar(2n)p^{2n-1}
+\end{align*}
+\begin{align*}
+    [x,U]=&
+    \sum_{n=0}^{\infty}\frac{1}{n!}(\frac{-i}{\hbar}t)^n
+    [x,H^n]\\
+    =&\sum_{n=1}^{\infty}\frac{1}{n!}(\frac{-i}{\hbar}t)^n\frac{1}{(2m)^n}i\hbar(2n)p^{2n-1}\\
+    =&
+    \sum_{s=0}^{\infty}\frac{1}{(s+1)!}(\frac{-i}{\hbar}t)^{s+1}\frac{1}{(2m)^{s+1}}i\hbar(2(s+1))p^{2s+1}\\
+    =&\frac{-it}{m\hbar}i\hbar p
+    \sum_{s=0}^\infty
+    \frac{1}{s!}
+    (\frac{-itp^2}{2m\hbar})^s\\
+    =&
+    \frac{tp}{m}
+    \exp\left[
+    -\frac{itp^2}{2m\hbar}
+    \right]\\
+    =&\frac{tp}{m}
+    \exp\left[
+    -\frac{it}{\hbar}H
+    \right]\\
+    =&\frac{tp}{m}U
+\end{align*}
+\begin{align*}
+    x_H(t)=&U^\dagger xU\\
+    =&U^\dagger(Ux + \frac{tp}{m}U)\\
+    =&x(0) + \frac{tp(0)}{m}
+\end{align*}
+Since $[H,p]=0,$ $[U,p]=0,$ so 
+$$
+p_H(t) = p(0).
+$$
+
+\subsection*{Sol. 28}
+\begin{align*}
+    \Psi(x,t) =& \Psi(x,t_0) + \frac{\partial \Psi}{\partial t}(x,t_0)(t-t_0)+\dots\\
+    =&\Psi(x,t_0) -\frac{i}{\hbar}H(t_0)\Psi(x,t_0)(t-t_0)+\dots
+\end{align*}
+\begin{align*}
+    \Psi(x,t_0+\delta) = \Psi(x,t_0) -\frac{i}{\hbar}H(t_0)\Psi(x,t_0)\delta
+    \Rightarrow U(t_0+\delta, t_0)=1-\frac{i}{\hbar}H(t_0)\delta
+\end{align*}
+
+\subsection*{Sol. 29}
+\begin{align*}
+    i\hbar \frac{d}{dt}Q_H(t)
+    =&i\hbar(\frac{dU^\dagger}{dt}QU + U^\dagger Q\frac{dU}{dt})\\
+    =&i\hbar (\frac{i}{\hbar} HU^\dagger QU -\frac{i}{\hbar}U^\dagger Q UH)\\
+    =&[Q_H(t), H]
+\end{align*}
+
+\begin{align*}
+    i\hbar\frac{dx_H}{dt} = [x_H, \frac{p^2}{2m}] = \frac{1}{m}i\hbar p \Rightarrow 
+    \frac{dx_H}{dt}= \frac{p}{m}
+\end{align*}
+\begin{align*}
+    i\hbar\frac{dp_H}{dt} = [p_H, V(x)] = -i\hbar V'(x) \Rightarrow 
+    \frac{dp_H}{dt}= -V'(x)
+\end{align*}
+
+\subsection*{Sol. 30}
+\begin{enumerate}
+    \item Let $$
+    \Psi(x,0) = \sum_{j}c_j\psi_j(x)
+    $$
+    \begin{align*}
+        \int K(x,x',t)\Psi(x',0)dx' =& 
+        \int \sum_n\psi_n^*(x')e^{-iE_nt/\hbar}\psi_n(x)\Psi(x',0)dx'\\
+        =&
+        \int \sum_{n,j}\psi_n^*(x')e^{-iE_nt/\hbar}\psi_n(x)c_j\psi_j(x')dx'\\
+        =& \sum_ne^{-iE_nt/\hbar}\psi_n(x)c_n\\
+        =& \sum_ne^{-iHt/\hbar}\psi_n(x)c_n\\
+        =& U(t)\Psi(x,0)
+    \end{align*}
+    \item 
+    \begin{align*}
+        K(x,x',t) =& \sum_n\psi_n^*(x')e^{-iE_nt/\hbar}\psi_n(x)\\
+        =&
+        \sqrt{\frac{m\omega}{\pi\hbar}}e^{-\xi^2/2}
+        e^{-it\omega/2}e^{-\eta^2/2}\sum_n \frac{1}{2^nn!}
+        H_n(\xi)e^{-it\omega n} H_n(\eta)\\
+        =&\sqrt{\frac{m\omega}{\pi\hbar}}e^{-\xi^2/2}
+        e^{-it\omega/2}e^{-\eta^2/2}
+        \frac{1}{\sqrt{1-z^2}}
+        \exp\left[
+        -\frac{\xi^2+\eta^2-2\xi\eta z}{1-z^2}
+        \right]
+        e^{\xi^2}e^{\eta^2}\\
+        =&
+        \sqrt{\frac{m\omega}{\pi\hbar}}
+        \sqrt{\frac{z}{1-z^2}}
+        \exp\left[
+        -\frac{m\omega}{\hbar}
+        \frac{x^{'2}+x^2-2x'xz}{1-z^2}
+        \right]
+        \exp\left(
+        \frac{m\omega}{\hbar}
+        \frac{x^{'2}}{2}
+        \right)
+        \exp\left(
+        \frac{m\omega}{\hbar}
+        \frac{x^{2}}{2}
+        \right)
+    \end{align*}
+    where $\xi = \sqrt{\frac{m\omega}{\hbar}}x',$ $\eta = \sqrt{\frac{m\omega}{\hbar}}x,$ $z=e^{-it\omega}.$
+
+    \item 
+    \begin{align*}
+        \Psi(x,t)=&\sqrt{\frac{m\omega}{\pi\hbar}}
+        \sqrt{\frac{z}{1-z^2}}
+        \exp\left(
+        \frac{m\omega}{\hbar}
+        \frac{x^{2}}{2}
+        \right)
+        \left(\frac{2a}{\pi}\right)^{1/4}\\
+        &\int_{-\infty}^\infty
+       \exp\left[
+        -\frac{m\omega}{\hbar}
+        \frac{x^{'2}+x^2-2x'xz}{1-z^2}
+        \right]
+        \exp\left(
+        \frac{m\omega}{\hbar}
+        \frac{x^{'2}}{2}
+        \right)
+        e^{-a(x'-x_0)^2}dx'\\
+        =&
+       \sqrt{\frac{m\omega}{\pi\hbar}}
+        \sqrt{\frac{z}{1-z^2}}
+        \exp\left(
+        \frac{m\omega}{\hbar}
+        \frac{x^{2}}{2}
+        \right)
+        \left(\frac{2a}{\pi}\right)^{1/4}
+        \sqrt{\frac{2\pi(1-z^2)}{c(1+z^2)+2a(1-z^2)}}\\
+        &
+        \exp\left[
+        \frac{
+        \frac{(2cxz+2ax_0(1-z^2))^2}{(1-z^2)^2}
+        }
+        {4 \frac{c(1+z^2)+2a(1-z^2)}{2(1-z^2)}}
+        \right]
+        \exp\left[
+        -ax_0^2 - \frac{cx^2}{1-z^2}
+        \right],
+    \end{align*}
+    where $c=\frac{m\omega}{\hbar}.$ If $a=\frac{c}{2},$ then 
+    \begin{align*}
+        &\exp\left[
+        \frac{
+        \frac{(2cxz+cx_0(1-z^2))^2}{(1-z^2)^2}
+        }
+        {4 \frac{c(1+z^2)+c(1-z^2)}{2(1-z^2)}}
+        \right]
+        \exp\left[
+        -2cx_0^2 - \frac{cx^2}{1-z^2}
+        \right]\\
+        =&
+        \exp\left[
+        c
+        \frac{
+        x^2z^2
+        +\frac{1}{4}x_0^2(1-z^2)^2
+        +xzx_0(1-z^2)
+        -x^2}{1-z^2}
+        -\frac{c}{2}x_0^2
+        \right]\\
+        =&
+        \exp\left[
+        \frac{m\omega}{\hbar}
+        \left(-x^2
+        +
+        \frac{1}{4}x_0^2(1-z^2)
+        +xzx_0
+        -\frac{1}{2}x_0^2
+        \right)
+        \right]
+    \end{align*}
+    \begin{align*}
+        \Psi(x,t)
+        =&
+        \sqrt{\frac{m\omega}{\pi\hbar}}
+        \sqrt{\frac{z}{1-z^2}}
+        \exp\left(
+        \frac{m\omega}{\hbar}
+        \frac{x^{2}}{2}
+        \right)
+        \left(\frac{c}{\pi}\right)^{1/4}
+        \sqrt{\frac{2\pi(1-z^2)}{2c}}\\
+        &\exp\left[
+        \frac{m\omega}{\hbar}
+        \left(-x^2
+        +
+        \frac{1}{4}x_0^2(1-z^2)
+        +xzx_0
+        -\frac{1}{2}x_0^2
+        \right)
+        \right]\\
+        =&
+        \left(
+        \frac{m\omega}{\pi\hbar}
+        \right)^{1/4}
+        \exp\left[
+        -\frac{m\omega}{2\hbar}
+        \left(x^2
+        +
+        \frac{1}{2}x_0^2(1+e^{-2it\omega})
+        -2xx_0e^{-it\omega}
+        \right)
+        -i\frac{t\omega}{2}
+        \right].
+    \end{align*}
+
+
+    \item 
+    \begin{align*}
+        K(x,x',t)=&
+        \frac{1}{2\pi}
+        \int_{-\infty}^{\infty} 
+        e^{-ikx'}
+        e^{-ik^2\hbar t/(2m)}e^{ikx}dk\\
+        =&
+        \frac{1}{2\pi}
+        \sqrt{\frac{\pi}{\frac{i}{2m}\hbar t}}
+        \exp\left[
+        \frac{(ix-ix')^2}{4\frac{i}{2m}\hbar t}
+        \right]\\
+        =&
+        \frac{1}{2\pi}
+        \sqrt{\frac{\pi}{\frac{i}{2m}\hbar t}}
+        \exp\left[
+        \frac{-(x-x')^2}{\frac{2i}{m}\hbar t}
+        \right]
+    \end{align*}
+    \item 
+    \begin{align*}
+        \Psi(x,t)
+        =&
+        \frac{1}{2\pi}
+        \sqrt{\frac{\pi}{\frac{i}{2m}\hbar t}}
+        \left(
+        \frac{2a}{\pi}
+        \right)^{1/4}
+        \int_{-\infty}^{\infty}
+        \exp\left[
+        \frac{-(x-x')^2}{\frac{2i}{m}\hbar t}
+        \right]
+        e^{-ax^{'2}}
+        dx'\\
+        =&
+        \frac{1}{2\pi}
+        \sqrt{\frac{\pi}{\frac{i}{2m}\hbar t}}
+        \left(
+        \frac{2a}{\pi}
+        \right)^{1/4}
+        \sqrt{\frac{\pi}{\frac{2i\hbar ta+m}{2i\hbar t}}}
+        \exp\left[-
+        \frac{\frac{x^2m^2}{\hbar^2t^2}}
+        {4\frac{2i\hbar ta+m}{2i\hbar t}}
+        \right]
+        \exp\left[
+        -\frac{x^2m}{2i\hbar t}
+        \right]\\
+        =&
+        \left(\frac{2a}{\pi}\right)^{1/4}
+        \sqrt{\frac{m}{2i\hbar ta+m}}
+        \exp\left[-
+        \frac{ma}{2i\hbar ta+m}x^2
+        \right]\\
+        =&
+        \left(\frac{2a}{\pi}\right)^{1/4}
+        \frac{1}{\sqrt{2i\hbar ta/m+1}}
+        \exp\left[-
+        \frac{a}{2i\hbar ta/m+1}x^2
+        \right]
+    \end{align*}
+    
+\end{enumerate}
+
+\subsection*{Sol. 31}
+\begin{align*}
+    T(a)\psi(x)
+    =&\int_{-\infty}^{\infty}
+    e^{-iap/\hbar}
+    \frac{1}{\sqrt{2\pi\hbar}}e^{ipx/\hbar}
+    \frac{1}{\sqrt{2\pi\hbar}}
+    \int_{-\infty}^{\infty}
+    e^{-ipy/\hbar}
+    \sqrt{\lambda}e^{-\lambda|y|}dydp\\
+    =&
+    \frac{1}{\hbar}\sqrt{\lambda}
+    \int_{-\infty}^{\infty}e^{-\lambda|y|}\delta(\frac{-a+x-y}{\hbar})dy\\
+    =&\sqrt{\lambda}e^{-\lambda|x-a|} = \psi(x-a)
+\end{align*}
+
+\subsection*{Sol. 32}
+
+\begin{enumerate}
+    \item 
+    \begin{align*}
+        (\bm a\cdot \bm \sigma)(\bm b\cdot \bm\sigma)
+        =&
+        (a_x\sigma_x+a_y\sigma_y+a_z\sigma_z)
+        (b_x\sigma_x+b_y\sigma_y+b_z\sigma_z)\\
+        =&a_xb_xI + ia_xb_y\sigma_z - ia_xb_z\sigma_y\\
+        &-ia_yb_x\sigma_z + a_yb_yI + ia_yb_z\sigma_x \\
+        & +ia_zb_x\sigma_y - ia_zb_y\sigma_x + a_zb_zI
+    \end{align*}
+    \begin{align*}
+        \bm a\cdot \bm b + i(\bm a\times \bm b)\cdot \bm \sigma 
+        =& a_xb_x + a_yb_y + a_zb_z + 
+        i\sigma_x(a_yb_z-a_zb_y)
+        +i\sigma_y(a_zb_x-a_xb_z) +
+        i\sigma_z(a_xb_y-a_yb_x)
+    \end{align*}
+    \item 
+    \begin{align*}
+        \exp\left[-i\frac{\varphi}{\hbar}\bm n\cdot\bm S\right]
+        =&\exp\left[-i\frac{\varphi}{2}\bm n\cdot\bm \sigma\right]\\
+        =&\sum_{n=0}^\infty
+        \frac{1}{n!}\left(-i\frac{\varphi}{2}\bm n\cdot\bm\sigma\right)^n
+    \end{align*}
+    Note that
+    \begin{align*}
+        \left(\bm n\cdot\bm\sigma\right)^n = &
+        \left[
+        \bm n\cdot\bm n + i(\bm n\times \bm n)\cdot \bm \sigma
+        \right]\left[\left(\bm n\cdot\bm\sigma\right)^{n-2}\right]\\
+        =&\left(\bm n\cdot\bm\sigma\right)^{n-2},
+    \end{align*}
+    so 
+    \begin{align*}
+        \sum_{n=0}^\infty
+        \frac{1}{n!}\left(-i\frac{\varphi}{2}\bm n\cdot\bm\sigma\right)^n
+        =& 
+        \sum_{n=0,2,4,\dots}\frac{(-i\varphi/2)^n}{n!}
+        +
+        \sum_{n=1,3,5,\dots}\frac{(-i\varphi/2)^n}{n!}(\bm n\cdot\bm\sigma)\\
+        =&
+        \cos\frac{\varphi}{2} - i 
+        \sin\frac{\varphi}{2}\bm n\cdot\bm\sigma
+    \end{align*}
+    \item
+    \begin{align*}
+        \bm n\cdot \bm \sigma =& 
+        \sin\theta\cos\phi\begin{pmatrix}
+            0 & 1\\1 & 0
+        \end{pmatrix}
+        +
+         \sin\theta\sin\phi\begin{pmatrix}
+            0 & -i\\i & 0
+        \end{pmatrix}
+        +\cos\theta\begin{pmatrix}
+            1 & 0 \\ 0 & -1
+        \end{pmatrix}\\
+        =&
+        \begin{pmatrix}
+            \cos\theta & \sin\theta e^{-i\phi}\\
+             \sin\theta e^{i\phi}&-\cos\theta 
+        \end{pmatrix}
+    \end{align*}
+    Thus 
+    \begin{align*}
+        R_{\bm n}
+        =\cos\frac{\varphi}{2}
+        \begin{pmatrix}
+            1 & 0 \\0 & 1
+        \end{pmatrix} -i\sin\frac{\varphi}{2}
+        \begin{pmatrix}
+            \cos\theta & \sin\theta e^{-i\phi}\\
+             \sin\theta e^{i\phi}&-\cos\theta 
+        \end{pmatrix}
+    \end{align*}
+    \item 
+    \begin{align*}
+        &R_n^\dagger R_n \\= & 
+        \left[\cos\frac{\varphi}{2}
+        \begin{pmatrix}
+            1 & 0 \\0 & 1
+        \end{pmatrix} +i\sin\frac{\varphi}{2}
+        \begin{pmatrix}
+            \cos\theta & \sin\theta e^{-i\phi}\\
+             \sin\theta e^{i\phi}&-\cos\theta 
+        \end{pmatrix}
+        \right]
+        \left[\cos\frac{\varphi}{2}
+        \begin{pmatrix}
+            1 & 0 \\0 & 1
+        \end{pmatrix} -i\sin\frac{\varphi}{2}
+        \begin{pmatrix}
+            \cos\theta & \sin\theta e^{-i\phi}\\
+             \sin\theta e^{i\phi}&-\cos\theta 
+        \end{pmatrix}
+        \right]\\
+        =&
+        \cos^2\frac{\varphi}{2}\begin{pmatrix}
+            1 & 0 \\
+            0 & 1
+        \end{pmatrix}
+        -i\cos\frac{\varphi}{2}\sin\frac{\varphi}{2}
+        \begin{pmatrix}
+            \cos\theta & \sin\theta e^{-i\phi}\\
+             \sin\theta e^{i\phi}&-\cos\theta 
+        \end{pmatrix}\\
+        &+i
+        \cos\frac{\varphi}{2}\sin\frac{\varphi}{2}
+        \begin{pmatrix}
+            \cos\theta & \sin\theta e^{-i\phi}\\
+             \sin\theta e^{i\phi}&-\cos\theta 
+        \end{pmatrix}
+        +\sin^2\frac{\varphi}{2}
+        \begin{pmatrix}
+            1 & 0 \\
+            0 & 1
+        \end{pmatrix}\\
+        =&\begin{pmatrix}
+            1 & 0 \\
+            0 & 1
+        \end{pmatrix}
+    \end{align*}
+    \item 
+    \begin{align*}
+        S_x'=&R_n^\dagger S_xR_n \\= & 
+        \frac{\hbar}{2}\left[\cos\frac{\varphi}{2}
+        \begin{pmatrix}
+            1 & 0 \\0 & 1
+        \end{pmatrix} +i\sin\frac{\varphi}{2}
+        \begin{pmatrix}
+            1 & 0\\
+             0&-1
+        \end{pmatrix}
+        \right]
+        \begin{pmatrix}
+            0 & 1 \\
+            1 & 0
+        \end{pmatrix}
+        \left[\cos\frac{\varphi}{2}
+        \begin{pmatrix}
+            1 & 0 \\0 & 1
+        \end{pmatrix} -i\sin\frac{\varphi}{2}
+        \begin{pmatrix}
+            1 & 0\\
+             0&-1
+        \end{pmatrix}
+        \right]\\
+        =&
+        \frac{\hbar}{2}\left[\cos\frac{\varphi}{2}
+        \begin{pmatrix}
+            1 & 0 \\0 & 1
+        \end{pmatrix} +i\sin\frac{\varphi}{2}
+        \begin{pmatrix}
+            1 & 0\\
+             0&-1
+        \end{pmatrix}
+        \right]
+        \left[\cos\frac{\varphi}{2}
+        \begin{pmatrix}
+            0 & 1 \\1 & 0
+        \end{pmatrix} -i\sin\frac{\varphi}{2}
+        \begin{pmatrix}
+            0 & -1\\
+             1 &0
+        \end{pmatrix}
+        \right]\\
+        =&
+        \frac{\hbar}{2}\left[\cos^2\frac{\varphi}{2}
+        \begin{pmatrix}
+            0 & 1 \\1 & 0
+        \end{pmatrix} -i\cos\frac{\varphi}{2}\sin\frac{\varphi}{2}
+        \begin{pmatrix}
+            0 & -1\\
+            1 & 0
+        \end{pmatrix}
+        +i\cos\frac{\varphi}{2}\sin\frac{\varphi}{2}
+        \begin{pmatrix}
+            0 & 1\\
+            -1 & 0
+        \end{pmatrix}
+        +
+        \sin^2\frac{\varphi}{2}
+        \begin{pmatrix}
+            0 & -1 \\-1 & 0
+        \end{pmatrix} 
+        \right]\\
+        =&
+        \frac{\hbar}{2}
+        \left[
+        \cos\varphi 
+        \begin{pmatrix}
+            0 & 1 \\
+            1 & 0
+        \end{pmatrix}
+        -i\sin\varphi 
+        \begin{pmatrix}
+            0 & -1 \\
+            1 & 0
+        \end{pmatrix}
+        \right]\\
+        =&\cos\varphi S_x -
+        \sin\varphi S_y
+    \end{align*}
+    \item 
+    \begin{align*}
+        R= -i
+        \begin{pmatrix}
+            0 & 1\\
+             1&0
+        \end{pmatrix}
+    \end{align*}
+    \begin{align*}
+        -i
+        \begin{pmatrix}
+            0 & 1\\
+             1&0
+        \end{pmatrix}
+        \begin{pmatrix}
+            1 \\ 0
+        \end{pmatrix}
+        =-i
+        \begin{pmatrix}
+            0 \\ 1
+        \end{pmatrix}
+    \end{align*}
+    \item 
+    \begin{align*}
+        R=-
+        \begin{pmatrix}
+            1 & 0 \\0 & 1
+        \end{pmatrix}.
+    \end{align*}
+\end{enumerate}
+\subsection*{Sol. 33}
+\begin{enumerate}
+    \item 
+    \begin{align*}
+    \psi_{ab}(r,\phi) = 
+    \frac{2}{L}
+    \sin\left[\frac{a\pi}{L}(r\cos\phi-\frac{L}{2})\right]
+    \sin\left[\frac{b\pi}{L}(r\sin\phi-\frac{L}{2})\right]
+\end{align*}
+\begin{align*}
+    R\psi_{ab}(r,\phi)
+    =&\psi_{ab}(r,\phi-\frac{\pi}{2})\\
+    =&
+    \frac{2}{L}
+    \sin\left[\frac{a\pi}{L}(r\cos(\phi-\pi/2)-\frac{L}{2})\right]
+    \sin\left[\frac{b\pi}{L}(r\sin(\phi-\pi/2)-\frac{L}{2})\right]\\
+    =&
+    \frac{2}{L}
+    \sin\left[\frac{a\pi}{L}(r\sin\phi-\frac{L}{2})\right]
+    \sin\left[\frac{b\pi}{L}(-r\cos\phi-\frac{L}{2})\right]\\
+    =&\psi_{ba}(r,\phi)
+    \frac{\sin\left[\frac{b\pi}{L}(r\cos\phi-\frac{L}{2})\right]}{\sin\left[\frac{b\pi}{L}(-r\cos\phi-\frac{L}{2})\right]}
+\end{align*}
+$$
+\frac{\sin\left[\frac{b\pi}{L}(r\cos\phi-\frac{L}{2})\right]}{\sin\left[\frac{b\pi}{L}(-r\cos\phi-\frac{L}{2})\right]}= 
+\begin{cases}
+1,\;\text{if b is odd}\\
+-1,\;\text{if b is even}
+\end{cases}
+$$
+
+\item 
+If $a$ and $b$ are odd 
+\begin{align*}
+    R\psi_+=R\frac{\psi_{ab}+\psi_{ba}}{\sqrt{2}}
+    =\frac{\psi_{ab}+\psi_{ba}}{\sqrt{2}}=\psi_+
+\end{align*}
+\begin{align*}
+    R\psi_-=R\frac{\psi_{ab}-\psi_{ba}}{\sqrt{2}}
+    =\frac{\psi_{ab}-\psi_{ba}}{\sqrt{2}}=\psi_-
+\end{align*}
+If $a$ and $b$ are even 
+\begin{align*}
+    R\psi_+=R\frac{\psi_{ab}+\psi_{ba}}{\sqrt{2}}
+    =-\frac{\psi_{ab}+\psi_{ba}}{\sqrt{2}}=-\psi_+
+\end{align*}
+\begin{align*}
+    R\psi_-=R\frac{\psi_{ab}-\psi_{ba}}{\sqrt{2}}
+    =-\frac{\psi_{ab}-\psi_{ba}}{\sqrt{2}}=-\psi_-
+\end{align*}
+\item 
+\includegraphics[width=0.8\textwidth,valign=t]{fig/prob6.33_psi_minus.png}
+\end{enumerate}
+
+
+\subsection*{Sol. 34}
+\begin{enumerate}
+    \item 
+    \begin{align*}
+        \bm M\cdot \bm L=&
+        M_xL_x+M_yL_y+M_zL_z\\
+        =&
+        \frac{1}{4}(M_++M_-)(L_++L_-)
+        -\frac{1}{4}(M_+-M_-)(L_+-L_-)
+        +M_zL_z\\
+        =&
+        \frac{1}{2}M_+L_-
+        +\frac{1}{2}M_-L_+
+        +M_zL_z
+    \end{align*}
+    By eq6.52, $[L_\pm,M_\mp]=\pm2\hbar M_z,$
+    \begin{align*}
+        0=\bm M\cdot \bm L\psi_{nll}
+        =&
+        \frac{1}{2}M_+L_-\psi_{nll}
+        +\frac{1}{2}M_-L_+\psi_{nll}
+        +M_zL_z\psi_{nll}\\
+        =&
+        \frac{1}{2}L_-M_+\psi_{nll}
+        +\hbar M_z\psi_{nll}
+        +
+        \hbar lM_z\psi_{nll}\\
+        =&
+        c_{nl}\frac{1}{2}L_-\psi_{n(l+1)(l+1)}
+        +
+        \hbar (l+1)M_z\psi_{nll}\\
+        =&
+        c_{nl}\frac{1}{2}\hbar\sqrt{2(l+1)}\psi_{n(l+1)l}
+        +
+        \hbar (l+1)M_z\psi_{nll}.
+    \end{align*}
+    Thus,
+    \begin{align*}
+        M_z\psi_{nll}=-\frac{c_{nl}}{\sqrt{2(l+1)}}\psi_{n(l+1)l}
+    \end{align*}
+    \item 
+    \begin{align*}
+        M_+M_--M_-M_+
+        =&(M_x+iM_y)(M_x-iM_y)-(M_x-iM_y)(M_x+iM_y)\\
+        =&-2i[M_x,M_y]\\
+        =&-2\hbar L_z\frac{2}{m}H
+    \end{align*}
+    \begin{align*}
+        M^2=&M_x^2+M_y^2+M_z^2 \\
+        =& \frac{1}{4}(M_++M_-)^2
+        -\frac{1}{4}(M_+-M_-)^2
+        +M_z^2\\
+        =&\frac{1}{2}
+        M_+M_-
+        +\frac{1}{2}
+        M_-M_+ + M_z^2\\
+        =&M_-M_+-\hbar L_z\frac{2}{m}H+M_z^2
+    \end{align*}
+    
+    \begin{align*}
+        M^2\psi_{nll}=&\left(\frac{e^2}{4\pi\epsilon_0}\right)^2\psi_{nll}+\frac{2}{m}H(L^2+\hbar^2)\psi_{nll}\\
+        =&\left(\frac{e^2}{4\pi\epsilon_0}\right)^2\psi_{nll}-\frac{2}{m}
+        \frac{m}{2\hbar^2}\left(\frac{e^2}{4\pi\epsilon_0}\right)^2\frac{1}{n^2}
+        \hbar^2(l(l+1)+1)\psi_{nll}\\
+        =&\left(\frac{e^2}{4\pi\epsilon_0}\right)^2(1-\frac{1}{n^2}(l^2+l+1))\psi_{nll}
+    \end{align*}
+    \begin{align*}
+        M^2\psi_{nll}=&(M_-M_+-\hbar L_z\frac{2}{m}H+M_z^2)\psi_{nll}\\
+        =&M_-M_+\psi_{nll} +M_z^2\psi_{nll}+\hbar\frac{2}{m}
+        \frac{m}{2\hbar^2}\left(\frac{e^2}{4\pi\epsilon_0}\right)^2\frac{1}{n^2}
+        \hbar l\psi_{nll}\\
+        =&M_-M_+\psi_{nll} +M_z^2\psi_{nll}+\left(\frac{e^2}{4\pi\epsilon_0}\right)^2\frac{1}{n^2}
+        l\psi_{nll}
+    \end{align*}
+    Thus
+    \begin{align*}
+        M_-M_+\psi_{nll}=\left(\frac{e^2}{4\pi\epsilon_0}\right)^2(1-\frac{(l+1)^2}{n^2})\psi_{nll}
+        -M_z^2\psi_{nll}
+    \end{align*}
+    \item 
+    \begin{align*}
+        |c_{nl}|^2 = \langle M_+\psi_{nll}, M_+\psi_{nll}\rangle=&
+        \langle M_-M_+\psi_{nll}, \psi_{nll}\rangle\\
+        =&\langle \left(\frac{e^2}{4\pi\epsilon_0}\right)^2(1-\frac{(l+1)^2}{n^2})\psi_{nll}
+        -M_z^2\psi_{nll}, \psi_{nll}\rangle\\
+        =&\left(\frac{e^2}{4\pi\epsilon_0}\right)^2(1-\frac{(l+1)^2}{n^2})
+        -\frac{1}{2}\frac{1}{l+1}|c_{nl}|^2
+    \end{align*}
+    \begin{align*}
+        c_{nl} = \frac{e^2}{4\pi\epsilon_0}
+        \sqrt{\frac{1-\frac{(l+1)^2}{n^2}}
+        {1+\frac{1}{2(l+1)}}}.
+    \end{align*}
+\end{enumerate}
+
+\subsection*{Sol. 35}
+\begin{enumerate}
+    \item 
+    \begin{align*}
+        x' =& 
+        \exp\left(
+        \frac{i}{\hbar}
+        \delta(tp-mx)
+        \right)x
+        \exp\left(
+        -\frac{i}{\hbar}
+        \delta(tp-mx)
+        \right)\\
+        =&
+        \left(
+        1+\frac{i}{\hbar}
+        \delta(tp-mx)
+        \right)
+        x
+        \left(
+        1-\frac{i}{\hbar}
+        \delta(tp-mx)
+        \right)\\
+        =&
+        x-\frac{i\delta}{\hbar}txp + 
+        \frac{i\delta}{\hbar}mx^2
+        +\frac{i}{\hbar}\delta tpx 
+        -\frac{i\delta}{\hbar}mx^2\\
+        =&x+\delta t
+    \end{align*}
+    \begin{align*}
+        p' = &
+        \exp\left(
+        \frac{i}{\hbar}
+        \delta(tp-mx)
+        \right)p
+        \exp\left(
+        -\frac{i}{\hbar}
+        \delta(tp-mx)
+        \right)\\
+        =&
+        \left(
+        1+\frac{i}{\hbar}
+        \delta(tp-mx)
+        \right)
+        p
+        \left(
+        1-\frac{i}{\hbar}
+        \delta(tp-mx)
+        \right)\\
+        =&
+        p-\frac{i\delta}{\hbar}tp^2 + 
+        \frac{i\delta}{\hbar}mpx
+        +\frac{i}{\hbar}\delta tp^2 
+        -\frac{i\delta}{\hbar}mxp\\
+        =&p+m\delta
+    \end{align*}
+    \item 
+    \begin{align*}
+        \exp\left(\frac{i}{\hbar}
+        (mxv-\frac{1}{2}mv^2t)\right)T(vt)
+        =&
+        \exp\left(\frac{i}{\hbar}
+        (mxv-\frac{1}{2}mv^2t)\right)
+        \exp\left(-\frac{ivt}{\hbar}p\right)\\
+        =&\exp\left(
+        \frac{i}{\hbar}
+        (mxv-\frac{1}{2}mv^2t)
+        -\frac{ivt}{\hbar}p
+        \right)
+        \exp(\frac{i mv^2 t}{2\hbar})\\
+        =&\exp\left(
+        -\frac{i}{\hbar}v(tp-mx)
+        \right) = \Gamma(v,t)
+    \end{align*}
+    \begin{align*}
+        T(vt)\exp\left(\frac{i}{\hbar}
+        (mxv+\frac{1}{2}mv^2t)\right)
+        =&
+        \exp\left(-\frac{ivt}{\hbar}p\right)
+        \exp\left(\frac{i}{\hbar}
+        (mxv+\frac{1}{2}mv^2t)\right)
+        \\
+        =&
+        \exp(-\frac{i mv^2 t}{2\hbar})
+        \exp\left(
+        \frac{i}{\hbar}
+        (mxv+\frac{1}{2}mv^2t)
+        -\frac{ivt}{\hbar}p
+        \right)
+    \\
+        =&\exp\left(
+        -\frac{i}{\hbar}v(tp-mx)
+        \right) = \Gamma(v,t)
+    \end{align*}
+    \item 
+    \begin{align*}
+        \frac{d}{dt}\Gamma 
+        =&
+        \frac{-i mv^2}{2\hbar}
+        \exp\left(
+        \frac{i}{\hbar}
+        (mxv-\frac{1}{2}mv^2 t)
+        \right)
+        T(vt)
+        -
+        \exp\left(
+        \frac{i}{\hbar}
+        (mxv-\frac{1}{2}mv^2 t)
+        \right)
+        T(vt)
+        \frac{ipv}{\hbar}
+        \\
+        =&\Gamma(-\frac{imv^2}{2\hbar}-\frac{ipv}{\hbar})
+    \end{align*}
+    
+    \begin{align*}
+        \frac{d}{dt}\Gamma 
+        =&
+        \frac{i mv^2}{2\hbar}
+        T(vt)
+        \exp\left(
+        \frac{i}{\hbar}
+        (mxv+\frac{1}{2}mv^2 t)
+        \right)
+        -\frac{ipv}{\hbar}
+        T(vt)
+        \exp\left(
+        \frac{i}{\hbar}
+        (mxv+\frac{1}{2}mv^2 t)
+        \right)\\
+        =&(\frac{imv^2}{2\hbar}-\frac{ipv}{\hbar})\Gamma
+    \end{align*}
+
+    $$
+    \Gamma p -p\Gamma = -mv\Gamma
+    $$
+
+    
+    \begin{align*}
+        i\hbar\frac{\partial}{\partial t}\Psi'
+        =&i\hbar\frac{\partial \Gamma}{\partial t}\Psi + 
+        i\hbar\Gamma \frac{\partial}{\partial t}\Psi\\
+        =&
+        (-\frac{mv^2}{2}+pv)\Gamma\Psi 
+        +\Gamma(\frac{p^2}{2m}+V(x))\Psi
+    \end{align*}
+
+    \begin{align*}
+        \Gamma p^2 
+         =&(-mv\Gamma+p\Gamma)p\\
+         =&-mv(-mv\Gamma+p\Gamma)+
+         p(p\Gamma-mv\Gamma)\\
+         =&m^2v^2\Gamma -2mvp\Gamma + p^2\Gamma 
+    \end{align*}
+
+    \begin{align*}
+        T(vt)V(x)f(x) = 
+        V(x-vt)f(x-vt)
+        =V(x-vt)T(vt)f(x)
+    \end{align*}
+    \begin{align*}
+        &(-\frac{mv^2}{2}+pv)\Gamma\Psi 
+        +\Gamma(\frac{p^2}{2m}+V(x))\Psi\\
+        =&
+        (-\frac{mv^2}{2}+pv
+        +\frac{1}{2m}(m^2v^2 -2mvp + p^2 )
+        +V(x-vt)
+        )\Gamma\Psi\\
+        =&
+        (\frac{p^2}{2m}+V(x-vt))\Psi'
+    \end{align*}
+    \item 
+    \begin{align*}
+        &\exp\left(
+        \frac{i}{\hbar}(mxv-\frac{1}{2}mv^2t)
+        \right)
+        T(vt)
+        \frac{\sqrt{m\alpha}}{\hbar}e^{-m\alpha|x|/\hbar^2}e^{-i Et/\hbar}\\
+        =&
+        \frac{\sqrt{m\alpha}}{\hbar}e^{-m\alpha|x-vt|/\hbar^2}e^{-i 
+        [(E+mv^2/2)t-mvx]/\hbar}
+    \end{align*}
+\end{enumerate}
+
+\subsection*{Sol. 36}
+\begin{enumerate}
+    \item 
+    \begin{align*}
+        \Theta^{-1}x\Theta f(x)
+        =& \Theta^{-1} xf^*(x)\\
+        =&xf(x)\Rightarrow x'=x
+    \end{align*}
+    \begin{align*}
+        \Theta^{-1}p\Theta f(x)
+        =& \Theta^{-1} (-p)f^*(x)\\
+        =&(-p)f(x)\Rightarrow p'=-p
+    \end{align*}
+    \item 
+    For an infinitesimal time interval
+
+    \begin{align*}
+        U(t)\Theta U(t)
+        =& (1-\frac{i\delta}{\hbar}H)\Theta (1-\frac{i\delta}{\hbar}H)\\
+        =&\Theta -\frac{i\delta}{\hbar}\Theta H + \frac{i\delta}{\hbar}H\Theta
+        \Rightarrow
+       [\Theta,H] = 0 
+    \end{align*}
+    \item 
+    \begin{align*}
+        H\psi_n^* =H\Theta\psi_n = \Theta H\psi_n = E_n\Theta\psi_n=E_n\psi_n^* 
+    \end{align*}
+    \item 
+    \begin{align*}
+        \Theta f_p(x)=f_{-p}(x)
+    \end{align*}
+    \begin{align*}
+        \Theta\psi_{nlm}=R(r)Y^{m*}_l
+        =R(r)(-1)^mY^{-m}_l = (-1)^m\psi_{nl-m}
+    \end{align*}
+\end{enumerate}
+
+\subsection*{Sol. 37}
+\begin{enumerate}
+    \item \begin{align*}
+        \Theta^2\begin{pmatrix}
+            a\\b
+        \end{pmatrix}
+        =\Theta\begin{pmatrix}
+            -b^*\\a^*
+        \end{pmatrix}
+        =\begin{pmatrix}
+            -a\\-b
+        \end{pmatrix}
+        \Rightarrow \Theta^2=-1.
+    \end{align*}
+    \item 
+    \begin{align*}
+        \Theta^2\psi_n = -\psi_n = c^2\psi_n\Rightarrow c=\pm i.
+    \end{align*}
+    If $c=i,$ 
+    $ai=-b^*,$ $bi=a^*,$ then $$
+    -b^* = (-b^*i)i\Rightarrow \text{ b is imaginary, a is real}.
+    $$
+    $$
+    a^* = (a^*i)i\Rightarrow \text{a is imaginary, b is real}.
+    $$
+    Both $a$ and $b$ are 0. Similar for $c=-i.$
+                                                                                             
+\end{enumerate}
