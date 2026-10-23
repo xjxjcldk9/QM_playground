@@ -22,7 +22,15 @@
 \parskip 1em
 
 
+\graphicspath{{fig/}}
+% Solution figure, top-aligned; optional arg = fraction of \textwidth (default 0.8)
+\newcommand{\solfig}[2][0.8]{\includegraphics[width=#1\textwidth,valign=t]{#2}}
+
 \newcommand{\underlineAns}{\rule{2em}{0.15mm} }
+
+% Fast builds: uncomment and list only the chapters you are working on.
+% Refs and page numbers for the other chapters come from their saved .aux files in build/.
+\includeonly{chapters/ch10_scattering}
 
 \begin{document}
 
@@ -31,26 +39,26 @@
 \end{center}
 
 \begin{flushright}
-Shen-Hsun Liao
+    Shen-Hsun Liao
 \end{flushright}
 
-\input{chapters/ch01_wave_function}
+\include{chapters/ch01_wave_function}
 
-\input{chapters/ch02_time_independent_schrodinger}
+\include{chapters/ch02_time_independent_schrodinger}
 
-\input{chapters/ch03_formalism}
+\include{chapters/ch03_formalism}
 
-\input{chapters/ch04_three_dimensions}
+\include{chapters/ch04_three_dimensions}
 
-\input{chapters/ch05_identical_particles}
+\include{chapters/ch05_identical_particles}
 
-\input{chapters/ch06_symmetries}
+\include{chapters/ch06_symmetries}
 
-\input{chapters/ch07_perturbation_theory}
+\include{chapters/ch07_perturbation_theory}
 
-\input{chapters/ch08_variational_principle}
+\include{chapters/ch08_variational_principle}
 
-\input{chapters/ch09_wkb}
+\include{chapters/ch09_wkb}
 
-\input{chapters/ch10_scattering}
+\include{chapters/ch10_scattering}
 \end{document}

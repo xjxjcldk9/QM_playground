@@ -1,5 +1,23 @@
 {
     // ---- LaTeX Workshop: build ----
+    // Defined here because the user-level settings replace the built-in recipe list
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-pdf",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        { "name": "latexmk", "tools": ["latexmk"] }
+    ],
     "latex-workshop.latex.recipe.default": "latexmk",
     "latex-workshop.latex.outDir": "%DIR%/build",
     "latex-workshop.latex.rootFile.useSubFile": false,
@@ -7,9 +25,13 @@
     "latex-workshop.latex.autoClean.run": "never",
     "latex-workshop.view.pdf.viewer": "tab",
 
-    // ---- LaTeX Workshop: linting (ChkTeX, reads latex/.chktexrc) ----
+    // ---- SyncTeX: jump between source and PDF ----
+    "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+    "latex-workshop.synctex.afterBuild.enabled": true,
+
+    // ---- LaTeX Workshop: linting (ChkTeX; .chktexrc next to main.tex is picked up automatically) ----
     "latex-workshop.linting.chktex.enabled": true,
-    "latex-workshop.linting.chktex.exec.args": ["-wall", "-n22", "-n30", "-e16", "-q", "-l", "%DIR%/.chktexrc"],
+    "latex-workshop.linting.chktex.exec.args": ["-q"],
     "latex-workshop.linting.run": "onType",
 
     // ---- Live math preview (hover + side panel) ----
@@ -17,19 +39,34 @@
     "latex-workshop.hover.preview.mathjax.extensions": ["mathtools", "mhchem", "boldsymbol"],
     "latex-workshop.mathpreviewpanel.cursor.enabled": true,
 
-    // ---- Formatting (latexindent) ----
+    // ---- Auto-fix on save (latexindent) ----
     "latex-workshop.formatting.latex": "latexindent",
+    // -r = apply the regex fixes in latex/.latexindent.yaml, then re-indent and align &
+    "latex-workshop.formatting.latexindent.args": ["-c", "%DIR%/", "%TMPFILE%", "-r", "-l=%DIR%/.latexindent.yaml"],
     "[latex]": {
-        "editor.formatOnSave": false,
+        "editor.formatOnSave": true,
         "editor.wordWrap": "on",
         "editor.defaultFormatter": "James-Yu.latex-workshop"
     },
+    // Hide competing suggestions so \sqrt is first for \sq and \delta for \del (they can still be typed manually)
+    "latex-workshop.intellisense.command.user": {
+        "sqcap": "",
+        "sqcup": "",
+        "sqsubseteq": "",
+        "sqsupseteq": "",
+        "delcode": "",
+        "delimiter": "",
+        "delimiterfactor": "",
+        "delimitershortfall": ""
+    },
+    // Plain Enter: don't auto-insert / auto-delete \item in lists
+    "latex-workshop.bind.enter.key": false,
 
     // ---- Grammar / spelling (LTeX+) ----
     "ltex.language": "en-US",
     "ltex.enabled": ["latex", "markdown"],
     "ltex.checkFrequency": "save",
-    "ltex.additionalRules.enablePickyRules": false,
+    "ltex.additionalRules.enablePickyRules": true,
     "ltex.latex.commands": {
         "\\underlineAns{}": "dummy",
         "\\ce{}": "dummy"

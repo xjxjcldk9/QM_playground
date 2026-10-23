@@ -1,125 +1,125 @@
 \section{Scattering}
 \subsection*{Sol. 1}
 \begin{enumerate}
-    \item 
-    Since the magnitude of momentum is unchanged after the scattering, 
-    $$
-    \Delta p = 2mv_0\sin\theta/2.
-    $$
-    Only the impulse component along the symmetry axis of the hyperbola will produce a net momentum change. Therefore,
-    \begin{align*}
-        \Delta p = 
-        \frac{q_1q_2}{4\pi\epsilon_0}
-        \int \frac{\cos\alpha}{r^2}dt,
-    \end{align*}
-    where $\alpha$ is the angle relative to the symmetry plane, with orientation.
-    Using the conservation of the angular momentum,
-    \begin{align*}
-        L = mv_0 b = mr^2\frac{d\alpha}{dt}.
-    \end{align*}
-    \begin{align*}
-        2mv_0\sin\theta/2 = &
-        \frac{q_1q_2}{4\pi\epsilon_0}
-        \int \frac{\cos\alpha}{r^2}dt\\
-        =&
-        \frac{q_1q_2}{4\pi\epsilon_0}
-        \int_{\frac{-\pi}{2}+\frac{\theta}{2}}^{\frac{\pi}{2}-\frac{\theta}{2}} \frac{\cos\alpha}{r^2}\frac{r^2}{v_0 b}d\alpha\\
-        =&
-         \frac{q_1q_2}{4\pi\epsilon_0}
-         \frac{1}{v_0 b}
-        \left[\sin\left(\frac{\pi}{2}-\frac{\theta}{2}\right)
-        -\sin\left(-\frac{\pi}{2}+\frac{\theta}{2}\right)
-        \right]\\
-        =&
-        \frac{q_1q_2}{4\pi\epsilon_0}
-         \frac{1}{v_0 b}2\cos(\theta/2).
-    \end{align*}
-    Thus
-    \begin{align*}
-        b=&\frac{q_1q_2}{4\pi\epsilon_0}
-         \frac{1}{mv^2_0}\cot(\theta/2)\\
-         =&
-         \frac{q_1q_2}{8\pi\epsilon_0E}
-         \cot(\theta/2).
-    \end{align*}
-    \item 
-    \begin{align*}
-        D(\theta) = &
-        \frac{q_1q_2}{8\pi\epsilon_0E}
-         \cot(\theta/2)\frac{1}{2\sin(\theta/2)\cos(\theta/2)}
-         \frac{q_1q_2}{8\pi\epsilon_0E}
-         \csc^2(\theta/2)\frac{1}{2}\\
-         =&\left[
-         \frac{q_1q_2}{16\pi\epsilon_0 E\sin^2(\theta/2)}
-         \right]^2
-    \end{align*}
-    \item 
-    \begin{align*}
-        \sigma = &
-        \int \left[
-         \frac{q_1q_2}{16\pi\epsilon_0 E\sin^2(\theta/2)}
-         \right]^2\sin\theta d\theta d\phi\\
-         =&
-         \left[
-         \frac{q_1q_2}{16\pi\epsilon_0 E}
-         \right]^22\pi 
-         (-\frac{2}{\sin^{2}\left(\frac{\theta}{2}\right)})\bigg|^\pi_0=\infty
-    \end{align*}
+    \item
+          Since the magnitude of momentum is unchanged after the scattering,
+          $$
+              \Delta p = 2mv_0\sin\theta/2.
+          $$
+          Only the impulse component along the symmetry axis of the hyperbola will produce a net momentum change. Therefore,
+          \begin{align*}
+              \Delta p =
+              \frac{q_1q_2}{4\pi\epsilon_0}
+              \int \frac{\cos\alpha}{r^2}dt,
+          \end{align*}
+          where $\alpha$ is the angle relative to the symmetry plane, with orientation.
+          Using the conservation of the angular momentum,
+          \begin{align*}
+              L = mv_0 b = mr^2\frac{d\alpha}{dt}.
+          \end{align*}
+          \begin{align*}
+              2mv_0\sin\theta/2 & =
+              \frac{q_1q_2}{4\pi\epsilon_0}
+              \int \frac{\cos\alpha}{r^2}dt \\
+                                & =
+              \frac{q_1q_2}{4\pi\epsilon_0}
+              \int_{\frac{-\pi}{2}+\frac{\theta}{2}}^{\frac{\pi}{2}-\frac{\theta}{2}} \frac{\cos\alpha}{r^2}\frac{r^2}{v_0 b}d\alpha \\
+                                & =
+              \frac{q_1q_2}{4\pi\epsilon_0}
+              \frac{1}{v_0 b}
+              \left[\sin\left(\frac{\pi}{2}-\frac{\theta}{2}\right)
+                  -\sin\left(-\frac{\pi}{2}+\frac{\theta}{2}\right)
+                  \right] \\
+                                & =
+              \frac{q_1q_2}{4\pi\epsilon_0}
+              \frac{1}{v_0 b}2\cos(\theta/2).
+          \end{align*}
+          Thus
+          \begin{align*}
+              b & =\frac{q_1q_2}{4\pi\epsilon_0}
+              \frac{1}{mv^2_0}\cot(\theta/2) \\
+                & =
+              \frac{q_1q_2}{8\pi\epsilon_0E}
+              \cot(\theta/2).
+          \end{align*}
+    \item
+          \begin{align*}
+              D(\theta) & =
+              \frac{q_1q_2}{8\pi\epsilon_0E}
+              \cot(\theta/2)\frac{1}{2\sin(\theta/2)\cos(\theta/2)}
+              \frac{q_1q_2}{8\pi\epsilon_0E}
+              \csc^2(\theta/2)\frac{1}{2} \\
+                        & =\left[
+                               \frac{q_1q_2}{16\pi\epsilon_0 E\sin^2(\theta/2)}
+                               \right]^2
+          \end{align*}
+    \item
+          \begin{align*}
+              \sigma & =
+              \int \left[
+                       \frac{q_1q_2}{16\pi\epsilon_0 E\sin^2(\theta/2)}
+                       \right]^2\sin\theta d\theta d\phi \\
+                     & =
+              \left[
+                  \frac{q_1q_2}{16\pi\epsilon_0 E}
+                  \right]^22\pi
+              (-\frac{2}{\sin^{2}\left(\frac{\theta}{2}\right)})\bigg|^\pi_0=\infty
+          \end{align*}
 
 \end{enumerate}
 \subsection*{Sol. 2}
 Two dim:
 $$
-\psi(r,\theta) \approx A\left[
-e^{ikx}+f(\theta)\frac{e^{ikr}}{\sqrt{r}}
-\right]
+    \psi(r,\theta) \approx A\left[
+        e^{ikx}+f(\theta)\frac{e^{ikr}}{\sqrt{r}}
+        \right]
 $$
 One dim:
 $$
-\psi(x) \approx A\left[
-e^{ikx}+f(\frac{x}{|x|})e^{-ikx}
-\right]
+    \psi(x) \approx A\left[
+        e^{ikx}+f(\frac{x}{|x|})e^{-ikx}
+        \right]
 $$
 
 \subsection*{Sol. 3}
 \begin{align*}
-    \sum_{l=0}^\infty 
+    \sum_{l=0}^\infty
     i^l(2l+1)[j_l(ka)+ika_lh_l^{(1)}(ka)]P_l(\cos\theta )=0
 \end{align*}
 \begin{align*}
-    0=&\int_0^{\pi}
-    \sum_{l=0}^\infty 
+    0 & =\int_0^{\pi}
+    \sum_{l=0}^\infty
     i^l(2l+1)[j_l(ka)+ika_lh_l^{(1)}(ka)]P_l(\cos\theta )
     P_{l'}(\cos\theta)
     \sin\theta
-    d\theta\\
-    =&
+    d\theta \\
+      & =
     i^l[j_l(ka)+ika_lh_l^{(1)}(ka)]
 \end{align*}
 \begin{align*}
     [j_l(ka)+ika_lh_l^{(1)}(ka)]=0
-    \Rightarrow 
+    \Rightarrow
     a_l = -\frac{j_l(ka)}{ikh_l^{(1)}(ka)}
     =i\frac{j_l(ka)}{kh_l^{(1)}(ka)}.
 \end{align*}
 \subsection*{Sol. 4}
 Keeping only the $l=0$ term, the exterior wavefunction is
 \begin{align*}
-    \psi(r) = &
-    A[j_0(kr) + ika_0h_0^{(1)}(kr)]P_0(\cos\theta)\\
-    = & 
+    \psi(r) & =
+    A[j_0(kr) + ika_0h_0^{(1)}(kr)]P_0(\cos\theta) \\
+            & =
     A[\frac{\sin kr}{kr} + a_0\frac{e^{ikr}}{r}]
 \end{align*}
 Fo the internal region
 \begin{align*}
     \psi(r) = Cj_0(kr) + Dn_l(kr) = C\frac{\sin kr}{kr}.
 \end{align*}
-$\psi$ should be continuous at $r=a:$
+$\psi$ should be continuous at $r=a$:
 \begin{align*}
-    C\frac{\sin ka}{ka} = 
+    C\frac{\sin ka}{ka} =
     A[\frac{\sin ka}{ka} + a_0\frac{e^{ika}}{a}]
 \end{align*}
-$\psi'$ at $r=a:$
+$\psi'$ at $r=a$:
 \begin{align*}
     -\frac{\hbar^2}{2m}
     \int_{a-\epsilon}^{a+\epsilon}
@@ -133,27 +133,27 @@ $\psi'$ at $r=a:$
 \end{align*}
 \begin{align*}
     \frac{du}{dr}\bigg|^{a+\epsilon}_{a-\epsilon}
-    =&\frac{2m}{\hbar^2}\int_{a-\epsilon}^{a+\epsilon}V(r)udr\\
-    =&\frac{2m}{\hbar^2}\alpha u(a)
+     & =\frac{2m}{\hbar^2}\int_{a-\epsilon}^{a+\epsilon}V(r)udr \\
+     & =\frac{2m}{\hbar^2}\alpha u(a)
 \end{align*}
 \begin{align*}
-    A[\cos ka + a_0ike^{ika}] - 
-    C\cos ka = \frac{2m}{\hbar^2}\alpha 
+    A[\cos ka + a_0ike^{ika}] -
+    C\cos ka = \frac{2m}{\hbar^2}\alpha
     C\frac{\sin ka}{k}
 \end{align*}
 Therefore,
 \begin{align*}
-    \frac{\sin ka}{ka}(\cos ka + a_0 ik e^{ika}) = 
+    \frac{\sin ka}{ka}(\cos ka + a_0 ik e^{ika}) =
     [\frac{\sin ka}{ka} + a_0\frac{e^{ika}}{a}]
     (2m\alpha/\hbar^2 \sin (ka)/k+\cos ka)
 \end{align*}
 \begin{align*}
-    a_0= & \frac{\frac{\sin ka}{ka}(2m\alpha/\hbar^2 \sin (ka)/k+\cos ka)-\frac{\sin ka}{ka}\cos ka }
-    {\frac{\sin ka}{ka} ike^{ika}-\frac{e^{ika}}{a}(2m\alpha/\hbar^2 \sin (ka)/k+\cos ka)}\\
-    =&
+    a_0 & = \frac{\frac{\sin ka}{ka}(2m\alpha/\hbar^2 \sin (ka)/k+\cos ka)-\frac{\sin ka}{ka}\cos ka }
+            {\frac{\sin ka}{ka} ike^{ika}-\frac{e^{ika}}{a}(2m\alpha/\hbar^2 \sin (ka)/k+\cos ka)} \\
+        & =
     \frac{(2m\alpha/\hbar^2 a+1)-1 }
-    {ike^{ika}-\frac{e^{ika}}{a}(2m\alpha/\hbar^2 a+1)}\\
-    =&
+    {ike^{ika}-\frac{e^{ika}}{a}(2m\alpha/\hbar^2 a+1)} \\
+        & =
     \frac{a\beta}{-(\beta+1)}
 \end{align*}
 \begin{align*}
@@ -162,83 +162,83 @@ Therefore,
 
 \subsection*{Sol. 5}
 \begin{enumerate}
-    \item 
-    For $x<-a,$
-    $$
-    \psi(x) = Ae^{ik x} + Be^{-ikx}
-    $$
-    For $-a<x<0,$
-    $$
-    \psi(x) = Ce^{\kappa x}+De^{-\kappa x}
-    $$
-    $\psi$ has to vanish at $x=0,$
-    $$
-    C+D=0,
-    $$
-    continuous at $x=-a,$
-    $$
-    Ce^{-a\kappa }+De^{ a\kappa }
-    =2D\sinh(a\kappa)
-    =
-    Ae^{-aik } + Be^{aik}
-    $$
-    and derivative continuous
-    $$
-    \kappa Ce^{-a\kappa }-\kappa De^{\kappa a}
-    =-2\kappa D\cosh(\kappa a)
-    =ikAe^{-aik } -ik Be^{aik}.
-    $$
+    \item
+          For $x<-a$,
+          $$
+              \psi(x) = Ae^{ik x} + Be^{-ikx}
+          $$
+          For $-a<x<0$,
+          $$
+              \psi(x) = Ce^{\kappa x}+De^{-\kappa x}
+          $$
+          $\psi$ has to vanish at $x=0$,
+          $$
+              C+D=0,
+          $$
+          continuous at $x=-a$,
+          $$
+              Ce^{-a\kappa }+De^{ a\kappa }
+              =2D\sinh(a\kappa)
+              =
+              Ae^{-aik } + Be^{aik}
+          $$
+          and derivative continuous
+          $$
+              \kappa Ce^{-a\kappa }-\kappa De^{\kappa a}
+              =-2\kappa D\cosh(\kappa a)
+              =ikAe^{-aik } -ik Be^{aik}.
+          $$
 
-    \begin{align*}
-        B =&\frac{\begin{vmatrix}
-        2\sinh(a\kappa)& Ae^{-aik}\\
-        -2\kappa\cosh(a\kappa) & ikAe^{-aik}\\
-        \end{vmatrix}}{\begin{vmatrix}
-        2\sinh(a\kappa)& - e^{aik}\\
-        -2\kappa\cosh(a\kappa) & ike^{aik}\\
-        \end{vmatrix}}\\
-        =&\frac{2ikAe^{-aik}\sinh(a\kappa)+2\kappa\cosh(a\kappa)Ae^{-aik}}
-        {ik2e^{aik}\sinh(a\kappa)-2\kappa e^{aik}\cosh(a\kappa)}\\
-        =&Ae^{-2ika}
-        \left[
-        \frac{k-i\kappa\coth(\kappa a)}{k+i\kappa\coth(\kappa a)}
-        \right]
-    \end{align*}
-    \item 
-    \begin{align*}
-        |B| = |A| |e^{-2ika}| |\frac{k-i\kappa\coth(\kappa a)}{k+i\kappa\coth(\kappa a)}| = |A|
-    \end{align*}
-    \item If $V_0\gg E,$ $\kappa = \frac{\sqrt{2mV_0}}{\hbar},$
-    \begin{align*}
-        \frac{k-i\kappa\coth(\kappa a)}{k+i\kappa\coth(\kappa a)}
-        =\frac{\sqrt{2mE}-i\sqrt{2mV_0}\coth(\kappa a)}
-        {\sqrt{2mE}+i\sqrt{2mV_0}\coth(\kappa a)}
-        =-1
-    \end{align*}
-    \begin{align*}
-        \psi(x) = Ae^{ikx} - Ae^{-2ika}e^{-ikx}\Rightarrow
-        \delta = -ka.
-    \end{align*}
+          \begin{align*}
+              B & =\frac{\begin{vmatrix}
+                           2\sinh(a\kappa)        & Ae^{-aik}   \\
+                           -2\kappa\cosh(a\kappa) & ikAe^{-aik} \\
+                       \end{vmatrix}}{\begin{vmatrix}
+                           2\sinh(a\kappa)        & - e^{aik} \\
+                           -2\kappa\cosh(a\kappa) & ike^{aik} \\
+                       \end{vmatrix}} \\
+                & =\frac{2ikAe^{-aik}\sinh(a\kappa)+2\kappa\cosh(a\kappa)Ae^{-aik}}
+                   {ik2e^{aik}\sinh(a\kappa)-2\kappa e^{aik}\cosh(a\kappa)} \\
+                & =Ae^{-2ika}
+              \left[
+                  \frac{k-i\kappa\coth(\kappa a)}{k+i\kappa\coth(\kappa a)}
+                  \right]
+          \end{align*}
+    \item
+          \begin{align*}
+              |B| = |A| |e^{-2ika}| |\frac{k-i\kappa\coth(\kappa a)}{k+i\kappa\coth(\kappa a)}| = |A|
+          \end{align*}
+    \item If $V_0\gg E$, $\kappa = \frac{\sqrt{2mV_0}}{\hbar}$,
+          \begin{align*}
+              \frac{k-i\kappa\coth(\kappa a)}{k+i\kappa\coth(\kappa a)}
+              =\frac{\sqrt{2mE}-i\sqrt{2mV_0}\coth(\kappa a)}
+               {\sqrt{2mE}+i\sqrt{2mV_0}\coth(\kappa a)}
+              =-1
+          \end{align*}
+          \begin{align*}
+              \psi(x) = Ae^{ikx} - Ae^{-2ika}e^{-ikx}\Rightarrow
+              \delta = -ka.
+          \end{align*}
 \end{enumerate}
 \subsection*{Sol. 6}
 \begin{align*}
     a_l = i\frac{j_l(ka)}{kh_l^{(1)}(ka)} = \frac{1}{2ik}(e^{2i\delta_l}-1)
 \end{align*}
 \begin{align*}
-    \delta_l=&\frac{-i}{2}\ln(-2k\frac{j_l(ka)}{kh_l^{(1)}(ka)}+1) \\
-    =&
-    \frac{-i}{2}\ln(\frac{-j_l(ka)+in_l(ka)}{j_l(ka)+in_l(ka))})\\
-    =&\arctan(\frac{j_l(ka)}{n_l(ka)})
+    \delta_l & =\frac{-i}{2}\ln(-2k\frac{j_l(ka)}{kh_l^{(1)}(ka)}+1) \\
+             & =
+    \frac{-i}{2}\ln(\frac{-j_l(ka)+in_l(ka)}{j_l(ka)+in_l(ka))}) \\
+             & =\arctan(\frac{j_l(ka)}{n_l(ka)})
 \end{align*}
 \subsection*{Sol. 7}
-For $l=0$, 
+For $l=0$,
 \begin{align*}
     u(r) = C\sin(kr), \; 0<r<a,
 \end{align*}
 \begin{align*}
     u(r) =  Ae^{-ikr}+ Be^{ikr}, \; r>a.
 \end{align*}
-Continuous at $r=a,$
+Continuous at $r=a$,
 \begin{align*}
     C\sin(ka) = Ae^{-ika}+ Be^{ika}
 \end{align*}
@@ -251,126 +251,126 @@ The derivative must satisfy
     -ikAe^{-ika} + ikBe^{ika} - Ck\cos(ka) = \frac{2m}{\hbar^2}\alpha C\sin(ka)
 \end{align*}
 \begin{align*}
-    B =& \frac{{\begin{vmatrix}
-        Ae^{-ika} & \sin(ka)\\
-        ikAe^{-ika} & -k\cos(ka)-\frac{2m\alpha}{\hbar^2}\sin(ka)
-    \end{vmatrix}}}
-    {\begin{vmatrix}
-        -e^{ika} & \sin(ka)\\
-        ike^{ika} & -k\cos(ka)-\frac{2m\alpha}{\hbar^2}\sin(ka)
-    \end{vmatrix}}\\
-    =&\frac{-Ae^{-ika}k\cos(ka)-\frac{2m\alpha}{\hbar^2}Ae^{-ika}\sin(ka)-ikAe^{-ika}\sin(ka)}
-    {e^{ika}k\cos(ka)+\frac{2m\alpha}{\hbar^2}e^{ika}\sin(ka)-ike^{ika}\sin(ka)}\\
-    =&-A
+    B & = \frac{{\begin{vmatrix}
+                      Ae^{-ika}   & \sin(ka)                                    \\
+                      ikAe^{-ika} & -k\cos(ka)-\frac{2m\alpha}{\hbar^2}\sin(ka)
+                  \end{vmatrix}}}
+          {\begin{vmatrix}
+                  -e^{ika}  & \sin(ka)                                    \\
+                  ike^{ika} & -k\cos(ka)-\frac{2m\alpha}{\hbar^2}\sin(ka)
+              \end{vmatrix}} \\
+      & =\frac{-Ae^{-ika}k\cos(ka)-\frac{2m\alpha}{\hbar^2}Ae^{-ika}\sin(ka)-ikAe^{-ika}\sin(ka)}
+         {e^{ika}k\cos(ka)+\frac{2m\alpha}{\hbar^2}e^{ika}\sin(ka)-ike^{ika}\sin(ka)} \\
+      & =-A
     \frac{(\cos(ka)-i\sin(ka))(ka\cos(ka)+\beta \sin(ka)+ika\sin(ka))}
-    {(\cos(ka)+i\sin(ka))(ka\cos(ka)+\beta \sin(ka)-ika\sin(ka))}\\
-    =&-A
-    \frac{ka+\beta \cos(ka)\sin(ka) 
-    -i\beta\sin^2(ka)}
+    {(\cos(ka)+i\sin(ka))(ka\cos(ka)+\beta \sin(ka)-ika\sin(ka))} \\
+      & =-A
+    \frac{ka+\beta \cos(ka)\sin(ka)
+        -i\beta\sin^2(ka)}
     {ka+\beta \cos(ka)\sin(ka)
-    +i\beta\sin^2(ka)}=-Ae^{2i\delta}
+        +i\beta\sin^2(ka)}=-Ae^{2i\delta}
 \end{align*}
 \begin{align*}
-    \delta =& \frac{1}{2i}
+    \delta & = \frac{1}{2i}
     \log\left[
-    \frac{ka+\beta \cos(ka)\sin(ka) 
-    -i\beta\sin^2(ka)}
-    {ka+\beta \cos(ka)\sin(ka)
-    +i\beta\sin^2(ka)}\right]\\
-    =&-\operatorname{arccot}
+            \frac{ka+\beta \cos(ka)\sin(ka)
+                -i\beta\sin^2(ka)}
+            {ka+\beta \cos(ka)\sin(ka)
+                +i\beta\sin^2(ka)}\right] \\
+           & =-\operatorname{arccot}
     \left[
-    \frac{ka+\beta\cos(ka)\sin(ka)}{\beta\sin^2(ka)}
-    \right]\\
-    =&
+        \frac{ka+\beta\cos(ka)\sin(ka)}{\beta\sin^2(ka)}
+        \right] \\
+           & =
     -\operatorname{arccot}
-    \left[\cot(ka) + 
-    \frac{ka}{\beta\sin^2(ka)}
-    \right].
+    \left[\cot(ka) +
+        \frac{ka}{\beta\sin^2(ka)}
+        \right].
 \end{align*}
 
 \subsection*{Sol. 8}
 \begin{align*}
     (\nabla^2 + k^2)(-\frac{e^{ikr}}{4\pi r})
-    =&-(\nabla^2e^{ikr})\frac{1}{4\pi r}
+     & =-(\nabla^2e^{ikr})\frac{1}{4\pi r}
     -2(\nabla e^{ikr})(\nabla\frac{1}{4\pi r})
     -e^{ikr}(\nabla^2\frac{1}{4\pi r})
-    -k^2\frac{e^{ikr}}{4\pi r}\\
-    =&-(ik\frac{2}{r}e^{ikr} - k^2e^{ikr} )\frac{1}{4\pi r}
+    -k^2\frac{e^{ikr}}{4\pi r} \\
+     & =-(ik\frac{2}{r}e^{ikr} - k^2e^{ikr} )\frac{1}{4\pi r}
     -2(ike^{ikr})(\frac{-1}{4\pi r^2})
-    +e^{ikr}\delta^3(\bm r)-k^2\frac{e^{ikr}}{4\pi r}\\
-    =&e^{ikr}\delta^3(\bm r)\\
-    =&\delta^3(\bm r)
+    +e^{ikr}\delta^3(\bm r)-k^2\frac{e^{ikr}}{4\pi r} \\
+     & =e^{ikr}\delta^3(\bm r) \\
+     & =\delta^3(\bm r)
 \end{align*}
 
 \subsection*{Sol. 9}
 $$
-k = i\sqrt{-2mE_1}/\hbar
-= \frac{i}{a}
+    k = i\sqrt{-2mE_1}/\hbar
+    = \frac{i}{a}
 $$
 
 \begin{align*}
-    &-\frac{m}{2\pi\hbar^2}
+     & -\frac{m}{2\pi\hbar^2}
     \int \frac{e^{-|\bm r-\bm r_0|/a}}{|\bm r - \bm r_0|}\frac{-e^2}{4\pi\epsilon_0 |\bm r_0|}\frac{1}{\sqrt{\pi a^3}}
-    e^{-|\bm r_0|/a}d\bm r_0\\
-    =&
+    e^{-|\bm r_0|/a}d\bm r_0 \\
+     & =
     \frac{1}{a}
     \frac{1}{\sqrt{\pi a^3}}
     \int \frac{e^{-\sqrt{r^2+r_0^2-2rr_0\cos\theta }/a}}{\sqrt{r^2+r_0^2-2rr_0\cos\theta }}
     \frac{1}{r_0}
     e^{-r_0/a}r_0^2\sin\theta dr_0d\theta \\
-    =&
+     & =
     \frac{1}{\sqrt{\pi a^3}}
     \frac{-1}{r}
     \left[
-    \int_0^{r}
-    e^{-r_0/a}
-    (e^{-(r+r_0)/a}
-    -
-    e^{-(r-r_0)/a}
-    )
-    dr_0
-   +\int_r^\infty
-    e^{-r_0/a}
-    (e^{-(r+r_0)/a}
-    -
-    e^{-(r_0-r)/a}
-    )
-    dr_0
-    \right]\\
-    =&
+        \int_0^{r}
+        e^{-r_0/a}
+        (e^{-(r+r_0)/a}
+        -
+        e^{-(r-r_0)/a}
+        )
+        dr_0
+        +\int_r^\infty
+        e^{-r_0/a}
+        (e^{-(r+r_0)/a}
+        -
+        e^{-(r_0-r)/a}
+        )
+        dr_0
+        \right] \\
+     & =
     \frac{1}{\sqrt{\pi a^3}}
     \frac{-1}{r}
     \left[
-    -\frac{\mathrm{e}^{-\frac{3r}{a}} \left(\left(2r - a\right) \mathrm{e}^{\frac{2r}{a}} + a\right)}{2}
-    -\frac{a\mathrm{e}^{-\frac{3r}{a}} \left(\mathrm{e}^{\frac{2r}{a}} - 1\right)}{2}
-    \right]\\
-    =&
+        -\frac{\mathrm{e}^{-\frac{3r}{a}} \left(\left(2r - a\right) \mathrm{e}^{\frac{2r}{a}} + a\right)}{2}
+        -\frac{a\mathrm{e}^{-\frac{3r}{a}} \left(\mathrm{e}^{\frac{2r}{a}} - 1\right)}{2}
+        \right] \\
+     & =
     \frac{1}{\sqrt{\pi a^3}}e^{-r/a}
 \end{align*}
 
 \subsection*{Sol. 10}
 \begin{align*}
     f(\theta)
-    =&-\frac{2m}{\hbar^2\kappa}
+     & =-\frac{2m}{\hbar^2\kappa}
     \int_0^a
-    rV_0\sin(\kappa r)dr\\
-    =&
+    rV_0\sin(\kappa r)dr \\
+     & =
     -\frac{2m}{\hbar^2\kappa}
     \frac{V_{0} \left(\sin\left(a{\kappa}\right) - a{\kappa} \cos\left(a{\kappa}\right)\right)}{{\kappa}^{2}}
 \end{align*}
-For low energy scattering $ka\ll 1,$
+For low energy scattering $ka\ll 1$,
 $$
-\sin(a\kappa) - a\kappa\cos(a\kappa)
-\approx (a\kappa) - (a\kappa )^3/3!
--(a\kappa)[1 - (a\kappa)^2/2!]
-=\frac{(a\kappa)^3}{3}
+    \sin(a\kappa) - a\kappa\cos(a\kappa)
+    \approx (a\kappa) - (a\kappa )^3/3!
+    -(a\kappa)[1 - (a\kappa)^2/2!]
+    =\frac{(a\kappa)^3}{3}
 $$
 \begin{align*}
     f(\theta) \approx &
     -\frac{2m}{\hbar^2\kappa^3}
     V_0
-    \frac{(a\kappa)^3}{3}\\
-    =&-
+    \frac{(a\kappa)^3}{3} \\
+                      & =-
     \frac{2ma^3}{3\hbar^2}
     V_0
 \end{align*}
@@ -378,7 +378,7 @@ $$
 \subsection*{Sol. 11}
 \begin{align*}
     -\frac{2m\beta}{\hbar^2\kappa}
-    \int_0^\infty 
+    \int_0^\infty
     e^{-\mu r}\sin(\kappa r)dr
     =
     -\frac{2m\beta}{\hbar^2\kappa}\frac{\kappa}{\mu^2+\kappa^2}
@@ -387,81 +387,81 @@ $$
 
 \subsection*{Sol. 12}
 \begin{align*}
-    D(\theta) = 
+    D(\theta) =
     \frac{4m^2\beta^2}{\hbar^4(\mu^2+\kappa^2)^2}
 \end{align*}
 \begin{align*}
-    \sigma =& 
+    \sigma & =
     2\pi\int_0^\pi
-     \frac{4m^2\beta^2}{\hbar^4(\mu^2+4k^2\sin^2(\theta/2))^2}\sin\theta d\theta \\
-     =&\frac{16\pi m^{2} {\beta}^{2}}{\hbar^{4} {\mu}^{2} \left({\mu}^{2} + 4k^{2}\right)}\\
-     =&
+    \frac{4m^2\beta^2}{\hbar^4(\mu^2+4k^2\sin^2(\theta/2))^2}\sin\theta d\theta \\
+           & =\frac{16\pi m^{2} {\beta}^{2}}{\hbar^{4} {\mu}^{2} \left({\mu}^{2} + 4k^{2}\right)} \\
+           & =
     \frac{16\pi m^{2} {\beta}^{2}}{ \hbar^{4} {\mu}^{4} +
-    \hbar^{2} {\mu}^{2}8mE}
+        \hbar^{2} {\mu}^{2}8mE}
 \end{align*}
 
 \subsection*{Sol. 13}
 \begin{enumerate}
     \item \begin{align*}
-        f(\theta)
-        =&
-        -\frac{m}{2\pi\hbar^2}
-        \int\alpha\delta(|\bm r|-a)
-        d\bm r\\
-        =&
-        -\frac{m}{2\pi\hbar^2}\alpha
-        \int\delta(r-a)
-        r^2\sin\theta drd\theta \\
-        =&-\frac{2m\alpha  a^2}{\hbar^2}
-    \end{align*}
-    \begin{align*}
-        D(\theta) = \frac{4m^2\alpha^2 a^4}{\hbar^4}
-    \end{align*}
-    \begin{align*}
-        \sigma = \frac{16\pi m^2\alpha^2 a^4}{\hbar^4}
-    \end{align*}
-    \item 
-    \begin{align*}
-        f(\theta) = &
-        -\frac{2m}{\hbar^2\kappa}
-        \int_0^\infty r\alpha \delta(r-a)\sin(\kappa r)dr\\
-        =&
-        -\frac{2m}{\hbar^2\kappa}
-         a\alpha \sin(\kappa a)
-    \end{align*}
-    Assume that $ka\ll 1,$
-    \begin{align*}
-         -\frac{2m}{\hbar^2\kappa}
-         a\alpha \sin(\kappa a)
-         \approx 
-         -\frac{2ma^2\alpha}{\hbar^2}.
-    \end{align*}
-   By 10.4,
-   \begin{align*}
-       -\frac{a\beta}{\beta+1}
-       \approx 
-       -a\beta
-       =-\frac{2ma^2\alpha}{\hbar^2}.
-   \end{align*}
+              f(\theta)
+               & =
+              -\frac{m}{2\pi\hbar^2}
+              \int\alpha\delta(|\bm r|-a)
+              d\bm r \\
+               & =
+              -\frac{m}{2\pi\hbar^2}\alpha
+              \int\delta(r-a)
+              r^2\sin\theta drd\theta \\
+               & =-\frac{2m\alpha  a^2}{\hbar^2}
+          \end{align*}
+          \begin{align*}
+              D(\theta) = \frac{4m^2\alpha^2 a^4}{\hbar^4}
+          \end{align*}
+          \begin{align*}
+              \sigma = \frac{16\pi m^2\alpha^2 a^4}{\hbar^4}
+          \end{align*}
+    \item
+          \begin{align*}
+              f(\theta) & =
+              -\frac{2m}{\hbar^2\kappa}
+              \int_0^\infty r\alpha \delta(r-a)\sin(\kappa r)dr \\
+                        & =
+              -\frac{2m}{\hbar^2\kappa}
+              a\alpha \sin(\kappa a)
+          \end{align*}
+          Assume that $ka\ll 1$,
+          \begin{align*}
+              -\frac{2m}{\hbar^2\kappa}
+              a\alpha \sin(\kappa a)
+              \approx
+              -\frac{2ma^2\alpha}{\hbar^2}.
+          \end{align*}
+          By 10.4,
+          \begin{align*}
+              -\frac{a\beta}{\beta+1}
+              \approx
+              -a\beta
+              =-\frac{2ma^2\alpha}{\hbar^2}.
+          \end{align*}
 \end{enumerate}
 
 \subsection*{Sol. 14}
 \begin{align*}
-    I  = &\frac{q_1q_2}{4\pi\epsilon_0}\int 
-    \frac{1}{r^2}\sin\theta dt\\
-    =&
+    I & =\frac{q_1q_2}{4\pi\epsilon_0}\int
+    \frac{1}{r^2}\sin\theta dt \\
+      & =
     \frac{q_1q_2}{4\pi\epsilon_0}
-    \int_{-\frac{\pi}{2}+\frac{\theta' }{2}}^{\frac{\pi}{2}-\frac{\theta' }{2}} 
+    \int_{-\frac{\pi}{2}+\frac{\theta' }{2}}^{\frac{\pi}{2}-\frac{\theta' }{2}}
     \frac{1}{r^2}\sin(
-\frac{\pi-\theta'}{2}
+    \frac{\pi-\theta'}{2}
     -\alpha + \theta '
-    ) \frac{r^2}{v_0 b}d\alpha\\
-    =&
+    ) \frac{r^2}{v_0 b}d\alpha \\
+      & =
     -\frac{q_1q_2}{4\pi\epsilon_0}
     \frac{1}{v_0 b}
     \sin(\frac{\theta'}{2}-\alpha)\bigg|^{\frac{\pi}{2}-\frac{\theta' }{2}}
-    _{-\frac{\pi}{2}+\frac{\theta' }{2}}\\
-    =&
+                                        _{-\frac{\pi}{2}+\frac{\theta' }{2}} \\
+      & =
     \frac{q_1q_2}{4\pi\epsilon_0}
     \frac{1}{v_0 b}(\cos\theta'+1)
     \approx\frac{q_1q_2}{2\pi\epsilon_0}
@@ -469,14 +469,14 @@ $$
 \end{align*}
 \begin{align*}
     \theta ' = \arctan\frac{\frac{q_1q_2}{2\pi\epsilon_0}
-    \frac{1}{v_0 b}}{mv_0}
+                          \frac{1}{v_0 b}}{mv_0}
     \approx \frac{q_1q_2}{4\pi\epsilon_0 bE}
 \end{align*}
 
 When $\theta'$ is small,
 \begin{align*}
     b = \frac{q_1q_2}{8\pi\epsilon_0 E}\cot\frac{\theta }{2}
-    \approx 
+    \approx
     \frac{q_1q_2}{8\pi\epsilon_0 E}\frac{2}{\theta'}
     \Rightarrow \theta'
     =\frac{q_1q_2}{4\pi\epsilon_0 bE}
@@ -484,23 +484,23 @@ When $\theta'$ is small,
 
 \subsection*{Sol. 15}
 \begin{align*}
-    \psi(\bm r) =& \psi_0(\bm r) + \int g(\bm r -\bm r_0)V(\bm r_0)\psi(\bm r_0)d\bm r_0\\
-    =&
-     \psi_0(\bm r) + \int g(\bm r -\bm r_0)V(\bm r_0)
-     \left[
-     \psi_0(\bm r_0) + 
-     \int g(\bm r_0 -\bm r_1)V(\bm r_1)\psi(\bm r_1)d\bm r_1
-     \right]
-     d\bm r_0\\
-    \approx& 
+    \psi(\bm r) & = \psi_0(\bm r) + \int g(\bm r -\bm r_0)V(\bm r_0)\psi(\bm r_0)d\bm r_0 \\
+                & =
+    \psi_0(\bm r) + \int g(\bm r -\bm r_0)V(\bm r_0)
+    \left[
+        \psi_0(\bm r_0) +
+        \int g(\bm r_0 -\bm r_1)V(\bm r_1)\psi(\bm r_1)d\bm r_1
+        \right]
+    d\bm r_0 \\
+    \approx     &
     Ae^{ikz}-\frac{m}{2\pi\hbar^2}
     \int\frac{e^{ik|\bm r-\bm r_0|}}{|\bm r - \bm r_0|}
     V(\bm r_0)\psi_0(\bm r_0)d\bm r_0
     +\frac{m^2}{4\pi^2\hbar^4}\int
     \frac{e^{ik|\bm r-\bm r_0|}}{|\bm r - \bm r_0|}
     \frac{e^{ik|\bm r_0-\bm r_1|}}{|\bm r_0 - \bm r_1|}
-    V(\bm r_0)V(\bm r_1)\psi_0(\bm r_1)d\bm r_0d\bm r_1\\
-    =&
+    V(\bm r_0)V(\bm r_1)\psi_0(\bm r_1)d\bm r_0d\bm r_1 \\
+                & =
     Ae^{ikz}-\frac{m}{2\pi\hbar^2}
     \frac{e^{ikr}}{r}
     \int e^{-i\bm k \cdot \bm r_0}
@@ -511,7 +511,7 @@ When $\theta'$ is small,
     V(\bm r_0)V(\bm r_1)\psi_0(\bm r_1)d\bm r_0d\bm r_1
 \end{align*}
 \begin{align*}
-    f(\theta) = &
+    f(\theta) & =
     -\frac{m}{2\pi\hbar^2A}
     \int e^{-i\bm k \cdot \bm r_0}
     V(\bm r_0)\psi_0(\bm r_0)d\bm r_0
@@ -523,54 +523,54 @@ When $\theta'$ is small,
 
 For low energy scattering, we can drop off the exponential terms
 \begin{align*}
-    & \int e^{-i\bm k \cdot \bm r_0}
+            & \int e^{-i\bm k \cdot \bm r_0}
     \frac{e^{ik|\bm r_0-\bm r_1|}}{|\bm r_0 - \bm r_1|}
-    V(\bm r_0)V(\bm r_1)\psi_0(\bm r_1)d\bm r_1d\bm r_0\\
+    V(\bm r_0)V(\bm r_1)\psi_0(\bm r_1)d\bm r_1d\bm r_0 \\
     \approx &
-     A\int 
+    A\int
     \frac{1}{|\bm r_0 - \bm r_1|}
-    V(\bm r_0)V(\bm r_1)d\bm r_1d\bm r_0\\
-    =&A V_0^2 2\pi
+    V(\bm r_0)V(\bm r_1)d\bm r_1d\bm r_0 \\
+            & =A V_0^2 2\pi
     \int \frac{1}{\sqrt{r_0^2+r_1^2-2r_0r_1\cos\theta}}
-    r_1^2\sin\theta dr_1d\theta d\bm r_0\\
-    =&AV_0^2 2\pi\int \frac{1}{r_0}\left[
-    \int_0^{r_0} 
-    r_1((r_1+r_0)-(r_0-r_1))
-    dr_1
-    +
-    \int_{r_0}^a
-    r_1((r_1+r_0)-(r_1-r_0))
-    dr_1
-    \right] d\bm r_0\\
-    =&
+    r_1^2\sin\theta dr_1d\theta d\bm r_0 \\
+            & =AV_0^2 2\pi\int \frac{1}{r_0}\left[
+                                                \int_0^{r_0}
+                                                r_1((r_1+r_0)-(r_0-r_1))
+                                                dr_1
+                                                +
+                                                \int_{r_0}^a
+                                                r_1((r_1+r_0)-(r_1-r_0))
+                                                dr_1
+                                                \right] d\bm r_0 \\
+            & =
     AV_0^2 2\pi 4\pi\int \frac{1}{r_0}
-    [\frac{2}{3}r_0^3 +a^2r_0-r_0^3 ] r_0^2d r_0\\
-    =&AV_0^2 \frac{32\pi^2a^5}{15}
+                         [\frac{2}{3}r_0^3 +a^2r_0-r_0^3 ] r_0^2d r_0 \\
+            & =AV_0^2 \frac{32\pi^2a^5}{15}
 \end{align*}
 Thus
 \begin{align*}
-    f(\theta) =& -\frac{m}{2\pi\hbar^2}V_0\frac{4}{3}\pi a^3
+    f(\theta) & = -\frac{m}{2\pi\hbar^2}V_0\frac{4}{3}\pi a^3
     +\frac{m^2}{4\pi^2\hbar^4}
-    V_0^2 \frac{32\pi^2a^5}{15}\\
-    =&-\frac{2mV_0a^3}{3\hbar^2}
+    V_0^2 \frac{32\pi^2a^5}{15} \\
+              & =-\frac{2mV_0a^3}{3\hbar^2}
     \left[
-    1 - \frac{4mV_0a^2}{5\hbar^2}
-    \right].
+        1 - \frac{4mV_0a^2}{5\hbar^2}
+        \right].
 \end{align*}
 
 \subsection*{Sol. 16}
 \begin{align*}
     (\frac{d^2}{dx^2} + k^2)G(x) = \delta(x)
 \end{align*}
-Let $G(x) = \frac{1}{(2\pi)^{1/2}}\int e^{isx}g(s)ds,$
+Let $G(x) = \frac{1}{(2\pi)^{1/2}}\int e^{isx}g(s)ds$,
 then
 \begin{align*}
-    (\frac{d^2}{dx^2} + k^2)G(x) = &
-    \frac{1}{(2\pi)^{1/2}}\int 
-    (\frac{d^2}{dx^2} + k^2)e^{isx}g(s)ds\\
-    =&
-    \frac{1}{(2\pi)^{1/2}}\int 
-    (-s^2 + k^2)e^{isx}g(s)ds = 
+    (\frac{d^2}{dx^2} + k^2)G(x) & =
+    \frac{1}{(2\pi)^{1/2}}\int
+    (\frac{d^2}{dx^2} + k^2)e^{isx}g(s)ds \\
+                                 & =
+    \frac{1}{(2\pi)^{1/2}}\int
+    (-s^2 + k^2)e^{isx}g(s)ds =
     \frac{1}{2\pi}\int e^{isx}ds
 \end{align*}
 Thus
@@ -578,29 +578,29 @@ Thus
     g(s) = \frac{1}{(2\pi)^{1/2}(k^2-s^2)}.
 \end{align*}
 \begin{align*}
-    G(x) =& \frac{1}{2\pi}\int \frac{e^{isx}}{(k^2-s^2)}ds\\
-    =& \frac{1}{2\pi}\int \frac{e^{isx}}{(k+s)(k-s)}ds\\
-    =& -i\frac{e^{ikx}}{2k}
+    G(x) & = \frac{1}{2\pi}\int \frac{e^{isx}}{(k^2-s^2)}ds \\
+         & = \frac{1}{2\pi}\int \frac{e^{isx}}{(k+s)(k-s)}ds \\
+         & = -i\frac{e^{ikx}}{2k}
 \end{align*}
 \begin{align*}
-    \psi(x) = \psi_0(x) - \frac{im}{\hbar^2 k }\int e^{ik|x-x_0|} V(x_0)\psi(x_0)dx_0
+    \psi(x) = \psi_0(x) - \frac{im}{\hbar^2 k }\int e^{ik|x-x_0|} V(x_0)\psi(x_0)dx_0.
 \end{align*}
 
 \subsection*{Sol. 17}
 \begin{align*}
-    &-\frac{im}{\hbar^2k}
-    \int_{-\infty}^{\infty} e^{ik|x-x_0|}V(x_0)Ae^{ikx_0}dx_0\\
-    =&-\frac{im}{\hbar^2k}
+     & -\frac{im}{\hbar^2k}
+    \int_{-\infty}^{\infty} e^{ik|x-x_0|}V(x_0)Ae^{ikx_0}dx_0 \\
+     & =-\frac{im}{\hbar^2k}
     \int_{-\infty}^{x} e^{ik(x-x_0)}V(x_0)Ae^{ikx_0}dx_0
     -\frac{im}{\hbar^2k}
     \int_{x}^{\infty} e^{-ik(x-x_0)}V(x_0)Ae^{ikx_0}dx_0
 \end{align*}
-The reflection coefficient is 
+The reflection coefficient is
 \begin{align*}
-    R =& \left(\frac{m}{\hbar^2k}\right)^2
+    R       & = \left(\frac{m}{\hbar^2k}\right)^2
     \left|
     \int_x^\infty e^{2ikx_0}V(x_0)dx_0
-    \right|^2\\
+    \right|^2 \\
     \approx &
     \left(\frac{m}{\hbar^2k}\right)^2
     \left|
@@ -611,7 +611,7 @@ The reflection coefficient is
 \subsection*{Sol. 18}
 Delta Function:
 \begin{align*}
-    R = 
+    R =
     \left(\frac{m}{\hbar^2k}\right)^2
     \left|
     \int_{-\infty}^\infty e^{2ikx}(-\alpha\delta(x))dx
@@ -628,18 +628,18 @@ When $E$ is large, the exact answer becomes
 \end{align*}
 
 
-Finite Square Well: 
+Finite Square Well:
 \begin{align*}
-    R = &
+    R & =
     \left(\frac{m}{\hbar^2k}\right)^2
     \left|
     \int_{-a}^a e^{2ikx}(-V_0)dx
-    \right|^2\\
-    =&
-    \left(\frac{m V_0}{\hbar^2k}\right)^2\frac{\sin^2(2ak)}{k^2}\\
-    = &
-    \frac{m V_0^2}{2\hbar^2 E}\frac{\sin^2(2a\sqrt{2mE}/\hbar)}{2mE/\hbar^2}\\
-    =&
+    \right|^2 \\
+      & =
+    \left(\frac{m V_0}{\hbar^2k}\right)^2\frac{\sin^2(2ak)}{k^2} \\
+      & =
+    \frac{m V_0^2}{2\hbar^2 E}\frac{\sin^2(2a\sqrt{2mE}/\hbar)}{2mE/\hbar^2} \\
+      & =
     \frac{V_0^2}{4 E^2}\sin^2(2a\sqrt{2mE}/\hbar)
 \end{align*}
 \begin{align*}
@@ -647,21 +647,21 @@ Finite Square Well:
 \end{align*}
 When $E$ is large, the exact answer becomes
 \begin{align*}
-    T 
+    T
     \approx 1 - \frac{V_0^2}{4 E^2}\sin^2(2a\sqrt{2mE}/\hbar) + \dots
 \end{align*}
 
 \subsection*{Sol. 19}
 \begin{align*}
-    f(0) = & \frac{1}{k}\sum_{l=0}^\infty 
-    (2l+1)e^{i\delta_l}\sin(\delta_l)P_l(1)\\
-    =&
-    \frac{1}{k}\sum_{l=0}^\infty 
+    f(0) & = \frac{1}{k}\sum_{l=0}^\infty
+    (2l+1)e^{i\delta_l}\sin(\delta_l)P_l(1) \\
+         & =
+    \frac{1}{k}\sum_{l=0}^\infty
     (2l+1)e^{i\delta_l}\sin(\delta_l)
 \end{align*}
 Thus
 \begin{align*}
-    \Im f(0) = \frac{1}{k}\sum_{l=0}^\infty 
+    \Im f(0) = \frac{1}{k}\sum_{l=0}^\infty
     (2l+1)\sin^2(\delta_l)
 \end{align*}
 \begin{align*}
@@ -672,90 +672,403 @@ Thus
 \subsection*{Sol. 20}
 \begin{align*}
     f(\theta )
-    =&-\frac{2m}{\hbar^2\kappa}
-    \int_0^\infty 
-    rAe^{-\mu r^2}\sin(\kappa r)dr\\
-    =&
+     & =-\frac{2m}{\hbar^2\kappa}
+    \int_0^\infty
+    rAe^{-\mu r^2}\sin(\kappa r)dr \\
+     & =
     -\frac{2m}{\hbar^2\kappa}A
-    \frac{\kappa}{2\mu}\frac{1}{2}\sqrt{\frac{\pi}{\mu}}e^{-\frac{\kappa^2}{4\mu}}\\
-    =&
+    \frac{\kappa}{2\mu}\frac{1}{2}\sqrt{\frac{\pi}{\mu}}e^{-\frac{\kappa^2}{4\mu}} \\
+     & =
     -\frac{Am}{2\mu\hbar^2}
     \sqrt{\frac{\pi}{\mu}}e^{-\frac{k^2\sin^2(\theta/2)}{\mu}}
 \end{align*}
 \begin{align*}
-    \sigma = &\left(\frac{Am}{2\mu\hbar^2}\right)^2
-    \frac{\pi}{\mu}2\pi\int_0^\pi 
+    \sigma & =\left(\frac{Am}{2\mu\hbar^2}\right)^2
+    \frac{\pi}{\mu}2\pi\int_0^\pi
     e^{-\frac{k^2\sin^2(\theta/2)}{2\mu}}\sin\theta d\theta \\
-    =&\left(\frac{Am}{2\mu\hbar^2}\right)^2
+           & =\left(\frac{Am}{2\mu\hbar^2}\right)^2
     \frac{\pi}{\mu}2\pi
-    \left[\frac{4{\mu}}{k^{2}} - \frac{4{\mu}\mathrm{e}^{-\frac{k^{2}}{2{\mu}}}}{k^{2}}\right]\\
-    =&2
+    \left[\frac{4{\mu}}{k^{2}} - \frac{4{\mu}\mathrm{e}^{-\frac{k^{2}}{2{\mu}}}}{k^{2}}\right] \\
+           & =2
     \left(\frac{Am\pi}{\mu\hbar^2k}\right)^2
     \left[1 - \mathrm{e}^{-\frac{k^{2}}{2{\mu}}}\right]
 \end{align*}
 
 \subsection*{Sol. 21}
 \begin{enumerate}
-    \item 
-    \begin{align*}
-        f(\theta) =& -\frac{m}{2\pi\hbar^2}
-        \int e^{i(\bm k' - \bm k)\cdot \bm r_0} \frac{2\pi\hbar^2 b}{m}
-        \sum_i\delta^3(\bm r_0- \bm r_i)
-        d^3\bm r_0\\
-        =&
-         -b
-         \sum_i
-        e^{i(\bm k' - \bm k)\cdot \bm r_i} 
-    \end{align*}
-    \begin{align*}
-        \frac{d\sigma}{d\Omega}
-        = 
-        b^2 
-        \left| 
-         \sum_i
-        e^{-i\bm q\cdot \bm r_i} 
-        \right|^2
-    \end{align*}
-    \item 
-    \begin{align*}
-        \frac{d\sigma}{d\omega}
-        =&b^2
-        \left|
-        \sum_{l,m,n}
-        e^{-i(q_xla + q_yma + q_zna)}
-        \right|^2\\
-        =&b^2
-        \left|
-        \frac{1-e^{-iq_xNa}}{1-e^{-iq_xa}}
-        \frac{1-e^{-iq_yNa}}{1-e^{-iq_ya}}
-        \frac{1-e^{-iq_zNa}}{1-e^{-iq_za}}
-        \right|^2\\
-        =&b^2
-        \frac{2-2\cos(q_xNa)}{2-2\cos(q_xa)}
-        \frac{2-2\cos(q_yNa)}{2-2\cos(q_ya)}
-        \frac{2-2\cos(q_zNa)}{2-2\cos(q_za)}\\
-        =&b^2
-        \frac{\sin^2(q_xNa/2)}{\sin^2(q_xa/2)}
-        \frac{\sin^2(q_yNa/2)}{\sin^2(q_ya/2)}
-        \frac{\sin^2(q_zNa/2)}{\sin^2(q_za/2)}
-    \end{align*}
-    \item 
-    \includegraphics[width=0.8\textwidth,valign=t]{fig/prob10.21c.png}
-    \item 
-    \begin{align*}
-        q^2 = k^2+k^2-2k^2\cos\theta 
-        \Rightarrow 
-        \cos\theta  = 1 - \frac{q^2}{2k^2}
-        =1-\frac{2\pi^2(l^2+m^2 + n^2)}{a^2k^2}
-    \end{align*}
-    If $\lambda = \frac{2\pi}{k}=a,$ then
-    \begin{align*}
-        \cos\theta  = 1-\frac{(l^2+m^2 + n^2)}{2}
-    \end{align*}
-    The three smallest non-zero angles are 
-    \begin{align*}
-        \arccos(\frac{1}{2}) = \frac{\pi}{3},
-        \arccos(0) = \frac{\pi}{2},
-        \arccos(-\frac{1}{2}) = \frac{2\pi}{3}.
-    \end{align*}
+    \item
+          \begin{align*}
+              f(\theta) & = -\frac{m}{2\pi\hbar^2}
+              \int e^{i(\bm k' - \bm k)\cdot \bm r_0} \frac{2\pi\hbar^2 b}{m}
+              \sum_i\delta^3(\bm r_0- \bm r_i)
+              d^3\bm r_0 \\
+                        & =
+              -b
+              \sum_i
+              e^{i(\bm k' - \bm k)\cdot \bm r_i}
+          \end{align*}
+          \begin{align*}
+              \frac{d\sigma}{d\Omega}
+              =
+              b^2
+              \left|
+              \sum_i
+              e^{-i\bm q\cdot \bm r_i}
+              \right|^2
+          \end{align*}
+    \item
+          \begin{align*}
+              \frac{d\sigma}{d\omega}
+               & =b^2
+              \left|
+              \sum_{l,m,n}
+              e^{-i(q_xla + q_yma + q_zna)}
+              \right|^2 \\
+               & =b^2
+              \left|
+              \frac{1-e^{-iq_xNa}}{1-e^{-iq_xa}}
+              \frac{1-e^{-iq_yNa}}{1-e^{-iq_ya}}
+              \frac{1-e^{-iq_zNa}}{1-e^{-iq_za}}
+              \right|^2 \\
+               & =b^2
+              \frac{2-2\cos(q_xNa)}{2-2\cos(q_xa)}
+              \frac{2-2\cos(q_yNa)}{2-2\cos(q_ya)}
+              \frac{2-2\cos(q_zNa)}{2-2\cos(q_za)} \\
+               & =b^2
+              \frac{\sin^2(q_xNa/2)}{\sin^2(q_xa/2)}
+              \frac{\sin^2(q_yNa/2)}{\sin^2(q_ya/2)}
+              \frac{\sin^2(q_zNa/2)}{\sin^2(q_za/2)}
+          \end{align*}
+    \item
+          \solfig{prob10.21c.png}
+    \item
+          \begin{align*}
+              q^2 = k^2+k^2-2k^2\cos\theta
+              \Rightarrow
+              \cos\theta  = 1 - \frac{q^2}{2k^2}
+              =1-\frac{2\pi^2(l^2+m^2 + n^2)}{a^2k^2}
+          \end{align*}
+          If $\lambda = \frac{2\pi}{k}=a$, then
+          \begin{align*}
+              \cos\theta  = 1-\frac{(l^2+m^2 + n^2)}{2}
+          \end{align*}
+          The three smallest non-zero angles are
+          \begin{align*}
+              \arccos(\frac{1}{2}) = \frac{\pi}{3},
+              \arccos(0) = \frac{\pi}{2},
+              \arccos(-\frac{1}{2}) = \frac{2\pi}{3}.
+          \end{align*}
 \end{enumerate}
+
+\subsection*{Sol. 22}
+\begin{enumerate}
+    \item Let $\psi(r,\theta) = R(r)Y(\theta)$.
+          Then
+          \begin{align*}
+              -\frac{\hbar^2}{2m}
+              \left[
+                  \frac{\partial^2}{\partial r^2}
+                  + \frac{1}{r}\frac{\partial}{\partial r}
+                  + \frac{1}{r^2}\frac{\partial^2}{\partial\theta^2}
+                  \right]RY
+              +VRY
+              =ERY
+          \end{align*}
+          \begin{align*}
+              \left\{
+              \left[
+                  \frac{r^2}{R}\frac{\partial^2}{\partial r^2}R
+                  + \frac{r}{R}\frac{\partial}{\partial r}R
+                  -\frac{2mr^2}{\hbar^2}(V-E)
+                  \right]\right\}
+              +\left\{
+              \frac{1}{Y}\frac{\partial^2}{\partial\theta^2}Y
+              \right\}
+              =0.
+          \end{align*}
+          \begin{align*}
+              \frac{1}{Y}\frac{\partial^2}{\partial\theta^2}Y = -j^2
+              \Rightarrow
+              Y(\theta) = e^{ij\theta}
+          \end{align*}
+          Since  $Y(\theta) = Y(\theta+2\pi)$, $j$ is required to be an integer.
+
+          Let $u = \sqrt r R$,
+          $R' = -\frac{1}{2}r^{-3/2}u + r^{-1/2}u'$, and
+          $R'' = \frac{3}{4}r^{-5/2}u- r^{-3/2}u'  + r^{-1/2}u''$, the equation becomes
+          \begin{align*}
+              \frac{r^2}{R}
+              \left[
+                  \frac{3}{4}r^{-5/2}u- r^{-3/2}u'  + r^{-1/2}u''
+                  \right]
+              +\frac{r}{R}
+              \left[
+                  -\frac{1}{2}r^{-3/2}u + r^{-1/2}u'
+                  \right]
+              -\frac{2mr^2}{\hbar^2}(V-E) = j^2
+          \end{align*}
+          \begin{align*}
+              \frac{1}{4}r^{-2}u  + u''
+              -\frac{2mr^2}{\hbar^2}(V-E) u r^{-2} = j^2 u r^{-2}
+          \end{align*}
+          \begin{align*}
+              -\frac{\hbar^2}{2m}u''
+              +\left[
+                   V + \frac{\hbar^2}{2m}
+                   \frac{j^2-\frac{1}{4}}{r^2}
+                   \right] u
+              = Eu
+          \end{align*}
+    \item
+          For very large $r$, the outgoing radial wave goes like
+          \begin{align*}
+              u \sim e^{ikr},
+          \end{align*}
+          where $k = \frac{\sqrt{2m E}}{\hbar}$, thus
+          \begin{align*}
+              R \sim \frac{e^{ikr}}{\sqrt{r}}.
+          \end{align*}
+          \begin{align*}
+              -\frac{\hbar^2}{2m}\nabla^2 Ae^{ikx}
+              =\frac{\hbar^2}{2m} A k^2 e^{ikx}
+              =E Ae^{ikx}
+          \end{align*}
+          \begin{align*}
+              \psi(r,\theta) \approx
+              A\left[
+                   e^{ikx} + f(\theta) \frac{e^{ikr}}{\sqrt{r}}
+                   \right].
+          \end{align*}
+    \item
+          \begin{align*}
+              r^2R'' + rR' +( \frac{2mr^2}{\hbar^2} - j^2) R  = 0
+          \end{align*}
+          Let $y=sr$, $R(r) = G(y)$, then
+          \begin{align*}
+              y^2G''(y) + yG'(y) +( \frac{2m}{\hbar^2}y^2\frac{1}{s^2} - j^2) G(y) = 0.
+          \end{align*}
+          Let $s=k=\frac{\sqrt{2m}}{\hbar}$, then $G(y) = AH_j^{(1)}(y)+BH_j^{(2)}(y)$. Note that the $H_j^{(1)}$ acts like an outgoing wave, whereas $H_j^{(2)}$ acts like an incoming wave, thus
+          $$
+              R(r) \sim H_j^{(1)} (kr),
+          $$
+          and
+          \begin{align*}
+              \psi(r,\theta) =
+              A\left\{
+              e^{ikx} + \sum_{j=-\infty}^{\infty}
+              c_j     H_j^{(1)} (kr)e^{ij\theta}
+              \right \}.
+          \end{align*}
+    \item
+          \begin{align*}
+              \sum_{j=-\infty}^{\infty}c_j  H_j^{(1)} (kr)e^{ij\theta} & =
+              \sum_{j=-\infty}^{\infty}c_j
+              \sqrt{\frac{2}{\pi}}
+              e^{-i\pi/4}(-i)^j
+              \frac{e^{ikr}}{\sqrt{kr}}
+              e^{ij\theta}
+          \end{align*}
+          \begin{align*}
+              f(\theta) & =
+              \sqrt{\frac{2}{k\pi}}
+              e^{-i\pi/4}
+              \sum_{j=-\infty}^{\infty}c_j
+              (-i)^j
+              e^{ij\theta}
+          \end{align*}
+    \item
+          The probability of the incident particle, traveling at speed $v$, passes through the infinitesimal line $db$, in time $dt$, is
+          $$
+              dP = |A|^2 (vdt)db.
+          $$
+          The particle scatters into the corresponding scattering angle $d\theta$:
+          $$
+              dP = |A|^2\frac{1}{r}|f|^2(vdt)rd\theta.
+          $$
+          $$
+              |f|^2 = \left|\frac{db}{d\theta}\right| = D(\theta).
+          $$
+
+          \begin{align*}
+              B & =\frac{2}{k\pi}
+              \int_{0}^{2\pi}
+              \left|
+              \sum_{j=-\infty}^{\infty}c_j
+              (-i)^j
+              e^{ij\theta}
+              \right|^2 d\theta
+              \\
+                & =
+              \frac{2}{k\pi}
+              \int_{0}^{2\pi}
+              \sum_{j=-\infty}^{\infty}
+              \sum_{s=-\infty}^{\infty}c_j
+              (-i)^j
+              e^{ij\theta}
+              c_s^*
+              (i)^s
+              e^{-is\theta} d\theta
+              \\
+                & =
+              \frac{2}{k\pi}2\pi
+              \sum_{j=-\infty}^{\infty}
+              c_j
+              (-i)^j
+              c_j^*
+              (i)^j
+              \\
+                & =
+              \frac{4}{k}
+              \sum_{j=-\infty}^{\infty}
+              |c_j|^2.
+          \end{align*}
+    \item
+          \begin{align*}
+              \psi(a,\theta) & =
+              A\left\{
+              \sum_{j=-\infty}^{\infty}
+              (i)^j J_j(ka)e^{ij\theta} + \sum_{j=-\infty}^{\infty}
+              c_j     H_j^{(1)} (ka)e^{ij\theta}
+              \right \} \\
+                             & =
+              A\left\{
+              \sum_{j=-\infty}^{\infty}
+              \left[(i)^j J_j(ka) +
+                  c_j     H_j^{(1)} (ka)\right]e^{ij\theta}
+              \right \} = 0
+          \end{align*}
+          \begin{align*}
+              c_j = -\frac{(i)^j J_j(ka)}{H_j^{(1)}(ka)} =
+              -\frac{(i)^j J_j(ka)}{J_j(ka) + iY_j(ka)}
+          \end{align*}
+          \begin{align*}
+              B = \frac{4}{k}
+              \sum_{j=-\infty}^{\infty}
+              \left|\frac{J_j(ka)}{H_j^{(1)}(ka)}\right|^2
+          \end{align*}
+          \solfig{prob10.22f.png}
+\end{enumerate}
+
+
+\subsection*{Sol. 23}
+\begin{enumerate}
+    \item \begin{align*}
+              \psi(\bm R, \bm r)
+              =\psi(\frac{\bm r_1 + \bm r_2}{2},
+              \bm r_1 - \bm r_2) = \psi_R(\bm R)\psi_r(\bm r)
+              =\psi(\frac{\bm r_2 + \bm r_1}{2},
+              \bm r_2 - \bm r_1) = \psi_R(\bm R)\psi_r(-\bm r)
+          \end{align*}
+          $$
+              \psi_r(\bm r) = \psi_r(-\bm r)
+          $$
+    \item
+          \begin{align*}
+              \psi_r(r,\theta)
+              \approx A
+              \left\{
+              e^{ikz} + f(\theta)\frac{e^{ikr}}{r}
+              +
+              e^{-ikz} + f(\pi - \theta)\frac{e^{ikr}}{r}
+              \right\}
+          \end{align*}
+          \begin{align*}
+              f_B(\theta) = f(\theta) + f(\pi - \theta)
+          \end{align*}
+    \item
+          \begin{align*}
+              f_B(\theta) & =\sum_{l=0}^\infty (2l+1)a_l P_l(\cos\theta) +
+              \sum_{l=0}^\infty (2l+1)a_l P_l(\cos(\pi - \theta)) \\
+                          & =
+              \sum_{l=0}^\infty (2l+1)a_l P_l(\cos\theta) +
+              \sum_{l=0}^\infty (2l+1)a_l P_l(-\cos(\theta))
+          \end{align*}
+          The Legendre polynomials are odd for odd $l$, so the partial waves vanish for odd $l$.
+    \item If they are fermions, then $\psi_r$ is odd.
+          \begin{align*}
+              \psi_r(r,\theta)
+              \approx A
+              \left\{
+              e^{ikz} + f(\theta)\frac{e^{ikr}}{r}
+              -
+              e^{-ikz} - f(\pi - \theta)\frac{e^{ikr}}{r}
+              \right\}
+          \end{align*}
+          \begin{align*}
+              f_F(\theta) = f(\theta) - f(\pi - \theta)
+          \end{align*}
+          \begin{align*}
+              f_F(\theta) & =\sum_{l=0}^\infty (2l+1)a_l P_l(\cos\theta) -
+              \sum_{l=0}^\infty (2l+1)a_l P_l(\cos(\pi - \theta)) \\
+                          & =
+              \sum_{l=0}^\infty (2l+1)a_l P_l(\cos\theta) -
+              \sum_{l=0}^\infty (2l+1)a_l P_l(-\cos(\theta))
+          \end{align*}
+          The partial wave for $f_F$ vanishes for even $l$.
+    \item
+          $$
+              f_F(\frac{\pi}{2}) = f(\frac{\pi}{2}) - f(\frac{\pi}{2}) = 0
+          $$
+    \item
+          \begin{align*}
+              |f_B(\theta)|^2 =
+              (-\frac{q^2}{16\pi\epsilon_0 E\sin^2(\theta/2)}
+              -\frac{q^2}{16\pi\epsilon_0 E\sin^2((\pi-\theta)/2)})^2
+          \end{align*}
+          \begin{align*}
+              |f_F(\theta)|^2 =
+              (-\frac{q^2}{16\pi\epsilon_0 E\sin^2(\theta/2)}
+              +\frac{q^2}{16\pi\epsilon_0 E\sin^2((\pi-\theta)/2)})^2
+          \end{align*}
+          \solfig[1]{prob10.23e.png}
+\end{enumerate}
+
+\subsection*{Sol. 24}
+$\kappa = \frac{\sqrt{2m(-V_0-E)}}{\hbar}
+    =ik'$
+\begin{align*}
+    B & = Ae^{-2ika}
+    \left[
+        \frac{k-i\kappa \coth(\kappa a)}{k + i\kappa \coth(\kappa a)}
+        \right] \\
+      & =
+    Ae^{-2ika}
+    \left[
+        \frac{k-ik' \cot(k'a)}{k + ik' \cot(k' a)}
+        \right]
+\end{align*}
+\begin{align*}
+    -e^{i2\delta}
+    =e^{-2ika}
+    \left[
+        \frac{k-ik' \cot(k'a)}{k + ik' \cot(k' a)}
+        \right]
+\end{align*}
+\begin{align*}
+    \delta
+     & =
+    \frac{1}{2i}
+    \left[
+        -2ika
+        +
+        \ln
+        \left[
+            \frac{-k+ik' \cot(k'a)}{k + ik' \cot(k' a)}
+            \right]
+        \right] \\
+     & =-ka +
+    \operatorname{arccot}\left(
+    \frac{k'\cot(k'a)}{k}
+    \right)
+\end{align*}
+With $z_0 = \frac{\sqrt{2mV_0}}{\hbar}a$, we have $k'a = \sqrt{(ka)^2 + z_0^2}$ and $\frac{k'}{k} = \sqrt{1 + \frac{z_0^2}{(ka)^2}}$, so
+\begin{align*}
+    \delta = -ka +
+    \operatorname{arccot}\left(
+    \sqrt{1 + \frac{z_0^2}{(ka)^2}}
+    \cot\left(\sqrt{(ka)^2 + z_0^2}\right)
+    \right)
+\end{align*}
+The phase shift for $z_0 = 10$:
+
+\solfig{prob10.24.png}

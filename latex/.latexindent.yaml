@@ -1,0 +1,27 @@
+# Used by VS Code format-on-save (latexindent -r: regex fixes below, then re-indent and align).
+defaultIndent: "    "
+
+# Align & (and keep \\ unpadded) in math environments.
+lookForAlignDelims:
+  align:
+    delims: 1
+    alignDoubleBackSlash: 0
+  align*:
+    delims: 1
+    alignDoubleBackSlash: 0
+  aligned: 1
+  cases: 1
+  pmatrix: 1
+  bmatrix: 1
+
+removeTrailingWhitespace:
+  beforeProcessing: 1
+  afterProcessing: 1
+
+replacements:
+  # Moves trailing punctuation out of inline math:  $x.$ -> $x$.   (ChkTeX warning 40)
+  -
+    substitution: s/(?<![\\\$])\$(?![\$\s])([^\$]*?[^\$\s])([.,;:])\$(?!\$)/\$$1\$$2/sg
+  # amsmath alignment style:  x =& y -> x &= y   (keeps relation spacing around =)
+  -
+    substitution: s/(?<![:<>!\\])=[ \t]*&/&=/g
