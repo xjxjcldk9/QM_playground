@@ -74,27 +74,27 @@ If $V_0$ is very small or $n$ is very large,
     f_1' = \frac{if_0''}{2f_0'}
     \Rightarrow 
     f_1 = 
-    \frac{i}{2}\log f_0'
-    =\frac{i}{2}\log (\pm p)
+    \frac{i}{2}\ln f_0'
+    =\frac{i}{2}\ln (\pm p)
 \end{align*}
 $$
-f_1^+ = \frac{i}{2}\log (p)
+f_1^+ = \frac{i}{2}\ln (p)
 $$
 $$
-f_1^- = \frac{i}{2}\log (p) - \frac{1}{2}n\pi,
+f_1^- = \frac{i}{2}\ln (p) - \frac{1}{2}n\pi,
 $$
 where $n$ is an odd number.
 Thus,
 \begin{align*}
     \psi(x)\approx &
     \exp\left[
-    i(\pm \int p + \hbar \frac{i}{2}\log p)/\hbar
+    i(\pm \int p + \hbar \frac{i}{2}\ln p)/\hbar
     \right]\\
     =&
     \exp\left[
     \pm \frac{i}{\hbar}\int p 
     \right]
-    \exp[\frac{-1}{2}\log p]\\
+    \exp[\frac{-1}{2}\ln p]\\
     \propto&
     \frac{C}{\sqrt{|p|}}
     \exp\left[
@@ -145,10 +145,10 @@ $m_d=
 234043599.8\mu u,$ 
 $m_\alpha=4002603.25413\mu u.$
 $$
-E\approx 6.841\times 10^{-13}J = 4.27MeV.
+E\approx \qty{6.841e-13}{J} = \qty{4.27}{MeV}.
 $$
 $$
-v\approx 1.43476\times 10^7m/s
+v\approx \qty{1.43476e7}{m/s}
 $$
 $$
 \gamma \approx 1.980\times \frac{90}{\sqrt{4.27}} - 1.485\times \sqrt{90\times 7.746}\approx 47.029
@@ -171,10 +171,10 @@ $m_d=
 207976652.0\mu u,$ 
 $m_\alpha=4002603.25413\mu u.$
 $$
-E\approx 1.435\times 10^{-12}J = 8.954MeV.
+E\approx \qty{1.435e-12}{J} = \qty{8.954}{MeV}.
 $$
 $$
-v\approx 2.0777254\times 10^7m/s
+v\approx \qty{2.0777254e7}{m/s}
 $$
 $$
 \gamma \approx 1.980\times \frac{82}{\sqrt{8.954}} - 1.485\times \sqrt{82\times 7.453}\approx 17.546
@@ -253,12 +253,12 @@ $$
     $\psi(0)=0=\operatorname{Ai}(b)$
     $$
     E=\frac{-mgz_0}{a}
-    =8.81\times 10^{-23}J, \; 1.54\times 10^{-22}J, \;
-    2.08\times 10^{-22}J, \; 2.56\times 10^{-22}J.
+    =\qty{8.81e-23}{J}, \; \qty{1.54e-22}{J}, \;
+    \qty{2.08e-22}{J}, \; \qty{2.56e-22}{J}.
     $$
     \item 
     $$
-    1.148\times 10^{-13}eV.
+    \qty{1.148e-13}{eV}.
     $$
     $$
     2\langle T\rangle
@@ -267,7 +267,7 @@ $$
     $$
     \langle x \rangle
     =\frac{2E}{3mg}
-    \approx 1.37mm
+    \approx \qty{1.37}{mm}
     $$
 \end{enumerate}
 
@@ -294,10 +294,10 @@ $$
     \end{align*}
     \item 
     $$
-    E_1=8.74\times 10^{-23}J,\;
-    E_2=1.54\times 10^{-22}J,\;
-    E_3=2.08\times 10^{-22}J,\;
-    E_4 = 2.55\times 10^{-22}J.
+    E_1=\qty{8.74e-23}{J},\;
+    E_2=\qty{1.54e-22}{J},\;
+    E_3=\qty{2.08e-22}{J},\;
+    E_4 = \qty{2.55e-22}{J}.
     $$
     \item 
     \begin{align*}
@@ -898,19 +898,19 @@ which yields the same answer as the exact case.
     \left[\frac{1}{4\pi\epsilon_0}\frac{e^2}{\frac{2}{\sqrt{2m}}(n'-\frac{1}{2})\hbar+
     2\sqrt{\frac{\hbar^2l(l+1)}{2m}}}\right]^2
     =
-    \frac{13.6 eV}
+    \frac{\qty{13.6}{eV}}
     {[(n'-\frac{1}{2})+
     \sqrt{l(l+1)}]^2}
     =-E_{n',l}
 \end{align*}
 \begin{align*}
-    \frac{-13.6 eV}
+    \frac{-\qty{13.6}{eV}}
     {[(n-l-\frac{1}{2})+
     \sqrt{l(l+1)}]^2}\approx&
-    \frac{-13.6 eV}
+    \frac{-\qty{13.6}{eV}}
     {[(n-l-\frac{1}{2})+
     l(1+\frac{1}{2}\frac{1}{l} -\frac{1}{8}\frac{1}{l^2})]^2}\\
-    =&\frac{-13.6eV}{(n-\frac{1}{8l})^2},
+    =&\frac{-\qty{13.6}{eV}}{(n-\frac{1}{8l})^2},
 \end{align*}
 The WKB approximation gives an extra energy split in $l.$
 
@@ -1201,9 +1201,9 @@ The WKB approximation gives an extra energy split in $l.$
     \sqrt{2m^2gx}dx
     =\frac{1}{\hbar}\sqrt{2m^2 g}\frac{2}{3}(\sqrt{R^2+(h/2)^2}-h/2)^{\frac{3}{2}}
 \end{align*}
-Estimate $R=3.3cm,$ $h=12.2cm,$ $m=380 g$ then $\gamma=8\times 10^{30}.$
+Estimate $R=\qty{3.3}{cm},$ $h=\qty{12.2}{cm},$ $m=\qty{380}{g}$ then $\gamma=8\times 10^{30}.$
 $
-v\approx 1.04\times10^{-10}m/s
+v\approx \qty{1.04e-10}{m/s}
 $
 $$
 \tau \approx 20\times  e^{16\times 10^{30}} yrs.
@@ -1301,4 +1301,4 @@ $K, E$ = complete elliptic integrals of the 1st/2nd kind, modulus k.
     = & \log_{10} \ln 2 +  \log_{10} \frac{2r_1}{v}e^{2\gamma}\\
     =&\log_{10} \ln 2 +  2(K_1\frac{Z}{\sqrt{E}}-K_2\sqrt{Z r_1})\log_{10}e+\log_{10} \frac{2r_1}{v}.
 \end{align*}
-The slope would be $-2K_1 Z\log_{10}e= -150.$ From $E = 5MeV$ to $6MeV,$ $\frac{-1}{\sqrt{E}}$ changes about $0.040MeV^{-1/2},$ thus the value of logarithm half life should decrease by $5.9,$ which matches the slope of the figure.
+The slope would be $-2K_1 Z\log_{10}e= -150.$ From $E = \qty{5}{MeV}$ to $\qty{6}{MeV},$ $\frac{-1}{\sqrt{E}}$ changes about $\qty{0.040}{MeV^{-1/2}},$ thus the value of logarithm half life should decrease by $5.9,$ which matches the slope of the figure.

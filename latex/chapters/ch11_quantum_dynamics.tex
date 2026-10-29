@@ -1,0 +1,1182 @@
+\section{Quantum Dynamics}
+\subsection*{Sol. 1}
+\begin{enumerate}
+    \item
+          \begin{align*}
+              f(t) = e^{kt}
+          \end{align*}
+    \item
+          \begin{align*}
+              \frac{df}{f} = kdt\Rightarrow
+              \ln |f| =\int k dt
+              \Rightarrow
+              f = Ae^{\int k dt }
+          \end{align*}
+    \item
+          By problem 3.29,
+          $e^{A+B} = e^A e^B e^{-C/2}$. Therefore, if $H_1$ and $H2$ do not commute, the two expressions are not the same.
+\end{enumerate}
+
+\subsection*{Sol. 2}
+\begin{align*}
+    \psi_{100} = \frac{1}{\sqrt{\pi a^3}}e^{-r/a}
+\end{align*}
+\begin{align*}
+    \psi_{200} = \frac{1}{\sqrt{2}}a^{-3/2}\left(1 - \frac{r}{2a}\right)e^{-\frac{r}{2a}}\frac{1}{\sqrt{4\pi}}
+\end{align*}
+\begin{align*}
+    \psi_{21-1} =
+    \frac{1}{2\sqrt{6}}a^{-3/2}\frac{r}{a}
+    e^{\frac{-r}{2a}}
+    \left(
+    \sqrt{\frac{3}{8\pi}}\sin\theta e^{-i\phi}
+    \right)
+\end{align*}
+\begin{align*}
+    \psi_{210} =
+    \frac{1}{2\sqrt{6}}a^{-3/2}\frac{r}{a}
+    e^{\frac{-r}{2a}}
+    \sqrt{\frac{3}{4\pi}}\cos\theta
+\end{align*}
+\begin{align*}
+    \psi_{211} = \frac{1}{2\sqrt{6}}a^{-3/2}\frac{r}{a}
+    e^{\frac{-r}{2a}}
+    \left(-
+    \sqrt{\frac{3}{8\pi}}\sin\theta e^{i\phi}
+    \right)
+\end{align*}
+
+
+\begin{align*}
+    \langle
+    \psi_{100}, eEz
+    \psi_{200}
+    \rangle  =
+    eE\int
+    \frac{1}{\sqrt{\pi a^3}}e^{-r/a}
+    \frac{1}{\sqrt{2}}a^{-3/2}\left(1 - \frac{r}{2a}\right)e^{-\frac{r}{2a}}\frac{1}{\sqrt{4\pi}}r\cos\theta
+    r^2\sin\theta drd\theta d\phi = 0
+\end{align*}
+\begin{align*}
+    \langle
+    \psi_{100}, eEz
+    \psi_{21-1}
+    \rangle  =
+    eE\int
+    \frac{1}{\sqrt{\pi a^3}}e^{-r/a}
+    \frac{1}{2\sqrt{6}}a^{-3/2}\frac{r}{a}
+    e^{\frac{-r}{2a}}
+    \left(
+    \sqrt{\frac{3}{8\pi}}\sin\theta e^{-i\phi}
+    \right)r\cos\theta
+    r^2\sin\theta drd\theta d\phi = 0
+\end{align*}
+\begin{align*}
+    \langle
+    \psi_{100}, eEz
+    \psi_{210}
+    \rangle  =
+    eE\int
+    \frac{1}{\sqrt{\pi a^3}}e^{-r/a}
+    \frac{1}{2\sqrt{6}}a^{-3/2}\frac{r}{a}
+    e^{\frac{-r}{2a}}
+    \sqrt{\frac{3}{4\pi}}\cos\theta
+    r\cos\theta
+    r^2\sin\theta drd\theta d\phi =
+    eE\frac{128\sqrt{2}}{243}a
+\end{align*}
+\begin{align*}
+    \langle
+    \psi_{100}, eEz
+    \psi_{211}
+    \rangle  =
+    eE\int
+    \frac{1}{\sqrt{\pi a^3}}e^{-r/a}
+    \frac{1}{2\sqrt{6}}a^{-3/2}\frac{r}{a}
+    e^{\frac{-r}{2a}}
+    \left(-
+    \sqrt{\frac{3}{8\pi}}\sin\theta e^{i\phi}
+    \right)r\cos\theta
+    r^2\sin\theta drd\theta d\phi = 0
+\end{align*}
+
+
+
+\begin{align*}
+    \langle
+    \psi_{100}, eEz
+    \psi_{100}
+    \rangle  =
+    eE\int
+    \left(\frac{1}{\sqrt{\pi a^3}}e^{-r/a}\right)^2
+    r\cos\theta
+    r^2\sin\theta drd\theta d\phi = 0
+\end{align*}
+\begin{align*}
+    \langle
+    \psi_{21-1}, eEz
+    \psi_{21-1}
+    \rangle  =
+    eE\int
+    \left(\frac{1}{2\sqrt{6}}a^{-3/2}\frac{r}{a}
+    e^{\frac{-r}{2a}}
+    \left(
+    \sqrt{\frac{3}{8\pi}}\sin\theta
+    \right)
+    \right)^2
+    r\cos\theta
+    r^2\sin\theta drd\theta d\phi = 0
+\end{align*}
+\begin{align*}
+    \langle
+    \psi_{210}, eEz
+    \psi_{210}
+    \rangle  =
+    eE\int
+    \left(
+    \frac{1}{2\sqrt{6}}a^{-3/2}\frac{r}{a}
+    e^{\frac{-r}{2a}}
+    \sqrt{\frac{3}{4\pi}}\cos\theta
+    \right)^2
+    r\cos\theta
+    r^2\sin\theta drd\theta d\phi =
+    0
+\end{align*}
+\begin{align*}
+    \langle
+    \psi_{211}, eEz
+    \psi_{211}
+    \rangle  =
+    eE\int
+    \left(
+    \frac{1}{2\sqrt{6}}a^{-3/2}\frac{r}{a}
+    e^{\frac{-r}{2a}}
+    \left(
+    \sqrt{\frac{3}{8\pi}}\sin\theta
+    \right)
+    \right)^2r\cos\theta
+    r^2\sin\theta drd\theta d\phi = 0
+\end{align*}
+
+\subsection*{Sol. 3}
+\begin{align*}
+    \ddot c_b & =
+    -\frac{i}{\hbar}
+    H'_{ba}i\omega_0 e^{i\omega_0 t}c_a
+    -\frac{i}{\hbar}
+    H'_{ba} e^{i\omega_0 t}\dot c_a \\
+              & =
+    -\frac{i}{\hbar}
+    H'_{ba}i\omega_0 e^{i\omega_0 t}
+    \left[
+        \frac{1}{-i/\hbar H'_{ba}e^{i\omega_0 t}}
+        \dot c_b
+        \right]
+    -\frac{i}{\hbar}
+    H'_{ba} e^{i\omega_0 t}
+    \left[
+        -\frac{i}{\hbar}H'_{ab}e^{-i\omega_0 t}c_b
+        \right] \\
+              & =
+    i\omega_0 \dot c_b
+    -\frac{|H'_{ab}|^2}{\hbar^2} c_b
+\end{align*}
+\begin{align*}
+    c_b & = A\exp\left[\frac{i\omega_0 + \sqrt{-\omega_0^2 - \frac{4|H'_{ab}|^2}{\hbar^2}}}{2} t\right]
+    + B\exp\left[\frac{i\omega_0 - \sqrt{-\omega_0^2 - \frac{4|H'_{ab}|^2}{\hbar^2}}}{2} t\right] \\
+        & =
+    A\exp\left[\frac{\omega_0 + \sqrt{\omega_0^2 + \frac{4|H'_{ab}|^2}{\hbar^2}}}{2} it\right]
+    + B\exp\left[\frac{\omega_0 - \sqrt{\omega_0^2 + \frac{4|H'_{ab}|^2}{\hbar^2}}}{2} it\right]
+\end{align*}
+\begin{align*}
+    c_a & =
+    \frac{1}{-i/\hbar H'_{ba}e^{i\omega_0 t}}A\frac{\omega_0 + \sqrt{\omega_0^2 + \frac{4|H'_{ab}|^2}{\hbar^2}}}{2} i
+    \exp\left[\frac{\omega_0 + \sqrt{\omega_0^2 + \frac{4|H'_{ab}|^2}{\hbar^2}}}{2} it\right]
+    \\ & + \frac{1}{-i/\hbar H'_{ba}e^{i\omega_0 t}}B
+    \frac{\omega_0 - \sqrt{\omega_0^2 + \frac{4|H'_{ab}|^2}{\hbar^2}}}{2} i
+    \exp\left[\frac{\omega_0 - \sqrt{\omega_0^2 + \frac{4|H'_{ab}|^2}{\hbar^2}}}{2} it\right]
+\end{align*}
+\begin{align*}
+    c_b(0) = 0 \Rightarrow A+B = 0
+\end{align*}
+\begin{align*}
+    c_a(0) = 1 \Rightarrow
+    \frac{1}{-i/\hbar H'_{ba}}A\frac{\omega_0 + \sqrt{\omega_0^2 + \frac{4|H'_{ab}|^2}{\hbar^2}}}{2} i
+    +
+    \frac{1}{-i/\hbar H'_{ba}}B\frac{\omega_0 - \sqrt{\omega_0^2 + \frac{4|H'_{ab}|^2}{\hbar^2}}}{2} i = 1
+\end{align*}
+\begin{align*}
+    A\sqrt{\omega_0^2 + \frac{4|H'_{ab}|^2}{\hbar^2}}
+    = - \frac{H'_{ba}}{\hbar}
+\end{align*}
+\begin{align*}
+    c_a & =
+    \frac{\omega_0 + \sqrt{\omega_0^2 + \frac{4|H'_{ab}|^2}{\hbar^2}}}{2\sqrt{\omega_0^2 + \frac{4|H'_{ab}|^2}{\hbar^2}}}
+    \exp\left[\frac{ -\omega_0  + \sqrt{\omega_0^2 + \frac{4|H'_{ab}|^2}{\hbar^2}}}{2} it\right]
+    \\ & -
+    \frac{\omega_0 - \sqrt{\omega_0^2 + \frac{4|H'_{ab}|^2}{\hbar^2}}}{2\sqrt{\omega_0^2 + \frac{4|H'_{ab}|^2}{\hbar^2}}}
+    \exp\left[\frac{-\omega_0 - \sqrt{\omega_0^2 + \frac{4|H'_{ab}|^2}{\hbar^2}}}{2} it\right]
+\end{align*}
+\begin{align*}
+    c_b = -\frac{H'_{ba}}{\hbar\sqrt{\omega^2_0 + \frac{4|H'_{ab}|^2}{\hbar^2}}}\exp\left[\frac{\omega_0 + \sqrt{\omega_0^2 + \frac{4|H'_{ab}|^2}{\hbar^2}}}{2} it\right]
+    + \frac{H'_{ba}}{\hbar\sqrt{\omega^2_0 + \frac{4|H'_{ab}|^2}{\hbar^2}}}\exp\left[\frac{\omega_0 - \sqrt{\omega_0^2 + \frac{4|H'_{ab}|^2}{\hbar^2}}}{2} it\right]
+\end{align*}
+\begin{align*}
+    |c_a|^2 & =
+    \left[\frac{\omega_0 + \sqrt{\omega_0^2 + \frac{4|H'_{ab}|^2}{\hbar^2}}}{2\sqrt{\omega_0^2 + \frac{4|H'_{ab}|^2}{\hbar^2}}}\right]^2
+    +\left[\frac{\omega_0 - \sqrt{\omega_0^2 + \frac{4|H'_{ab}|^2}{\hbar^2}}}{2\sqrt{\omega_0^2 + \frac{4|H'_{ab}|^2}{\hbar^2}}}\right]^2
+    -
+    \left(
+    \frac{\omega_0 + \sqrt{\omega_0^2 + \frac{4|H'_{ab}|^2}{\hbar^2}}}{2\sqrt{\omega_0^2 + \frac{4|H'_{ab}|^2}{\hbar^2}}}
+    \frac{\omega_0 - \sqrt{\omega_0^2 + \frac{4|H'_{ab}|^2}{\hbar^2}}}{2\sqrt{\omega_0^2 + \frac{4|H'_{ab}|^2}{\hbar^2}}}
+    \right) \\
+            & \left[
+                  \exp\left(
+                  \sqrt{\omega_0^2 + \frac{4|H'_{ab}|^2}{\hbar^2}} it
+                  \right) +
+                  \exp\left(-
+                  \sqrt{\omega_0^2 + \frac{4|H'_{ab}|^2}{\hbar^2}} it\right)
+                  \right]
+    \\ &
+    = \left[\frac{\omega_0 ^2+ \omega_0^2 + \frac{4|H'_{ab}|^2}{\hbar^2}}{ 2\left(\omega_0^2 + \frac{4|H'_{ab}|^2}{\hbar^2}\right)}\right]
+    -
+    \left[\frac{\omega_0 ^2- \omega_0^2 - \frac{4|H'_{ab}|^2}{\hbar^2}}{ 2\left(\omega_0^2 + \frac{4|H'_{ab}|^2}{\hbar^2}\right)}\right]
+    \cos\left( \sqrt{\omega_0^2 + \frac{4|H'_{ab}|^2}{\hbar^2}} t\right) \\
+            & =
+    \left[\frac{\omega_0 ^2\hbar^2+   2|H'_{ab}|^2}{ \omega_0^2\hbar^2 + 4|H'_{ab}|^2}\right]
+    +
+    \left[\frac{  2|H'_{ab}|^2}{ \omega_0^2\hbar^2 + 4|H'_{ab}|^2}\right]
+    \cos\left( \sqrt{\omega_0^2 + \frac{4|H'_{ab}|^2}{\hbar^2}} t\right)
+\end{align*}
+\begin{align*}
+    |c_b|^2 & =
+    \frac{|H'_{ba}|^2}{\hbar^2\left(\omega_0^2 + \frac{4|H_{ab}'|^2}{\hbar^2}\right)}
+    2
+    \left[
+        1 - \cos\left(
+        \sqrt{\omega_0^2 + \frac{4|H_{ab}'|^2}{\hbar^2}}
+        \right)
+        \right] \\
+            & =
+    \frac{|H'_{ba}|^2}{\omega_0^2\hbar^2 + 4|H_{ab}'|^2}
+    2
+    \left[
+        1 - \cos\left(
+        \sqrt{\omega_0^2 + \frac{4|H_{ab}'|^2}{\hbar^2}}
+        \right)
+        \right]
+\end{align*}
+\begin{align*}
+    |c_a|^2 + |c_b|^2 & =
+    \left[\frac{\omega_0 ^2\hbar^2+   2|H'_{ab}|^2}{ \omega_0^2\hbar^2 + 4|H'_{ab}|^2}\right]
+    +
+    \left[\frac{  2|H'_{ab}|^2}{ \omega_0^2\hbar^2 + 4|H'_{ab}|^2}\right]
+    \cos\left( \sqrt{\omega_0^2 + \frac{4|H'_{ab}|^2}{\hbar^2}} t\right) \\
+                      & +
+    \frac{|H'_{ba}|^2}{\omega_0^2\hbar^2 + 4|H_{ab}'|^2}
+    2
+    \left[
+        1 - \cos\left(
+        \sqrt{\omega_0^2 + \frac{4|H_{ab}'|^2}{\hbar^2}}
+        \right)
+        \right] \\
+                      & =
+    \left[\frac{\omega_0 ^2\hbar^2+   2|H'_{ab}|^2}{ \omega_0^2\hbar^2 + 4|H'_{ab}|^2}\right]
+    +\frac{2|H'_{ba}|^2}{\omega_0^2\hbar^2 + 4|H_{ab}'|^2}
+    = 1
+\end{align*}
+
+\subsection*{Sol. 4}
+Treat $\delta(t)$ as a rectangle of width $\frac{1}{n}$ and height $n$.
+For $\frac{-1}{2n}<t < \frac{1}{2n}$,
+\begin{align*}
+    \ddot c_b & = -\frac{i}{\hbar}
+    \alpha^* n (i\omega)e^{i\omega t} c_a
+    -\frac{i}{\hbar}
+    \alpha^* n e^{i\omega t}\dot c_a \\
+              & =
+    -\frac{i}{\hbar}
+    \alpha^* n (i\omega)e^{i\omega t}
+    (\frac{1}{-i/\hbar \alpha^* ne^{i\omega t}})\dot c_b
+    -\frac{i}{\hbar}
+    \alpha^* n e^{i\omega t}
+    (-i/\hbar \alpha n e^{-i\omega t}c_b) \\
+              & = i\omega \dot c_b - \frac{n^2|\alpha|^2}{\hbar^2}c_b
+\end{align*}
+\begin{align*}
+    c_b & = A\exp\left[
+                     \frac{i\omega + \sqrt{-\omega^2 - \frac{4n^2|\alpha|^2}{\hbar^2}}}{2} t
+                     \right] +
+    B\exp\left[
+             \frac{i\omega - \sqrt{-\omega^2 - \frac{4n^2|\alpha|^2}{\hbar^2}}}{2}t
+             \right] \\
+        & =
+    A\exp\left[
+             \frac{\omega + \sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2} it
+             \right] +
+    B\exp\left[
+             \frac{\omega -\sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2}it
+             \right]
+\end{align*}
+\begin{align*}
+    c_b(-\frac{1}{2n}) = A\exp\left[
+                                  \frac{\omega + \sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2} i\frac{-1}{2n}
+                                  \right] +
+    B\exp\left[
+             \frac{\omega -\sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2}i\frac{-1}{2n}
+             \right]=0
+\end{align*}
+\begin{align*}
+    c_a & =
+    \frac{1}{-i/\hbar\alpha^* n e^{i\omega t}}\left(\frac{\omega + \sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2} i\right)A\exp\left[
+                                                                                                                                         \frac{\omega + \sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2} it
+                                                                                                                                         \right] \\
+        & +
+    \frac{1}{-i/\hbar\alpha^* n e^{i\omega t}}\left( \frac{\omega -\sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2}i\right) B\exp\left[
+                                                                                                                                         \frac{\omega -\sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2}it
+                                                                                                                                         \right]
+\end{align*}
+\begin{align*}
+    c_a(\frac{-1}{2n}) & =
+    -\frac{\hbar}{\alpha^* n }\left(\frac{\omega + \sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2} \right)A\exp\left[
+                                                                                                                        \frac{-\omega + \sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2} i\frac{-1}{2n}
+                                                                                                                        \right] \\
+                       & -
+    \frac{\hbar}{\alpha^* n }\left( \frac{\omega -\sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2}\right) B\exp\left[
+                                                                                                                       \frac{-\omega -\sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2}i\frac{-1}{2n}
+                                                                                                                       \right] = 1
+\end{align*}
+\begin{align*}
+    A & =
+    \frac{\begin{vmatrix}
+            0 &
+            \exp\left[
+                    \frac{\omega - \sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2} i\frac{-1}{2n}
+                    \right] \\
+            1 & -
+            \frac{\hbar}{\alpha^* n }\left( \frac{\omega -\sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2}\right) \exp\left[
+                                                                                                                              \frac{-\omega -\sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2}i\frac{-1}{2n}
+                                                                                                                              \right]
+        \end{vmatrix}}{\begin{vmatrix}
+            \exp\left[
+                    \frac{\omega + \sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2} i\frac{-1}{2n}
+                    \right]                                    &
+            \exp\left[
+                    \frac{\omega - \sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2} i\frac{-1}{2n}
+                    \right]                                                                                                             \\
+            -\frac{\hbar}{\alpha^* n }\left(\frac{\omega + \sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2} \right)\exp\left[
+                                                                                                                               \frac{-\omega + \sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2} i\frac{-1}{2n}
+                                                                                                                               \right] & -
+            \frac{\hbar}{\alpha^* n }\left( \frac{\omega -\sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2}\right) \exp\left[
+                                                                                                                              \frac{-\omega -\sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2}i\frac{-1}{2n}
+                                                                                                                              \right]
+        \end{vmatrix}} \\
+      & =
+    \frac{-\exp\left[
+            \frac{\omega - \sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2} i\frac{-1}{2n}
+            \right]}
+    {-\frac{\hbar}{\alpha^* n}
+        \left[
+            \left( \frac{\omega -\sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2}\right)
+            -
+            \left( \frac{\omega +\sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2}\right)
+            \right]}
+    =
+    \frac{-\exp\left[
+            \frac{\omega - \sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2} i\frac{-1}{2n}
+            \right]}
+    {\frac{\hbar}{\alpha^* n}
+        \sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}
+\end{align*}
+\begin{align*}
+    B =
+    \frac{\begin{vmatrix}
+            \exp\left[
+                    \frac{\omega + \sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2} i\frac{-1}{2n}
+                    \right]                                    &
+            0                                                                                                                                                                                                     \\
+            -\frac{\hbar}{\alpha^* n }\left(\frac{\omega + \sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2} \right)\exp\left[
+                                                                                                                               \frac{-\omega + \sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2} i\frac{-1}{2n}
+                                                                                                                               \right] & 1
+        \end{vmatrix}}
+    {\frac{\hbar}{\alpha^* n}
+        \sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}} =
+    \frac{\exp\left[
+            \frac{\omega + \sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2} i\frac{-1}{2n}
+            \right]   }{\frac{\hbar}{\alpha^* n}
+        \sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}.
+\end{align*}
+
+For $t>0$,
+\begin{align*}
+    c_b & =
+    \lim_{n\to\infty}\left[
+                         \frac{-\exp\left[
+                                 \frac{\omega - \sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2} i\frac{-1}{2n}
+                                 \right]}
+                         {\frac{\hbar}{\alpha^* n}
+                             \sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}
+                         e^{\frac{\omega+\sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2}i\frac{1}{2n}} +
+                         \frac{\exp\left[
+                                 \frac{\omega + \sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2} i\frac{-1}{2n}
+                                 \right]   }{\frac{\hbar}{\alpha^* n}
+                             \sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}
+                         e^{\frac{\omega-\sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2}i\frac{1}{2n}}
+                         \right] \\
+        & =
+    - \frac{e^{\frac{|\alpha|}{\hbar}i}}
+      {\frac{\hbar}{\alpha ^*}\frac{2|\alpha|}{\hbar}}
+    +
+    \frac{e^{\frac{-|\alpha|}{\hbar}i}}
+    {\frac{\hbar}{\alpha ^*}\frac{2|\alpha|}{\hbar}}
+    \\
+        & =\frac{-i\alpha^*}{|\alpha|}
+    \sin \frac{|\alpha|}{\hbar}
+\end{align*}
+
+\begin{align*}
+    c_a & =
+    \lim_{n\to\infty}
+    \frac{-\hbar}{\alpha^* n }\left(\frac{\omega + \sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2} \right)
+    \frac{-\exp\left[
+            \frac{\omega - \sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2} i\frac{-1}{2n}
+            \right]}
+    {\frac{\hbar}{\alpha^* n}
+        \sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}
+    \exp\left[
+            \frac{-\omega + \sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2} i\frac{1}{2n}
+            \right] \\
+        & +
+    \frac{\hbar}{\alpha^* n }\left( \frac{\omega -\sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2}\right) \frac{\exp\left[
+                                                                                                                      \frac{\omega + \sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2} i\frac{-1}{2n}
+                                                                                                                      \right]   }{\frac{\hbar}{\alpha^* n}
+                                                                                                                  \sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}\exp\left[
+                                                                                                                                                                           \frac{-\omega -\sqrt{\omega^2 + \frac{4n^2|\alpha|^2}{\hbar^2}}}{2}i\frac{1}{2n}
+                                                                                                                                                                           \right]
+    \\& =
+    \frac{\hbar}{\alpha^*}
+    \frac{ |\alpha|}{\hbar}
+    \frac{1}{\frac{\hbar}{\alpha^*}\frac{2|\alpha|}{\hbar}}
+    e^{\frac{|\alpha|}{\hbar}i}
+    +
+    \frac{\hbar}{\alpha^*}
+    \frac{ |\alpha|}{\hbar}
+    \frac{1}{\frac{\hbar}{\alpha^*}\frac{2|\alpha|}{\hbar}}
+    e^{\frac{-|\alpha|}{\hbar}i} \\
+        & =
+    \cos\frac{|\alpha|}{\hbar}
+\end{align*}
+\begin{align*}
+    |c_a|^2 + |c_b|^2 = \cos^2\frac{|\alpha|}{\hbar} + \sin^2\frac{|\alpha|}{\hbar} = 1
+\end{align*}
+\begin{align*}
+    P_{a\to b} = \sin^2\frac{|\alpha|}{\hbar}
+\end{align*}
+
+\subsection*{Sol. 5}
+\begin{enumerate}
+    \item
+          \begin{align*}
+              \dot c_a = -\frac{i}{\hbar}
+                          [c_a H'_{aa} + c_b H'_{ab}e^{-i\omega_0t}]
+          \end{align*}
+          \begin{align*}
+              \dot c_b = -\frac{i}{\hbar}
+                          [c_b H'_{bb} + c_a H'_{ba}e^{-i\omega_0t}]
+          \end{align*}
+          First Order:
+          \begin{align*}
+              \dot c_a = -\frac{i}{\hbar}
+              H'_{aa}\Rightarrow
+              c_a =1 -\frac{i}{\hbar}\int_0^t H'_{aa}(t')dt'
+          \end{align*}
+          \begin{align*}
+              \dot c_b = -\frac{i}{\hbar}
+              H'_{ba}e^{-i\omega_0t}\Rightarrow
+              c_b = -\frac{i}{\hbar}\int_0^
+              t H'_{ba}(t')e^{i\omega_0 t'}dt'
+          \end{align*}
+          \begin{align*}
+              |c_a|^2 + |c_b|^2
+              =
+              1 + \frac{1}{\hbar^2}
+              \left[\int_0^t H'_{aa}(t')dt' \right]^2
+              +
+              \frac{1}{\hbar^2}
+              \left[
+                  \int_0^t H'_{ba}(t')e^{i\omega_0 t'}dt'
+                  \right]^2\approx 1
+          \end{align*}
+    \item
+          \begin{align*}
+              \dot d_a & = \frac{i}{\hbar} H'_{aa}(t)
+              e^{\frac{i}{\hbar}\int_0^t H'_{aa}(t')dt'}c_a
+              +
+              e^{\frac{i}{\hbar}\int_0^t H'_{aa}(t')dt'}\dot c_a \\
+                       & =
+              \frac{i}{\hbar} H'_{aa}(t)
+              e^{\frac{i}{\hbar}\int_0^t H'_{aa}(t')dt'}c_a
+              +
+              e^{\frac{i}{\hbar}\int_0^t H'_{aa}(t')dt'}
+              \left(-\frac{i}{\hbar}[c_a H'_{aa} + c_b H'_{ab}e^{-i\omega_0 t}]\right) \\
+                       & =
+              -\frac{i}{\hbar}
+              H'_{ab}e^{-i\omega_0 t} e^{\frac{i}{\hbar}\int_0^t [H'_{aa}(t') - H_{bb}(t')]dt'}
+              e^{\frac{i}{\hbar}\int_0^t H_{bb}(t')dt'}c_b \\
+                       & =
+              -\frac{i}{\hbar}
+              H'_{ab}e^{-i\omega_0 t} e^{i\phi}
+              d_b
+          \end{align*}
+          \begin{align*}
+              \dot d_b & = \frac{i}{\hbar} H'_{bb}(t)
+              e^{\frac{i}{\hbar}\int_0^t H'_{bb}(t')dt'}c_b
+              +
+              e^{\frac{i}{\hbar}\int_0^t H'_{bb}(t')dt'}\dot c_b \\
+                       & =\frac{i}{\hbar} H'_{bb}(t)
+              e^{\frac{i}{\hbar}\int_0^t H'_{bb}(t')dt'}c_b
+              +
+              e^{\frac{i}{\hbar}\int_0^t H'_{bb}(t')dt'}\left(-\frac{i}{\hbar}[c_b H'_{bb} + c_a H'_{ba}e^{i\omega_0 t}]\right)
+              \\
+                       & =
+              -\frac{i}{\hbar}
+              H'_{ba}e^{i\omega_0 t} e^{\frac{i}{\hbar}\int_0^t [-H'_{aa}(t') + H_{bb}(t')]dt'}
+              e^{\frac{i}{\hbar}\int_0^t H_{aa}(t')dt'}c_a \\
+                       & =
+              -\frac{i}{\hbar}
+              H'_{ba}e^{i\omega_0 t} e^{-i\phi}
+              d_a
+          \end{align*}
+    \item
+          \begin{align*}
+              \dot d_a = 0 \Rightarrow d_a(t) = e^{\frac{i}{\hbar}\int_0^t H'_{aa}(t')dt'}c_a(t) = 1
+          \end{align*}
+          \begin{align*}
+              \dot d_b = -\frac{i}{\hbar}e^{-i\phi}H'_{ba}e^{i\omega_0 t} \Rightarrow d_b(t) = e^{\frac{i}{\hbar}\int_0^t H'_{bb}(t')dt'}c_b(t) =
+              -\frac{i}{\hbar}e^{-i\phi}
+              \int_0^{t'}H'_{ba}(t')e^{i\omega_0 t'}dt'
+          \end{align*}
+          \begin{align*}
+              c_a(t) = e^{\frac{-i}{\hbar}\int_0^t H'_{aa}(t')dt'}
+          \end{align*}
+          \begin{align*}
+              c_b(t) & =
+              -\frac{i}{\hbar}e^{-i\phi}
+              e^{\frac{-i}{\hbar}\int_0^t H'_{bb}(t')dt'}
+              \int_0^{t'}H'_{ba}(t')e^{i\omega_0 t'}dt' \\
+                     & =
+              -\frac{i}{\hbar}
+              e^{\frac{-i}{\hbar}\int_0^t H'_{aa}(t')dt'}
+              \int_0^{t'}H'_{ba}(t')e^{i\omega_0 t'}dt'
+          \end{align*}
+          Part a is just a Taylor expansion to the first order of $H'$ on the exponential.
+\end{enumerate}
+\subsection*{Sol. 6}
+\begin{align*}
+    \dot c_a^{(1)} = -\frac{i}{\hbar}H'_{ab}e^{-i\omega_0 t}b \Rightarrow
+    c_a^{(1)}(t) =
+    a-\frac{i}{\hbar}
+    \int_{0}^t H'_{ab}(t')e^{-i\omega_0 t'}bdt'
+\end{align*}
+\begin{align*}
+    \dot c_b^{(1)} = -\frac{i}{\hbar}H'_{ba}e^{i\omega_0 t}a \Rightarrow
+    c_b^{(1)}(t) =
+    b-\frac{i}{\hbar}
+    \int_{0}^t H'_{ba}(t')e^{i\omega_0 t'}adt'
+\end{align*}
+\begin{align*}
+    \dot c_a^{(2)} = -\frac{i}{\hbar}H'_{ab}
+    e^{-i\omega_0 t}
+    \left[
+        b-\frac{i}{\hbar}
+        \int_{0}^t H'_{ba}(t')e^{i\omega_0 t'}adt'
+        \right]
+\end{align*}
+\begin{align*}
+    c_a^{(2)}(t) =
+    a
+    -\frac{i}{\hbar}
+    \int_0^{t}H'_{ab}(t')
+    e^{-i\omega_0 t'}bdt'
+    -\frac{1}{\hbar^2}
+    \left[
+        \int_{0}^{t}
+        H'_{ab}(t')
+        e^{-i\omega_0 t'}
+        \int_{0}^{t'} H'_{ba}(t'')e^{i\omega_0 t''}adt''
+        \right]dt'
+\end{align*}
+\begin{align*}
+    \dot c_b^{(2)} = -\frac{i}{\hbar}H'_{ba}
+    e^{i\omega_0 t}
+    \left[
+        a-\frac{i}{\hbar}
+        \int_{0}^t H'_{ab}(t')e^{-i\omega_0 t'}bdt'
+        \right]
+\end{align*}
+\begin{align*}
+    c_b^{(2)}(t) =
+    b
+    -\frac{i}{\hbar}
+    \int_0^{t}H'_{ba}(t')
+    e^{i\omega_0 t'}adt'
+    -\frac{1}{\hbar^2}
+    \left[
+        \int_{0}^{t}
+        H'_{ba}(t')
+        e^{i\omega_0 t'}
+        \int_{0}^{t'} H'_{ab}(t'')e^{-i\omega_0 t''}bdt''
+        \right]dt'
+\end{align*}
+\subsection*{Sol. 7}
+\begin{align*}
+    c_a^{(2)}(t) & =
+    1
+    -\frac{|H'_{ab}|^2}{\hbar^2}
+    \left[
+        \int_{0}^{t}
+        e^{-i\omega_0 t'}
+        \int_{0}^{t'} e^{i\omega_0 t''}dt''
+        \right]dt' \\
+                 & =
+    1
+    -\frac{|H'_{ab}|^2}{\hbar^2}
+    \left[
+        \int_{0}^{t}
+        e^{-i\omega_0 t'}
+        \frac{e^{i\omega_0t'}-1}{i\omega_0}
+        \right]dt' \\
+                 & =
+    1
+    -\frac{|H'_{ab}|^2}{\hbar^2}\frac{1}{i\omega_0}
+    \left[
+        \int_{0}^{t}
+        1
+        -e^{-i\omega_0 t'}
+        \right]dt' \\
+                 & =
+    1
+    -\frac{|H'_{ab}|^2}{\hbar^2}\frac{1}{i\omega_0}
+    \left[
+        t - \frac{1}{-i\omega_0}(e^{-i\omega_0 t}-1)
+        \right] \\
+                 & = 1- \frac{|H'_{ab}|^2}{\hbar^2}\frac{1}{i\omega_0}t
+    +
+    \frac{|H'_{ab}|^2}{\hbar^2}\frac{1}{\omega^2_0}
+    e^{-i\omega_0 t}-
+    \frac{|H'_{ab}|^2}{\hbar^2}\frac{1}{\omega^2_0}
+\end{align*}
+\begin{align*}
+    c_b^{(2)}(t) =
+    -\frac{iH'_{ba}}{\hbar}
+    \int_0^{t}
+    e^{i\omega_0 t'}dt'
+    =
+    -\frac{iH_{ba}'}{\hbar}\frac{1}{i\omega_0}(e^{i\omega_0 t}-1)
+    =
+    \frac{H_{ba}'}{\hbar}\frac{1}{\omega_0}(1-e^{i\omega_0 t})
+\end{align*}
+By expanding the exact answer to the second order
+\begin{align*}
+    c_a \approx & \left(1 - \frac{1}{4}\frac{1}{\omega_0^2}\frac{4|H'_{ab}|^2}{\hbar^2}\right)e^{-\frac{\omega_0}{2}it}
+    \left[e^{\frac{\omega_0}{2}it}
+        +e^{\frac{\omega_0}{2}it}\frac{1}{4}it\frac{1}{\omega_0}\frac{4|H'_{ab}|^2}{\hbar^2}\right] \\
+                & -\left(-\frac{1}{4}\frac{1}{\omega_0^2}
+    \frac{4|H'_{ab}|^2}{\hbar^2}\right)e^{-\frac{\omega_0}{2}it}
+    \left[e^{\frac{-\omega_0}{2}it}
+        -e^{\frac{-\omega_0}{2}it}\frac{1}{4}it\frac{1}{\omega_0}\frac{4|H'_{ab}|^2}{\hbar^2}\right] \\
+    \approx     & \left(1 - \frac{|H'_{ab}|^2}{\omega_0^2\hbar^2}\right)
+    \left[1
+        +it\frac{1}{\omega_0}\frac{|H'_{ab}|^2}{\hbar^2}\right]  +\left(\frac{|H'_{ab}|^2}{\omega_0^2\hbar^2}\right)e^{-\omega_0it}
+    \left[1
+        -it\frac{1}{\omega_0}\frac{|H'_{ab}|^2}{\hbar^2}\right] \\
+    \approx     &
+    1+it\frac{1}{\omega_0}\frac{|H'_{ab}|^2}{\hbar^2}
+    -\frac{|H'_{ab}|^2}{\omega_0^2\hbar^2}
+    +\frac{|H'_{ab}|^2}{\omega_0^2\hbar^2}e^{-i\omega_0 t}
+\end{align*}
+\begin{align*}
+    c_b     \approx & -H'_{ba}\left(
+    \frac{1}{\hbar \omega_0}
+    - \frac{1}{2}\frac{1}{\hbar}\frac{1}{\omega_0^3}
+    \frac{4|H_{ab}'|^2}{\hbar^2}
+    \right)e^{\frac{\omega_0}{2}it}
+    \left[e^{\frac{\omega_0 it}{2}}
+        +e^{\frac{\omega_0 it}{2}}it\frac{1}{\omega_0}\frac{|H'_{ab}|^2}{\hbar^2}\right] \\
+                    & +
+    H'_{ba}\left(
+    \frac{1}{\hbar \omega_0}
+    - \frac{1}{2}\frac{1}{\hbar}\frac{1}{\omega_0^3}
+    \frac{4|H_{ab}'|^2}{\hbar^2}
+    \right)e^{\frac{\omega_0}{2}it}
+    \left[e^{\frac{-\omega_0 it}{2}}
+        -e^{\frac{-\omega_0 it}{2}}it\frac{1}{\omega_0}\frac{|H'_{ab}|^2}{\hbar^2}\right] \\
+    \approx         &
+    -H'_{ba} \frac{1}{\hbar\omega_0}e^{\omega_0 it}
+    +H'_{ba} \frac{1}{\hbar\omega_0}.
+\end{align*}
+
+\subsection*{Sol. 8}
+\begin{enumerate}
+    \item
+          \begin{align*}
+              c_b & =-\frac{i}{\hbar}
+              \int_{-\infty}^\infty\frac{\alpha}{\sqrt{\pi}\tau}e^{-(t'/\tau)^2}
+              e^{i\omega_0t'}dt' \\
+                  & =-\frac{i}{\hbar}
+                      {\alpha}\mathrm{e}^{-\frac{{\tau}^{2} {\omega}_{0}^{2}}{4}}
+          \end{align*}
+          $$
+              P_{a\to b}
+              =
+              \frac{\alpha^2}{\hbar^2}
+              \mathrm{e}^{-\frac{{\tau}^{2} {\omega}_{0}^{2}}{2}}
+          $$
+    \item As $\tau\to 0$, $$
+              P_{a\to b} = \frac{\alpha^2}{\hbar^2}
+          $$
+          \begin{align*}
+              \sin^2(\frac{\alpha}{\hbar})\approx\frac{\alpha^2}{\hbar^2}
+          \end{align*}
+    \item If $\omega_0\tau \gg 1$, $c_b = 0$
+\end{enumerate}
+\subsection*{Sol. 9}
+\begin{enumerate}
+    \item
+          \begin{align*}
+              \dot c_a = -\frac{i}{\hbar}\frac{V_{ab}}{2}e^{i\omega t}e^{-i\omega_0 t}c_b
+          \end{align*}
+          \begin{align*}
+              \dot c_b = -\frac{i}{\hbar}\frac{V_{ba}}{2}e^{-i\omega t}e^{i\omega_0 t}c_a
+          \end{align*}
+          \begin{align*}
+              \ddot c_a & = -i(\omega -\omega_0)\frac{i}{\hbar}\frac{V_{ab}}{2}e^{i(\omega -\omega_0)t}c_b
+              -\frac{i}{\hbar}\frac{V_{ab}}{2}e^{i(\omega -\omega_0)t}\dot c_b \\
+                        & =
+              -i(\omega -\omega_0)\frac{i}{\hbar}\frac{V_{ab}}{2}e^{i(\omega -\omega_0)t}
+              \frac{1}{-i/\hbar \frac{V_{ab}}{2}e^{i(\omega-\omega_0)t}}\dot c_a
+              -\frac{i}{\hbar}\frac{V_{ab}}{2}e^{i(\omega -\omega_0)t}\left[
+                                                                          -\frac{i}{\hbar}\frac{V_{ba}}{2}e^{-i(\omega-\omega_0) t}c_a
+                                                                          \right] \\
+                        & =
+              i(\omega-\omega_0)\dot c_a
+              -\frac{|V_{ab}|^2}{4\hbar^2}c_a
+          \end{align*}
+          \begin{align*}
+              c_a & = A\exp\left[
+                               \frac{i(\omega-\omega_0) + \sqrt{-(\omega - \omega_0)^2 - \frac{|V_{ab}|^2}{\hbar^2}}}{2} t
+                               \right]
+              +B\exp\left[
+                        \frac{i(\omega-\omega_0) - \sqrt{-(\omega - \omega_0)^2 - \frac{|V_{ab}|^2}{\hbar^2}}}{2} t
+                        \right] \\
+                  & =
+              A\exp\left[
+                       \frac{(\omega-\omega_0) + 2\omega_r}{2} it
+                       \right]
+              +B\exp\left[
+                        \frac{(\omega-\omega_0) - 2\omega_r}{2} it
+                        \right]
+          \end{align*}
+          \begin{align*}
+              c_b & = \frac{1}{-i/\hbar \frac{V_{ab}}{2}e^{i(\omega-\omega_0)t}}
+              A
+              \frac{(\omega-\omega_0) + 2\omega_r}{2} i
+              \exp\left[
+                      \frac{(\omega-\omega_0) + 2\omega_r}{2} it
+                      \right] \\
+                  & + \frac{1}{-i/\hbar \frac{V_{ab}}{2}e^{i(\omega-\omega_0)t}}B\frac{(\omega-\omega_0) - 2\omega_r}{2} i
+              \exp\left[
+                      \frac{(\omega-\omega_0) - 2\omega_r}{2} it
+                      \right] \\
+                  & =
+              -\frac{\hbar }{V_{ab}}
+              A
+                  [(\omega-\omega_0) + 2\omega_r]
+              \exp\left[
+                      \frac{-(\omega-\omega_0) + 2\omega_r}{2} it
+                      \right] \\
+                  & - \frac{\hbar}{ V_{ab}}
+              B
+                  [(\omega-\omega_0) - 2\omega_r]
+              \exp\left[
+                      \frac{-(\omega-\omega_0) - 2\omega_r}{2} it
+                      \right]
+          \end{align*}
+          \begin{align*}
+              A
+                  [(\omega-\omega_0) + 2\omega_r]
+              + B[(\omega-\omega_0) - 2\omega_r] = 0
+          \end{align*}
+          \begin{align*}
+              A+B=1
+          \end{align*}
+          \begin{align*}
+              A = \frac{\begin{vmatrix}
+                          0 & (\omega-\omega_0) - 2\omega_r \\
+                          1 & 1                             \\
+                      \end{vmatrix}}{\begin{vmatrix}
+                          (\omega-\omega_0) + 2\omega_r & (\omega-\omega_0) - 2\omega_r \\
+                          1                             & 1                             \\
+                      \end{vmatrix}} =
+              \frac{
+                  -(\omega-\omega_0) + 2\omega_r
+              }{4\omega_r} = -\frac{\omega-\omega_0}{4\omega_r} + \frac{1}{2}, \;
+              B= \frac{\omega-\omega_0}{4\omega_r} + \frac{1}{2}
+          \end{align*}
+          \begin{align*}
+              c_a & = \left[ -\frac{\omega-\omega_0}{4\omega_r} + \frac{1}{2}\right]
+              \exp\left[
+                      \frac{(\omega-\omega_0) + 2\omega_r}{2} it
+                      \right] +
+              \left[ \frac{\omega-\omega_0}{4\omega_r} + \frac{1}{2}\right]
+              \exp\left[
+                      \frac{(\omega-\omega_0) - 2\omega_r}{2} it
+                      \right] \\
+                  & =
+              \exp\left[
+                      \frac{\omega-\omega_0}{2}it
+                      \right]
+              \left[-\frac{\omega-\omega_0}{2\omega_r}
+                  i\sin (\omega_r t)
+                  +
+                  \cos(\omega_r t)\right]
+          \end{align*}
+          \begin{align*}
+              c_b & =
+              -\frac{\hbar }{V_{ab}}
+              \left[-\frac{\omega-\omega_0}{4\omega_r} + \frac{1}{2}\right]
+              [(\omega-\omega_0) + 2\omega_r]
+              \exp\left[
+                      \frac{-(\omega-\omega_0) + 2\omega_r}{2} it
+                      \right] \\
+                  & - \frac{\hbar}{ V_{ab}}
+              \left[\frac{\omega-\omega_0}{4\omega_r} + \frac{1}{2}\right]
+              [(\omega-\omega_0) - 2\omega_r]
+              \exp\left[
+                      \frac{-(\omega-\omega_0) - 2\omega_r}{2} it
+                      \right] \\
+                  & =
+              -\frac{\hbar}{V_{ab}}
+              \exp\left[-\frac{\omega-\omega_0}{2}it\right]
+              \bigg[
+                  (-\frac{\omega-\omega_0}{4\omega_r}2\omega_r + \frac{1}{2}(\omega-\omega_0))
+                  2\cos(\omega_r t)\\
+                  +
+                  & (-\frac{\omega-\omega_0}{4\omega_r}(\omega-\omega_0)+\omega_r)
+                  2i\sin(\omega_r t)
+                  \bigg] \\
+                  & =
+              \frac{2\hbar}{V_{ab}}
+              \exp\left[-\frac{\omega-\omega_0}{2}it\right]
+              \left[-\frac{(\omega-\omega_0)^2}{4\omega_r}+ \omega_r\right]
+              i\sin(\omega_r t)
+          \end{align*}
+    \item
+          \begin{align*}
+              P_{a\to b}
+               & =\frac{4\hbar^2}{|V_{ab}|^2}
+              \left[\frac{-(\omega-\omega_0)^2}{4\omega_r} + \omega_r\right]^2
+              \sin^2(\omega_r t) \\
+               & =
+              \frac{4\hbar^2}{|V_{ab}|^2}
+              \left[\frac{4(\omega-\omega_0)^4}{16
+                          [(\omega-\omega_0)^2 + |V_{ab}|^2/\hbar^2]} +
+                  \frac{1}{4}
+                  [(\omega-\omega_0)^2 + |V_{ab}|^2/\hbar^2]
+                  -\frac{1}{2}(\omega-\omega_0)^2\right]
+              \sin^2(\omega_r t)
+              \\
+               & =
+              \frac{\hbar^2}{|V_{ab}|^2}
+              \left[\frac{(\omega-\omega_0)^4}{
+                      [(\omega-\omega_0)^2 + |V_{ab}|^2/\hbar^2]} +
+                  |V_{ab}|^2/\hbar^2
+                  -(\omega-\omega_0)^2\right]
+              \sin^2(\omega_r t)
+              \\
+               & =
+              \frac{|V_{ab}|^2/\hbar^2}{(\omega-\omega_0)^2 + |V_{ab}|^2/\hbar^2}
+              \sin^2(\omega_r t)
+          \end{align*}
+          \begin{align*}
+              |c_a|^2
+               & =\frac{(\omega-\omega_0)^2}{4\omega_r^2}\sin^2(\omega_r t) + \cos^2(\omega_r t) \\
+               & = \frac{(\omega-\omega_0)^2}
+                   {(\omega-\omega_0)^2+|V_{ab}|^2/\hbar^2}\sin^2(\omega_r t) + \cos^2(\omega_r t)
+          \end{align*}
+    \item If $$
+              \frac{|V_{ab}^2|}{\hbar} \ll (\omega-\omega_0)^2
+          $$
+          \begin{align*}
+              P_{a\to b} \approx
+              \frac{|V_{ab}^2|}{\hbar^2}
+              \frac{1}{(\omega-\omega_0)^2}
+              \sin^2\left(\frac{\omega-\omega_0}{2} t\right)
+          \end{align*}
+    \item
+          $$
+              t = \frac{2\pi}{\sqrt{(\omega-\omega_0)^2} + |V_{ab}|^2/\hbar^2}
+          $$
+\end{enumerate}
+
+
+\subsection*{Sol. 10}
+\begin{align*}
+    A = \frac{\omega_0^3\hbar}{\pi^2c^3}B
+\end{align*}
+\begin{align*}
+    B\rho(\omega_0) =B
+    \frac{\hbar}{\pi^2 c^3}
+    \frac{\omega_0^3}{e^{\hbar\omega_0/k_B T} - 1}
+\end{align*}
+\begin{align*}
+    \frac{\hbar \omega_0}{k_B T} = 2.5\times 10^{-14}\omega_0
+\end{align*}
+If $\omega_0 \ll \qty{5e12}{Hz}$,
+$
+    e^{\hbar\omega_0/k_B T} - 1 \ll 1
+$ and thus thermal stimulation dominates, whereas
+$\omega_0 \gg \qty{5e12}{Hz}$,
+$
+    e^{\hbar\omega_0/k_B T} - 1 \gg 1
+$,
+the spontaneous emission dominates.
+
+\subsection*{Sol. 11}
+\begin{enumerate}
+    \item
+          Let $f(x,y,z,t) = X(x)Y(y)Z(z)T(t)$,
+          \begin{align*}
+              \left(\frac{1}{c^2}\frac{\partial^2}{\partial t^2}
+              -\frac{\partial^2}{\partial x^2}
+              -\frac{\partial^2}{\partial y^2}
+              -\frac{\partial^2}{\partial z^2}\right) XYZT = 0
+          \end{align*}
+          \begin{align*}
+              \left(\frac{1}{T}\frac{1}{c^2}\frac{\partial^2}{\partial t^2}T
+              -\frac{1}{X}\frac{\partial^2}{\partial x^2}X
+              -\frac{1}{Y}\frac{\partial^2}{\partial y^2}Y
+              -\frac{1}{Z}\frac{\partial^2}{\partial z^2}Z\right)  = 0
+          \end{align*}
+          \begin{align*}
+              \frac{1}{X}\frac{\partial^2}{\partial x^2}X = a
+              \Rightarrow X \propto\sin(\sqrt{a} x) ,
+          \end{align*}
+          where $\sqrt{a} = \frac{n_x\pi}{l}$. Similarly,
+          $Y \propto \sin(\sqrt{b} y)$,
+          $Z \propto \sin(\sqrt{c} z)$,
+          where
+          $\sqrt{b} = \frac{n_y\pi}{l}$
+          $\sqrt{c} = \frac{n_z\pi}{l}$.
+          \begin{align*}
+              \frac{1}{c^2}T'' = (a+b + c)T
+          \end{align*}
+          \begin{align*}
+              T = A\sin(\omega t) + B\cos(\omega t)
+          \end{align*}
+    \item
+          Imagine $\sqrt{n_x^2+n_y^2+n_z^2}$ as the radius in the $n$ space, then extending the radius from $n$ to $dn$ adds extra $ \frac{1}{8}4\pi n^2 dn$ states, with energy $\frac{2\pi\hbar c}{l}n$.
+          Thus,
+          \begin{align*}
+              d E & = \frac{1}{2}\pi n^2 \frac{2\pi\hbar c}{l}ndn \\
+                  & =\pi  \frac{\pi\hbar c}{l}(\frac{\omega l}{\pi c})^3\frac{l}{\pi c}d\omega
+          \end{align*}
+          \begin{align*}
+              \frac{1}{l^3}dE =
+              \hbar\frac{\omega^3 }{\pi^2 c^3}d\omega.
+          \end{align*}
+    \item
+          \begin{align*}
+              A & =\frac{\pi}{3\epsilon_0\hbar^2}|\mathcal P|^2
+              \hbar\frac{\omega_0^3 }{\pi^2 c^3} \\
+                & =\frac{\omega_0^3|\mathcal P|^2}{3\epsilon_0\hbar \pi c^3}
+          \end{align*}
+\end{enumerate}
+\subsection*{Sol. 12}
+\begin{align*}
+    \frac{1}{2}=e^{-At_{1/2}}\Rightarrow t_{1/2} = \frac{1}{A}\ln 2\Rightarrow t_{1/2} = \tau\ln 2
+\end{align*}
+
+\subsection*{Sol. 13}
+\begin{itemize}
+    \item
+          \begin{align*}
+              \langle
+              \psi_{100}, x
+              \psi_{200}
+              \rangle  =
+              \int
+              \frac{1}{\sqrt{\pi a^3}}e^{-r/a}
+              \frac{1}{\sqrt{2}}a^{-3/2}\left(1 - \frac{r}{2a}\right)e^{-\frac{r}{2a}}\frac{1}{\sqrt{4\pi}}(r\sin\theta\cos\phi)
+              r^2\sin\theta drd\theta d\phi = 0
+          \end{align*}
+          \begin{align*}
+              \langle
+              \psi_{100}, y
+              \psi_{200}
+              \rangle  =
+              \int
+              \frac{1}{\sqrt{\pi a^3}}e^{-r/a}
+              \frac{1}{\sqrt{2}}a^{-3/2}\left(1 - \frac{r}{2a}\right)e^{-\frac{r}{2a}}\frac{1}{\sqrt{4\pi}}(r\sin\theta\sin\phi)
+              r^2\sin\theta drd\theta d\phi = 0
+          \end{align*}
+          \begin{align*}
+              \langle
+              \psi_{100}, z
+              \psi_{200}
+              \rangle  =
+              \int
+              \frac{1}{\sqrt{\pi a^3}}e^{-r/a}
+              \frac{1}{\sqrt{2}}a^{-3/2}\left(1 - \frac{r}{2a}\right)e^{-\frac{r}{2a}}\frac{1}{\sqrt{4\pi}}(r\cos\theta)
+              r^2\sin\theta drd\theta d\phi = 0
+          \end{align*}
+    \item
+          \begin{align*}
+              \langle
+              \psi_{100}, x
+              \psi_{21-1}
+              \rangle & =
+              \int
+              \frac{1}{\sqrt{\pi a^3}}e^{-r/a}
+              \frac{1}{2\sqrt{6}}a^{-3/2}\frac{r}{a}
+              e^{\frac{-r}{2a}}
+              \left(
+              \sqrt{\frac{3}{8\pi}}\sin\theta e^{-i\phi}
+              \right)(r\sin\theta\cos\phi)
+              r^2\sin\theta drd\theta d\phi \\
+                      & =
+              \frac{1}{8\pi a^4}\frac{32a^5}{243}24\pi \frac{4}{3} =
+              \frac{128a}{243}
+          \end{align*}
+          \begin{align*}
+              \langle
+              \psi_{100}, y
+              \psi_{21-1}
+              \rangle & =
+              \int
+              \frac{1}{\sqrt{\pi a^3}}e^{-r/a}
+              \frac{1}{2\sqrt{6}}a^{-3/2}\frac{r}{a}
+              e^{\frac{-r}{2a}}
+              \left(
+              \sqrt{\frac{3}{8\pi}}\sin\theta e^{-i\phi}
+              \right)(r\sin\theta\sin\phi)
+              r^2\sin\theta drd\theta d\phi
+              \\
+                      & =
+              \frac{1}{8\pi a^4}\frac{32a^5}{243}24\pi \frac{4}{3} =
+              \frac{128a}{243}
+          \end{align*}
+          \begin{align*}
+              \langle
+              \psi_{100}, z
+              \psi_{21-1}
+              \rangle  =
+              \int
+              \frac{1}{\sqrt{\pi a^3}}e^{-r/a}
+              \frac{1}{2\sqrt{6}}a^{-3/2}\frac{r}{a}
+              e^{\frac{-r}{2a}}
+              \left(
+              \sqrt{\frac{3}{8\pi}}\sin\theta e^{-i\phi}
+              \right)(r\cos\theta)
+              r^2\sin\theta drd\theta d\phi = 0
+          \end{align*}
+    \item
+          \begin{align*}
+              \langle
+              \psi_{100}, x
+              \psi_{210}
+              \rangle  =
+              \int
+              \frac{1}{\sqrt{\pi a^3}}e^{-r/a}
+              \frac{1}{2\sqrt{6}}a^{-3/2}\frac{r}{a}
+              e^{\frac{-r}{2a}}
+              \sqrt{\frac{3}{4\pi}}\cos\theta
+              (r\sin\theta\cos\phi)
+              r^2\sin\theta drd\theta d\phi =
+              0
+          \end{align*}
+          \begin{align*}
+              \langle
+              \psi_{100}, y
+              \psi_{210}
+              \rangle  =
+              \int
+              \frac{1}{\sqrt{\pi a^3}}e^{-r/a}
+              \frac{1}{2\sqrt{6}}a^{-3/2}\frac{r}{a}
+              e^{\frac{-r}{2a}}
+              \sqrt{\frac{3}{4\pi}}\cos\theta
+              (r\sin\theta\sin\phi)
+              r^2\sin\theta drd\theta d\phi =
+              0
+          \end{align*}
+          \begin{align*}
+              \langle
+              \psi_{100}, z
+              \psi_{210}
+              \rangle  =
+              \int
+              \frac{1}{\sqrt{\pi a^3}}e^{-r/a}
+              \frac{1}{2\sqrt{6}}a^{-3/2}\frac{r}{a}
+              e^{\frac{-r}{2a}}
+              \sqrt{\frac{3}{4\pi}}\cos\theta
+              (r\cos\theta)
+              r^2\sin\theta drd\theta d\phi =
+              \frac{128\sqrt{2}}{243}a
+          \end{align*}
+    \item
+          \begin{align*}
+              \langle
+              \psi_{100}, x
+              \psi_{211}
+              \rangle & =
+              \int
+              \frac{1}{\sqrt{\pi a^3}}e^{-r/a}
+              \frac{1}{2\sqrt{6}}a^{-3/2}\frac{r}{a}
+              e^{\frac{-r}{2a}}
+              \left(-
+              \sqrt{\frac{3}{8\pi}}\sin\theta e^{i\phi}
+              \right)(r\sin\theta\cos\phi)
+              r^2\sin\theta drd\theta d\phi = \\
+                      & =
+              -\frac{1}{8\pi a^4}\frac{32a^5}{243}24\pi \frac{4}{3} =
+              -\frac{128a}{243}
+          \end{align*}
+          \begin{align*}
+              \langle
+              \psi_{100}, y
+              \psi_{211}
+              \rangle & =
+              \int
+              \frac{1}{\sqrt{\pi a^3}}e^{-r/a}
+              \frac{1}{2\sqrt{6}}a^{-3/2}\frac{r}{a}
+              e^{\frac{-r}{2a}}
+              \left(-
+              \sqrt{\frac{3}{8\pi}}\sin\theta e^{i\phi}
+              \right)(r\sin\theta\sin\phi)
+              r^2\sin\theta drd\theta d\phi \\
+                      & =
+              -\frac{1}{8\pi a^4}\frac{32a^5}{243}24\pi \frac{4}{3} =
+              -\frac{128a}{243}
+          \end{align*}
+          \begin{align*}
+              \langle
+              \psi_{100}, z
+              \psi_{211}
+              \rangle  =
+              \int
+              \frac{1}{\sqrt{\pi a^3}}e^{-r/a}
+              \frac{1}{2\sqrt{6}}a^{-3/2}\frac{r}{a}
+              e^{\frac{-r}{2a}}
+              \left(-
+              \sqrt{\frac{3}{8\pi}}\sin\theta e^{i\phi}
+              \right)(r\cos\theta)
+              r^2\sin\theta drd\theta d\phi = 0
+          \end{align*}
+\end{itemize}
+$$
+    |\mathcal P|^2 = \frac{2^{15}}{3^{10}}a^2q^2,\;
+    \omega_0 =
+    -\frac{3}{4}E_1/\hbar
+$$
+$\frac{1}{A} = \qty{1.6e-9}{s}$ for $\psi_{211}$,
+$\psi_{210}$, $\psi_{21-1}$, and infinite for $\psi_{200}$.
